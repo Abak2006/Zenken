@@ -14,6 +14,11 @@ This project models an authentic, end-to-end digital forensics and open-source i
 
 The framework is **100% self-contained, offline-operable, reproducible**, and constructed under strict ethical guidelines. It generates synthetic social media microblogs, abstract images with injected EXIF GPS, call detail records (CDR), venue check-ins, and social graph ties. It then applies advanced analytical pipelines to resolve fragmented aliases, build an investigation knowledge graph, reconstruct movement trajectories, generate competing hypotheses, and evaluate findings against an isolated ground truth.
 
+### Recent Updates
+- **Fixed Streamlit Dashboard Module Import Issues**: Resolved module import errors in the dashboard by properly configuring Python path imports
+- **Updated Streamlit API**: Migrated from deprecated `use_container_width` to the new `width='stretch'` parameter
+- **Enhanced Dashboard Stability**: All 8 tabs now function correctly without import errors or deprecation warnings
+
 ```mermaid
 flowchart TD
     subgraph Synthetic_World ["1. Synthetic Evidence Generation"]
