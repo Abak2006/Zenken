@@ -13,9 +13,14 @@ Streamlit Forensic Investigation Dashboard.
 from __future__ import annotations
 import json
 from pathlib import Path
+import sys
+from pathlib import Path as PathLib
 import streamlit as st
 import pandas as pd
 import streamlit.components.v1 as components
+
+# Add parent directory to path for imports
+sys.path.insert(0, str(PathLib(__file__).resolve().parent.parent))
 
 # Set page configuration
 st.set_page_config(
@@ -194,19 +199,19 @@ with tab2:
             df = df[df["account"].isin(selected_accounts)]
         st.dataframe(
             df[["post_id", "account", "timestamp_raw", "text", "location_tag", "deleted", "sentiment_label"]],
-            use_container_width=True
+            width='stretch'
         )
         st.caption("🚨 Red rows indicate deleted posts recovered from web archive forensic snapshots.")
 
     elif ev_type == "Call Detail Records (CDR)" and "calls" in DATA:
-        st.dataframe(DATA["calls"], use_container_width=True)
+        st.dataframe(DATA["calls"], width='stretch')
 
     elif ev_type == "Physical Check-ins" and "checkins" in DATA:
-        st.dataframe(DATA["checkins"], use_container_width=True)
+        st.dataframe(DATA["checkins"], width='stretch')
 
     elif ev_type == "Photo Metadata (EXIF)" and "photos" in DATA:
         ph_df = pd.DataFrame(DATA["photos"])
-        st.dataframe(ph_df[["photo_id", "account", "timestamp_utc", "camera_make", "camera_model", "latitude", "longitude", "exif_stripped", "is_red_herring"]], use_container_width=True)
+        st.dataframe(ph_df[["photo_id", "account", "timestamp_utc", "camera_make", "camera_model", "latitude", "longitude", "exif_stripped", "is_red_herring"]], width='stretch')
 
 # ----------------- TAB 3: IDENTITY RESOLUTION -----------------
 with tab3:
@@ -216,18 +221,18 @@ with tab3:
     if "resolved" in DATA:
         st.subheader("Canonical Resolved Person Clusters")
         clusters_df = pd.DataFrame(DATA["resolved"]["clusters"])
-        st.dataframe(clusters_df[["canonical_id", "canonical_name", "account_count", "accounts", "linked_emails", "linked_phones", "is_multi_account"]], use_container_width=True)
+        st.dataframe(clusters_df[["canonical_id", "canonical_name", "account_count", "accounts", "linked_emails", "linked_phones", "is_multi_account"]], width='stretch')
 
         st.subheader("Confirmed Identity Links (Confidence >= 0.75)")
         links_df = pd.DataFrame(DATA["resolved"]["confirmed_links"])
-        st.dataframe(links_df[["account_a", "account_b", "confidence", "rationale"]], use_container_width=True)
+        st.dataframe(links_df[["account_a", "account_b", "confidence", "rationale"]], width='stretch')
 
     if "ambiguous" in DATA:
         st.subheader("⚠️ Ambiguous Links Requiring Manual Analyst Review")
         amb_df = pd.DataFrame(DATA["ambiguous"]["ambiguous_links"])
         if not amb_df.empty:
             filtered_amb = amb_df[amb_df["confidence"] >= conf_threshold]
-            st.dataframe(filtered_amb[["account_a", "account_b", "confidence", "rationale"]], use_container_width=True)
+            st.dataframe(filtered_amb[["account_a", "account_b", "confidence", "rationale"]], width='stretch')
 
 # ----------------- TAB 4: INVESTIGATION GRAPH -----------------
 with tab4:
@@ -245,14 +250,14 @@ with tab4:
         col_a, col_b = st.columns(2)
         with col_a:
             st.markdown("**Top Degree Centrality (Most Connected Hubs):**")
-            st.dataframe(pd.DataFrame(ga["top_degree_centrality"]), use_container_width=True)
+            st.dataframe(pd.DataFrame(ga["top_degree_centrality"]), width='stretch')
         with col_b:
             st.markdown("**Top Betweenness Centrality (Key Informational Bridges):**")
-            st.dataframe(pd.DataFrame(ga["top_betweenness_centrality"]), use_container_width=True)
+            st.dataframe(pd.DataFrame(ga["top_betweenness_centrality"]), width='stretch')
 
     st.subheader("Catalogue of Forensic Cypher Queries (Neo4j)")
-    from graph.cypher_queries import CYPHER_QUERIES
-    for q in CYPHER_QUERIES[:4]:
+    from graph.cypher_queries import CYPHER_QUERIES as cypher_queries
+    for q in cypher_queries[:4]:
         with st.expander(f"{q['query_id']}: {q['title']}"):
             st.write(f"**Objective:** {q['objective']}")
             st.code(q["cypher"], language="cypher")
@@ -271,10 +276,10 @@ with tab5:
         mov = DATA["movement"]
         st.subheader("Candidate Last Known Location (LKL) Rankings")
         lkl_df = pd.DataFrame(mov["ranked_candidate_lkl"])
-        st.dataframe(lkl_df[["rank", "candidate_name", "confidence", "latitude", "longitude", "timestamp", "rationale"]], use_container_width=True)
+        st.dataframe(lkl_df[["rank", "candidate_name", "confidence", "latitude", "longitude", "timestamp", "rationale"]], width='stretch')
 
         st.subheader("DBSCAN Dwell-Time Clusters")
-        st.dataframe(pd.DataFrame(mov["spatial_clusters"]), use_container_width=True)
+        st.dataframe(pd.DataFrame(mov["spatial_clusters"]), width='stretch')
 
 # ----------------- TAB 6: FORENSIC TIMELINE -----------------
 with tab6:
@@ -329,7 +334,7 @@ with tab8:
 
     metric_img_path = REPORTS_DIR / "evaluation_metrics.png"
     if metric_img_path.exists():
-        st.image(str(metric_img_path), use_container_width=True)
+        st.image(str(metric_img_path), width='stretch')
 
     if "evaluation" in DATA:
         ev = DATA["evaluation"]
