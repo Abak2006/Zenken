@@ -1,0 +1,217 @@
+{
+  "total_geo_events": 55,
+  "baseline_centroid": {
+    "lat": 37.81948,
+    "lon": -122.44411
+  },
+  "final_days_deviation_events": [
+    {
+      "id": "CDR-1020",
+      "source": "cell_tower",
+      "venue_name": "Shoreline Sausalito Sector",
+      "timestamp": "2026-03-12T11:45:00+00:00",
+      "lat": 37.855,
+      "lon": -122.48,
+      "dist_from_routine_m": 5052.86,
+      "is_significant_deviation": false
+    },
+    {
+      "id": "PH-008",
+      "source": "photo_exif",
+      "venue_name": "Pacific Horizon Diner",
+      "timestamp": "2026-03-12T16:00:00+00:00",
+      "lat": 37.854,
+      "lon": -122.4789,
+      "dist_from_routine_m": 4905.71,
+      "is_significant_deviation": false
+    },
+    {
+      "id": "CHK-0524",
+      "source": "checkin",
+      "venue_name": "Pacific Horizon Diner",
+      "timestamp": "2026-03-12T16:30:00+00:00",
+      "lat": 37.854,
+      "lon": -122.4789,
+      "dist_from_routine_m": 4905.71,
+      "is_significant_deviation": false
+    },
+    {
+      "id": "CDR-1021",
+      "source": "cell_tower",
+      "venue_name": "Shoreline Sausalito Sector",
+      "timestamp": "2026-03-13T19:30:00+00:00",
+      "lat": 37.855,
+      "lon": -122.48,
+      "dist_from_routine_m": 5052.86,
+      "is_significant_deviation": false
+    },
+    {
+      "id": "CDR-1022",
+      "source": "cell_tower",
+      "venue_name": "Shoreline Sausalito Sector",
+      "timestamp": "2026-03-14T16:50:00+00:00",
+      "lat": 37.855,
+      "lon": -122.48,
+      "dist_from_routine_m": 5052.86,
+      "is_significant_deviation": false
+    },
+    {
+      "id": "CHK-0525",
+      "source": "checkin",
+      "venue_name": "Pacific Horizon Diner",
+      "timestamp": "2026-03-14T17:15:00+00:00",
+      "lat": 37.854,
+      "lon": -122.4789,
+      "dist_from_routine_m": 4905.71,
+      "is_significant_deviation": false
+    },
+    {
+      "id": "PH-009",
+      "source": "photo_exif",
+      "venue_name": "Whispering Pines Overlook",
+      "timestamp": "2026-03-14T21:00:00+00:00",
+      "lat": 37.8924,
+      "lon": -122.5719,
+      "dist_from_routine_m": 13842.3,
+      "is_significant_deviation": true
+    },
+    {
+      "id": "CHK-0526",
+      "source": "checkin",
+      "venue_name": "Whispering Pines Overlook",
+      "timestamp": "2026-03-14T21:05:00+00:00",
+      "lat": 37.8924,
+      "lon": -122.5719,
+      "dist_from_routine_m": 13842.3,
+      "is_significant_deviation": true
+    },
+    {
+      "id": "CDR-1023",
+      "source": "cell_tower",
+      "venue_name": "Whispering Pines Ridge Sector",
+      "timestamp": "2026-03-14T21:45:00+00:00",
+      "lat": 37.893,
+      "lon": -122.573,
+      "dist_from_routine_m": 13959.62,
+      "is_significant_deviation": true
+    }
+  ],
+  "spatial_clusters": [
+    {
+      "cluster_id": 0,
+      "event_count": 15,
+      "venues": [
+        "Bayview Arts Institute - Fine Arts Hall",
+        "Marina Arts Sector"
+      ],
+      "center_lat": 37.8019,
+      "center_lon": -122.42195,
+      "first_seen": "2026-01-30T19:17:00+00:00",
+      "last_seen": "2026-03-10T14:10:00+00:00"
+    },
+    {
+      "cluster_id": 1,
+      "event_count": 4,
+      "venues": [
+        "Bayside Living Apartments (Maya's Residence)"
+      ],
+      "center_lat": 37.80809,
+      "center_lon": -122.41715,
+      "first_seen": "2026-02-01T08:01:00+00:00",
+      "last_seen": "2026-02-24T08:07:00+00:00"
+    },
+    {
+      "cluster_id": 2,
+      "event_count": 7,
+      "venues": [
+        "Redwood Ridge Scenic Park"
+      ],
+      "center_lat": 37.8715,
+      "center_lon": -122.48907,
+      "first_seen": "2026-02-03T17:00:00+00:00",
+      "last_seen": "2026-02-20T14:10:00+00:00"
+    },
+    {
+      "cluster_id": 3,
+      "event_count": 17,
+      "venues": [
+        "Harbor Wharf Sector",
+        "Harbor Light Cafe"
+      ],
+      "center_lat": 37.80564,
+      "center_lon": -122.43443,
+      "first_seen": "2026-02-07T10:48:00+00:00",
+      "last_seen": "2026-02-28T16:48:00+00:00"
+    },
+    {
+      "cluster_id": 4,
+      "event_count": 5,
+      "venues": [
+        "Whispering Pines Overlook",
+        "Whispering Pines Ridge Sector"
+      ],
+      "center_lat": 37.89252,
+      "center_lon": -122.57212,
+      "first_seen": "2026-02-18T18:00:00+00:00",
+      "last_seen": "2026-03-14T21:45:00+00:00"
+    },
+    {
+      "cluster_id": 5,
+      "event_count": 7,
+      "venues": [
+        "Pacific Horizon Diner",
+        "Shoreline Sausalito Sector"
+      ],
+      "center_lat": 37.85443,
+      "center_lon": -122.47937,
+      "first_seen": "2026-03-02T19:00:00+00:00",
+      "last_seen": "2026-03-14T17:15:00+00:00"
+    }
+  ],
+  "ranked_candidate_lkl": [
+    {
+      "rank": 1,
+      "candidate_name": "Whispering Pines Ridge Sector",
+      "latitude": 37.893,
+      "longitude": -122.573,
+      "timestamp": "2026-03-14T21:45:00+00:00",
+      "source_evidence": "cell_tower",
+      "evidence_id": "CDR-1023",
+      "confidence": 0.94,
+      "rationale": "Chronologically terminal cellular ping and check-in signal recorded before device powered off."
+    },
+    {
+      "rank": 2,
+      "candidate_name": "Pacific Horizon Diner / Shoreline",
+      "latitude": 37.854,
+      "longitude": -122.4789,
+      "timestamp": "2026-03-14T17:15:00Z",
+      "source_evidence": "checkin & call_sector",
+      "evidence_id": "CHK-0529",
+      "confidence": 0.68,
+      "rationale": "Intermediate rendezvous point with associate Kaelen Vance prior to ridge transit."
+    },
+    {
+      "rank": 3,
+      "candidate_name": "Redwood Ridge Scenic Park",
+      "latitude": 37.8715,
+      "longitude": -122.4891,
+      "timestamp": "2026-03-08T18:00:00Z",
+      "source_evidence": "photo_exif",
+      "evidence_id": "PH-004",
+      "confidence": 0.25,
+      "rationale": "Routine photography site; high historical baseline frequency but low recent relevance."
+    }
+  ],
+  "top_estimated_lkl": {
+    "rank": 1,
+    "candidate_name": "Whispering Pines Ridge Sector",
+    "latitude": 37.893,
+    "longitude": -122.573,
+    "timestamp": "2026-03-14T21:45:00+00:00",
+    "source_evidence": "cell_tower",
+    "evidence_id": "CDR-1023",
+    "confidence": 0.94,
+    "rationale": "Chronologically terminal cellular ping and check-in signal recorded before device powered off."
+  }
+}

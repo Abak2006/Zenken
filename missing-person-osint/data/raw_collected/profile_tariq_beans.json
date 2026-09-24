@@ -1,0 +1,18 @@
+{
+  "account_id": "acc_assoc_09",
+  "account_type": "associate",
+  "avatar_image": "avatar_tariq_beans.jpg",
+  "bio": "Barista / Daily Acquaintance | Creative & Student | Contact: tariq.mansoor@fictional-domain.org",
+  "display_name": "Tariq Mansoor",
+  "email": "tariq.mansoor@fictional-domain.org",
+  "followers_count": 185,
+  "following_count": 105,
+  "handle": "tariq_beans",
+  "is_private": true,
+  "is_target_identity": false,
+  "joined_date": "2023-05-20",
+  "phone": "+1-555-0184",
+  "platform": "InstaPhoto",
+  "relationship_strength": 0.4,
+  "relationship_to_target": "Barista / Daily Acquaintance"
+}

@@ -1,0 +1,50 @@
+source,target,relationship_type,weight,context
+mayalin_art,chloe_creative,FOLLOWS,1.0,mutual_social_circle
+chloe_creative,mayalin_art,FOLLOWS,1.0,mutual_social_circle
+mayalin_art,david_lin_tech,FOLLOWS,1.0,mutual_social_circle
+david_lin_tech,mayalin_art,FOLLOWS,1.0,mutual_social_circle
+mayalin_art,prof_vance_art,FOLLOWS,1.0,mutual_social_circle
+prof_vance_art,mayalin_art,FOLLOWS,1.0,mutual_social_circle
+mayalin_art,elena_prints,FOLLOWS,1.0,mutual_social_circle
+elena_prints,mayalin_art,FOLLOWS,1.0,mutual_social_circle
+mayalin_art,sara_chen_photo,FOLLOWS,1.0,mutual_social_circle
+sara_chen_photo,mayalin_art,FOLLOWS,1.0,mutual_social_circle
+mayalin_art,tariq_beans,FOLLOWS,1.0,mutual_social_circle
+tariq_beans,mayalin_art,FOLLOWS,1.0,mutual_social_circle
+mayalin_art,hannah_w_lens,FOLLOWS,1.0,mutual_social_circle
+hannah_w_lens,mayalin_art,FOLLOWS,1.0,mutual_social_circle
+mayalin_art,zoe_p_design,FOLLOWS,1.0,mutual_social_circle
+zoe_p_design,mayalin_art,FOLLOWS,1.0,mutual_social_circle
+m_lin99,chloe_creative,FOLLOWS,0.9,casual_social_circle
+m_lin99,david_lin_tech,FOLLOWS,0.9,casual_social_circle
+m_lin99,elena_prints,FOLLOWS,0.9,casual_social_circle
+m_lin99,lucas_r_sound,FOLLOWS,0.9,casual_social_circle
+m.shadow_7,kaelen_v,FOLLOWS,0.85,clandestine_contact
+kaelen_v,m.shadow_7,FOLLOWS,0.85,clandestine_contact
+kaelen_v,mayalin_art,FOLLOWS,0.7,solicitation
+mayalin_travels,mayalin_art,FOLLOWS,0.2,impersonator
+mayalin_art,chloe_creative,MENTIONS,0.6,Post POST-0001 mention
+mayalin_art,prof_vance_art,MENTIONS,0.6,Post POST-0002 mention
+mayalin_art,david_lin_tech,MENTIONS,0.6,Post POST-0004 mention
+m_lin99,prof_vance_art,MENTIONS,0.6,Post POST-0005 mention
+mayalin_art,prof_vance_art,MENTIONS,0.6,Post POST-0006 mention
+mayalin_art,prof_vance_art,MENTIONS,0.6,Post POST-0008 mention
+mayalin_art,elena_prints,MENTIONS,0.6,Post POST-0010 mention
+mayalin_art,sara_chen_photo,MENTIONS,0.6,Post POST-0010 mention
+m_lin99,chloe_creative,MENTIONS,0.6,Post POST-0011 mention
+mayalin_art,elena_prints,MENTIONS,0.6,Post POST-0013 mention
+mayalin_art,sara_chen_photo,MENTIONS,0.6,Post POST-0013 mention
+lucas_r_sound,mayalin_art,MENTIONS,0.6,Post POST-0020 mention
+m_lin99,chloe_creative,MENTIONS,0.6,Post POST-0014 mention
+m_lin99,prof_vance_art,MENTIONS,0.6,Post POST-0015 mention
+mayalin_art,prof_vance_art,MENTIONS,0.6,Post POST-0017 mention
+m_lin99,chloe_creative,MENTIONS,0.6,Post POST-0018 mention
+m_lin99,tariq_beans,MENTIONS,0.6,Post POST-0019 mention
+kaelen_v,mayalin_art,MENTIONS,0.6,Post POST-0021 mention
+mayalin_art,kaelen_v,MENTIONS,0.6,Post POST-0024 mention
+marcus_c_drift,liam_drift_auto,MENTIONS,0.6,Post POST-0030 mention
+chloe_creative,mayalin_art,COMMENTED,0.9,Stunning composition Maya!
+prof_vance_art,mayalin_art,COMMENTED,0.75,Bring this print to Tuesday critique.
+lucas_r_sound,mayalin_art,COMMENTED,0.6,Answer your DMs.
+elena_prints,m_lin99,COMMENTED,0.8,Saved a space in drying rack 2 for you.
+david_lin_tech,mayalin_art,COMMENTED,0.95,Mom said call her this weekend!

@@ -1,0 +1,18 @@
+{
+  "account_id": "acc_assoc_14",
+  "account_type": "associate",
+  "avatar_image": "avatar_bayview_campus_safety.jpg",
+  "bio": "Campus Security Liaison | Creative & Student | Contact: officer.brandon.miller@fictional-domain.org",
+  "display_name": "Officer Brandon Miller",
+  "email": "officer.brandon.miller@fictional-domain.org",
+  "followers_count": 1586,
+  "following_count": 422,
+  "handle": "bayview_campus_safety",
+  "is_private": false,
+  "is_target_identity": false,
+  "joined_date": "2023-05-20",
+  "phone": "+1-555-0105",
+  "platform": "ChirpNet",
+  "relationship_strength": 0.2,
+  "relationship_to_target": "Campus Security Liaison"
+}

@@ -1,0 +1,16 @@
+{
+  "account_id": "acc_noise_04",
+  "account_type": "bystander",
+  "avatar_image": "avatar_noise_4.jpg",
+  "bio": "Monitored real-time firmware",
+  "display_name": "James Howard",
+  "email": "joshua35@example-synthetic.org",
+  "followers_count": 53,
+  "following_count": 244,
+  "handle": "joshua35_bay",
+  "is_private": false,
+  "is_target_identity": false,
+  "joined_date": "2024-11-02",
+  "phone": "+1-555-0174",
+  "platform": "ChirpNet"
+}

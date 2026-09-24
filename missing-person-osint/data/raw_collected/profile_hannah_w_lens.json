@@ -1,0 +1,18 @@
+{
+  "account_id": "acc_assoc_11",
+  "account_type": "associate",
+  "avatar_image": "avatar_hannah_w_lens.jpg",
+  "bio": "Fellow Photographer | Creative & Student | Contact: hannah.ward@fictional-domain.org",
+  "display_name": "Hannah Ward",
+  "email": "hannah.ward@fictional-domain.org",
+  "followers_count": 596,
+  "following_count": 348,
+  "handle": "hannah_w_lens",
+  "is_private": false,
+  "is_target_identity": false,
+  "joined_date": "2023-05-20",
+  "phone": "+1-555-0138",
+  "platform": "InstaPhoto",
+  "relationship_strength": 0.45,
+  "relationship_to_target": "Fellow Photographer"
+}

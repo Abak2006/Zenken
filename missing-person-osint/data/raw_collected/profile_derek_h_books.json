@@ -1,0 +1,18 @@
+{
+  "account_id": "acc_assoc_12",
+  "account_type": "associate",
+  "avatar_image": "avatar_derek_h_books.jpg",
+  "bio": "Campus Bookstore Clerk | Creative & Student | Contact: derek.hayes@fictional-domain.org",
+  "display_name": "Derek Hayes",
+  "email": "derek.hayes@fictional-domain.org",
+  "followers_count": 1352,
+  "following_count": 103,
+  "handle": "derek_h_books",
+  "is_private": false,
+  "is_target_identity": false,
+  "joined_date": "2023-05-20",
+  "phone": "+1-555-0149",
+  "platform": "ChirpNet",
+  "relationship_strength": 0.25,
+  "relationship_to_target": "Campus Bookstore Clerk"
+}

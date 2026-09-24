@@ -1,0 +1,18 @@
+{
+  "account_id": "acc_assoc_03",
+  "account_type": "associate",
+  "avatar_image": "avatar_lucas_r_sound.jpg",
+  "bio": "Ex-Partner | Creative & Student | Contact: lucas.reed@fictional-domain.org",
+  "display_name": "Lucas Reed",
+  "email": "lucas.reed@fictional-domain.org",
+  "followers_count": 683,
+  "following_count": 215,
+  "handle": "lucas_r_sound",
+  "is_private": false,
+  "is_target_identity": false,
+  "joined_date": "2023-05-20",
+  "phone": "+1-555-0155",
+  "platform": "InstaPhoto",
+  "relationship_strength": 0.65,
+  "relationship_to_target": "Ex-Partner"
+}

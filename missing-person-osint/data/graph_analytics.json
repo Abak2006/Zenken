@@ -1,0 +1,534 @@
+{
+  "total_nodes": 103,
+  "total_edges": 206,
+  "density": 0.0268,
+  "top_degree_centrality": [
+    {
+      "node": "ACC_mayalin_art",
+      "score": 0.402,
+      "label": "@mayalin_art"
+    },
+    {
+      "node": "ACC_m_lin99",
+      "score": 0.2059,
+      "label": "@m_lin99"
+    },
+    {
+      "node": "ACC_m.shadow_7",
+      "score": 0.098,
+      "label": "@m.shadow_7"
+    },
+    {
+      "node": "ACC_prof_vance_art",
+      "score": 0.0882,
+      "label": "@prof_vance_art"
+    },
+    {
+      "node": "ACC_chloe_creative",
+      "score": 0.0784,
+      "label": "@chloe_creative"
+    },
+    {
+      "node": "PERSON_MAYA_LIN",
+      "score": 0.0588,
+      "label": "Maya Lin"
+    },
+    {
+      "node": "ACC_lucas_r_sound",
+      "score": 0.0588,
+      "label": "@lucas_r_sound"
+    },
+    {
+      "node": "ACC_kaelen_v",
+      "score": 0.049,
+      "label": "@kaelen_v"
+    },
+    {
+      "node": "ACC_elena_prints",
+      "score": 0.049,
+      "label": "@elena_prints"
+    },
+    {
+      "node": "ACC_pixel_maya",
+      "score": 0.0392,
+      "label": "@pixel_maya"
+    }
+  ],
+  "top_betweenness_centrality": [
+    {
+      "node": "ACC_mayalin_art",
+      "score": 0.4452,
+      "label": "@mayalin_art"
+    },
+    {
+      "node": "ACC_m_lin99",
+      "score": 0.2347,
+      "label": "@m_lin99"
+    },
+    {
+      "node": "ACC_m.shadow_7",
+      "score": 0.076,
+      "label": "@m.shadow_7"
+    },
+    {
+      "node": "ACC_lucas_r_sound",
+      "score": 0.0631,
+      "label": "@lucas_r_sound"
+    },
+    {
+      "node": "ACC_mayalin_travels",
+      "score": 0.06,
+      "label": "@mayalin_travels"
+    },
+    {
+      "node": "ACC_chloe_creative",
+      "score": 0.0461,
+      "label": "@chloe_creative"
+    },
+    {
+      "node": "PERSON_MAYA_LIN",
+      "score": 0.0441,
+      "label": "Maya Lin"
+    },
+    {
+      "node": "POST_POST-0001",
+      "score": 0.0351,
+      "label": "Post POST-0001"
+    },
+    {
+      "node": "ACC_david_lin_tech",
+      "score": 0.0328,
+      "label": "@david_lin_tech"
+    },
+    {
+      "node": "POST_POST-0010",
+      "score": 0.0227,
+      "label": "Post POST-0010"
+    }
+  ],
+  "communities_count": 17,
+  "communities": [
+    {
+      "community_id": 0,
+      "size": 28,
+      "members": [
+        "POST_POST-0008",
+        "ACC_mayalin_art",
+        "POST_POST-0009",
+        "POST_POST-0017",
+        "LOC_venue_02",
+        "POST_POST-0002",
+        "POST_POST-0004",
+        "LOC_venue_03",
+        "ACC_elena_prints",
+        "ACC_david_lin_tech",
+        "PERSON_SARA_CHEN",
+        "PERSON_HANNAH_WARD",
+        "POST_POST-0010",
+        "PERSON_ELENA_ROSTOVA",
+        "PERSON_ZOE_PATEL",
+        "POST_POST-0007",
+        "POST_POST-0012",
+        "ACC_hannah_w_lens",
+        "PHOTO_PH-001",
+        "PERSON_PROF_ALISTAIR_VANCE",
+        "ACC_prof_vance_art",
+        "POST_POST-0026",
+        "ACC_zoe_p_design",
+        "PHOTO_PH-002",
+        "POST_POST-0003",
+        "POST_POST-0006",
+        "ACC_sara_chen_photo",
+        "POST_POST-0013"
+      ],
+      "sample_labels": [
+        "Post POST-0008",
+        "@mayalin_art",
+        "Post POST-0009",
+        "Post POST-0017",
+        "Harbor Light Cafe",
+        "Post POST-0002"
+      ]
+    },
+    {
+      "community_id": 1,
+      "size": 18,
+      "members": [
+        "PHOTO_PH-004",
+        "PERSON_MAYA_LIN",
+        "PHOTO_PH-003",
+        "POST_POST-0023",
+        "PHOTO_PH-009",
+        "ACC_kaelen_v",
+        "PHONE_15550188",
+        "ACC_pixel_maya",
+        "LOC_venue_01",
+        "POST_POST-0024",
+        "LOC_venue_05",
+        "POST_POST-0027",
+        "ACC_m.shadow_7",
+        "PHOTO_PH-007",
+        "PHOTO_PH-005",
+        "PHONE_15550199",
+        "PERSON_KAELEN_VANCE",
+        "POST_POST-0021"
+      ],
+      "sample_labels": [
+        "PH-004",
+        "Maya Lin",
+        "PH-003",
+        "Post POST-0023",
+        "PH-009",
+        "@kaelen_v"
+      ]
+    },
+    {
+      "community_id": 2,
+      "size": 16,
+      "members": [
+        "ACC_m_lin99",
+        "POST_POST-0018",
+        "POST_POST-0019",
+        "POST_POST-0022",
+        "POST_POST-0015",
+        "POST_POST-0016",
+        "ACC_tariq_beans",
+        "POST_POST-0011",
+        "POST_POST-0005",
+        "POST_POST-0014",
+        "ACC_chloe_creative",
+        "POST_POST-0001",
+        "LOC_venue_04",
+        "POST_POST-0031",
+        "POST_POST-0025",
+        "PERSON_TARIQ_MANSOOR"
+      ],
+      "sample_labels": [
+        "@m_lin99",
+        "Post POST-0018",
+        "Post POST-0019",
+        "Post POST-0022",
+        "Post POST-0015",
+        "Post POST-0016"
+      ]
+    },
+    {
+      "community_id": 3,
+      "size": 6,
+      "members": [
+        "PHONE_15550155",
+        "LOC_venue_09",
+        "POST_POST-0028",
+        "ACC_lucas_r_sound",
+        "PERSON_LUCAS_REED",
+        "POST_POST-0020"
+      ],
+      "sample_labels": [
+        "+1-555-0155",
+        "SFO Airport Marriott Gateway",
+        "Post POST-0028",
+        "@lucas_r_sound",
+        "Lucas Reed",
+        "Post POST-0020"
+      ]
+    },
+    {
+      "community_id": 4,
+      "size": 6,
+      "members": [
+        "ACC_lrobinson_bay",
+        "POST_POST-0030",
+        "PERSON_MARCUS_COLE",
+        "ACC_marcus_c_drift",
+        "PERSON_LIAM_O'CONNOR",
+        "ACC_liam_drift_auto"
+      ],
+      "sample_labels": [
+        "@lrobinson_bay",
+        "Post POST-0030",
+        "Marcus Cole",
+        "@marcus_c_drift",
+        "Liam O'Connor",
+        "@liam_drift_auto"
+      ]
+    },
+    {
+      "community_id": 5,
+      "size": 5,
+      "members": [
+        "PHONE_15550121",
+        "PHONE_15550144",
+        "PHONE_15550133",
+        "PERSON_CHLOE_SIMMONS",
+        "PERSON_DAVID_LIN"
+      ],
+      "sample_labels": [
+        "+1-555-0121",
+        "+1-555-0144",
+        "+1-555-0133",
+        "Chloe Simmons",
+        "David Lin"
+      ]
+    },
+    {
+      "community_id": 6,
+      "size": 5,
+      "members": [
+        "ACC_mayalin_travels",
+        "PHOTO_PH-010",
+        "LOC_venue_08",
+        "PERSON_MAYA_L_TRAVEL_ESCAPES",
+        "POST_POST-0029"
+      ],
+      "sample_labels": [
+        "@mayalin_travels",
+        "PH-010",
+        "Silver Sands Motel",
+        "Maya L. Travel Escapes",
+        "Post POST-0029"
+      ]
+    },
+    {
+      "community_id": 7,
+      "size": 3,
+      "members": [
+        "PHOTO_PH-008",
+        "LOC_venue_06",
+        "PHOTO_PH-006"
+      ],
+      "sample_labels": [
+        "PH-008",
+        "Pacific Horizon Diner",
+        "PH-006"
+      ]
+    },
+    {
+      "community_id": 8,
+      "size": 2,
+      "members": [
+        "ACC_julian_g_sound",
+        "PERSON_JULIAN_GOMEZ"
+      ],
+      "sample_labels": [
+        "@julian_g_sound",
+        "Julian Gomez"
+      ]
+    },
+    {
+      "community_id": 9,
+      "size": 2,
+      "members": [
+        "PERSON_DEREK_HAYES",
+        "ACC_derek_h_books"
+      ],
+      "sample_labels": [
+        "Derek Hayes",
+        "@derek_h_books"
+      ]
+    },
+    {
+      "community_id": 10,
+      "size": 2,
+      "members": [
+        "PERSON_OFFICER_BRANDON_MILLER",
+        "ACC_bayview_campus_safety"
+      ],
+      "sample_labels": [
+        "Officer Brandon Miller",
+        "@bayview_campus_safety"
+      ]
+    },
+    {
+      "community_id": 11,
+      "size": 2,
+      "members": [
+        "ACC_johnsonjoshua_bay",
+        "PERSON_NOAH_RHODES"
+      ],
+      "sample_labels": [
+        "@johnsonjoshua_bay",
+        "Noah Rhodes"
+      ]
+    },
+    {
+      "community_id": 12,
+      "size": 2,
+      "members": [
+        "PERSON_JONATHAN_JOHNSON",
+        "ACC_fjohnson_bay"
+      ],
+      "sample_labels": [
+        "Jonathan Johnson",
+        "@fjohnson_bay"
+      ]
+    },
+    {
+      "community_id": 13,
+      "size": 2,
+      "members": [
+        "PERSON_JAMES_HOWARD",
+        "ACC_joshua35_bay"
+      ],
+      "sample_labels": [
+        "James Howard",
+        "@joshua35_bay"
+      ]
+    },
+    {
+      "community_id": 14,
+      "size": 2,
+      "members": [
+        "ACC_blairamanda_bay",
+        "PERSON_JAMIE_ARNOLD"
+      ],
+      "sample_labels": [
+        "@blairamanda_bay",
+        "Jamie Arnold"
+      ]
+    },
+    {
+      "community_id": 15,
+      "size": 1,
+      "members": [
+        "LOC_venue_07"
+      ],
+      "sample_labels": [
+        "Metro Transit Central Hub"
+      ]
+    },
+    {
+      "community_id": 16,
+      "size": 1,
+      "members": [
+        "LOC_venue_10"
+      ],
+      "sample_labels": [
+        "Cloverdale Rest Stop"
+      ]
+    }
+  ],
+  "last_72h_subgraph": {
+    "node_count": 62,
+    "edge_count": 122,
+    "nodes": [
+      "PERSON_MAYA_LIN",
+      "PERSON_CHLOE_SIMMONS",
+      "PERSON_DAVID_LIN",
+      "PERSON_LUCAS_REED",
+      "PERSON_PROF_ALISTAIR_VANCE",
+      "PERSON_KAELEN_VANCE",
+      "PERSON_ELENA_ROSTOVA",
+      "PERSON_MARCUS_COLE",
+      "PERSON_SARA_CHEN",
+      "PERSON_TARIQ_MANSOOR",
+      "PERSON_JULIAN_GOMEZ",
+      "PERSON_HANNAH_WARD",
+      "PERSON_DEREK_HAYES",
+      "PERSON_ZOE_PATEL",
+      "PERSON_OFFICER_BRANDON_MILLER",
+      "PERSON_LIAM_O'CONNOR",
+      "PERSON_MAYA_L_TRAVEL_ESCAPES",
+      "PERSON_NOAH_RHODES",
+      "PERSON_JONATHAN_JOHNSON",
+      "PERSON_JAMES_HOWARD",
+      "PERSON_JAMIE_ARNOLD",
+      "ACC_mayalin_art",
+      "ACC_m_lin99",
+      "ACC_pixel_maya",
+      "ACC_m.shadow_7",
+      "ACC_chloe_creative",
+      "ACC_david_lin_tech",
+      "ACC_lucas_r_sound",
+      "ACC_prof_vance_art",
+      "ACC_kaelen_v",
+      "ACC_elena_prints",
+      "ACC_marcus_c_drift",
+      "ACC_sara_chen_photo",
+      "ACC_tariq_beans",
+      "ACC_julian_g_sound",
+      "ACC_hannah_w_lens",
+      "ACC_derek_h_books",
+      "ACC_zoe_p_design",
+      "ACC_bayview_campus_safety",
+      "ACC_liam_drift_auto",
+      "ACC_mayalin_travels",
+      "ACC_johnsonjoshua_bay",
+      "ACC_fjohnson_bay",
+      "ACC_lrobinson_bay",
+      "ACC_joshua35_bay",
+      "ACC_blairamanda_bay",
+      "PHONE_15550144",
+      "PHONE_15550199",
+      "PHONE_15550188",
+      "PHONE_15550121",
+      "PHONE_15550133",
+      "PHONE_15550155",
+      "LOC_venue_05",
+      "LOC_venue_06",
+      "LOC_venue_09",
+      "POST_POST-0026",
+      "POST_POST-0029",
+      "POST_POST-0028",
+      "POST_POST-0030",
+      "POST_POST-0027",
+      "PHOTO_PH-008",
+      "PHOTO_PH-009"
+    ]
+  },
+  "detected_communication_anomalies": [
+    {
+      "type": "NEW_COMMUNICATION_LINK",
+      "timestamp": "2026-03-10T14:10:00+00:00",
+      "caller": "+1-555-0199",
+      "receiver": "+1-555-0188",
+      "cell_tower": "Marina Arts Sector",
+      "duration_sec": 185,
+      "notes": "Unprecedented communication partner detected after routine baseline period"
+    },
+    {
+      "type": "NEW_COMMUNICATION_LINK",
+      "timestamp": "2026-03-12T11:45:00+00:00",
+      "caller": "+1-555-0199",
+      "receiver": "+1-555-0188",
+      "cell_tower": "Shoreline Sausalito Sector",
+      "duration_sec": 310,
+      "notes": "Unprecedented communication partner detected after routine baseline period"
+    },
+    {
+      "type": "NEW_COMMUNICATION_LINK",
+      "timestamp": "2026-03-13T19:30:00+00:00",
+      "caller": "+1-555-0199",
+      "receiver": "+1-555-0188",
+      "cell_tower": "Shoreline Sausalito Sector",
+      "duration_sec": 95,
+      "notes": "Unprecedented communication partner detected after routine baseline period"
+    },
+    {
+      "type": "NEW_COMMUNICATION_LINK",
+      "timestamp": "2026-03-14T16:50:00+00:00",
+      "caller": "+1-555-0199",
+      "receiver": "+1-555-0188",
+      "cell_tower": "Shoreline Sausalito Sector",
+      "duration_sec": 240,
+      "notes": "Unprecedented communication partner detected after routine baseline period"
+    },
+    {
+      "type": "NEW_COMMUNICATION_LINK",
+      "timestamp": "2026-03-14T19:10:00+00:00",
+      "caller": "+1-555-0155",
+      "receiver": "+1-555-0129",
+      "cell_tower": "Airport Gateway Sector",
+      "duration_sec": 340,
+      "notes": "Unprecedented communication partner detected after routine baseline period"
+    },
+    {
+      "type": "NEW_COMMUNICATION_LINK",
+      "timestamp": "2026-03-14T21:45:00+00:00",
+      "caller": "+1-555-0199",
+      "receiver": "+1-555-0188",
+      "cell_tower": "Whispering Pines Ridge Sector",
+      "duration_sec": 0,
+      "notes": "Unprecedented communication partner detected after routine baseline period"
+    }
+  ]
+}

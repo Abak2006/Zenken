@@ -1,0 +1,18 @@
+{
+  "account_id": "acc_assoc_04",
+  "account_type": "associate",
+  "avatar_image": "avatar_prof_vance_art.jpg",
+  "bio": "Academic Mentor / Faculty | Creative & Student | Contact: prof..alistair.vance@fictional-domain.org",
+  "display_name": "Prof. Alistair Vance",
+  "email": "prof..alistair.vance@fictional-domain.org",
+  "followers_count": 577,
+  "following_count": 161,
+  "handle": "prof_vance_art",
+  "is_private": false,
+  "is_target_identity": false,
+  "joined_date": "2023-05-20",
+  "phone": "+1-555-0162",
+  "platform": "ChirpNet",
+  "relationship_strength": 0.75,
+  "relationship_to_target": "Academic Mentor / Faculty"
+}

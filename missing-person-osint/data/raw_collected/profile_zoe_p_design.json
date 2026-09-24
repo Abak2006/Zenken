@@ -1,0 +1,18 @@
+{
+  "account_id": "acc_assoc_13",
+  "account_type": "associate",
+  "avatar_image": "avatar_zoe_p_design.jpg",
+  "bio": "Design Student | Creative & Student | Contact: zoe.patel@fictional-domain.org",
+  "display_name": "Zoe Patel",
+  "email": "zoe.patel@fictional-domain.org",
+  "followers_count": 1269,
+  "following_count": 191,
+  "handle": "zoe_p_design",
+  "is_private": true,
+  "is_target_identity": false,
+  "joined_date": "2023-05-20",
+  "phone": "+1-555-0167",
+  "platform": "InstaPhoto",
+  "relationship_strength": 0.42,
+  "relationship_to_target": "Design Student"
+}

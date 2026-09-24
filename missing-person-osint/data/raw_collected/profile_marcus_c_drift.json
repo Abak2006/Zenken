@@ -1,0 +1,18 @@
+{
+  "account_id": "acc_assoc_07",
+  "account_type": "associate",
+  "avatar_image": "avatar_marcus_c_drift.jpg",
+  "bio": "Student Acquaintance | Creative & Student | Contact: marcus.cole@fictional-domain.org",
+  "display_name": "Marcus Cole",
+  "email": "marcus.cole@fictional-domain.org",
+  "followers_count": 1236,
+  "following_count": 134,
+  "handle": "marcus_c_drift",
+  "is_private": false,
+  "is_target_identity": false,
+  "joined_date": "2023-05-20",
+  "phone": "+1-555-0112",
+  "platform": "InstaPhoto",
+  "relationship_strength": 0.35,
+  "relationship_to_target": "Student Acquaintance"
+}

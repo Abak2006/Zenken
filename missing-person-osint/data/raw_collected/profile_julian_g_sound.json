@@ -1,0 +1,18 @@
+{
+  "account_id": "acc_assoc_10",
+  "account_type": "associate",
+  "avatar_image": "avatar_julian_g_sound.jpg",
+  "bio": "Lucas's Friend | Creative & Student | Contact: julian.gomez@fictional-domain.org",
+  "display_name": "Julian Gomez",
+  "email": "julian.gomez@fictional-domain.org",
+  "followers_count": 311,
+  "following_count": 201,
+  "handle": "julian_g_sound",
+  "is_private": false,
+  "is_target_identity": false,
+  "joined_date": "2023-05-20",
+  "phone": "+1-555-0129",
+  "platform": "ChirpNet",
+  "relationship_strength": 0.3,
+  "relationship_to_target": "Lucas's Friend"
+}

@@ -1,0 +1,16 @@
+{
+  "account_id": "acc_noise_01",
+  "account_type": "bystander",
+  "avatar_image": "avatar_noise_1.jpg",
+  "bio": "Quality-focused background parallelism",
+  "display_name": "Noah Rhodes",
+  "email": "johnsonjoshua@example-synthetic.org",
+  "followers_count": 264,
+  "following_count": 106,
+  "handle": "johnsonjoshua_bay",
+  "is_private": false,
+  "is_target_identity": false,
+  "joined_date": "2024-11-02",
+  "phone": "+1-555-0171",
+  "platform": "ChirpNet"
+}

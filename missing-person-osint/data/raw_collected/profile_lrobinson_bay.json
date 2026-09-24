@@ -1,0 +1,16 @@
+{
+  "account_id": "acc_noise_03",
+  "account_type": "bystander",
+  "avatar_image": "avatar_noise_3.jpg",
+  "bio": "Diverse tangible interface",
+  "display_name": "Sean Blake",
+  "email": "lrobinson@example-synthetic.org",
+  "followers_count": 192,
+  "following_count": 257,
+  "handle": "lrobinson_bay",
+  "is_private": false,
+  "is_target_identity": false,
+  "joined_date": "2024-11-02",
+  "phone": "+1-555-0173",
+  "platform": "ChirpNet"
+}

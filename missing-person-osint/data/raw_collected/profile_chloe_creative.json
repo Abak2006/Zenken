@@ -1,0 +1,18 @@
+{
+  "account_id": "acc_assoc_01",
+  "account_type": "associate",
+  "avatar_image": "avatar_chloe_creative.jpg",
+  "bio": "Roommate & Close Friend | Creative & Student | Contact: chloe.simmons@fictional-domain.org",
+  "display_name": "Chloe Simmons",
+  "email": "chloe.simmons@fictional-domain.org",
+  "followers_count": 1429,
+  "following_count": 147,
+  "handle": "chloe_creative",
+  "is_private": true,
+  "is_target_identity": false,
+  "joined_date": "2023-05-20",
+  "phone": "+1-555-0121",
+  "platform": "InstaPhoto",
+  "relationship_strength": 0.95,
+  "relationship_to_target": "Roommate & Close Friend"
+}

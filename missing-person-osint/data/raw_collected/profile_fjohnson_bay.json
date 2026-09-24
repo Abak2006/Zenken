@@ -1,0 +1,16 @@
+{
+  "account_id": "acc_noise_02",
+  "account_type": "bystander",
+  "avatar_image": "avatar_noise_2.jpg",
+  "bio": "Exclusive transitional projection",
+  "display_name": "Jonathan Johnson",
+  "email": "fjohnson@example-synthetic.org",
+  "followers_count": 279,
+  "following_count": 200,
+  "handle": "fjohnson_bay",
+  "is_private": false,
+  "is_target_identity": false,
+  "joined_date": "2024-11-02",
+  "phone": "+1-555-0172",
+  "platform": "ChirpNet"
+}

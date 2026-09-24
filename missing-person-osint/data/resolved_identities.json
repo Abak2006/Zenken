@@ -1,0 +1,414 @@
+{
+  "total_profiles_analyzed": 25,
+  "resolved_clusters_count": 21,
+  "multi_account_clusters_count": 2,
+  "confirmed_links_count": 5,
+  "ambiguous_links_count": 5,
+  "clusters": [
+    {
+      "canonical_id": "PERSON_MAYA_LIN",
+      "canonical_name": "Maya Lin",
+      "accounts": [
+        "m.shadow_7",
+        "m_lin99",
+        "mayalin_art",
+        "pixel_maya"
+      ],
+      "account_count": 4,
+      "linked_emails": [
+        "maya.lin.lens@fictional-mail.org",
+        "mlin_personal@fictional-mail.org",
+        "shadow7_archive@proton-synth.org"
+      ],
+      "linked_phones": [
+        "+1-555-0144",
+        "+1-555-0199"
+      ],
+      "is_multi_account": true
+    },
+    {
+      "canonical_id": "PERSON_CHLOE_SIMMONS",
+      "canonical_name": "Chloe Simmons",
+      "accounts": [
+        "chloe_creative"
+      ],
+      "account_count": 1,
+      "linked_emails": [
+        "chloe.simmons@fictional-domain.org"
+      ],
+      "linked_phones": [
+        "+1-555-0121"
+      ],
+      "is_multi_account": false
+    },
+    {
+      "canonical_id": "PERSON_DAVID_LIN",
+      "canonical_name": "David Lin",
+      "accounts": [
+        "david_lin_tech"
+      ],
+      "account_count": 1,
+      "linked_emails": [
+        "david.lin@fictional-domain.org"
+      ],
+      "linked_phones": [
+        "+1-555-0133"
+      ],
+      "is_multi_account": false
+    },
+    {
+      "canonical_id": "PERSON_LUCAS_REED",
+      "canonical_name": "Lucas Reed",
+      "accounts": [
+        "lucas_r_sound"
+      ],
+      "account_count": 1,
+      "linked_emails": [
+        "lucas.reed@fictional-domain.org"
+      ],
+      "linked_phones": [
+        "+1-555-0155"
+      ],
+      "is_multi_account": false
+    },
+    {
+      "canonical_id": "PERSON_PROF_ALISTAIR_VANCE",
+      "canonical_name": "Prof. Alistair Vance",
+      "accounts": [
+        "prof_vance_art"
+      ],
+      "account_count": 1,
+      "linked_emails": [
+        "prof..alistair.vance@fictional-domain.org"
+      ],
+      "linked_phones": [
+        "+1-555-0162"
+      ],
+      "is_multi_account": false
+    },
+    {
+      "canonical_id": "PERSON_KAELEN_VANCE",
+      "canonical_name": "Kaelen Vance",
+      "accounts": [
+        "kaelen_v"
+      ],
+      "account_count": 1,
+      "linked_emails": [
+        "kaelen.vance@fictional-domain.org"
+      ],
+      "linked_phones": [
+        "+1-555-0188"
+      ],
+      "is_multi_account": false
+    },
+    {
+      "canonical_id": "PERSON_ELENA_ROSTOVA",
+      "canonical_name": "Elena Rostova",
+      "accounts": [
+        "elena_prints"
+      ],
+      "account_count": 1,
+      "linked_emails": [
+        "elena.rostova@fictional-domain.org"
+      ],
+      "linked_phones": [
+        "+1-555-0177"
+      ],
+      "is_multi_account": false
+    },
+    {
+      "canonical_id": "PERSON_MARCUS_COLE",
+      "canonical_name": "Marcus Cole",
+      "accounts": [
+        "marcus_c_drift"
+      ],
+      "account_count": 1,
+      "linked_emails": [
+        "marcus.cole@fictional-domain.org"
+      ],
+      "linked_phones": [
+        "+1-555-0112"
+      ],
+      "is_multi_account": false
+    },
+    {
+      "canonical_id": "PERSON_SARA_CHEN",
+      "canonical_name": "Sara Chen",
+      "accounts": [
+        "sara_chen_photo"
+      ],
+      "account_count": 1,
+      "linked_emails": [
+        "sara.chen@fictional-domain.org"
+      ],
+      "linked_phones": [
+        "+1-555-0191"
+      ],
+      "is_multi_account": false
+    },
+    {
+      "canonical_id": "PERSON_TARIQ_MANSOOR",
+      "canonical_name": "Tariq Mansoor",
+      "accounts": [
+        "tariq_beans"
+      ],
+      "account_count": 1,
+      "linked_emails": [
+        "tariq.mansoor@fictional-domain.org"
+      ],
+      "linked_phones": [
+        "+1-555-0184"
+      ],
+      "is_multi_account": false
+    },
+    {
+      "canonical_id": "PERSON_JULIAN_GOMEZ",
+      "canonical_name": "Julian Gomez",
+      "accounts": [
+        "julian_g_sound"
+      ],
+      "account_count": 1,
+      "linked_emails": [
+        "julian.gomez@fictional-domain.org"
+      ],
+      "linked_phones": [
+        "+1-555-0129"
+      ],
+      "is_multi_account": false
+    },
+    {
+      "canonical_id": "PERSON_HANNAH_WARD",
+      "canonical_name": "Hannah Ward",
+      "accounts": [
+        "hannah_w_lens"
+      ],
+      "account_count": 1,
+      "linked_emails": [
+        "hannah.ward@fictional-domain.org"
+      ],
+      "linked_phones": [
+        "+1-555-0138"
+      ],
+      "is_multi_account": false
+    },
+    {
+      "canonical_id": "PERSON_DEREK_HAYES",
+      "canonical_name": "Derek Hayes",
+      "accounts": [
+        "derek_h_books"
+      ],
+      "account_count": 1,
+      "linked_emails": [
+        "derek.hayes@fictional-domain.org"
+      ],
+      "linked_phones": [
+        "+1-555-0149"
+      ],
+      "is_multi_account": false
+    },
+    {
+      "canonical_id": "PERSON_ZOE_PATEL",
+      "canonical_name": "Zoe Patel",
+      "accounts": [
+        "zoe_p_design"
+      ],
+      "account_count": 1,
+      "linked_emails": [
+        "zoe.patel@fictional-domain.org"
+      ],
+      "linked_phones": [
+        "+1-555-0167"
+      ],
+      "is_multi_account": false
+    },
+    {
+      "canonical_id": "PERSON_OFFICER_BRANDON_MILLER",
+      "canonical_name": "Officer Brandon Miller",
+      "accounts": [
+        "bayview_campus_safety"
+      ],
+      "account_count": 1,
+      "linked_emails": [
+        "officer.brandon.miller@fictional-domain.org"
+      ],
+      "linked_phones": [
+        "+1-555-0105"
+      ],
+      "is_multi_account": false
+    },
+    {
+      "canonical_id": "PERSON_LIAM_O'CONNOR",
+      "canonical_name": "Liam O'Connor",
+      "accounts": [
+        "liam_drift_auto",
+        "lrobinson_bay"
+      ],
+      "account_count": 2,
+      "linked_emails": [
+        "liam.o'connor@fictional-domain.org",
+        "lrobinson@example-synthetic.org"
+      ],
+      "linked_phones": [
+        "+1-555-0173"
+      ],
+      "is_multi_account": true
+    },
+    {
+      "canonical_id": "PERSON_MAYA_L_TRAVEL_ESCAPES",
+      "canonical_name": "Maya L. Travel Escapes",
+      "accounts": [
+        "mayalin_travels"
+      ],
+      "account_count": 1,
+      "linked_emails": [
+        "traveler_beach_fun99@temp-synth.net"
+      ],
+      "linked_phones": [
+        "+1-555-0100"
+      ],
+      "is_multi_account": false
+    },
+    {
+      "canonical_id": "PERSON_NOAH_RHODES",
+      "canonical_name": "Noah Rhodes",
+      "accounts": [
+        "johnsonjoshua_bay"
+      ],
+      "account_count": 1,
+      "linked_emails": [
+        "johnsonjoshua@example-synthetic.org"
+      ],
+      "linked_phones": [
+        "+1-555-0171"
+      ],
+      "is_multi_account": false
+    },
+    {
+      "canonical_id": "PERSON_JONATHAN_JOHNSON",
+      "canonical_name": "Jonathan Johnson",
+      "accounts": [
+        "fjohnson_bay"
+      ],
+      "account_count": 1,
+      "linked_emails": [
+        "fjohnson@example-synthetic.org"
+      ],
+      "linked_phones": [
+        "+1-555-0172"
+      ],
+      "is_multi_account": false
+    },
+    {
+      "canonical_id": "PERSON_JAMES_HOWARD",
+      "canonical_name": "James Howard",
+      "accounts": [
+        "joshua35_bay"
+      ],
+      "account_count": 1,
+      "linked_emails": [
+        "joshua35@example-synthetic.org"
+      ],
+      "linked_phones": [
+        "+1-555-0174"
+      ],
+      "is_multi_account": false
+    },
+    {
+      "canonical_id": "PERSON_JAMIE_ARNOLD",
+      "canonical_name": "Jamie Arnold",
+      "accounts": [
+        "blairamanda_bay"
+      ],
+      "account_count": 1,
+      "linked_emails": [
+        "blairamanda@example-synthetic.org"
+      ],
+      "linked_phones": [
+        "+1-555-0175"
+      ],
+      "is_multi_account": false
+    }
+  ],
+  "confirmed_links": [
+    {
+      "account_a": "mayalin_art",
+      "account_b": "m_lin99",
+      "confidence": 0.975,
+      "evidence_count": 2,
+      "evidence": [
+        {
+          "type": "EXACT_PHONE_MATCH",
+          "detail": "Both accounts bound to phone '+1-555-0144'",
+          "weight": 0.95
+        },
+        {
+          "type": "SPATIOTEMPORAL_COOCCURRENCE",
+          "detail": "Shared physical check-in venues: ['venue_02', 'venue_03', 'venue_04']",
+          "weight": 0.5
+        }
+      ],
+      "rationale": "EXACT_PHONE_MATCH: Both accounts bound to phone '+1-555-0144' (w=0.95) | SPATIOTEMPORAL_COOCCURRENCE: Shared physical check-in venues: ['venue_02', 'venue_03', 'venue_04'] (w=0.50)"
+    },
+    {
+      "account_a": "mayalin_art",
+      "account_b": "pixel_maya",
+      "confidence": 0.95,
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "type": "EXACT_EMAIL_MATCH",
+          "detail": "Both accounts registered with 'maya.lin.lens@fictional-mail.org'",
+          "weight": 0.95
+        }
+      ],
+      "rationale": "EXACT_EMAIL_MATCH: Both accounts registered with 'maya.lin.lens@fictional-mail.org' (w=0.95)"
+    },
+    {
+      "account_a": "mayalin_art",
+      "account_b": "m.shadow_7",
+      "confidence": 0.925,
+      "evidence_count": 2,
+      "evidence": [
+        {
+          "type": "PERCEPTUAL_IMAGE_MATCH",
+          "detail": "Attached photos PH-001 and PH-007 have pHash Hamming dist 4",
+          "weight": 0.85
+        },
+        {
+          "type": "SPATIOTEMPORAL_COOCCURRENCE",
+          "detail": "Shared physical check-in venues: ['venue_06']",
+          "weight": 0.5
+        }
+      ],
+      "rationale": "PERCEPTUAL_IMAGE_MATCH: Attached photos PH-001 and PH-007 have pHash Hamming dist 4 (w=0.85) | SPATIOTEMPORAL_COOCCURRENCE: Shared physical check-in venues: ['venue_06'] (w=0.50)"
+    },
+    {
+      "account_a": "pixel_maya",
+      "account_b": "m.shadow_7",
+      "confidence": 0.85,
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "type": "PERCEPTUAL_IMAGE_MATCH",
+          "detail": "Attached photos PH-003 and PH-009 have pHash Hamming dist 6",
+          "weight": 0.85
+        }
+      ],
+      "rationale": "PERCEPTUAL_IMAGE_MATCH: Attached photos PH-003 and PH-009 have pHash Hamming dist 6 (w=0.85)"
+    },
+    {
+      "account_a": "liam_drift_auto",
+      "account_b": "lrobinson_bay",
+      "confidence": 0.95,
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "type": "EXACT_PHONE_MATCH",
+          "detail": "Both accounts bound to phone '+1-555-0173'",
+          "weight": 0.95
+        }
+      ],
+      "rationale": "EXACT_PHONE_MATCH: Both accounts bound to phone '+1-555-0173' (w=0.95)"
+    }
+  ]
+}

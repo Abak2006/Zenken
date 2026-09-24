@@ -1,0 +1,2864 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_67d9f66fe4474a4288de07132888bb08 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.control.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_67d9f66fe4474a4288de07132888bb08" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_67d9f66fe4474a4288de07132888bb08 = L.map(
+                "map_67d9f66fe4474a4288de07132888bb08",
+                {
+                    center: [37.83, -122.47],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_33e321ce197b13643564026eed02b21a = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_33e321ce197b13643564026eed02b21a.addTo(map_67d9f66fe4474a4288de07132888bb08);
+        
+    
+            var heat_map_76a9fed6688e9da360578e9f7a5fa6c1 = L.heatLayer(
+                [[37.8012, -122.4215, 1.0], [37.801098, -122.421644, 1.0], [37.807937, -122.417307, 1.0], [37.802, -122.422, 1.0], [37.808136, -122.417076, 1.0], [37.8715, -122.4891, 1.0], [37.871386, -122.488995, 1.0], [37.802, -122.422, 1.0], [37.871406, -122.489283, 1.0], [37.808017, -122.417149, 1.0], [37.802, -122.422, 1.0], [37.806, -122.435, 1.0], [37.805318, -122.434309, 1.0], [37.805411, -122.434146, 1.0], [37.802, -122.422, 1.0], [37.806, -122.435, 1.0], [37.805581, -122.434127, 1.0], [37.8055, -122.4342, 1.0], [37.805452, -122.434004, 1.0], [37.871629, -122.488978, 1.0], [37.806, -122.435, 1.0], [37.8715, -122.488946, 1.0], [37.805525, -122.434295, 1.0], [37.802, -122.422, 1.0], [37.805497, -122.434098, 1.0], [37.805539, -122.434246, 1.0], [37.871572, -122.489254, 1.0], [37.802, -122.422, 1.0], [37.8924, -122.5719, 1.0], [37.806, -122.435, 1.0], [37.871481, -122.488918, 1.0], [37.805648, -122.434281, 1.0], [37.806, -122.435, 1.0], [37.805365, -122.434019, 1.0], [37.802, -122.422, 1.0], [37.808272, -122.417049, 1.0], [37.802, -122.422, 1.0], [37.801379, -122.421666, 1.0], [37.80549, -122.43418, 1.0], [37.802, -122.422, 1.0], [37.805592, -122.43432, 1.0], [37.854, -122.4789, 1.0], [37.802, -122.422, 1.0], [37.802, -122.422, 1.0], [37.802, -122.422, 1.0], [37.8924, -122.5719, 1.0], [37.802, -122.422, 1.0], [37.855, -122.48, 1.0], [37.854, -122.4789, 1.0], [37.854, -122.4789, 1.0], [37.855, -122.48, 1.0], [37.855, -122.48, 1.0], [37.854, -122.4789, 1.0], [37.8924, -122.5719, 1.0], [37.8924, -122.5719, 1.0], [37.893, -122.573, 1.0]],
+                {
+  "minOpacity": 0.3,
+  "maxZoom": 18,
+  "radius": 22,
+  "blur": 15,
+}
+            );
+        
+    
+            L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
+                _getDisplayDateFormat: function(date){
+                    var newdate = new moment(date);
+                    console.log(newdate)
+                    return newdate.format("YYYY-MM-DD HH:mm");
+                }
+            });
+            map_67d9f66fe4474a4288de07132888bb08.timeDimension = L.timeDimension(
+                {
+                    period: "PT6H",
+                }
+            );
+            var timeDimensionControl = new L.Control.TimeDimensionCustom(
+                {
+  "position": "bottomleft",
+  "minSpeed": 0.1,
+  "maxSpeed": 2,
+  "autoPlay": false,
+  "loopButton": true,
+  "timeSliderDragUpdate": true,
+  "speedSlider": true,
+  "playerOptions": {
+  "transitionTime": 200,
+  "loop": false,
+  "startOver": true,
+},
+}
+            );
+            map_67d9f66fe4474a4288de07132888bb08.addControl(this.timeDimensionControl);
+
+            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.4215, 37.8012]}, "properties": {"time": "2025-10-21T15:00:00+00:00", "popup": "<b>Photo: PH-003</b><br>Time: 2025-10-21T15:00:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.421644, 37.801098]}, "properties": {"time": "2026-01-30T19:17:00+00:00", "popup": "<b>Check-in: Bayview Arts Institute - Fine Arts Hall</b><br>Time: 2026-01-30T19:17:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.417307, 37.807937]}, "properties": {"time": "2026-02-01T08:01:00+00:00", "popup": "<b>Check-in: Bayside Living Apartments (Maya's Residence)</b><br>Time: 2026-02-01T08:01:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.422, 37.802]}, "properties": {"time": "2026-02-01T14:15:00+00:00", "popup": "<b>CDR: Marina Arts Sector</b><br>Time: 2026-02-01T14:15:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.417076, 37.808136]}, "properties": {"time": "2026-02-02T11:28:00+00:00", "popup": "<b>Check-in: Bayside Living Apartments (Maya's Residence)</b><br>Time: 2026-02-02T11:28:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.4891, 37.8715]}, "properties": {"time": "2026-02-03T17:00:00+00:00", "popup": "<b>Photo: PH-001</b><br>Time: 2026-02-03T17:00:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.488995, 37.871386]}, "properties": {"time": "2026-02-04T12:09:00+00:00", "popup": "<b>Check-in: Redwood Ridge Scenic Park</b><br>Time: 2026-02-04T12:09:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.422, 37.802]}, "properties": {"time": "2026-02-04T16:02:00+00:00", "popup": "<b>CDR: Marina Arts Sector</b><br>Time: 2026-02-04T16:02:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.489283, 37.871406]}, "properties": {"time": "2026-02-05T13:38:00+00:00", "popup": "<b>Check-in: Redwood Ridge Scenic Park</b><br>Time: 2026-02-05T13:38:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.417149, 37.808017]}, "properties": {"time": "2026-02-06T09:35:00+00:00", "popup": "<b>Check-in: Bayside Living Apartments (Maya's Residence)</b><br>Time: 2026-02-06T09:35:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.422, 37.802]}, "properties": {"time": "2026-02-06T13:45:00+00:00", "popup": "<b>CDR: Marina Arts Sector</b><br>Time: 2026-02-06T13:45:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.435, 37.806]}, "properties": {"time": "2026-02-07T10:48:00+00:00", "popup": "<b>CDR: Harbor Wharf Sector</b><br>Time: 2026-02-07T10:48:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.434309, 37.805318]}, "properties": {"time": "2026-02-07T19:04:00+00:00", "popup": "<b>Check-in: Harbor Light Cafe</b><br>Time: 2026-02-07T19:04:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.434146, 37.805411]}, "properties": {"time": "2026-02-08T09:24:00+00:00", "popup": "<b>Check-in: Harbor Light Cafe</b><br>Time: 2026-02-08T09:24:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.422, 37.802]}, "properties": {"time": "2026-02-08T13:48:00+00:00", "popup": "<b>CDR: Marina Arts Sector</b><br>Time: 2026-02-08T13:48:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.435, 37.806]}, "properties": {"time": "2026-02-09T15:38:00+00:00", "popup": "<b>CDR: Harbor Wharf Sector</b><br>Time: 2026-02-09T15:38:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.434127, 37.805581]}, "properties": {"time": "2026-02-09T18:17:00+00:00", "popup": "<b>Check-in: Harbor Light Cafe</b><br>Time: 2026-02-09T18:17:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.4342, 37.8055]}, "properties": {"time": "2026-02-10T09:00:00+00:00", "popup": "<b>Photo: PH-002</b><br>Time: 2026-02-10T09:00:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.434004, 37.805452]}, "properties": {"time": "2026-02-10T10:29:00+00:00", "popup": "<b>Check-in: Harbor Light Cafe</b><br>Time: 2026-02-10T10:29:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.488978, 37.871629]}, "properties": {"time": "2026-02-11T08:14:00+00:00", "popup": "<b>Check-in: Redwood Ridge Scenic Park</b><br>Time: 2026-02-11T08:14:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.435, 37.806]}, "properties": {"time": "2026-02-11T16:05:00+00:00", "popup": "<b>CDR: Harbor Wharf Sector</b><br>Time: 2026-02-11T16:05:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.488946, 37.8715]}, "properties": {"time": "2026-02-12T11:41:00+00:00", "popup": "<b>Check-in: Redwood Ridge Scenic Park</b><br>Time: 2026-02-12T11:41:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.434295, 37.805525]}, "properties": {"time": "2026-02-13T11:47:00+00:00", "popup": "<b>Check-in: Harbor Light Cafe</b><br>Time: 2026-02-13T11:47:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.422, 37.802]}, "properties": {"time": "2026-02-13T13:45:00+00:00", "popup": "<b>CDR: Marina Arts Sector</b><br>Time: 2026-02-13T13:45:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.434098, 37.805497]}, "properties": {"time": "2026-02-15T10:32:00+00:00", "popup": "<b>Check-in: Harbor Light Cafe</b><br>Time: 2026-02-15T10:32:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.434246, 37.805539]}, "properties": {"time": "2026-02-16T18:27:00+00:00", "popup": "<b>Check-in: Harbor Light Cafe</b><br>Time: 2026-02-16T18:27:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.489254, 37.871572]}, "properties": {"time": "2026-02-17T16:00:00+00:00", "popup": "<b>Check-in: Redwood Ridge Scenic Park</b><br>Time: 2026-02-17T16:00:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.422, 37.802]}, "properties": {"time": "2026-02-18T17:40:00+00:00", "popup": "<b>CDR: Marina Arts Sector</b><br>Time: 2026-02-18T17:40:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.5719, 37.8924]}, "properties": {"time": "2026-02-18T18:00:00+00:00", "popup": "<b>Photo: PH-004</b><br>Time: 2026-02-18T18:00:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.435, 37.806]}, "properties": {"time": "2026-02-19T14:44:00+00:00", "popup": "<b>CDR: Harbor Wharf Sector</b><br>Time: 2026-02-19T14:44:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.488918, 37.871481]}, "properties": {"time": "2026-02-20T14:10:00+00:00", "popup": "<b>Check-in: Redwood Ridge Scenic Park</b><br>Time: 2026-02-20T14:10:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.434281, 37.805648]}, "properties": {"time": "2026-02-21T16:06:00+00:00", "popup": "<b>Check-in: Harbor Light Cafe</b><br>Time: 2026-02-21T16:06:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.435, 37.806]}, "properties": {"time": "2026-02-21T17:24:00+00:00", "popup": "<b>CDR: Harbor Wharf Sector</b><br>Time: 2026-02-21T17:24:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.434019, 37.805365]}, "properties": {"time": "2026-02-22T13:48:00+00:00", "popup": "<b>Check-in: Harbor Light Cafe</b><br>Time: 2026-02-22T13:48:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.422, 37.802]}, "properties": {"time": "2026-02-23T15:53:00+00:00", "popup": "<b>CDR: Marina Arts Sector</b><br>Time: 2026-02-23T15:53:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.417049, 37.808272]}, "properties": {"time": "2026-02-24T08:07:00+00:00", "popup": "<b>Check-in: Bayside Living Apartments (Maya's Residence)</b><br>Time: 2026-02-24T08:07:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.422, 37.802]}, "properties": {"time": "2026-02-25T11:13:00+00:00", "popup": "<b>CDR: Marina Arts Sector</b><br>Time: 2026-02-25T11:13:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.421666, 37.801379]}, "properties": {"time": "2026-02-25T11:36:00+00:00", "popup": "<b>Check-in: Bayview Arts Institute - Fine Arts Hall</b><br>Time: 2026-02-25T11:36:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.43418, 37.80549]}, "properties": {"time": "2026-02-26T10:42:00+00:00", "popup": "<b>Check-in: Harbor Light Cafe</b><br>Time: 2026-02-26T10:42:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.422, 37.802]}, "properties": {"time": "2026-02-26T20:29:00+00:00", "popup": "<b>CDR: Marina Arts Sector</b><br>Time: 2026-02-26T20:29:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.43432, 37.805592]}, "properties": {"time": "2026-02-28T16:48:00+00:00", "popup": "<b>Check-in: Harbor Light Cafe</b><br>Time: 2026-02-28T16:48:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.4789, 37.854]}, "properties": {"time": "2026-03-02T19:00:00+00:00", "popup": "<b>Photo: PH-006</b><br>Time: 2026-03-02T19:00:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.422, 37.802]}, "properties": {"time": "2026-03-02T19:25:00+00:00", "popup": "<b>CDR: Marina Arts Sector</b><br>Time: 2026-03-02T19:25:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.422, 37.802]}, "properties": {"time": "2026-03-04T10:55:00+00:00", "popup": "<b>CDR: Marina Arts Sector</b><br>Time: 2026-03-04T10:55:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.422, 37.802]}, "properties": {"time": "2026-03-06T11:24:00+00:00", "popup": "<b>CDR: Marina Arts Sector</b><br>Time: 2026-03-06T11:24:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.5719, 37.8924]}, "properties": {"time": "2026-03-06T22:00:00+00:00", "popup": "<b>Photo: PH-007</b><br>Time: 2026-03-06T22:00:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.422, 37.802]}, "properties": {"time": "2026-03-10T14:10:00+00:00", "popup": "<b>CDR: Marina Arts Sector</b><br>Time: 2026-03-10T14:10:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.48, 37.855]}, "properties": {"time": "2026-03-12T11:45:00+00:00", "popup": "<b>CDR: Shoreline Sausalito Sector</b><br>Time: 2026-03-12T11:45:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.4789, 37.854]}, "properties": {"time": "2026-03-12T16:00:00+00:00", "popup": "<b>Photo: PH-008</b><br>Time: 2026-03-12T16:00:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.4789, 37.854]}, "properties": {"time": "2026-03-12T16:30:00+00:00", "popup": "<b>Check-in: Pacific Horizon Diner</b><br>Time: 2026-03-12T16:30:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.48, 37.855]}, "properties": {"time": "2026-03-13T19:30:00+00:00", "popup": "<b>CDR: Shoreline Sausalito Sector</b><br>Time: 2026-03-13T19:30:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.48, 37.855]}, "properties": {"time": "2026-03-14T16:50:00+00:00", "popup": "<b>CDR: Shoreline Sausalito Sector</b><br>Time: 2026-03-14T16:50:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.4789, 37.854]}, "properties": {"time": "2026-03-14T17:15:00+00:00", "popup": "<b>Check-in: Pacific Horizon Diner</b><br>Time: 2026-03-14T17:15:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.5719, 37.8924]}, "properties": {"time": "2026-03-14T21:00:00+00:00", "popup": "<b>Photo: PH-009</b><br>Time: 2026-03-14T21:00:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.5719, 37.8924]}, "properties": {"time": "2026-03-14T21:05:00+00:00", "popup": "<b>Check-in: Whispering Pines Overlook</b><br>Time: 2026-03-14T21:05:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-122.573, 37.893]}, "properties": {"time": "2026-03-14T21:45:00+00:00", "popup": "<b>CDR: Whispering Pines Ridge Sector</b><br>Time: 2026-03-14T21:45:00+00:00", "icon": "circle", "iconstyle": {"fillColor": "#e11d48", "fillOpacity": 0.8, "stroke": "true", "radius": 7}}}]}, {
+                    pointToLayer: function (feature, latLng) {
+                        if (feature.properties.icon == 'marker') {
+                            if(feature.properties.iconstyle){
+                                return new L.Marker(latLng, {
+                                    icon: L.icon(feature.properties.iconstyle)});
+                            }
+                            //else
+                            return new L.Marker(latLng);
+                        }
+                        if (feature.properties.icon == 'circle') {
+                            if (feature.properties.iconstyle) {
+                                return new L.circleMarker(latLng, feature.properties.iconstyle)
+                                };
+                            //else
+                            return new L.circleMarker(latLng);
+                        }
+                        //else
+
+                        return new L.Marker(latLng);
+                    },
+                    style: function (feature) {
+                        return feature.properties.style;
+                    },
+                    onEachFeature: function(feature, layer) {
+                        if (feature.properties.popup) {
+                        layer.bindPopup(feature.properties.popup);
+                        }
+                        if (feature.properties.tooltip) {
+                        layer.bindTooltip(feature.properties.tooltip);
+                        }
+                    }
+                })
+
+            var timestamped_geo_json_3728e548f17a38a61c01dd15065853b9 = L.timeDimension.layer.geoJson(
+                geoJsonLayer,
+                {
+                    updateTimeDimension: true,
+                    addlastPoint: true,
+                    duration: undefined,
+                }
+            ).addTo(map_67d9f66fe4474a4288de07132888bb08);
+        
+    
+            var feature_group_3d473d609aad3259baf6fdf730aa43e0 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_93d336143eec8e99f4557139dfaa086b = L.marker(
+                [37.801098, -122.421644],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_7065443c41969114360ae9aab53fb2c8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b561f94c555d00c3cd5225219d052819 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_74cf98036abbec7b24e7bec3c8325260 = $(`<div id="html_74cf98036abbec7b24e7bec3c8325260" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Bayview Arts Institute - Fine Arts Hall</b><br>                 <b>Account:</b> @mayalin_art<br>                 <b>Time:</b> 2026-01-30T19:17:00+00:00<br>                 <b>Platform:</b> InstaPhoto             </div>             </div>`)[0];
+                popup_b561f94c555d00c3cd5225219d052819.setContent(html_74cf98036abbec7b24e7bec3c8325260);
+            
+        
+
+        marker_93d336143eec8e99f4557139dfaa086b.bindPopup(popup_b561f94c555d00c3cd5225219d052819)
+        ;
+
+        
+    
+    
+            marker_93d336143eec8e99f4557139dfaa086b.bindTooltip(
+                `<div>
+                     @mayalin_art @ Bayview Arts Institute - Fine Arts Hall
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_93d336143eec8e99f4557139dfaa086b.setIcon(icon_7065443c41969114360ae9aab53fb2c8);
+            
+    
+            var marker_2d8ad334b5208f32a2b5f85201a602e6 = L.marker(
+                [37.807937, -122.417307],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_503701cc4a7c803e346e0c7a70a13977 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d3c53c16c84f07972c8ba11706be6ec2 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b156eea3c4265380d976461c1b359194 = $(`<div id="html_b156eea3c4265380d976461c1b359194" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Bayside Living Apartments (Maya's Residence)</b><br>                 <b>Account:</b> @mayalin_art<br>                 <b>Time:</b> 2026-02-01T08:01:00+00:00<br>                 <b>Platform:</b> InstaPhoto             </div>             </div>`)[0];
+                popup_d3c53c16c84f07972c8ba11706be6ec2.setContent(html_b156eea3c4265380d976461c1b359194);
+            
+        
+
+        marker_2d8ad334b5208f32a2b5f85201a602e6.bindPopup(popup_d3c53c16c84f07972c8ba11706be6ec2)
+        ;
+
+        
+    
+    
+            marker_2d8ad334b5208f32a2b5f85201a602e6.bindTooltip(
+                `<div>
+                     @mayalin_art @ Bayside Living Apartments (Maya's Residence)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2d8ad334b5208f32a2b5f85201a602e6.setIcon(icon_503701cc4a7c803e346e0c7a70a13977);
+            
+    
+            var marker_f9e53d6bb5cbe529a5e5a5f9d478e320 = L.marker(
+                [37.808136, -122.417076],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_5b5ac54336c243e047c0d3dc0a44ee7d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1444d3892193fa48bf7bee6746ceb423 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0629e659e3021bcc4e531724338b8c9f = $(`<div id="html_0629e659e3021bcc4e531724338b8c9f" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Bayside Living Apartments (Maya's Residence)</b><br>                 <b>Account:</b> @mayalin_art<br>                 <b>Time:</b> 2026-02-02T11:28:00+00:00<br>                 <b>Platform:</b> InstaPhoto             </div>             </div>`)[0];
+                popup_1444d3892193fa48bf7bee6746ceb423.setContent(html_0629e659e3021bcc4e531724338b8c9f);
+            
+        
+
+        marker_f9e53d6bb5cbe529a5e5a5f9d478e320.bindPopup(popup_1444d3892193fa48bf7bee6746ceb423)
+        ;
+
+        
+    
+    
+            marker_f9e53d6bb5cbe529a5e5a5f9d478e320.bindTooltip(
+                `<div>
+                     @mayalin_art @ Bayside Living Apartments (Maya's Residence)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f9e53d6bb5cbe529a5e5a5f9d478e320.setIcon(icon_5b5ac54336c243e047c0d3dc0a44ee7d);
+            
+    
+            var marker_fc0cc7f73573ef4193baceebff69ab74 = L.marker(
+                [37.871386, -122.488995],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_e789e707a67e260afc7a5959a3837228 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2b9ecb5c8036158fa3395c0c382a58c3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f56a0760ec3e0c43cad36b16c03da2a5 = $(`<div id="html_f56a0760ec3e0c43cad36b16c03da2a5" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Redwood Ridge Scenic Park</b><br>                 <b>Account:</b> @mayalin_art<br>                 <b>Time:</b> 2026-02-04T12:09:00+00:00<br>                 <b>Platform:</b> InstaPhoto             </div>             </div>`)[0];
+                popup_2b9ecb5c8036158fa3395c0c382a58c3.setContent(html_f56a0760ec3e0c43cad36b16c03da2a5);
+            
+        
+
+        marker_fc0cc7f73573ef4193baceebff69ab74.bindPopup(popup_2b9ecb5c8036158fa3395c0c382a58c3)
+        ;
+
+        
+    
+    
+            marker_fc0cc7f73573ef4193baceebff69ab74.bindTooltip(
+                `<div>
+                     @mayalin_art @ Redwood Ridge Scenic Park
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fc0cc7f73573ef4193baceebff69ab74.setIcon(icon_e789e707a67e260afc7a5959a3837228);
+            
+    
+            var marker_2a7459a8000ddff4bbf76d406c3d73d3 = L.marker(
+                [37.871406, -122.489283],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_cfd98aed7564f7601ba6b63d195b35a2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b39b8e2cb6a66339593911e00a48faef = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_43fc67cdcc20ee2b94de5a0637070d48 = $(`<div id="html_43fc67cdcc20ee2b94de5a0637070d48" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Redwood Ridge Scenic Park</b><br>                 <b>Account:</b> @mayalin_art<br>                 <b>Time:</b> 2026-02-05T13:38:00+00:00<br>                 <b>Platform:</b> InstaPhoto             </div>             </div>`)[0];
+                popup_b39b8e2cb6a66339593911e00a48faef.setContent(html_43fc67cdcc20ee2b94de5a0637070d48);
+            
+        
+
+        marker_2a7459a8000ddff4bbf76d406c3d73d3.bindPopup(popup_b39b8e2cb6a66339593911e00a48faef)
+        ;
+
+        
+    
+    
+            marker_2a7459a8000ddff4bbf76d406c3d73d3.bindTooltip(
+                `<div>
+                     @mayalin_art @ Redwood Ridge Scenic Park
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2a7459a8000ddff4bbf76d406c3d73d3.setIcon(icon_cfd98aed7564f7601ba6b63d195b35a2);
+            
+    
+            var marker_0661299c74c7a3b1a0d85574bba95ddd = L.marker(
+                [37.808017, -122.417149],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_e04571fbf7adad1de2d76d2ab0638343 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_716cd119be633481f9c8fd1ed011631f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3756a41c1f321dd83e91821efa287f0d = $(`<div id="html_3756a41c1f321dd83e91821efa287f0d" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Bayside Living Apartments (Maya's Residence)</b><br>                 <b>Account:</b> @m_lin99<br>                 <b>Time:</b> 2026-02-06T09:35:00+00:00<br>                 <b>Platform:</b> InstaPhoto             </div>             </div>`)[0];
+                popup_716cd119be633481f9c8fd1ed011631f.setContent(html_3756a41c1f321dd83e91821efa287f0d);
+            
+        
+
+        marker_0661299c74c7a3b1a0d85574bba95ddd.bindPopup(popup_716cd119be633481f9c8fd1ed011631f)
+        ;
+
+        
+    
+    
+            marker_0661299c74c7a3b1a0d85574bba95ddd.bindTooltip(
+                `<div>
+                     @m_lin99 @ Bayside Living Apartments (Maya's Residence)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0661299c74c7a3b1a0d85574bba95ddd.setIcon(icon_e04571fbf7adad1de2d76d2ab0638343);
+            
+    
+            var marker_be472622011652b31f9f7652611effde = L.marker(
+                [37.805318, -122.434309],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_58142ffb4ca9db67abaa7f86425ee124 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ff1a22eaaa14e8b6e8f86442a727f8f1 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f24c6555a71d8e7b6ea802fc6ca60746 = $(`<div id="html_f24c6555a71d8e7b6ea802fc6ca60746" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Harbor Light Cafe</b><br>                 <b>Account:</b> @mayalin_art<br>                 <b>Time:</b> 2026-02-07T19:04:00+00:00<br>                 <b>Platform:</b> InstaPhoto             </div>             </div>`)[0];
+                popup_ff1a22eaaa14e8b6e8f86442a727f8f1.setContent(html_f24c6555a71d8e7b6ea802fc6ca60746);
+            
+        
+
+        marker_be472622011652b31f9f7652611effde.bindPopup(popup_ff1a22eaaa14e8b6e8f86442a727f8f1)
+        ;
+
+        
+    
+    
+            marker_be472622011652b31f9f7652611effde.bindTooltip(
+                `<div>
+                     @mayalin_art @ Harbor Light Cafe
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_be472622011652b31f9f7652611effde.setIcon(icon_58142ffb4ca9db67abaa7f86425ee124);
+            
+    
+            var marker_815ebd1e32124d12074e332fb3212d5b = L.marker(
+                [37.805411, -122.434146],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_4751b2dae7b86e9ff92871e8a2287775 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_96cf72fbeab468d07d5976b609df68d7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_33186c39cc7bf348abc71f187f1548d6 = $(`<div id="html_33186c39cc7bf348abc71f187f1548d6" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Harbor Light Cafe</b><br>                 <b>Account:</b> @mayalin_art<br>                 <b>Time:</b> 2026-02-08T09:24:00+00:00<br>                 <b>Platform:</b> InstaPhoto             </div>             </div>`)[0];
+                popup_96cf72fbeab468d07d5976b609df68d7.setContent(html_33186c39cc7bf348abc71f187f1548d6);
+            
+        
+
+        marker_815ebd1e32124d12074e332fb3212d5b.bindPopup(popup_96cf72fbeab468d07d5976b609df68d7)
+        ;
+
+        
+    
+    
+            marker_815ebd1e32124d12074e332fb3212d5b.bindTooltip(
+                `<div>
+                     @mayalin_art @ Harbor Light Cafe
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_815ebd1e32124d12074e332fb3212d5b.setIcon(icon_4751b2dae7b86e9ff92871e8a2287775);
+            
+    
+            var marker_2cf145400688f92603a545e54bf13dcd = L.marker(
+                [37.805581, -122.434127],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_d1ec3588b7d8f561d580745a2f9411e4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c9aaf683314f3c8335e518bc512ffa4e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_3ba4bb3f8aa03c33967e66edaa3bf26c = $(`<div id="html_3ba4bb3f8aa03c33967e66edaa3bf26c" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Harbor Light Cafe</b><br>                 <b>Account:</b> @mayalin_art<br>                 <b>Time:</b> 2026-02-09T18:17:00+00:00<br>                 <b>Platform:</b> InstaPhoto             </div>             </div>`)[0];
+                popup_c9aaf683314f3c8335e518bc512ffa4e.setContent(html_3ba4bb3f8aa03c33967e66edaa3bf26c);
+            
+        
+
+        marker_2cf145400688f92603a545e54bf13dcd.bindPopup(popup_c9aaf683314f3c8335e518bc512ffa4e)
+        ;
+
+        
+    
+    
+            marker_2cf145400688f92603a545e54bf13dcd.bindTooltip(
+                `<div>
+                     @mayalin_art @ Harbor Light Cafe
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2cf145400688f92603a545e54bf13dcd.setIcon(icon_d1ec3588b7d8f561d580745a2f9411e4);
+            
+    
+            var marker_0ad44da79de0c878cdfcf29d93f65038 = L.marker(
+                [37.805452, -122.434004],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_de8a471d70b5fdab1808a5bcc88d8b99 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f232667c8b13513583f1c4a42c455261 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_4c5b68888f1a5d4267fff98815b14dff = $(`<div id="html_4c5b68888f1a5d4267fff98815b14dff" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Harbor Light Cafe</b><br>                 <b>Account:</b> @mayalin_art<br>                 <b>Time:</b> 2026-02-10T10:29:00+00:00<br>                 <b>Platform:</b> InstaPhoto             </div>             </div>`)[0];
+                popup_f232667c8b13513583f1c4a42c455261.setContent(html_4c5b68888f1a5d4267fff98815b14dff);
+            
+        
+
+        marker_0ad44da79de0c878cdfcf29d93f65038.bindPopup(popup_f232667c8b13513583f1c4a42c455261)
+        ;
+
+        
+    
+    
+            marker_0ad44da79de0c878cdfcf29d93f65038.bindTooltip(
+                `<div>
+                     @mayalin_art @ Harbor Light Cafe
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0ad44da79de0c878cdfcf29d93f65038.setIcon(icon_de8a471d70b5fdab1808a5bcc88d8b99);
+            
+    
+            var marker_32b0d5e86f0b96f53bc3e63bd513cca0 = L.marker(
+                [37.871629, -122.488978],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_0133bbd81e6e5934d1b6f6272ab3b7cb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_24d61e9e4ab90d2dc7a09090c69b79cf = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5580b7fec7f7993417ffc685c15040de = $(`<div id="html_5580b7fec7f7993417ffc685c15040de" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Redwood Ridge Scenic Park</b><br>                 <b>Account:</b> @mayalin_art<br>                 <b>Time:</b> 2026-02-11T08:14:00+00:00<br>                 <b>Platform:</b> InstaPhoto             </div>             </div>`)[0];
+                popup_24d61e9e4ab90d2dc7a09090c69b79cf.setContent(html_5580b7fec7f7993417ffc685c15040de);
+            
+        
+
+        marker_32b0d5e86f0b96f53bc3e63bd513cca0.bindPopup(popup_24d61e9e4ab90d2dc7a09090c69b79cf)
+        ;
+
+        
+    
+    
+            marker_32b0d5e86f0b96f53bc3e63bd513cca0.bindTooltip(
+                `<div>
+                     @mayalin_art @ Redwood Ridge Scenic Park
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_32b0d5e86f0b96f53bc3e63bd513cca0.setIcon(icon_0133bbd81e6e5934d1b6f6272ab3b7cb);
+            
+    
+            var marker_f2525dc071223404ae324e6ffc97a816 = L.marker(
+                [37.8715, -122.488946],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_9606a0e111094ffb0a1e90cb8faa6025 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_01bb06dbb87c9fef6b7ce3c38d6c3143 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_fc8b9397367f166b5905a6dcedc02983 = $(`<div id="html_fc8b9397367f166b5905a6dcedc02983" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Redwood Ridge Scenic Park</b><br>                 <b>Account:</b> @mayalin_art<br>                 <b>Time:</b> 2026-02-12T11:41:00+00:00<br>                 <b>Platform:</b> InstaPhoto             </div>             </div>`)[0];
+                popup_01bb06dbb87c9fef6b7ce3c38d6c3143.setContent(html_fc8b9397367f166b5905a6dcedc02983);
+            
+        
+
+        marker_f2525dc071223404ae324e6ffc97a816.bindPopup(popup_01bb06dbb87c9fef6b7ce3c38d6c3143)
+        ;
+
+        
+    
+    
+            marker_f2525dc071223404ae324e6ffc97a816.bindTooltip(
+                `<div>
+                     @mayalin_art @ Redwood Ridge Scenic Park
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f2525dc071223404ae324e6ffc97a816.setIcon(icon_9606a0e111094ffb0a1e90cb8faa6025);
+            
+    
+            var marker_84ff669ea40e78527dc663016392f023 = L.marker(
+                [37.805525, -122.434295],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_a1e3093cf65b357e602a908ddd14abbc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_df9df5c6a3014ef574062e202df92453 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_960efc6a26e1a81c4d74c81d3f01ec10 = $(`<div id="html_960efc6a26e1a81c4d74c81d3f01ec10" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Harbor Light Cafe</b><br>                 <b>Account:</b> @mayalin_art<br>                 <b>Time:</b> 2026-02-13T11:47:00+00:00<br>                 <b>Platform:</b> InstaPhoto             </div>             </div>`)[0];
+                popup_df9df5c6a3014ef574062e202df92453.setContent(html_960efc6a26e1a81c4d74c81d3f01ec10);
+            
+        
+
+        marker_84ff669ea40e78527dc663016392f023.bindPopup(popup_df9df5c6a3014ef574062e202df92453)
+        ;
+
+        
+    
+    
+            marker_84ff669ea40e78527dc663016392f023.bindTooltip(
+                `<div>
+                     @mayalin_art @ Harbor Light Cafe
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_84ff669ea40e78527dc663016392f023.setIcon(icon_a1e3093cf65b357e602a908ddd14abbc);
+            
+    
+            var marker_32ce13b4824bd0b7bc35e8b4441f3dca = L.marker(
+                [37.805497, -122.434098],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_0f158d0e908107091bbe640cfa186bb3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cf7e83e409f205ce473841ae3724e792 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d96c47e29ae3332323a707dd62979333 = $(`<div id="html_d96c47e29ae3332323a707dd62979333" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Harbor Light Cafe</b><br>                 <b>Account:</b> @m_lin99<br>                 <b>Time:</b> 2026-02-15T10:32:00+00:00<br>                 <b>Platform:</b> InstaPhoto             </div>             </div>`)[0];
+                popup_cf7e83e409f205ce473841ae3724e792.setContent(html_d96c47e29ae3332323a707dd62979333);
+            
+        
+
+        marker_32ce13b4824bd0b7bc35e8b4441f3dca.bindPopup(popup_cf7e83e409f205ce473841ae3724e792)
+        ;
+
+        
+    
+    
+            marker_32ce13b4824bd0b7bc35e8b4441f3dca.bindTooltip(
+                `<div>
+                     @m_lin99 @ Harbor Light Cafe
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_32ce13b4824bd0b7bc35e8b4441f3dca.setIcon(icon_0f158d0e908107091bbe640cfa186bb3);
+            
+    
+            var marker_986800b3a912a1aaad664e3af1f0e8aa = L.marker(
+                [37.805539, -122.434246],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_d11fbf66638864eb2a0895faee009cf1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4ac125481ec91334a68dc4306194142e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d32f799b1707b1543a2aabeee3dccf64 = $(`<div id="html_d32f799b1707b1543a2aabeee3dccf64" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Harbor Light Cafe</b><br>                 <b>Account:</b> @mayalin_art<br>                 <b>Time:</b> 2026-02-16T18:27:00+00:00<br>                 <b>Platform:</b> InstaPhoto             </div>             </div>`)[0];
+                popup_4ac125481ec91334a68dc4306194142e.setContent(html_d32f799b1707b1543a2aabeee3dccf64);
+            
+        
+
+        marker_986800b3a912a1aaad664e3af1f0e8aa.bindPopup(popup_4ac125481ec91334a68dc4306194142e)
+        ;
+
+        
+    
+    
+            marker_986800b3a912a1aaad664e3af1f0e8aa.bindTooltip(
+                `<div>
+                     @mayalin_art @ Harbor Light Cafe
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_986800b3a912a1aaad664e3af1f0e8aa.setIcon(icon_d11fbf66638864eb2a0895faee009cf1);
+            
+    
+            var marker_e88f81ad35a5dc5c4acf6327c6bde762 = L.marker(
+                [37.871572, -122.489254],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_65338ff2d580cedfbb6c193a6aa087e9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9e01dbdef3ba8e42fa9d0c9ec933c167 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0ef058d5e7ad0d87c1a4afa216530ea3 = $(`<div id="html_0ef058d5e7ad0d87c1a4afa216530ea3" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Redwood Ridge Scenic Park</b><br>                 <b>Account:</b> @m_lin99<br>                 <b>Time:</b> 2026-02-17T16:00:00+00:00<br>                 <b>Platform:</b> InstaPhoto             </div>             </div>`)[0];
+                popup_9e01dbdef3ba8e42fa9d0c9ec933c167.setContent(html_0ef058d5e7ad0d87c1a4afa216530ea3);
+            
+        
+
+        marker_e88f81ad35a5dc5c4acf6327c6bde762.bindPopup(popup_9e01dbdef3ba8e42fa9d0c9ec933c167)
+        ;
+
+        
+    
+    
+            marker_e88f81ad35a5dc5c4acf6327c6bde762.bindTooltip(
+                `<div>
+                     @m_lin99 @ Redwood Ridge Scenic Park
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e88f81ad35a5dc5c4acf6327c6bde762.setIcon(icon_65338ff2d580cedfbb6c193a6aa087e9);
+            
+    
+            var marker_d996307fc3c11b5c650f2ae3ac452754 = L.marker(
+                [37.871481, -122.488918],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_d76c1c4a307e20c3c089371bd91857cd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_416053e1aa695e90b987f60ce6d99b68 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_4db6c1b19985d7edc7aa910d185cca3b = $(`<div id="html_4db6c1b19985d7edc7aa910d185cca3b" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Redwood Ridge Scenic Park</b><br>                 <b>Account:</b> @m_lin99<br>                 <b>Time:</b> 2026-02-20T14:10:00+00:00<br>                 <b>Platform:</b> InstaPhoto             </div>             </div>`)[0];
+                popup_416053e1aa695e90b987f60ce6d99b68.setContent(html_4db6c1b19985d7edc7aa910d185cca3b);
+            
+        
+
+        marker_d996307fc3c11b5c650f2ae3ac452754.bindPopup(popup_416053e1aa695e90b987f60ce6d99b68)
+        ;
+
+        
+    
+    
+            marker_d996307fc3c11b5c650f2ae3ac452754.bindTooltip(
+                `<div>
+                     @m_lin99 @ Redwood Ridge Scenic Park
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d996307fc3c11b5c650f2ae3ac452754.setIcon(icon_d76c1c4a307e20c3c089371bd91857cd);
+            
+    
+            var marker_0b594acd3d69fc4d53ad0659b7f7df94 = L.marker(
+                [37.805648, -122.434281],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_ebbe929702f5faac15ef1ca19d06619d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_91a86b9e42e8e98fee7f456f2b604aa4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0ab377d762d1fd0c5ca77a53d8341a71 = $(`<div id="html_0ab377d762d1fd0c5ca77a53d8341a71" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Harbor Light Cafe</b><br>                 <b>Account:</b> @mayalin_art<br>                 <b>Time:</b> 2026-02-21T16:06:00+00:00<br>                 <b>Platform:</b> InstaPhoto             </div>             </div>`)[0];
+                popup_91a86b9e42e8e98fee7f456f2b604aa4.setContent(html_0ab377d762d1fd0c5ca77a53d8341a71);
+            
+        
+
+        marker_0b594acd3d69fc4d53ad0659b7f7df94.bindPopup(popup_91a86b9e42e8e98fee7f456f2b604aa4)
+        ;
+
+        
+    
+    
+            marker_0b594acd3d69fc4d53ad0659b7f7df94.bindTooltip(
+                `<div>
+                     @mayalin_art @ Harbor Light Cafe
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0b594acd3d69fc4d53ad0659b7f7df94.setIcon(icon_ebbe929702f5faac15ef1ca19d06619d);
+            
+    
+            var marker_20429c2f6b34e88b202fca0a1e13acc2 = L.marker(
+                [37.805365, -122.434019],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_47ff04c1c875f9e59906a4936b5bcaf1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e8ac60f73d14c8d7b2425f6a93ee6195 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a4737e88483f756728be18b9522e88ca = $(`<div id="html_a4737e88483f756728be18b9522e88ca" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Harbor Light Cafe</b><br>                 <b>Account:</b> @m_lin99<br>                 <b>Time:</b> 2026-02-22T13:48:00+00:00<br>                 <b>Platform:</b> InstaPhoto             </div>             </div>`)[0];
+                popup_e8ac60f73d14c8d7b2425f6a93ee6195.setContent(html_a4737e88483f756728be18b9522e88ca);
+            
+        
+
+        marker_20429c2f6b34e88b202fca0a1e13acc2.bindPopup(popup_e8ac60f73d14c8d7b2425f6a93ee6195)
+        ;
+
+        
+    
+    
+            marker_20429c2f6b34e88b202fca0a1e13acc2.bindTooltip(
+                `<div>
+                     @m_lin99 @ Harbor Light Cafe
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_20429c2f6b34e88b202fca0a1e13acc2.setIcon(icon_47ff04c1c875f9e59906a4936b5bcaf1);
+            
+    
+            var marker_b15de6f836ae205506b01ba706eecdb3 = L.marker(
+                [37.808272, -122.417049],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_ee20cf19466d8206cc57d89f21ba07af = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d435d676284a815bd00baa871d987056 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_80466d06ae631d1f65231ad7e05e6a56 = $(`<div id="html_80466d06ae631d1f65231ad7e05e6a56" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Bayside Living Apartments (Maya's Residence)</b><br>                 <b>Account:</b> @m_lin99<br>                 <b>Time:</b> 2026-02-24T08:07:00+00:00<br>                 <b>Platform:</b> InstaPhoto             </div>             </div>`)[0];
+                popup_d435d676284a815bd00baa871d987056.setContent(html_80466d06ae631d1f65231ad7e05e6a56);
+            
+        
+
+        marker_b15de6f836ae205506b01ba706eecdb3.bindPopup(popup_d435d676284a815bd00baa871d987056)
+        ;
+
+        
+    
+    
+            marker_b15de6f836ae205506b01ba706eecdb3.bindTooltip(
+                `<div>
+                     @m_lin99 @ Bayside Living Apartments (Maya's Residence)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b15de6f836ae205506b01ba706eecdb3.setIcon(icon_ee20cf19466d8206cc57d89f21ba07af);
+            
+    
+            var marker_ea8429c4952c47af1964cc9392f880e0 = L.marker(
+                [37.801379, -122.421666],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_118150fa50c552e48c4d624b069474cb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a52f1833b73173fdb79d7c7b8a452a4a = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8573e44e8f0f075ba77db155494ddb7c = $(`<div id="html_8573e44e8f0f075ba77db155494ddb7c" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Bayview Arts Institute - Fine Arts Hall</b><br>                 <b>Account:</b> @mayalin_art<br>                 <b>Time:</b> 2026-02-25T11:36:00+00:00<br>                 <b>Platform:</b> InstaPhoto             </div>             </div>`)[0];
+                popup_a52f1833b73173fdb79d7c7b8a452a4a.setContent(html_8573e44e8f0f075ba77db155494ddb7c);
+            
+        
+
+        marker_ea8429c4952c47af1964cc9392f880e0.bindPopup(popup_a52f1833b73173fdb79d7c7b8a452a4a)
+        ;
+
+        
+    
+    
+            marker_ea8429c4952c47af1964cc9392f880e0.bindTooltip(
+                `<div>
+                     @mayalin_art @ Bayview Arts Institute - Fine Arts Hall
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ea8429c4952c47af1964cc9392f880e0.setIcon(icon_118150fa50c552e48c4d624b069474cb);
+            
+    
+            var marker_9384cb8e88ead897fa89afa3cc13d079 = L.marker(
+                [37.80549, -122.43418],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_ac6e1119c2ddc07604e8e4373083b9ff = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b1b333e369d94df50745323c32ec919c = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_002ab5dbeaef7612281fae84ede31e25 = $(`<div id="html_002ab5dbeaef7612281fae84ede31e25" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Harbor Light Cafe</b><br>                 <b>Account:</b> @mayalin_art<br>                 <b>Time:</b> 2026-02-26T10:42:00+00:00<br>                 <b>Platform:</b> InstaPhoto             </div>             </div>`)[0];
+                popup_b1b333e369d94df50745323c32ec919c.setContent(html_002ab5dbeaef7612281fae84ede31e25);
+            
+        
+
+        marker_9384cb8e88ead897fa89afa3cc13d079.bindPopup(popup_b1b333e369d94df50745323c32ec919c)
+        ;
+
+        
+    
+    
+            marker_9384cb8e88ead897fa89afa3cc13d079.bindTooltip(
+                `<div>
+                     @mayalin_art @ Harbor Light Cafe
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9384cb8e88ead897fa89afa3cc13d079.setIcon(icon_ac6e1119c2ddc07604e8e4373083b9ff);
+            
+    
+            var marker_287a2b6831f9b39e5fef1699a1caad75 = L.marker(
+                [37.805592, -122.43432],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_989fa49c529c5c7b0d225df0c3a80a5f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6c00d01c1a0c72e60941e0779b1f8a99 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6c6abea0b34bd35b16a54aa3dccb8988 = $(`<div id="html_6c6abea0b34bd35b16a54aa3dccb8988" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Harbor Light Cafe</b><br>                 <b>Account:</b> @mayalin_art<br>                 <b>Time:</b> 2026-02-28T16:48:00+00:00<br>                 <b>Platform:</b> InstaPhoto             </div>             </div>`)[0];
+                popup_6c00d01c1a0c72e60941e0779b1f8a99.setContent(html_6c6abea0b34bd35b16a54aa3dccb8988);
+            
+        
+
+        marker_287a2b6831f9b39e5fef1699a1caad75.bindPopup(popup_6c00d01c1a0c72e60941e0779b1f8a99)
+        ;
+
+        
+    
+    
+            marker_287a2b6831f9b39e5fef1699a1caad75.bindTooltip(
+                `<div>
+                     @mayalin_art @ Harbor Light Cafe
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_287a2b6831f9b39e5fef1699a1caad75.setIcon(icon_989fa49c529c5c7b0d225df0c3a80a5f);
+            
+    
+            var marker_169ba5151be36b3226a8e480dfc7f37f = L.marker(
+                [37.854, -122.4789],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_f04978862ac0ce077efd433e4affa936 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_797e2644f36ad260a34d0dca785f3e1d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ff46e5229351abba9fbfd3afbd37d534 = $(`<div id="html_ff46e5229351abba9fbfd3afbd37d534" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Pacific Horizon Diner</b><br>                 <b>Account:</b> @mayalin_art<br>                 <b>Time:</b> 2026-03-12T16:30:00+00:00<br>                 <b>Platform:</b> InstaPhoto             </div>             </div>`)[0];
+                popup_797e2644f36ad260a34d0dca785f3e1d.setContent(html_ff46e5229351abba9fbfd3afbd37d534);
+            
+        
+
+        marker_169ba5151be36b3226a8e480dfc7f37f.bindPopup(popup_797e2644f36ad260a34d0dca785f3e1d)
+        ;
+
+        
+    
+    
+            marker_169ba5151be36b3226a8e480dfc7f37f.bindTooltip(
+                `<div>
+                     @mayalin_art @ Pacific Horizon Diner
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_169ba5151be36b3226a8e480dfc7f37f.setIcon(icon_f04978862ac0ce077efd433e4affa936);
+            
+    
+            var marker_fb29bfd84686af82651facd9bca2ad3d = L.marker(
+                [37.854, -122.4789],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_1e467a8c32024c4713b76543002ef061 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_09ca08299c67e9601613c132ceb8c442 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_6f885c19f7f43da5ccdaf13bcca0f02f = $(`<div id="html_6f885c19f7f43da5ccdaf13bcca0f02f" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Pacific Horizon Diner</b><br>                 <b>Account:</b> @m.shadow_7<br>                 <b>Time:</b> 2026-03-14T17:15:00+00:00<br>                 <b>Platform:</b> WhisperWire             </div>             </div>`)[0];
+                popup_09ca08299c67e9601613c132ceb8c442.setContent(html_6f885c19f7f43da5ccdaf13bcca0f02f);
+            
+        
+
+        marker_fb29bfd84686af82651facd9bca2ad3d.bindPopup(popup_09ca08299c67e9601613c132ceb8c442)
+        ;
+
+        
+    
+    
+            marker_fb29bfd84686af82651facd9bca2ad3d.bindTooltip(
+                `<div>
+                     @m.shadow_7 @ Pacific Horizon Diner
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fb29bfd84686af82651facd9bca2ad3d.setIcon(icon_1e467a8c32024c4713b76543002ef061);
+            
+    
+            var marker_09a672dd7b1204f91583911b921b21de = L.marker(
+                [37.6001, -122.3812],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_ce3c819ba7885e5378075285fc507701 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "gray",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_47fcd4c13726d66dc95244f939085a95 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ba2943fd5aac0524127dc18d05f7bd3b = $(`<div id="html_ba2943fd5aac0524127dc18d05f7bd3b" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>SFO Airport Marriott Gateway</b><br>                 <b>Account:</b> @lucas_r_sound<br>                 <b>Time:</b> 2026-03-14T18:50:00+00:00<br>                 <b>Platform:</b> ChirpNet             </div>             </div>`)[0];
+                popup_47fcd4c13726d66dc95244f939085a95.setContent(html_ba2943fd5aac0524127dc18d05f7bd3b);
+            
+        
+
+        marker_09a672dd7b1204f91583911b921b21de.bindPopup(popup_47fcd4c13726d66dc95244f939085a95)
+        ;
+
+        
+    
+    
+            marker_09a672dd7b1204f91583911b921b21de.bindTooltip(
+                `<div>
+                     @lucas_r_sound @ SFO Airport Marriott Gateway
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_09a672dd7b1204f91583911b921b21de.setIcon(icon_ce3c819ba7885e5378075285fc507701);
+            
+    
+            var marker_4fb69dfd80d53bcb68ac379a86e062fe = L.marker(
+                [37.8924, -122.5719],
+                {
+}
+            ).addTo(feature_group_3d473d609aad3259baf6fdf730aa43e0);
+        
+    
+            var icon_f819df296f47ab40b7b7b5be70630034 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "map-marker",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9733ea88cc0a0d56a87bc06a739e2b86 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_cb35268c60780a3d81a621d7bdfd860c = $(`<div id="html_cb35268c60780a3d81a621d7bdfd860c" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 200px;">                 <b>Whispering Pines Overlook</b><br>                 <b>Account:</b> @m.shadow_7<br>                 <b>Time:</b> 2026-03-14T21:05:00+00:00<br>                 <b>Platform:</b> WhisperWire             </div>             </div>`)[0];
+                popup_9733ea88cc0a0d56a87bc06a739e2b86.setContent(html_cb35268c60780a3d81a621d7bdfd860c);
+            
+        
+
+        marker_4fb69dfd80d53bcb68ac379a86e062fe.bindPopup(popup_9733ea88cc0a0d56a87bc06a739e2b86)
+        ;
+
+        
+    
+    
+            marker_4fb69dfd80d53bcb68ac379a86e062fe.bindTooltip(
+                `<div>
+                     @m.shadow_7 @ Whispering Pines Overlook
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4fb69dfd80d53bcb68ac379a86e062fe.setIcon(icon_f819df296f47ab40b7b7b5be70630034);
+            
+    
+            feature_group_3d473d609aad3259baf6fdf730aa43e0.addTo(map_67d9f66fe4474a4288de07132888bb08);
+        
+    
+            var feature_group_127d7264f3f00a73ab3e0c728a765b6a = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_f8e438fcb0ef4b6a6a7ff66903aab714 = L.marker(
+                [37.8715, -122.4891],
+                {
+}
+            ).addTo(feature_group_127d7264f3f00a73ab3e0c728a765b6a);
+        
+    
+            var icon_e753ac9d5db0cef90a9e8207d815e943 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8bcb894e3bf6e1d8738fa8f04a3a029f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7191d5067df77884a478704de9e177d6 = $(`<div id="html_7191d5067df77884a478704de9e177d6" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">                         <b>Photo: PH-001</b> (PH-001.jpg)<br>                         <b>Account:</b> @mayalin_art<br>                         <b>Camera:</b> Sony ILCE-7M4<br>                         <b>Time:</b> 2026-02-03T17:00:00+00:00<br>                         <b>Caption:</b> Golden hour ridge gradients<br>                                              </div>                     </div>`)[0];
+                popup_8bcb894e3bf6e1d8738fa8f04a3a029f.setContent(html_7191d5067df77884a478704de9e177d6);
+            
+        
+
+        marker_f8e438fcb0ef4b6a6a7ff66903aab714.bindPopup(popup_8bcb894e3bf6e1d8738fa8f04a3a029f)
+        ;
+
+        
+    
+    
+            marker_f8e438fcb0ef4b6a6a7ff66903aab714.bindTooltip(
+                `<div>
+                     Photo PH-001 (@mayalin_art)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f8e438fcb0ef4b6a6a7ff66903aab714.setIcon(icon_e753ac9d5db0cef90a9e8207d815e943);
+            
+    
+            var marker_d4b47d01a6b33c70518f53e62657ea59 = L.marker(
+                [37.8055, -122.4342],
+                {
+}
+            ).addTo(feature_group_127d7264f3f00a73ab3e0c728a765b6a);
+        
+    
+            var icon_2a16cae0f65e122dd315ac8565d426bb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a5b34d0d0894b02e5580bd0555bec5c9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_61e0362b2bf4ac7e700f32d0b15bf2a3 = $(`<div id="html_61e0362b2bf4ac7e700f32d0b15bf2a3" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">                         <b>Photo: PH-002</b> (PH-002.jpg)<br>                         <b>Account:</b> @mayalin_art<br>                         <b>Camera:</b> Google Pixel 7<br>                         <b>Time:</b> 2026-02-10T09:00:00+00:00<br>                         <b>Caption:</b> Morning reflections and espresso<br>                                              </div>                     </div>`)[0];
+                popup_a5b34d0d0894b02e5580bd0555bec5c9.setContent(html_61e0362b2bf4ac7e700f32d0b15bf2a3);
+            
+        
+
+        marker_d4b47d01a6b33c70518f53e62657ea59.bindPopup(popup_a5b34d0d0894b02e5580bd0555bec5c9)
+        ;
+
+        
+    
+    
+            marker_d4b47d01a6b33c70518f53e62657ea59.bindTooltip(
+                `<div>
+                     Photo PH-002 (@mayalin_art)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d4b47d01a6b33c70518f53e62657ea59.setIcon(icon_2a16cae0f65e122dd315ac8565d426bb);
+            
+    
+            var marker_84e3abfef7b27055ebc3a3a41aa109a5 = L.marker(
+                [37.8012, -122.4215],
+                {
+}
+            ).addTo(feature_group_127d7264f3f00a73ab3e0c728a765b6a);
+        
+    
+            var icon_6ef4590110f5143aaa4eb7cc4568e136 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d145265576e7de53d67cc2b8187a3c90 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_08a5fee644901b7923166ba6c6e97e8b = $(`<div id="html_08a5fee644901b7923166ba6c6e97e8b" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">                         <b>Photo: PH-003</b> (PH-003.jpg)<br>                         <b>Account:</b> @pixel_maya<br>                         <b>Camera:</b> Sony ILCE-7M4<br>                         <b>Time:</b> 2025-10-21T15:00:00+00:00<br>                         <b>Caption:</b> Archived studio studies<br>                                              </div>                     </div>`)[0];
+                popup_d145265576e7de53d67cc2b8187a3c90.setContent(html_08a5fee644901b7923166ba6c6e97e8b);
+            
+        
+
+        marker_84e3abfef7b27055ebc3a3a41aa109a5.bindPopup(popup_d145265576e7de53d67cc2b8187a3c90)
+        ;
+
+        
+    
+    
+            marker_84e3abfef7b27055ebc3a3a41aa109a5.bindTooltip(
+                `<div>
+                     Photo PH-003 (@pixel_maya)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_84e3abfef7b27055ebc3a3a41aa109a5.setIcon(icon_6ef4590110f5143aaa4eb7cc4568e136);
+            
+    
+            var marker_9daa9f121797a427b279da98493f0990 = L.marker(
+                [37.8924, -122.5719],
+                {
+}
+            ).addTo(feature_group_127d7264f3f00a73ab3e0c728a765b6a);
+        
+    
+            var icon_b15eb326327dd9f0a2f9ee1770bac5b5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_98b0e3dcd2eac9938f48ef0e324f3fd4 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_f431ac9d546a2ea502c09cb06c66f893 = $(`<div id="html_f431ac9d546a2ea502c09cb06c66f893" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">                         <b>Photo: PH-004</b> (PH-004.jpg)<br>                         <b>Account:</b> @mayalin_art<br>                         <b>Camera:</b> Sony ILCE-7M4<br>                         <b>Time:</b> 2026-02-18T18:00:00+00:00<br>                         <b>Caption:</b> Whispering Pines evening breeze<br>                                              </div>                     </div>`)[0];
+                popup_98b0e3dcd2eac9938f48ef0e324f3fd4.setContent(html_f431ac9d546a2ea502c09cb06c66f893);
+            
+        
+
+        marker_9daa9f121797a427b279da98493f0990.bindPopup(popup_98b0e3dcd2eac9938f48ef0e324f3fd4)
+        ;
+
+        
+    
+    
+            marker_9daa9f121797a427b279da98493f0990.bindTooltip(
+                `<div>
+                     Photo PH-004 (@mayalin_art)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9daa9f121797a427b279da98493f0990.setIcon(icon_b15eb326327dd9f0a2f9ee1770bac5b5);
+            
+    
+            var marker_4087533834c366495648137d7568c000 = L.marker(
+                [37.854, -122.4789],
+                {
+}
+            ).addTo(feature_group_127d7264f3f00a73ab3e0c728a765b6a);
+        
+    
+            var icon_d74d2034d4728f8852ace83e870d0372 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e5cda4cd101e94fec7210394bdfc087d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_156d322c9208ce3a2a9fc54b90235d6e = $(`<div id="html_156d322c9208ce3a2a9fc54b90235d6e" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">                         <b>Photo: PH-006</b> (PH-006.jpg)<br>                         <b>Account:</b> @mayalin_art<br>                         <b>Camera:</b> Sony ILCE-7M4<br>                         <b>Time:</b> 2026-03-02T19:00:00+00:00<br>                         <b>Caption:</b> Shadows over shoreline<br>                                              </div>                     </div>`)[0];
+                popup_e5cda4cd101e94fec7210394bdfc087d.setContent(html_156d322c9208ce3a2a9fc54b90235d6e);
+            
+        
+
+        marker_4087533834c366495648137d7568c000.bindPopup(popup_e5cda4cd101e94fec7210394bdfc087d)
+        ;
+
+        
+    
+    
+            marker_4087533834c366495648137d7568c000.bindTooltip(
+                `<div>
+                     Photo PH-006 (@mayalin_art)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4087533834c366495648137d7568c000.setIcon(icon_d74d2034d4728f8852ace83e870d0372);
+            
+    
+            var marker_7a52ae94697526b98a99e228a6f138d2 = L.marker(
+                [37.8924, -122.5719],
+                {
+}
+            ).addTo(feature_group_127d7264f3f00a73ab3e0c728a765b6a);
+        
+    
+            var icon_61788fd63a2880a7ccc0be481d91a0ec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c07e6378a99cd7366b9eed4c25768466 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_aa8f149b430e493ec82b7f3be0fd0eb6 = $(`<div id="html_aa8f149b430e493ec82b7f3be0fd0eb6" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">                         <b>Photo: PH-007</b> (PH-007.jpg)<br>                         <b>Account:</b> @m.shadow_7<br>                         <b>Camera:</b> Motorola Moto G Play Synthetic<br>                         <b>Time:</b> 2026-03-06T22:00:00+00:00<br>                         <b>Caption:</b> Late trail inspection<br>                                              </div>                     </div>`)[0];
+                popup_c07e6378a99cd7366b9eed4c25768466.setContent(html_aa8f149b430e493ec82b7f3be0fd0eb6);
+            
+        
+
+        marker_7a52ae94697526b98a99e228a6f138d2.bindPopup(popup_c07e6378a99cd7366b9eed4c25768466)
+        ;
+
+        
+    
+    
+            marker_7a52ae94697526b98a99e228a6f138d2.bindTooltip(
+                `<div>
+                     Photo PH-007 (@m.shadow_7)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7a52ae94697526b98a99e228a6f138d2.setIcon(icon_61788fd63a2880a7ccc0be481d91a0ec);
+            
+    
+            var marker_333975913c76ae5a624d6af11ae32922 = L.marker(
+                [37.854, -122.4789],
+                {
+}
+            ).addTo(feature_group_127d7264f3f00a73ab3e0c728a765b6a);
+        
+    
+            var icon_a6d2c7caed08be7814e856070c5b1344 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_352b144cc56d95c62bbd32ce4ba24833 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_17b03b9409fb1e16ae88789fbb4b5dc8 = $(`<div id="html_17b03b9409fb1e16ae88789fbb4b5dc8" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">                         <b>Photo: PH-008</b> (PH-008.jpg)<br>                         <b>Account:</b> @mayalin_art<br>                         <b>Camera:</b> Google Pixel 7<br>                         <b>Time:</b> 2026-03-12T16:00:00+00:00<br>                         <b>Caption:</b> Awaiting appointment at the shoreline<br>                                              </div>                     </div>`)[0];
+                popup_352b144cc56d95c62bbd32ce4ba24833.setContent(html_17b03b9409fb1e16ae88789fbb4b5dc8);
+            
+        
+
+        marker_333975913c76ae5a624d6af11ae32922.bindPopup(popup_352b144cc56d95c62bbd32ce4ba24833)
+        ;
+
+        
+    
+    
+            marker_333975913c76ae5a624d6af11ae32922.bindTooltip(
+                `<div>
+                     Photo PH-008 (@mayalin_art)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_333975913c76ae5a624d6af11ae32922.setIcon(icon_a6d2c7caed08be7814e856070c5b1344);
+            
+    
+            var marker_64d71db52a02d75449310c26e4b5aa4e = L.marker(
+                [37.8924, -122.5719],
+                {
+}
+            ).addTo(feature_group_127d7264f3f00a73ab3e0c728a765b6a);
+        
+    
+            var icon_078c3e7ae3e317225bd5d085d9b5cf8a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8f98ffdcf8c9d80db6d31c6a9f497d15 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8e854eae810c6c2cff55c8b34c250823 = $(`<div id="html_8e854eae810c6c2cff55c8b34c250823" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">                         <b>Photo: PH-009</b> (PH-009.jpg)<br>                         <b>Account:</b> @m.shadow_7<br>                         <b>Camera:</b> Motorola Moto G Play Synthetic<br>                         <b>Time:</b> 2026-03-14T21:00:00+00:00<br>                         <b>Caption:</b> Final horizon from the pines<br>                                              </div>                     </div>`)[0];
+                popup_8f98ffdcf8c9d80db6d31c6a9f497d15.setContent(html_8e854eae810c6c2cff55c8b34c250823);
+            
+        
+
+        marker_64d71db52a02d75449310c26e4b5aa4e.bindPopup(popup_8f98ffdcf8c9d80db6d31c6a9f497d15)
+        ;
+
+        
+    
+    
+            marker_64d71db52a02d75449310c26e4b5aa4e.bindTooltip(
+                `<div>
+                     Photo PH-009 (@m.shadow_7)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_64d71db52a02d75449310c26e4b5aa4e.setIcon(icon_078c3e7ae3e317225bd5d085d9b5cf8a);
+            
+    
+            var marker_ecc4568d9c290c92746d16c742f6b02f = L.marker(
+                [22.8905, -109.9167],
+                {
+}
+            ).addTo(feature_group_127d7264f3f00a73ab3e0c728a765b6a);
+        
+    
+            var icon_a72e5127778d0bc527aaf518ee237a41 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_664aa3759737110c873d78abcf625704 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_8c35b78cd648776ada87c86cab3d29f6 = $(`<div id="html_8c35b78cd648776ada87c86cab3d29f6" style="width: 100.0%; height: 100.0%;">                     <div style="font-family: sans-serif; font-size: 12px; width: 220px;">                         <b>Photo: PH-010</b> (PH-010.jpg)<br>                         <b>Account:</b> @mayalin_travels<br>                         <b>Camera:</b> Apple iPhone 8<br>                         <b>Time:</b> 2024-06-15T12:00:00+00:00<br>                         <b>Caption:</b> Sunny beach freedom in Cabo!<br>                         <b style="color:red;">RED HERRING PHOTO</b>                     </div>                     </div>`)[0];
+                popup_664aa3759737110c873d78abcf625704.setContent(html_8c35b78cd648776ada87c86cab3d29f6);
+            
+        
+
+        marker_ecc4568d9c290c92746d16c742f6b02f.bindPopup(popup_664aa3759737110c873d78abcf625704)
+        ;
+
+        
+    
+    
+            marker_ecc4568d9c290c92746d16c742f6b02f.bindTooltip(
+                `<div>
+                     Photo PH-010 (@mayalin_travels)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ecc4568d9c290c92746d16c742f6b02f.setIcon(icon_a72e5127778d0bc527aaf518ee237a41);
+            
+    
+            feature_group_127d7264f3f00a73ab3e0c728a765b6a.addTo(map_67d9f66fe4474a4288de07132888bb08);
+        
+    
+            var feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_895828ecd351ed30394581fe875b1856 = L.circleMarker(
+                [37.802, -122.422],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a);
+        
+    
+        var popup_e7b47a828afcbb56be98d8baa3ff4a41 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e02dab498e615a44f4447719b92c76af = $(`<div id="html_e02dab498e615a44f4447719b92c76af" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 210px;">                 <b>Cell Tower: Marina Arts Sector</b><br>                 <b>Handset:</b> +1-555-0144<br>                 <b>Recipient:</b> +1-555-0121<br>                 <b>Call ID:</b> CDR-1001 (VOICE)<br>                 <b>Time:</b> 2026-02-01T14:15:00+00:00             </div>             </div>`)[0];
+                popup_e7b47a828afcbb56be98d8baa3ff4a41.setContent(html_e02dab498e615a44f4447719b92c76af);
+            
+        
+
+        circle_marker_895828ecd351ed30394581fe875b1856.bindPopup(popup_e7b47a828afcbb56be98d8baa3ff4a41)
+        ;
+
+        
+    
+    
+            circle_marker_895828ecd351ed30394581fe875b1856.bindTooltip(
+                `<div>
+                     Tower Sector: Marina Arts Sector
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_74352b86f74a6ec568942167382a3653 = L.circleMarker(
+                [37.802, -122.422],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a);
+        
+    
+        var popup_fdabcc90b5277788e52c3d0f66144af5 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e4990b88396c5b4972c7aef6671697b7 = $(`<div id="html_e4990b88396c5b4972c7aef6671697b7" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 210px;">                 <b>Cell Tower: Marina Arts Sector</b><br>                 <b>Handset:</b> +1-555-0144<br>                 <b>Recipient:</b> +1-555-0121<br>                 <b>Call ID:</b> CDR-1002 (VOICE)<br>                 <b>Time:</b> 2026-02-04T16:02:00+00:00             </div>             </div>`)[0];
+                popup_fdabcc90b5277788e52c3d0f66144af5.setContent(html_e4990b88396c5b4972c7aef6671697b7);
+            
+        
+
+        circle_marker_74352b86f74a6ec568942167382a3653.bindPopup(popup_fdabcc90b5277788e52c3d0f66144af5)
+        ;
+
+        
+    
+    
+            circle_marker_74352b86f74a6ec568942167382a3653.bindTooltip(
+                `<div>
+                     Tower Sector: Marina Arts Sector
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4ca8a7d42f0afd27277f5870ee1ce55b = L.circleMarker(
+                [37.802, -122.422],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a);
+        
+    
+        var popup_86456a7d0c0a006cd35f87c88d5a75b6 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_5baf542a1010a7d6b81df40d6d58137c = $(`<div id="html_5baf542a1010a7d6b81df40d6d58137c" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 210px;">                 <b>Cell Tower: Marina Arts Sector</b><br>                 <b>Handset:</b> +1-555-0144<br>                 <b>Recipient:</b> +1-555-0133<br>                 <b>Call ID:</b> CDR-1003 (VOICE)<br>                 <b>Time:</b> 2026-02-06T13:45:00+00:00             </div>             </div>`)[0];
+                popup_86456a7d0c0a006cd35f87c88d5a75b6.setContent(html_5baf542a1010a7d6b81df40d6d58137c);
+            
+        
+
+        circle_marker_4ca8a7d42f0afd27277f5870ee1ce55b.bindPopup(popup_86456a7d0c0a006cd35f87c88d5a75b6)
+        ;
+
+        
+    
+    
+            circle_marker_4ca8a7d42f0afd27277f5870ee1ce55b.bindTooltip(
+                `<div>
+                     Tower Sector: Marina Arts Sector
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_473050af1e1bc5ecf48668afdb9dac9c = L.circleMarker(
+                [37.806, -122.435],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a);
+        
+    
+        var popup_ee257a8839579cc92a7a6c14b95ca9f7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_ee99e07da8444cece9ce3d389c9636ad = $(`<div id="html_ee99e07da8444cece9ce3d389c9636ad" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 210px;">                 <b>Cell Tower: Harbor Wharf Sector</b><br>                 <b>Handset:</b> +1-555-0144<br>                 <b>Recipient:</b> +1-555-0121<br>                 <b>Call ID:</b> CDR-1004 (VOICE)<br>                 <b>Time:</b> 2026-02-07T10:48:00+00:00             </div>             </div>`)[0];
+                popup_ee257a8839579cc92a7a6c14b95ca9f7.setContent(html_ee99e07da8444cece9ce3d389c9636ad);
+            
+        
+
+        circle_marker_473050af1e1bc5ecf48668afdb9dac9c.bindPopup(popup_ee257a8839579cc92a7a6c14b95ca9f7)
+        ;
+
+        
+    
+    
+            circle_marker_473050af1e1bc5ecf48668afdb9dac9c.bindTooltip(
+                `<div>
+                     Tower Sector: Harbor Wharf Sector
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_067d22aa142597cfb0212c524685af13 = L.circleMarker(
+                [37.802, -122.422],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a);
+        
+    
+        var popup_1c8538f2246c8b90d7650cd436be88bc = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_00682fe91fefabdcc9572d69bfc7f455 = $(`<div id="html_00682fe91fefabdcc9572d69bfc7f455" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 210px;">                 <b>Cell Tower: Marina Arts Sector</b><br>                 <b>Handset:</b> +1-555-0144<br>                 <b>Recipient:</b> +1-555-0133<br>                 <b>Call ID:</b> CDR-1005 (VOICE)<br>                 <b>Time:</b> 2026-02-08T13:48:00+00:00             </div>             </div>`)[0];
+                popup_1c8538f2246c8b90d7650cd436be88bc.setContent(html_00682fe91fefabdcc9572d69bfc7f455);
+            
+        
+
+        circle_marker_067d22aa142597cfb0212c524685af13.bindPopup(popup_1c8538f2246c8b90d7650cd436be88bc)
+        ;
+
+        
+    
+    
+            circle_marker_067d22aa142597cfb0212c524685af13.bindTooltip(
+                `<div>
+                     Tower Sector: Marina Arts Sector
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d1bc106595551bca4f78f0f824563b81 = L.circleMarker(
+                [37.806, -122.435],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a);
+        
+    
+        var popup_7599121ed451b97cdf0e3b2e64ce0133 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d5f884616dfbc461f68ab15765e97d79 = $(`<div id="html_d5f884616dfbc461f68ab15765e97d79" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 210px;">                 <b>Cell Tower: Harbor Wharf Sector</b><br>                 <b>Handset:</b> +1-555-0144<br>                 <b>Recipient:</b> +1-555-0133<br>                 <b>Call ID:</b> CDR-1006 (VOICE)<br>                 <b>Time:</b> 2026-02-09T15:38:00+00:00             </div>             </div>`)[0];
+                popup_7599121ed451b97cdf0e3b2e64ce0133.setContent(html_d5f884616dfbc461f68ab15765e97d79);
+            
+        
+
+        circle_marker_d1bc106595551bca4f78f0f824563b81.bindPopup(popup_7599121ed451b97cdf0e3b2e64ce0133)
+        ;
+
+        
+    
+    
+            circle_marker_d1bc106595551bca4f78f0f824563b81.bindTooltip(
+                `<div>
+                     Tower Sector: Harbor Wharf Sector
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_02288d9cdff8a39a59d95f4fe5564b07 = L.circleMarker(
+                [37.806, -122.435],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a);
+        
+    
+        var popup_8e65633711d95c27811082955b5f4ab7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_fc1b5650e9da49480855f6bb4d7fec59 = $(`<div id="html_fc1b5650e9da49480855f6bb4d7fec59" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 210px;">                 <b>Cell Tower: Harbor Wharf Sector</b><br>                 <b>Handset:</b> +1-555-0144<br>                 <b>Recipient:</b> +1-555-0133<br>                 <b>Call ID:</b> CDR-1007 (VOICE)<br>                 <b>Time:</b> 2026-02-11T16:05:00+00:00             </div>             </div>`)[0];
+                popup_8e65633711d95c27811082955b5f4ab7.setContent(html_fc1b5650e9da49480855f6bb4d7fec59);
+            
+        
+
+        circle_marker_02288d9cdff8a39a59d95f4fe5564b07.bindPopup(popup_8e65633711d95c27811082955b5f4ab7)
+        ;
+
+        
+    
+    
+            circle_marker_02288d9cdff8a39a59d95f4fe5564b07.bindTooltip(
+                `<div>
+                     Tower Sector: Harbor Wharf Sector
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6a4777be0bf704ae380393508fd3c8bb = L.circleMarker(
+                [37.802, -122.422],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a);
+        
+    
+        var popup_e50c9e70d9aa1f0ceb6233e5694860e9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_de9d69cd98627ae6d3e85eda8ac6ea97 = $(`<div id="html_de9d69cd98627ae6d3e85eda8ac6ea97" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 210px;">                 <b>Cell Tower: Marina Arts Sector</b><br>                 <b>Handset:</b> +1-555-0144<br>                 <b>Recipient:</b> +1-555-0121<br>                 <b>Call ID:</b> CDR-1008 (VOICE)<br>                 <b>Time:</b> 2026-02-13T13:45:00+00:00             </div>             </div>`)[0];
+                popup_e50c9e70d9aa1f0ceb6233e5694860e9.setContent(html_de9d69cd98627ae6d3e85eda8ac6ea97);
+            
+        
+
+        circle_marker_6a4777be0bf704ae380393508fd3c8bb.bindPopup(popup_e50c9e70d9aa1f0ceb6233e5694860e9)
+        ;
+
+        
+    
+    
+            circle_marker_6a4777be0bf704ae380393508fd3c8bb.bindTooltip(
+                `<div>
+                     Tower Sector: Marina Arts Sector
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4d349174563024cda46942c18a01d5e1 = L.circleMarker(
+                [37.802, -122.422],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a);
+        
+    
+        var popup_5d528b300e59df2d34a89653ed641e9b = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_090e507ca7731e929ea3b78f300011df = $(`<div id="html_090e507ca7731e929ea3b78f300011df" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 210px;">                 <b>Cell Tower: Marina Arts Sector</b><br>                 <b>Handset:</b> +1-555-0144<br>                 <b>Recipient:</b> +1-555-0133<br>                 <b>Call ID:</b> CDR-1009 (VOICE)<br>                 <b>Time:</b> 2026-02-18T17:40:00+00:00             </div>             </div>`)[0];
+                popup_5d528b300e59df2d34a89653ed641e9b.setContent(html_090e507ca7731e929ea3b78f300011df);
+            
+        
+
+        circle_marker_4d349174563024cda46942c18a01d5e1.bindPopup(popup_5d528b300e59df2d34a89653ed641e9b)
+        ;
+
+        
+    
+    
+            circle_marker_4d349174563024cda46942c18a01d5e1.bindTooltip(
+                `<div>
+                     Tower Sector: Marina Arts Sector
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f564c8095327576f746af6a6607ca38a = L.circleMarker(
+                [37.806, -122.435],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a);
+        
+    
+        var popup_3b394bcd7cfdd76d8000b47f5fca2579 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1f6610bb96e3fae5ea900684947e584d = $(`<div id="html_1f6610bb96e3fae5ea900684947e584d" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 210px;">                 <b>Cell Tower: Harbor Wharf Sector</b><br>                 <b>Handset:</b> +1-555-0144<br>                 <b>Recipient:</b> +1-555-0121<br>                 <b>Call ID:</b> CDR-1010 (VOICE)<br>                 <b>Time:</b> 2026-02-19T14:44:00+00:00             </div>             </div>`)[0];
+                popup_3b394bcd7cfdd76d8000b47f5fca2579.setContent(html_1f6610bb96e3fae5ea900684947e584d);
+            
+        
+
+        circle_marker_f564c8095327576f746af6a6607ca38a.bindPopup(popup_3b394bcd7cfdd76d8000b47f5fca2579)
+        ;
+
+        
+    
+    
+            circle_marker_f564c8095327576f746af6a6607ca38a.bindTooltip(
+                `<div>
+                     Tower Sector: Harbor Wharf Sector
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d6fb02f049eab99f4cdf36dc97afbbf1 = L.circleMarker(
+                [37.806, -122.435],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a);
+        
+    
+        var popup_c879032658069c9c26bcc4876d0f61e3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_4266c4f3dc0e3b59baa091bba2ad8a25 = $(`<div id="html_4266c4f3dc0e3b59baa091bba2ad8a25" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 210px;">                 <b>Cell Tower: Harbor Wharf Sector</b><br>                 <b>Handset:</b> +1-555-0144<br>                 <b>Recipient:</b> +1-555-0133<br>                 <b>Call ID:</b> CDR-1011 (VOICE)<br>                 <b>Time:</b> 2026-02-21T17:24:00+00:00             </div>             </div>`)[0];
+                popup_c879032658069c9c26bcc4876d0f61e3.setContent(html_4266c4f3dc0e3b59baa091bba2ad8a25);
+            
+        
+
+        circle_marker_d6fb02f049eab99f4cdf36dc97afbbf1.bindPopup(popup_c879032658069c9c26bcc4876d0f61e3)
+        ;
+
+        
+    
+    
+            circle_marker_d6fb02f049eab99f4cdf36dc97afbbf1.bindTooltip(
+                `<div>
+                     Tower Sector: Harbor Wharf Sector
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a7f337a5f9333f382d84b328026478d1 = L.circleMarker(
+                [37.802, -122.422],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a);
+        
+    
+        var popup_9b670b986c34b13f32d0527363017f5d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a6eed31884a698a71cdb1bbc5bbc6dbc = $(`<div id="html_a6eed31884a698a71cdb1bbc5bbc6dbc" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 210px;">                 <b>Cell Tower: Marina Arts Sector</b><br>                 <b>Handset:</b> +1-555-0144<br>                 <b>Recipient:</b> +1-555-0121<br>                 <b>Call ID:</b> CDR-1012 (VOICE)<br>                 <b>Time:</b> 2026-02-23T15:53:00+00:00             </div>             </div>`)[0];
+                popup_9b670b986c34b13f32d0527363017f5d.setContent(html_a6eed31884a698a71cdb1bbc5bbc6dbc);
+            
+        
+
+        circle_marker_a7f337a5f9333f382d84b328026478d1.bindPopup(popup_9b670b986c34b13f32d0527363017f5d)
+        ;
+
+        
+    
+    
+            circle_marker_a7f337a5f9333f382d84b328026478d1.bindTooltip(
+                `<div>
+                     Tower Sector: Marina Arts Sector
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4f25d3bc5fb5a7170404b1977cb3dbfd = L.circleMarker(
+                [37.802, -122.422],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a);
+        
+    
+        var popup_80bf2a7c18aeaa4df44d26beaf313c6e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b325580bb112df1e41d6d4c69694fbcc = $(`<div id="html_b325580bb112df1e41d6d4c69694fbcc" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 210px;">                 <b>Cell Tower: Marina Arts Sector</b><br>                 <b>Handset:</b> +1-555-0144<br>                 <b>Recipient:</b> +1-555-0133<br>                 <b>Call ID:</b> CDR-1013 (VOICE)<br>                 <b>Time:</b> 2026-02-25T11:13:00+00:00             </div>             </div>`)[0];
+                popup_80bf2a7c18aeaa4df44d26beaf313c6e.setContent(html_b325580bb112df1e41d6d4c69694fbcc);
+            
+        
+
+        circle_marker_4f25d3bc5fb5a7170404b1977cb3dbfd.bindPopup(popup_80bf2a7c18aeaa4df44d26beaf313c6e)
+        ;
+
+        
+    
+    
+            circle_marker_4f25d3bc5fb5a7170404b1977cb3dbfd.bindTooltip(
+                `<div>
+                     Tower Sector: Marina Arts Sector
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1d1146acfe5a614fea40c48c694b45e0 = L.circleMarker(
+                [37.802, -122.422],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a);
+        
+    
+        var popup_d435490624341b37b56624d5150dc6c9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_46b871a02cf8594eafa71170849e7ff4 = $(`<div id="html_46b871a02cf8594eafa71170849e7ff4" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 210px;">                 <b>Cell Tower: Marina Arts Sector</b><br>                 <b>Handset:</b> +1-555-0144<br>                 <b>Recipient:</b> +1-555-0121<br>                 <b>Call ID:</b> CDR-1014 (VOICE)<br>                 <b>Time:</b> 2026-02-26T20:29:00+00:00             </div>             </div>`)[0];
+                popup_d435490624341b37b56624d5150dc6c9.setContent(html_46b871a02cf8594eafa71170849e7ff4);
+            
+        
+
+        circle_marker_1d1146acfe5a614fea40c48c694b45e0.bindPopup(popup_d435490624341b37b56624d5150dc6c9)
+        ;
+
+        
+    
+    
+            circle_marker_1d1146acfe5a614fea40c48c694b45e0.bindTooltip(
+                `<div>
+                     Tower Sector: Marina Arts Sector
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_532a9584acfafb5aa00de3905ab6c998 = L.circleMarker(
+                [37.802, -122.422],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a);
+        
+    
+        var popup_72e1b03ff0ecf0af38063d394bf48d42 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e737477537c33eb0815ed9449bca40ac = $(`<div id="html_e737477537c33eb0815ed9449bca40ac" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 210px;">                 <b>Cell Tower: Marina Arts Sector</b><br>                 <b>Handset:</b> +1-555-0188<br>                 <b>Recipient:</b> +1-555-0144<br>                 <b>Call ID:</b> CDR-1018 (VOICE)<br>                 <b>Time:</b> 2026-03-02T15:20:00+00:00             </div>             </div>`)[0];
+                popup_72e1b03ff0ecf0af38063d394bf48d42.setContent(html_e737477537c33eb0815ed9449bca40ac);
+            
+        
+
+        circle_marker_532a9584acfafb5aa00de3905ab6c998.bindPopup(popup_72e1b03ff0ecf0af38063d394bf48d42)
+        ;
+
+        
+    
+    
+            circle_marker_532a9584acfafb5aa00de3905ab6c998.bindTooltip(
+                `<div>
+                     Tower Sector: Marina Arts Sector
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_68d0a0b541cedb7df47bcad35da44ae9 = L.circleMarker(
+                [37.802, -122.422],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a);
+        
+    
+        var popup_590de1ed49ea67507d469b13cfad1db5 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_d1e8c977b03c5e94c5170accf8577eee = $(`<div id="html_d1e8c977b03c5e94c5170accf8577eee" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 210px;">                 <b>Cell Tower: Marina Arts Sector</b><br>                 <b>Handset:</b> +1-555-0144<br>                 <b>Recipient:</b> +1-555-0133<br>                 <b>Call ID:</b> CDR-1015 (VOICE)<br>                 <b>Time:</b> 2026-03-02T19:25:00+00:00             </div>             </div>`)[0];
+                popup_590de1ed49ea67507d469b13cfad1db5.setContent(html_d1e8c977b03c5e94c5170accf8577eee);
+            
+        
+
+        circle_marker_68d0a0b541cedb7df47bcad35da44ae9.bindPopup(popup_590de1ed49ea67507d469b13cfad1db5)
+        ;
+
+        
+    
+    
+            circle_marker_68d0a0b541cedb7df47bcad35da44ae9.bindTooltip(
+                `<div>
+                     Tower Sector: Marina Arts Sector
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7eba7165545b076bda55010c5d38a30d = L.circleMarker(
+                [37.802, -122.422],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a);
+        
+    
+        var popup_95f399b8d8d602881d2a74fcc55adb64 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e6fb0388ac66dd2da47dbb5a3f4c66e7 = $(`<div id="html_e6fb0388ac66dd2da47dbb5a3f4c66e7" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 210px;">                 <b>Cell Tower: Marina Arts Sector</b><br>                 <b>Handset:</b> +1-555-0144<br>                 <b>Recipient:</b> +1-555-0121<br>                 <b>Call ID:</b> CDR-1016 (VOICE)<br>                 <b>Time:</b> 2026-03-04T10:55:00+00:00             </div>             </div>`)[0];
+                popup_95f399b8d8d602881d2a74fcc55adb64.setContent(html_e6fb0388ac66dd2da47dbb5a3f4c66e7);
+            
+        
+
+        circle_marker_7eba7165545b076bda55010c5d38a30d.bindPopup(popup_95f399b8d8d602881d2a74fcc55adb64)
+        ;
+
+        
+    
+    
+            circle_marker_7eba7165545b076bda55010c5d38a30d.bindTooltip(
+                `<div>
+                     Tower Sector: Marina Arts Sector
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_354283f01dcee3117a4da00003793d1d = L.circleMarker(
+                [37.802, -122.422],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a);
+        
+    
+        var popup_c5de67cbafea90681caa474714c70ab1 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b60c39956185bf430072ddcf7eea0252 = $(`<div id="html_b60c39956185bf430072ddcf7eea0252" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 210px;">                 <b>Cell Tower: Marina Arts Sector</b><br>                 <b>Handset:</b> +1-555-0144<br>                 <b>Recipient:</b> +1-555-0133<br>                 <b>Call ID:</b> CDR-1017 (VOICE)<br>                 <b>Time:</b> 2026-03-06T11:24:00+00:00             </div>             </div>`)[0];
+                popup_c5de67cbafea90681caa474714c70ab1.setContent(html_b60c39956185bf430072ddcf7eea0252);
+            
+        
+
+        circle_marker_354283f01dcee3117a4da00003793d1d.bindPopup(popup_c5de67cbafea90681caa474714c70ab1)
+        ;
+
+        
+    
+    
+            circle_marker_354283f01dcee3117a4da00003793d1d.bindTooltip(
+                `<div>
+                     Tower Sector: Marina Arts Sector
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_26338e8a7f91fffecc3a5652e6926e5a = L.circleMarker(
+                [37.802, -122.422],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a);
+        
+    
+        var popup_d388b7256602690cb172a6e3644669d9 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_1a11af21f61861ba7ae376da744b1f67 = $(`<div id="html_1a11af21f61861ba7ae376da744b1f67" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 210px;">                 <b>Cell Tower: Marina Arts Sector</b><br>                 <b>Handset:</b> +1-555-0199<br>                 <b>Recipient:</b> +1-555-0188<br>                 <b>Call ID:</b> CDR-1019 (VOICE)<br>                 <b>Time:</b> 2026-03-10T14:10:00+00:00             </div>             </div>`)[0];
+                popup_d388b7256602690cb172a6e3644669d9.setContent(html_1a11af21f61861ba7ae376da744b1f67);
+            
+        
+
+        circle_marker_26338e8a7f91fffecc3a5652e6926e5a.bindPopup(popup_d388b7256602690cb172a6e3644669d9)
+        ;
+
+        
+    
+    
+            circle_marker_26338e8a7f91fffecc3a5652e6926e5a.bindTooltip(
+                `<div>
+                     Tower Sector: Marina Arts Sector
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6ab6f609345bbb5dd5ce87505d4e9ff0 = L.circleMarker(
+                [37.855, -122.48],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a);
+        
+    
+        var popup_f311a0d1e0f1d6adc6ca7160a2e93712 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_25c0aab00c2cd58e3e6f9a6bd199d9a7 = $(`<div id="html_25c0aab00c2cd58e3e6f9a6bd199d9a7" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 210px;">                 <b>Cell Tower: Shoreline Sausalito Sector</b><br>                 <b>Handset:</b> +1-555-0199<br>                 <b>Recipient:</b> +1-555-0188<br>                 <b>Call ID:</b> CDR-1020 (VOICE)<br>                 <b>Time:</b> 2026-03-12T11:45:00+00:00             </div>             </div>`)[0];
+                popup_f311a0d1e0f1d6adc6ca7160a2e93712.setContent(html_25c0aab00c2cd58e3e6f9a6bd199d9a7);
+            
+        
+
+        circle_marker_6ab6f609345bbb5dd5ce87505d4e9ff0.bindPopup(popup_f311a0d1e0f1d6adc6ca7160a2e93712)
+        ;
+
+        
+    
+    
+            circle_marker_6ab6f609345bbb5dd5ce87505d4e9ff0.bindTooltip(
+                `<div>
+                     Tower Sector: Shoreline Sausalito Sector
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_433c26631b9d6e127eb43e7060db4652 = L.circleMarker(
+                [37.855, -122.48],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a);
+        
+    
+        var popup_770d8a43e08fe4c94a1924ab42d4a155 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_4ac6b73670d0e55c52804acfe994fc3d = $(`<div id="html_4ac6b73670d0e55c52804acfe994fc3d" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 210px;">                 <b>Cell Tower: Shoreline Sausalito Sector</b><br>                 <b>Handset:</b> +1-555-0199<br>                 <b>Recipient:</b> +1-555-0188<br>                 <b>Call ID:</b> CDR-1021 (VOICE)<br>                 <b>Time:</b> 2026-03-13T19:30:00+00:00             </div>             </div>`)[0];
+                popup_770d8a43e08fe4c94a1924ab42d4a155.setContent(html_4ac6b73670d0e55c52804acfe994fc3d);
+            
+        
+
+        circle_marker_433c26631b9d6e127eb43e7060db4652.bindPopup(popup_770d8a43e08fe4c94a1924ab42d4a155)
+        ;
+
+        
+    
+    
+            circle_marker_433c26631b9d6e127eb43e7060db4652.bindTooltip(
+                `<div>
+                     Tower Sector: Shoreline Sausalito Sector
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e75bb1e310e65a995270bb2407827a27 = L.circleMarker(
+                [37.855, -122.48],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a);
+        
+    
+        var popup_ca357c81209c1cf1e7bfe880f4f07bf1 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_b1ace6424975544379fe987e6f16071e = $(`<div id="html_b1ace6424975544379fe987e6f16071e" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 210px;">                 <b>Cell Tower: Shoreline Sausalito Sector</b><br>                 <b>Handset:</b> +1-555-0199<br>                 <b>Recipient:</b> +1-555-0188<br>                 <b>Call ID:</b> CDR-1022 (VOICE)<br>                 <b>Time:</b> 2026-03-14T16:50:00+00:00             </div>             </div>`)[0];
+                popup_ca357c81209c1cf1e7bfe880f4f07bf1.setContent(html_b1ace6424975544379fe987e6f16071e);
+            
+        
+
+        circle_marker_e75bb1e310e65a995270bb2407827a27.bindPopup(popup_ca357c81209c1cf1e7bfe880f4f07bf1)
+        ;
+
+        
+    
+    
+            circle_marker_e75bb1e310e65a995270bb2407827a27.bindTooltip(
+                `<div>
+                     Tower Sector: Shoreline Sausalito Sector
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_531ced97f31831a7d19d8f1df4a429b4 = L.circleMarker(
+                [37.601, -122.382],
+                {"bubblingMouseEvents": true, "color": "darkgreen", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkgreen", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a);
+        
+    
+        var popup_2f29c0ad2555ffd494b979c6edb3a012 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_e7a70d691759c2203b1d2a1a0b480082 = $(`<div id="html_e7a70d691759c2203b1d2a1a0b480082" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 210px;">                 <b>Cell Tower: Airport Gateway Sector</b><br>                 <b>Handset:</b> +1-555-0155<br>                 <b>Recipient:</b> +1-555-0129<br>                 <b>Call ID:</b> CDR-1024 (VOICE)<br>                 <b>Time:</b> 2026-03-14T19:10:00+00:00             </div>             </div>`)[0];
+                popup_2f29c0ad2555ffd494b979c6edb3a012.setContent(html_e7a70d691759c2203b1d2a1a0b480082);
+            
+        
+
+        circle_marker_531ced97f31831a7d19d8f1df4a429b4.bindPopup(popup_2f29c0ad2555ffd494b979c6edb3a012)
+        ;
+
+        
+    
+    
+            circle_marker_531ced97f31831a7d19d8f1df4a429b4.bindTooltip(
+                `<div>
+                     Tower Sector: Airport Gateway Sector
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fd8ffdda2ec07805dba4419e6daba783 = L.circleMarker(
+                [37.893, -122.573],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a);
+        
+    
+        var popup_ecb6aa1be0f90c5329aa6a1eedf2315e = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_dbb506d95dc6eb9df40690e0a64deb53 = $(`<div id="html_dbb506d95dc6eb9df40690e0a64deb53" style="width: 100.0%; height: 100.0%;">             <div style="font-family: sans-serif; font-size: 12px; width: 210px;">                 <b>Cell Tower: Whispering Pines Ridge Sector</b><br>                 <b>Handset:</b> +1-555-0199<br>                 <b>Recipient:</b> +1-555-0188<br>                 <b>Call ID:</b> CDR-1023 (SMS_ROUTING_PING)<br>                 <b>Time:</b> 2026-03-14T21:45:00+00:00             </div>             </div>`)[0];
+                popup_ecb6aa1be0f90c5329aa6a1eedf2315e.setContent(html_dbb506d95dc6eb9df40690e0a64deb53);
+            
+        
+
+        circle_marker_fd8ffdda2ec07805dba4419e6daba783.bindPopup(popup_ecb6aa1be0f90c5329aa6a1eedf2315e)
+        ;
+
+        
+    
+    
+            circle_marker_fd8ffdda2ec07805dba4419e6daba783.bindTooltip(
+                `<div>
+                     Tower Sector: Whispering Pines Ridge Sector
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a.addTo(map_67d9f66fe4474a4288de07132888bb08);
+        
+    
+            var feature_group_7f1a5cf1f1fb08f28415a830ed1e402a = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var poly_line_28a8bb7c54c8d389426578293e2b8787 = L.polyline(
+                [[37.8012, -122.4215], [37.801098, -122.421644], [37.807937, -122.417307], [37.802, -122.422], [37.808136, -122.417076], [37.8715, -122.4891], [37.871386, -122.488995], [37.802, -122.422], [37.871406, -122.489283], [37.808017, -122.417149], [37.802, -122.422], [37.806, -122.435], [37.805318, -122.434309], [37.805411, -122.434146], [37.802, -122.422], [37.806, -122.435], [37.805581, -122.434127], [37.8055, -122.4342], [37.805452, -122.434004], [37.871629, -122.488978], [37.806, -122.435], [37.8715, -122.488946], [37.805525, -122.434295], [37.802, -122.422], [37.805497, -122.434098], [37.805539, -122.434246], [37.871572, -122.489254], [37.802, -122.422], [37.8924, -122.5719], [37.806, -122.435], [37.871481, -122.488918], [37.805648, -122.434281], [37.806, -122.435], [37.805365, -122.434019], [37.802, -122.422], [37.808272, -122.417049], [37.802, -122.422], [37.801379, -122.421666], [37.80549, -122.43418], [37.802, -122.422], [37.805592, -122.43432], [37.854, -122.4789], [37.802, -122.422], [37.802, -122.422], [37.802, -122.422], [37.8924, -122.5719], [37.802, -122.422], [37.855, -122.48], [37.854, -122.4789], [37.854, -122.4789], [37.855, -122.48], [37.855, -122.48], [37.854, -122.4789], [37.8924, -122.5719], [37.8924, -122.5719], [37.893, -122.573]],
+                {"bubblingMouseEvents": true, "color": "#ef4444", "dashArray": "6, 8", "dashOffset": null, "fill": false, "fillColor": "#ef4444", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_7f1a5cf1f1fb08f28415a830ed1e402a);
+        
+    
+            poly_line_28a8bb7c54c8d389426578293e2b8787.bindTooltip(
+                `<div>
+                     Target Chronological Movement Trajectory
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_7f1a5cf1f1fb08f28415a830ed1e402a.addTo(map_67d9f66fe4474a4288de07132888bb08);
+        
+    
+            var feature_group_279c4a273009862a29e7c55663d67945 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_ede7974fee6bd9944bc7d8995e319096 = L.marker(
+                [37.8924, -122.5719],
+                {
+}
+            ).addTo(feature_group_279c4a273009862a29e7c55663d67945);
+        
+    
+            var icon_ff0751ba53a24a7009d50710a1b661f4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8d13466a5ef93ed3871676f9cd463e37 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7e4803fd4e1100fa5f4460c452a15e51 = $(`<div id="html_7e4803fd4e1100fa5f4460c452a15e51" style="width: 100.0%; height: 100.0%;">     <div style="font-family: sans-serif; font-size: 13px; width: 240px; border-left: 4px solid red; padding-left: 8px;">         <h4 style="margin: 0 0 6px 0; color: #b91c1c;">TRUE LAST KNOWN LOCATION</h4>         <b>Venue:</b> Whispering Pines Overlook<br>         <b>Coordinates:</b> 37.8924, -122.5719<br>         <b>Last Signal:</b> 2026-03-14 21:45:00 UTC<br>         <b>Source:</b> Burner phone (+1-555-0199) final cell tower ping before device powered down.     </div>     </div>`)[0];
+                popup_8d13466a5ef93ed3871676f9cd463e37.setContent(html_7e4803fd4e1100fa5f4460c452a15e51);
+            
+        
+
+        marker_ede7974fee6bd9944bc7d8995e319096.bindPopup(popup_8d13466a5ef93ed3871676f9cd463e37)
+        ;
+
+        
+    
+    
+            marker_ede7974fee6bd9944bc7d8995e319096.bindTooltip(
+                `<div>
+                     🚨 CRITICAL: Last Known Location (2026-03-14 21:45 UTC)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ede7974fee6bd9944bc7d8995e319096.setIcon(icon_ff0751ba53a24a7009d50710a1b661f4);
+            
+    
+            var circle_ad88afbf46e658d7e8c801ea36a8aebb = L.circle(
+                [37.8924, -122.5719],
+                {"bubblingMouseEvents": true, "color": "#b91c1c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f87171", "fillOpacity": 0.35, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 350, "stroke": true, "weight": 3}
+            ).addTo(feature_group_279c4a273009862a29e7c55663d67945);
+        
+    
+            circle_ad88afbf46e658d7e8c801ea36a8aebb.bindTooltip(
+                `<div>
+                     High-Probability Disappearance Search Radius (350m)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_279c4a273009862a29e7c55663d67945.addTo(map_67d9f66fe4474a4288de07132888bb08);
+        
+    
+            var layer_control_473d5b26b556fe9753e5c04416a909e0_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_33e321ce197b13643564026eed02b21a,
+                },
+                overlays :  {
+                    "Activity Density Heatmap" : heat_map_76a9fed6688e9da360578e9f7a5fa6c1,
+                    "Venue Check-ins (Social)" : feature_group_3d473d609aad3259baf6fdf730aa43e0,
+                    "Photo EXIF GPS Pins" : feature_group_127d7264f3f00a73ab3e0c728a765b6a,
+                    "Cell Tower CDR Pings" : feature_group_e8668ed9ec40c18f85f92f68c7ee3b2a,
+                    "Movement Trajectory Path" : feature_group_7f1a5cf1f1fb08f28415a830ed1e402a,
+                    "Last Known Location (LKL)" : feature_group_279c4a273009862a29e7c55663d67945,
+                },
+            };
+            let layer_control_473d5b26b556fe9753e5c04416a909e0 = L.control.layers(
+                layer_control_473d5b26b556fe9753e5c04416a909e0_layers.base_layers,
+                layer_control_473d5b26b556fe9753e5c04416a909e0_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_67d9f66fe4474a4288de07132888bb08);
+
+        
+</script>
+</html>

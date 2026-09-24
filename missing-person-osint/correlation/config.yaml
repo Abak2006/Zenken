@@ -1,0 +1,15 @@
+# Entity Resolution Weighting Configuration
+weights:
+  exact_email_match: 0.95
+  exact_phone_match: 0.95
+  image_phash_match: 0.85
+  username_high_similarity: 0.70 # rapidfuzz >= 80
+  username_med_similarity: 0.45  # rapidfuzz >= 65
+  bio_keyword_overlap: 0.55
+  spatiotemporal_cooccurrence: 0.50
+  cross_platform_follow: 0.35
+
+thresholds:
+  resolved_identity_threshold: 0.75 # Score >= 0.75 merged into same Person entity
+  ambiguous_review_threshold: 0.45   # Score between 0.45 and 0.75 flagged for manual review
+  phash_max_hamming_distance: 6     # Maximum pHash difference to count as identical image

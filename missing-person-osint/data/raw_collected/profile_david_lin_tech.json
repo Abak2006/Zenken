@@ -1,0 +1,18 @@
+{
+  "account_id": "acc_assoc_02",
+  "account_type": "associate",
+  "avatar_image": "avatar_david_lin_tech.jpg",
+  "bio": "Brother | Creative & Student | Contact: david.lin@fictional-domain.org",
+  "display_name": "David Lin",
+  "email": "david.lin@fictional-domain.org",
+  "followers_count": 171,
+  "following_count": 469,
+  "handle": "david_lin_tech",
+  "is_private": false,
+  "is_target_identity": false,
+  "joined_date": "2023-05-20",
+  "phone": "+1-555-0133",
+  "platform": "ChirpNet",
+  "relationship_strength": 0.88,
+  "relationship_to_target": "Brother"
+}

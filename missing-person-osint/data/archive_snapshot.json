@@ -1,0 +1,54 @@
+{
+  "snapshot_id": "WAYBACK-ARCHIVE-2026-03-12",
+  "timestamp_utc": "2026-03-12T12:00:00Z",
+  "crawler": "FictionalWaybackBot/3.1",
+  "cached_deleted_posts": [
+    {
+      "post_id": "POST-0024",
+      "account": "mayalin_art",
+      "timestamp_raw": "2026-03-10T11:30:00.000+00:00",
+      "timestamp_utc_iso": "2026-03-10T11:30:00+00:00",
+      "text": "Meeting with K at Pacific Horizon Diner on Friday to finalize the private gallery contract. Super nervous!!",
+      "hashtags": "#opportunity #secretproject",
+      "mentions": "@kaelen_v",
+      "location_tag": "Pacific Horizon Diner",
+      "likes": 42,
+      "photo_id": null,
+      "deleted": true,
+      "sentiment_label": "anxious_excited"
+    },
+    {
+      "post_id": "POST-0025",
+      "account": "m_lin99",
+      "timestamp_raw": "2026-03-11 07:00:00 PST",
+      "timestamp_utc_iso": "2026-03-11T15:00:00+00:00",
+      "text": "Switching to new phone line soon. Don't call the 0144 number after tomorrow morning.",
+      "hashtags": "",
+      "mentions": "",
+      "location_tag": null,
+      "likes": 8,
+      "photo_id": null,
+      "deleted": true,
+      "sentiment_label": "neutral"
+    },
+    {
+      "post_id": "POST-0026",
+      "account": "mayalin_art",
+      "timestamp_raw": "2026-03-12T16:20:00Z",
+      "timestamp_utc_iso": "2026-03-12T16:20:00+00:00",
+      "text": "Awaiting appointment at the shoreline. Fog is coming in fast.",
+      "hashtags": "#coastal #fog",
+      "mentions": "",
+      "location_tag": "Pacific Horizon Diner",
+      "likes": 25,
+      "photo_id": "PH-008",
+      "deleted": true,
+      "sentiment_label": "tense"
+    }
+  ],
+  "historical_handles_detected": [
+    "mayalin_art",
+    "pixel_maya",
+    "m_lin99"
+  ]
+}

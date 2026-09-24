@@ -1,0 +1,16 @@
+{
+  "account_id": "acc_noise_05",
+  "account_type": "bystander",
+  "avatar_image": "avatar_noise_5.jpg",
+  "bio": "Self-enabling regional hierarchy",
+  "display_name": "Jamie Arnold",
+  "email": "blairamanda@example-synthetic.org",
+  "followers_count": 131,
+  "following_count": 228,
+  "handle": "blairamanda_bay",
+  "is_private": false,
+  "is_target_identity": false,
+  "joined_date": "2024-11-02",
+  "phone": "+1-555-0175",
+  "platform": "ChirpNet"
+}

@@ -1,0 +1,28 @@
+checkin_id,account,venue_id,venue_name,timestamp_utc,latitude,longitude,platform
+CHK-0501,mayalin_art,venue_01,Bayview Arts Institute - Fine Arts Hall,2026-01-30T19:17:00+00:00,37.801098,-122.421644,InstaPhoto
+CHK-0502,mayalin_art,venue_04,Bayside Living Apartments (Maya's Residence),2026-02-01T08:01:00+00:00,37.807937,-122.417307,InstaPhoto
+CHK-0503,mayalin_art,venue_04,Bayside Living Apartments (Maya's Residence),2026-02-02T11:28:00+00:00,37.808136,-122.417076,InstaPhoto
+CHK-0504,mayalin_art,venue_03,Redwood Ridge Scenic Park,2026-02-04T12:09:00+00:00,37.871386,-122.488995,InstaPhoto
+CHK-0505,mayalin_art,venue_03,Redwood Ridge Scenic Park,2026-02-05T13:38:00+00:00,37.871406,-122.489283,InstaPhoto
+CHK-0506,m_lin99,venue_04,Bayside Living Apartments (Maya's Residence),2026-02-06T09:35:00+00:00,37.808017,-122.417149,InstaPhoto
+CHK-0507,mayalin_art,venue_02,Harbor Light Cafe,2026-02-07T19:04:00+00:00,37.805318,-122.434309,InstaPhoto
+CHK-0508,mayalin_art,venue_02,Harbor Light Cafe,2026-02-08T09:24:00+00:00,37.805411,-122.434146,InstaPhoto
+CHK-0509,mayalin_art,venue_02,Harbor Light Cafe,2026-02-09T18:17:00+00:00,37.805581,-122.434127,InstaPhoto
+CHK-0510,mayalin_art,venue_02,Harbor Light Cafe,2026-02-10T10:29:00+00:00,37.805452,-122.434004,InstaPhoto
+CHK-0511,mayalin_art,venue_03,Redwood Ridge Scenic Park,2026-02-11T08:14:00+00:00,37.871629,-122.488978,InstaPhoto
+CHK-0512,mayalin_art,venue_03,Redwood Ridge Scenic Park,2026-02-12T11:41:00+00:00,37.8715,-122.488946,InstaPhoto
+CHK-0513,mayalin_art,venue_02,Harbor Light Cafe,2026-02-13T11:47:00+00:00,37.805525,-122.434295,InstaPhoto
+CHK-0514,m_lin99,venue_02,Harbor Light Cafe,2026-02-15T10:32:00+00:00,37.805497,-122.434098,InstaPhoto
+CHK-0515,mayalin_art,venue_02,Harbor Light Cafe,2026-02-16T18:27:00+00:00,37.805539,-122.434246,InstaPhoto
+CHK-0516,m_lin99,venue_03,Redwood Ridge Scenic Park,2026-02-17T16:00:00+00:00,37.871572,-122.489254,InstaPhoto
+CHK-0517,m_lin99,venue_03,Redwood Ridge Scenic Park,2026-02-20T14:10:00+00:00,37.871481,-122.488918,InstaPhoto
+CHK-0518,mayalin_art,venue_02,Harbor Light Cafe,2026-02-21T16:06:00+00:00,37.805648,-122.434281,InstaPhoto
+CHK-0519,m_lin99,venue_02,Harbor Light Cafe,2026-02-22T13:48:00+00:00,37.805365,-122.434019,InstaPhoto
+CHK-0520,m_lin99,venue_04,Bayside Living Apartments (Maya's Residence),2026-02-24T08:07:00+00:00,37.808272,-122.417049,InstaPhoto
+CHK-0521,mayalin_art,venue_01,Bayview Arts Institute - Fine Arts Hall,2026-02-25T11:36:00+00:00,37.801379,-122.421666,InstaPhoto
+CHK-0522,mayalin_art,venue_02,Harbor Light Cafe,2026-02-26T10:42:00+00:00,37.80549,-122.43418,InstaPhoto
+CHK-0523,mayalin_art,venue_02,Harbor Light Cafe,2026-02-28T16:48:00+00:00,37.805592,-122.43432,InstaPhoto
+CHK-0524,mayalin_art,venue_06,Pacific Horizon Diner,2026-03-12T16:30:00+00:00,37.854,-122.4789,InstaPhoto
+CHK-0525,m.shadow_7,venue_06,Pacific Horizon Diner,2026-03-14T17:15:00+00:00,37.854,-122.4789,WhisperWire
+CHK-0527,lucas_r_sound,venue_09,SFO Airport Marriott Gateway,2026-03-14T18:50:00+00:00,37.6001,-122.3812,ChirpNet
+CHK-0526,m.shadow_7,venue_05,Whispering Pines Overlook,2026-03-14T21:05:00+00:00,37.8924,-122.5719,WhisperWire

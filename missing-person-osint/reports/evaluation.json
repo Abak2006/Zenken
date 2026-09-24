@@ -1,0 +1,42 @@
+{
+  "evaluation_timestamp": "2026-03-15T10:00:00Z",
+  "case_id": "MP-2026-0419",
+  "metrics": {
+    "entity_resolution": {
+      "true_positive_links": 6,
+      "false_positive_links": 1,
+      "false_negative_links": 0,
+      "precision": 0.8571,
+      "recall": 1.0,
+      "f1_score": 0.9231,
+      "target_persona_cluster_accuracy": 1.0
+    },
+    "last_known_location": {
+      "estimated_venue": "Whispering Pines Ridge Sector",
+      "true_venue": "Whispering Pines Overlook",
+      "estimated_coords": [
+        37.893,
+        -122.573
+      ],
+      "true_coords": [
+        37.8924,
+        -122.5719
+      ],
+      "distance_error_meters": 117.34,
+      "correct_sector_match": true
+    },
+    "red_herring_audit": {
+      "traps_avoided_count": 2,
+      "traps_followed_count": 0,
+      "audit_breakdown": {
+        "RH-02_parody_travel_account": "PASSED (Successfully identified as fraudulent)",
+        "RH-01_ex_partner_abduction": "PASSED (Alibi verified; de-escalated)"
+      }
+    },
+    "timeline_concordance": {
+      "concordance_score": 1.0,
+      "ordering_status": "CONCORDANT"
+    }
+  },
+  "overall_grade": "A+ (Exemplary OSINT Pipeline Performance)"
+}

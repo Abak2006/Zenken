@@ -1,0 +1,156 @@
+{
+  "case_id": "MP-2026-0419",
+  "missing_person": {
+    "name": "Maya Lin",
+    "true_handles": [
+      "mayalin_art",
+      "m_lin99",
+      "pixel_maya",
+      "m.shadow_7"
+    ],
+    "true_phone_numbers": [
+      "+1-555-0144",
+      "+1-555-0199"
+    ],
+    "true_emails": [
+      "maya.lin.lens@fictional-mail.org",
+      "mlin_personal@fictional-mail.org",
+      "shadow7_archive@proton-synth.org"
+    ]
+  },
+  "entity_resolution_ground_truth": {
+    "clusters": [
+      {
+        "canonical_id": "PERSON_MAYA_LIN",
+        "name": "Maya Lin",
+        "accounts": [
+          "mayalin_art",
+          "m_lin99",
+          "pixel_maya",
+          "m.shadow_7"
+        ],
+        "phones": [
+          "+1-555-0144",
+          "+1-555-0199"
+        ],
+        "emails": [
+          "maya.lin.lens@fictional-mail.org",
+          "mlin_personal@fictional-mail.org",
+          "shadow7_archive@proton-synth.org"
+        ]
+      },
+      {
+        "canonical_id": "PERSON_KAELEN_VANCE",
+        "name": "Kaelen Vance",
+        "accounts": [
+          "kaelen_v"
+        ],
+        "phones": [
+          "+1-555-0188"
+        ],
+        "emails": [
+          "kvance_studio@fictional-art.org"
+        ]
+      },
+      {
+        "canonical_id": "PERSON_LUCAS_REED",
+        "name": "Lucas Reed",
+        "accounts": [
+          "lucas_r_sound"
+        ],
+        "phones": [
+          "+1-555-0155"
+        ],
+        "emails": [
+          "lucas_audio@fictional-sound.org"
+        ]
+      }
+    ],
+    "negative_matches": [
+      {
+        "account_a": "mayalin_art",
+        "account_b": "mayalin_travels",
+        "reason": "Red herring impersonation account operated by unrelated bot/troll"
+      },
+      {
+        "account_a": "marcus_c_drift",
+        "account_b": "m.shadow_7",
+        "reason": "Unrelated student falsely linked by coincidence of car make"
+      }
+    ]
+  },
+  "true_last_known_location": {
+    "location_name": "Whispering Pines Overlook",
+    "latitude": 37.8924,
+    "longitude": -122.5719,
+    "timestamp": "2026-03-14T21:45:00Z",
+    "source_evidence_id": "CELL_PING_88291",
+    "notes": "Cellular tower sector ping and vehicle dashcam corroborate final signal at 21:45 UTC before handset powered down."
+  },
+  "true_timeline_sequence": [
+    {
+      "step": 1,
+      "date": "2026-01-29T10:00:00Z",
+      "event": "Routine classes and photography projects begin; regular posts from @mayalin_art."
+    },
+    {
+      "step": 2,
+      "date": "2026-02-18T16:20:00Z",
+      "event": "Breakup with Lucas Reed; Lucas posts argumentative comments."
+    },
+    {
+      "step": 3,
+      "date": "2026-03-01T14:10:00Z",
+      "event": "First unsolicited message received from @kaelen_v proposing private off-grid shoot."
+    },
+    {
+      "step": 4,
+      "date": "2026-03-03T19:00:00Z",
+      "event": "Covert account @m.shadow_7 registered using proton-synth email."
+    },
+    {
+      "step": 5,
+      "date": "2026-03-10T11:30:00Z",
+      "event": "Prepaid handset (+1-555-0199) activated; primary line (+1-555-0144) ceases outgoing activity."
+    },
+    {
+      "step": 6,
+      "date": "2026-03-12T09:15:00Z",
+      "event": "Deletion of 3 posts on @mayalin_art containing hints of client meetup location."
+    },
+    {
+      "step": 7,
+      "date": "2026-03-14T17:30:00Z",
+      "event": "Meeting at Pacific Horizon Diner between Maya and Kaelen Vance."
+    },
+    {
+      "step": 8,
+      "date": "2026-03-14T21:45:00Z",
+      "event": "Burner phone pings tower at Whispering Pines Overlook; handset powers off."
+    }
+  ],
+  "ground_truth_hypotheses_evaluation": {
+    "correct_hypothesis_id": "HYP-01-OFFGRID-MEETING-FOULPLAY",
+    "false_hypotheses_ids": [
+      "HYP-02-EX-PARTNER-ABDUCTION",
+      "HYP-03-VOLUNTARY-MEXICO-TRAVEL"
+    ]
+  },
+  "red_herrings": {
+    "RH-01": {
+      "suspect": "Lucas Reed",
+      "verdict": "CLEAR_ALIBI",
+      "proof": "Boarded flight SEA-441 from SFO to Seattle at 2026-03-14T20:15:00Z."
+    },
+    "RH-02": {
+      "account": "mayalin_travels",
+      "verdict": "FABRICATED_PHOTOS",
+      "proof": "Stock photo match from 2024 with altered caption."
+    },
+    "RH-03": {
+      "target": "Abandoned vehicle at Silver Sands",
+      "verdict": "FALSE_ALARM",
+      "proof": "Vehicle registered to Marcus Cole, out of gas."
+    }
+  }
+}

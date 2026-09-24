@@ -1,0 +1,74 @@
+{
+  "ambiguous_links": [
+    {
+      "account_a": "mayalin_art",
+      "account_b": "mayalin_travels",
+      "confidence": 0.45,
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "type": "HANDLE_MED_SIMILARITY",
+          "detail": "RapidFuzz string similarity 69.23076923076923% between '@mayalin_art' and '@mayalin_travels'",
+          "weight": 0.45
+        }
+      ],
+      "rationale": "HANDLE_MED_SIMILARITY: RapidFuzz string similarity 69.23076923076923% between '@mayalin_art' and '@mayalin_travels' (w=0.45)"
+    },
+    {
+      "account_a": "lucas_r_sound",
+      "account_b": "julian_g_sound",
+      "confidence": 0.45,
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "type": "HANDLE_MED_SIMILARITY",
+          "detail": "RapidFuzz string similarity 66.66666666666667% between '@lucas_r_sound' and '@julian_g_sound'",
+          "weight": 0.45
+        }
+      ],
+      "rationale": "HANDLE_MED_SIMILARITY: RapidFuzz string similarity 66.66666666666667% between '@lucas_r_sound' and '@julian_g_sound' (w=0.45)"
+    },
+    {
+      "account_a": "johnsonjoshua_bay",
+      "account_b": "fjohnson_bay",
+      "confidence": 0.45,
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "type": "HANDLE_MED_SIMILARITY",
+          "detail": "RapidFuzz string similarity 75.86206896551724% between '@johnsonjoshua_bay' and '@fjohnson_bay'",
+          "weight": 0.45
+        }
+      ],
+      "rationale": "HANDLE_MED_SIMILARITY: RapidFuzz string similarity 75.86206896551724% between '@johnsonjoshua_bay' and '@fjohnson_bay' (w=0.45)"
+    },
+    {
+      "account_a": "johnsonjoshua_bay",
+      "account_b": "joshua35_bay",
+      "confidence": 0.45,
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "type": "HANDLE_MED_SIMILARITY",
+          "detail": "RapidFuzz string similarity 68.96551724137932% between '@johnsonjoshua_bay' and '@joshua35_bay'",
+          "weight": 0.45
+        }
+      ],
+      "rationale": "HANDLE_MED_SIMILARITY: RapidFuzz string similarity 68.96551724137932% between '@johnsonjoshua_bay' and '@joshua35_bay' (w=0.45)"
+    },
+    {
+      "account_a": "fjohnson_bay",
+      "account_b": "lrobinson_bay",
+      "confidence": 0.45,
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "type": "HANDLE_MED_SIMILARITY",
+          "detail": "RapidFuzz string similarity 72.0% between '@fjohnson_bay' and '@lrobinson_bay'",
+          "weight": 0.45
+        }
+      ],
+      "rationale": "HANDLE_MED_SIMILARITY: RapidFuzz string similarity 72.0% between '@fjohnson_bay' and '@lrobinson_bay' (w=0.45)"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+[
+  {
+    "hypothesis_id": "HYP-01-OFFGRID-MEETING-FOULPLAY",
+    "title": "Clandestine Off-Grid Meeting with Kaelen Vance (Foul Play / Coercion)",
+    "status": "MOST_PROBABLE",
+    "confidence_score": 0.88,
+    "summary": "Maya Lin was solicited by art broker Kaelen Vance for an off-grid photo shoot, acquired a burner phone, deleted posts regarding their dinner meeting, and traveled to Whispering Pines Overlook where her handset ceased transmission.",
+    "supporting_evidence": [
+      {
+        "item": "Inbound Solicitation",
+        "detail": "Account @kaelen_v reached out on Day 31 offering high payment for an off-grid architectural shoot.",
+        "weight": 0.8
+      },
+      {
+        "item": "Covert Account Creation",
+        "detail": "Alias @m.shadow_7 registered on Day 36 specifically following @kaelen_v.",
+        "weight": 0.85
+      },
+      {
+        "item": "Sanitized Digital Artifacts",
+        "detail": "Three posts mentioning 'Meeting with K at Pacific Horizon Diner' deleted from @mayalin_art (recovered via web archive cache).",
+        "weight": 0.9
+      },
+      {
+        "item": "Burner Handset Telecommunications",
+        "detail": "Prepaid handset (+1-555-0199) exchanged 5 calls exclusively with Kaelen Vance (+1-555-0188).",
+        "weight": 0.92
+      },
+      {
+        "item": "Terminal Geo Location Corroboration",
+        "detail": "Final post from @m.shadow_7 and cell tower sector TOWER-PAC-09 both pin Whispering Pines Overlook at 21:45 UTC on March 14.",
+        "weight": 0.95
+      }
+    ],
+    "contradicting_evidence": [
+      {
+        "item": "Absence of Overt Physical Struggle in Digital Logs",
+        "detail": "Public microblog entries do not record an explicit distress SOS message before terminal silence."
+      }
+    ],
+    "recommended_actions": [
+      "Issue search warrant for cell records and subscriber identity of Kaelen Vance (+1-555-0188).",
+      "Deploy ground search and rescue units to Whispering Pines Overlook (37.8924, -122.5719).",
+      "Subpoena surveillance footage from Pacific Horizon Diner for March 14, 17:00-18:30 UTC."
+    ]
+  },
+  {
+    "hypothesis_id": "HYP-02-EX-PARTNER-ABDUCTION",
+    "title": "Abduction / Vengeance by Ex-Partner Lucas Reed (Disproven Red Herring)",
+    "status": "DISPROVEN_RED_HERRING",
+    "confidence_score": 0.12,
+    "summary": "Suspicion arose due to hostile social media comments from ex-partner Lucas Reed, but corroborating telecommunications and flight travel verify an ironclad alibi.",
+    "supporting_evidence": [
+      {
+        "item": "Hostile Public Comments",
+        "detail": "Lucas posted aggressive messages demanding the return of audio equipment on Day 20.",
+        "weight": 0.6
+      }
+    ],
+    "contradicting_evidence": [
+      {
+        "item": "Verified Geographic Alibi",
+        "detail": "Lucas checked in at SFO Airport Marriott Gateway at 18:50 UTC on March 14."
+      },
+      {
+        "item": "Flight Confirmation & Tower Pings",
+        "detail": "Handset (+1-555-0155) pinged SFO Airport Tower Sector TOWER-SFO-12 at 19:10 UTC, followed by boarding of flight SEA-441 to Seattle."
+      }
+    ],
+    "recommended_actions": [
+      "De-escalate investigative priority on Lucas Reed; maintain alibi flight manifest in evidentiary case file."
+    ]
+  },
+  {
+    "hypothesis_id": "HYP-03-VOLUNTARY-MEXICO-TRAVEL",
+    "title": "Voluntary Relocation to Mexico (Fabricated Impersonation Red Herring)",
+    "status": "FABRICATED_IMPERSONATION",
+    "confidence_score": 0.05,
+    "summary": "Claims of Maya fleeing to Cabo San Lucas published by @mayalin_travels were proven fraudulent through EXIF digital forensics and perceptual hash matching.",
+    "supporting_evidence": [
+      {
+        "item": "Social Post Claiming Relocation",
+        "detail": "Account @mayalin_travels published beach photos with hashtags #escape #mexico on Day 44.",
+        "weight": 0.4
+      }
+    ],
+    "contradicting_evidence": [
+      {
+        "item": "EXIF Temporal Mismatch",
+        "detail": "Forensic EXIF extraction from photo PH-010 shows capture date of 2024-06-15, two years prior to current case."
+      },
+      {
+        "item": "Hardware Inconsistency",
+        "detail": "Camera signature is Apple iPhone 8; target Maya Lin utilizes Sony Alpha a7 IV and Google Pixel 7."
+      },
+      {
+        "item": "Perceptual Hash Stock Match",
+        "detail": "pHash identifies the photograph as a reposted stock image, indicating an opportunistic bot or troll account."
+      }
+    ],
+    "recommended_actions": [
+      "Flag @mayalin_travels as fraudulent disinformation; issue take-down notice to prevent public distraction."
+    ]
+  }
+]

@@ -1,0 +1,296 @@
+# Case Bible: Missing Person Investigation - Case #2026-MP-0419
+# Fictional academic benchmark dataset for OSINT & Digital Forensics training.
+# All data, names, phone numbers, venues, and events are 100% synthetic.
+
+case_metadata:
+  case_id: "MP-2026-0419"
+  investigation_title: "Disappearance of Maya Lin"
+  status: "OPEN"
+  date_reported: "2026-03-15T08:30:00Z"
+  assigned_team: "Academic Digital Forensics Lab"
+  jurisdiction: "Bayview Metro / Coastal District"
+
+missing_person:
+  full_name: "Maya Lin"
+  age: 21
+  pronouns: "she/her"
+  occupation: "Senior BFA Student & Freelance Photographer"
+  institution: "Bayview Arts Institute"
+  personality_traits:
+    - "Introverted and detail-oriented landscape photographer"
+    - "Active digital creator with aesthetic consistency"
+    - "Became increasingly secretive and anxious in early March 2026"
+  last_seen_date: "2026-03-14T21:45:00Z"
+  last_seen_location_name: "Whispering Pines Overlook"
+  last_seen_coordinates:
+    latitude: 37.8924
+    longitude: -122.5719
+  routine_description: >
+    Regularly attends classes at Bayview Arts Institute on Tuesdays and Thursdays.
+    Works remote shifts from Harbor Light Cafe on Monday/Wednesday mornings.
+    Photographs coastal sunsets at Redwood Ridge and Whispering Pines on weekends.
+
+digital_identities:
+  - platform: "InstaPhoto"
+    handle: "mayalin_art"
+    display_name: "Maya Lin | Visuals"
+    account_type: "primary"
+    status: "active"
+    bio: "Senior BFA @ Bayview Arts. Coastal landscapes & analogue tones. Inquiries: maya.lin.lens@fictional-mail.org"
+    email: "maya.lin.lens@fictional-mail.org"
+    phone_reference: "+1-555-0144"
+    visibility: "public"
+    significance: "Primary showcase account with frequent posts and check-ins."
+
+  - platform: "ChirpNet"
+    handle: "m_lin99"
+    display_name: "Maya L."
+    account_type: "variant_alias"
+    status: "active"
+    bio: "light, shadow, and unread emails. photography & art history @ Bayview. thoughts are my own."
+    email: "mlin_personal@fictional-mail.org"
+    phone_reference: "+1-555-0144"
+    visibility: "public"
+    significance: "Casual microblogging handle with spelling variance and conversational posts."
+
+  - platform: "PortfolioHub"
+    handle: "pixel_maya"
+    display_name: "Maya Lin Photography"
+    account_type: "dormant"
+    status: "dormant"
+    bio: "Archived portfolio (2023-2024). Coastal gallery, urban geometry. Contact: maya.lin.lens@fictional-mail.org"
+    email: "maya.lin.lens@fictional-mail.org"
+    phone_reference: null
+    visibility: "public"
+    significance: "Old gallery account with reused email and historical EXIF camera signatures."
+
+  - platform: "WhisperWire"
+    handle: "m.shadow_7"
+    display_name: "M.S."
+    account_type: "covert_alias"
+    status: "active_recent"
+    bio: "Private transactions & commissioned prints only. PGP in bio. Off-grid soon."
+    email: "shadow7_archive@proton-synth.org"
+    phone_reference: "+1-555-0199"
+    visibility: "pseudonymous"
+    significance: "Secondary covert account created 12 days prior to disappearance for clandestine contact."
+
+phones:
+  - number: "+1-555-0144"
+    owner: "Maya Lin"
+    label: "Primary Personal Cellular"
+    device_model: "Sony Alpha a7 IV / Pixel 7"
+    carrier: "Pacific Cellular Synthetic"
+    status: "disconnected_on_2026_03_10"
+  - number: "+1-555-0199"
+    owner: "Maya Lin"
+    label: "Burner / Prepaid Cellular"
+    device_model: "Motorola Moto G Play (Synthetic)"
+    carrier: "Metro Synthetic Prepaid"
+    status: "last_ping_2026_03_14_2145"
+
+associates:
+  - id: "assoc_01"
+    name: "Chloe Simmons"
+    handle: "chloe_creative"
+    relationship: "Roommate & Close Friend"
+    strength: 0.95
+    phone: "+1-555-0121"
+    notes: "Reported Maya missing after Maya failed to return home on Saturday night."
+  - id: "assoc_02"
+    name: "David Lin"
+    handle: "david_lin_tech"
+    relationship: "Brother"
+    strength: 0.88
+    phone: "+1-555-0133"
+    notes: "Lives 30 miles away; received an abrupt text message on March 12 stating 'need space for a big project'."
+  - id: "assoc_03"
+    name: "Lucas Reed"
+    handle: "lucas_r_sound"
+    relationship: "Ex-Partner"
+    strength: 0.65
+    phone: "+1-555-0155"
+    notes: "Recent difficult breakup in late February. Left several angry comments on Maya's posts before disappearance."
+  - id: "assoc_04"
+    name: "Prof. Alistair Vance"
+    handle: "prof_vance_art"
+    relationship: "Academic Mentor / Faculty"
+    strength: 0.75
+    phone: "+1-555-0162"
+    notes: "Thesis advisor. Mentioned Maya missed a key grant critique on March 13."
+  - id: "assoc_05"
+    name: "Kaelen Vance"
+    handle: "kaelen_v"
+    relationship: "Suspicious Contact / Shadow Collector"
+    strength: 0.82
+    phone: "+1-555-0188"
+    notes: "Distant relative of Alistair Vance; contacted Maya offering high-paying off-grid architectural commissions."
+  - id: "assoc_06"
+    name: "Elena Rostova"
+    handle: "elena_prints"
+    relationship: "Classmate / Studio Partner"
+    strength: 0.60
+    phone: "+1-555-0177"
+    notes: "Shares studio space 4B at Bayview Arts. Noticed Maya packing equipment on March 12."
+  - id: "assoc_07"
+    name: "Marcus Cole"
+    handle: "marcus_c_drift"
+    relationship: "Student Acquaintance"
+    strength: 0.35
+    phone: "+1-555-0112"
+    notes: "Car enthusiast student whose vehicle was mistakenly linked to a red herring alert."
+  - id: "assoc_08"
+    name: "Sara Chen"
+    handle: "sara_chen_photo"
+    relationship: "Darkroom Technician"
+    strength: 0.50
+    phone: "+1-555-0191"
+    notes: "Saw Maya developing prints late at night on March 11."
+  - id: "assoc_09"
+    name: "Tariq Mansoor"
+    handle: "tariq_beans"
+    relationship: "Barista / Daily Acquaintance"
+    strength: 0.40
+    phone: "+1-555-0184"
+    notes: "Harbor Light Cafe barista who recognized Maya with a tall man in dark jacket on March 13."
+  - id: "assoc_10"
+    name: "Julian Gomez"
+    handle: "julian_g_sound"
+    relationship: "Lucas's Friend"
+    strength: 0.30
+    phone: "+1-555-0129"
+    notes: "Corroborates Lucas's travel alibi to Seattle."
+  - id: "assoc_11"
+    name: "Hannah Ward"
+    handle: "hannah_w_lens"
+    relationship: "Fellow Photographer"
+    strength: 0.45
+    phone: "+1-555-0138"
+    notes: "Competitor in coastal photography contest."
+  - id: "assoc_12"
+    name: "Derek Hayes"
+    handle: "derek_h_books"
+    relationship: "Campus Bookstore Clerk"
+    strength: 0.25
+    phone: "+1-555-0149"
+    notes: "Sold topographic hiking maps to Maya on March 9."
+  - id: "assoc_13"
+    name: "Zoe Patel"
+    handle: "zoe_p_design"
+    relationship: "Design Student"
+    strength: 0.42
+    phone: "+1-555-0167"
+    notes: "Collaborated on typography project in February."
+  - id: "assoc_14"
+    name: "Officer Brandon Miller"
+    handle: "bayview_campus_safety"
+    relationship: "Campus Security Liaison"
+    strength: 0.20
+    phone: "+1-555-0105"
+    notes: "Logged campus gate badge swipe on March 14 afternoon."
+  - id: "assoc_15"
+    name: "Liam O'Connor"
+    handle: "liam_drift_auto"
+    relationship: "Local Tow Operator"
+    strength: 0.15
+    phone: "+1-555-0173"
+    notes: "Reported an abandoned Honda Civic (Marcus Cole's) near scenic vista."
+
+venues:
+  - id: "venue_01"
+    name: "Bayview Arts Institute - Fine Arts Hall"
+    category: "Academic / Workplace"
+    latitude: 37.8012
+    longitude: -122.4215
+    address: "400 Marina Blvd, Bayview Metro"
+  - id: "venue_02"
+    name: "Harbor Light Cafe"
+    category: "Coffee Shop / Routine Workspace"
+    latitude: 37.8055
+    longitude: -122.4342
+    address: "1250 Beach St, Bayview Metro"
+  - id: "venue_03"
+    name: "Redwood Ridge Scenic Park"
+    category: "Recreation / Photography Routine"
+    latitude: 37.8715
+    longitude: -122.4891
+    address: "Redwood Trailhead, Coastal Ridge"
+  - id: "venue_04"
+    name: "Bayside Living Apartments (Maya's Residence)"
+    category: "Residence"
+    latitude: 37.8081
+    longitude: -122.4172
+    address: "880 Bay St, Apt 3B, Bayview Metro"
+  - id: "venue_05"
+    name: "Whispering Pines Overlook"
+    category: "Remote Vista / True Last Known Location"
+    latitude: 37.8924
+    longitude: -122.5719
+    address: "Mile Marker 14, Highway 1 Panoramic"
+  - id: "venue_06"
+    name: "Pacific Horizon Diner"
+    category: "Diner / Suspicious Meeting Spot"
+    latitude: 37.8540
+    longitude: -122.4789
+    address: "700 Shoreline Hwy, Sausalito synthetic"
+  - id: "venue_07"
+    name: "Metro Transit Central Hub"
+    category: "Transportation"
+    latitude: 37.7891
+    longitude: -122.3995
+    address: "100 Transbay Plaza, Bayview Metro"
+  - id: "venue_08"
+    name: "Silver Sands Motel"
+    category: "Lodging / Red Herring Area"
+    latitude: 37.7410
+    longitude: -122.5020
+    address: "2200 Great Hwy, Bayview Metro"
+  - id: "venue_09"
+    name: "SFO Airport Marriott Gateway"
+    category: "Hotel / Lucas Alibi Spot"
+    latitude: 37.6001
+    longitude: -122.3812
+    address: "1800 Old Bayshore Hwy, Burlingame synthetic"
+  - id: "venue_10"
+    name: "Cloverdale Rest Stop"
+    category: "Highway Rest Stop"
+    latitude: 37.9150
+    longitude: -122.6105
+    address: "Hwy 101 Northbound synthetic"
+
+timeline_scenario:
+  start_date: "2026-01-29"
+  end_date: "2026-03-15"
+  total_days: 45
+  phases:
+    - phase: "Normal Routine (Days 1 to 30)"
+      description: "Regular classes, frequent cafe check-ins, sunset photography, normal positive sentiment."
+    - phase: "Behavioral Shift & Covert Contact (Days 31 to 38)"
+      description: >
+        Inbound contact from @kaelen_v regarding secret architectural photo commission.
+        Maya expresses acute stress, decreases public posting, creates @m.shadow_7,
+        and purchases prepaid cellular device.
+    - phase: "Evidence Sanitization & Disappearance (Days 39 to 45)"
+      description: >
+        Maya disconnects old phone (+1-555-0144), deletes 3 posts mentioning client meeting,
+        drives to Pacific Horizon Diner, meets Kaelen, proceeds to Whispering Pines Overlook.
+        Burner phone (+1-555-0199) last cell tower ping recorded at 21:45 UTC on March 14.
+
+red_herrings:
+  - id: "RH-01"
+    name: "Ex-Partner Vengeance Suspicion"
+    description: >
+      Lucas Reed posted aggressive public comments demanding Maya return equipment and was tracked
+      checking in near SFO Airport. Analysis must resolve that Lucas flew to Seattle on flight SEA-441
+      with documented timestamps and boarding receipts, eliminating him as a physical abductor.
+  - id: "RH-02"
+    name: "Parody / Impersonation Travel Account"
+    description: >
+      An unverified account @mayalin_travels posted beach photos claiming Maya ran away to Cabo.
+      EXIF extraction and perceptual hashing (pHash) reveal the images were taken 2 years prior
+      with mismatched camera signatures (iPhone 8 instead of Sony a7 IV) and scraped stock images.
+  - id: "RH-03"
+    name: "Abandoned Vehicle False Alarm"
+    description: >
+      A report of an abandoned sedan at Silver Sands Motel / Coastal Vista caused search units
+      to deploy. Vehicle registration queries link the car to student Marcus Cole, who ran out of gas.

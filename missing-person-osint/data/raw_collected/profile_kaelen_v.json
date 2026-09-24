@@ -1,0 +1,18 @@
+{
+  "account_id": "acc_assoc_05",
+  "account_type": "associate",
+  "avatar_image": "avatar_kaelen_v.jpg",
+  "bio": "Suspicious Contact / Shadow Collector | Creative & Student | Contact: kaelen.vance@fictional-domain.org",
+  "display_name": "Kaelen Vance",
+  "email": "kaelen.vance@fictional-domain.org",
+  "followers_count": 1628,
+  "following_count": 142,
+  "handle": "kaelen_v",
+  "is_private": true,
+  "is_target_identity": false,
+  "joined_date": "2023-05-20",
+  "phone": "+1-555-0188",
+  "platform": "InstaPhoto",
+  "relationship_strength": 0.82,
+  "relationship_to_target": "Suspicious Contact / Shadow Collector"
+}
