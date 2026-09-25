@@ -1,0 +1,50 @@
+[
+  {
+    "photo_id": "PH-701",
+    "account": "ananya.n",
+    "timestamp_utc": "2026-04-06 17:30:00",
+    "filename": "koramangala_cafe.jpg",
+    "camera_make": "Sony",
+    "camera_model": "ILCE-7M4",
+    "latitude": 12.9352,
+    "longitude": 77.6245,
+    "caption": "Evening code sprint at 3rd Wave",
+    "is_red_herring": false
+  },
+  {
+    "photo_id": "PH-702",
+    "account": "ananya.n",
+    "timestamp_utc": "2026-04-12 18:30:00",
+    "filename": "indiranagar_roastery.jpg",
+    "camera_make": "Apple",
+    "camera_model": "iPhone 15 Pro",
+    "latitude": 12.9719,
+    "longitude": 77.6412,
+    "caption": "Evening coffee before discussions",
+    "is_red_herring": false
+  },
+  {
+    "photo_id": "PH-703",
+    "account": "void_null07",
+    "timestamp_utc": "2026-04-16 20:30:00",
+    "filename": "nandi_ridge_dusk.jpg",
+    "camera_make": "Sony",
+    "camera_model": "ILCE-7M4",
+    "latitude": 13.3702,
+    "longitude": 77.6835,
+    "caption": "Final horizon from Nandi ridge",
+    "is_red_herring": false
+  },
+  {
+    "photo_id": "PH-704",
+    "account": "travel_bot_decoy",
+    "timestamp_utc": "2026-04-17 12:00:00",
+    "filename": "goa_beach_spotting.jpg",
+    "camera_make": "Canon",
+    "camera_model": "EOS R6",
+    "latitude": 15.5524,
+    "longitude": 73.7516,
+    "caption": "Spotted student backpacker in Baga Beach",
+    "is_red_herring": true
+  }
+]

@@ -1,0 +1,7 @@
+checkin_id,account,venue_id,venue_name,timestamp_utc,latitude,longitude,platform
+CHK-501,ananya_dev,blr_v03,Third Wave Coffee Koramangala,2026-04-08 11:30:00,12.9352,77.6245,ChirpNet
+CHK-502,ananya.n,blr_v02,Electronic City Tech Campus,2026-04-10 14:00:00,12.8452,77.6602,InstaPhoto
+CHK-503,ananya.n,blr_v04,Indiranagar Roastery,2026-04-12 18:00:00,12.9719,77.6412,InstaPhoto
+CHK-504,ananya_dev,blr_v05,Cubbon Park Bamboo Grove,2026-04-13 16:45:00,12.9763,77.5929,ChirpNet
+CHK-505,void_null07,blr_v06,Hebbal Lake Watchtower,2026-04-15 15:20:00,13.041,77.591,ShadowNet
+CHK-506,void_null07,blr_v07,Nandi Hills Ridge Overlook,2026-04-16 20:50:00,13.3702,77.6835,ShadowNet

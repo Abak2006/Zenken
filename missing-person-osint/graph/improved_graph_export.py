@@ -58,7 +58,7 @@ def create_improved_pyvis_graph(
     return generate_workstation_graph_html(
         G=G,
         output_path=output_path,
-        default_focus_target=focus_entity or "PERSON_MAYA_LIN",
+        default_focus_target=focus_entity,
         initial_layout=layout,
         initial_filter=init_filter
     )
@@ -66,7 +66,12 @@ def create_improved_pyvis_graph(
 def generate_workstation_graph_html(
     G: nx.MultiDiGraph,
     output_path: Path,
-    default_focus_target: Optional[str] = "PERSON_MAYA_LIN",
+    default_focus_target: Optional[str] = None,
+    target_person_name: Optional[str] = None,
+    target_accounts: Optional[set] = None,
+    target_phones: Optional[set] = None,
+    critical_locations: Optional[set] = None,
+    search_placeholder: Optional[str] = None,
     initial_layout: str = "organic",
     initial_filter: str = "core"
 ) -> str:
@@ -82,11 +87,50 @@ def generate_workstation_graph_html(
     nodes_data = []
     edges_data = []
     
-    # Identify target person and primary aliases
-    target_person_id = "PERSON_MAYA_LIN"
-    target_accounts = {"acc_mayalin_art", "acc_m_lin99", "acc_m.shadow_7"}
-    target_phones = {"phone_15550144", "phone_15550199"}
-    critical_locations = {"loc_v01", "loc_v02", "loc_v03"} # Whispering Pines, Pacific Horizon Diner, Bayview Arts
+    # Identify target person and primary aliases dynamically
+    if default_focus_target:
+        target_person_id = default_focus_target
+    else:
+        found_target = None
+        for n, d in G.nodes(data=True):
+            if d.get("node_type") == "Person" and (d.get("is_target") or "target" in str(d.get("name", "")).lower()):
+                found_target = n
+                break
+        if not found_target:
+            for n, d in G.nodes(data=True):
+                if d.get("node_type") == "Person":
+                    found_target = n
+                    break
+        target_person_id = found_target or "PERSON_MAYA_LIN"
+        default_focus_target = target_person_id
+
+    if not target_person_name:
+        target_person_name = G.nodes.get(target_person_id, {}).get("name", "Target Subject")
+
+    if target_accounts is None:
+        target_accounts = set()
+        for n, d in G.nodes(data=True):
+            if d.get("node_type") == "Account" and (d.get("is_target") or G.has_edge(target_person_id, n)):
+                target_accounts.add(n.lower())
+        if not target_accounts:
+            target_accounts = {"acc_mayalin_art", "acc_m_lin99", "acc_m.shadow_7"}
+
+    if target_phones is None:
+        target_phones = set()
+        for n, d in G.nodes(data=True):
+            if d.get("node_type") == "Phone" and (G.has_edge(target_person_id, n) or G.has_edge(n, target_person_id)):
+                target_phones.add(n.lower())
+        if not target_phones:
+            target_phones = {"phone_15550144", "phone_15550199"}
+
+    if critical_locations is None:
+        critical_locations = set()
+        for n, d in G.nodes(data=True):
+            if d.get("node_type") == "Location":
+                critical_locations.add(n.lower())
+
+    if not search_placeholder:
+        search_placeholder = f"{target_person_name}, aliases, locations"
 
     # Process Nodes
     for node_id, data in G.nodes(data=True):
@@ -622,7 +666,7 @@ def generate_workstation_graph_html(
                     type="text" 
                     id="search-input" 
                     class="search-input" 
-                    placeholder="Search entity (e.g. Maya Lin, kaelen_v)..." 
+                    placeholder="Search entity (e.g. {search_placeholder})..." 
                     list="entities-datalist"
                     autocomplete="off"
                 />
@@ -645,7 +689,7 @@ def generate_workstation_graph_html(
 
             <div class="divider"></div>
 
-            <button id="btn-focus-target" class="toolbar-btn" title="Focus Maya Lin (Target)">
+            <button id="btn-focus-target" class="toolbar-btn" title="Focus {target_person_name} (Target)">
                 🎯 Target
             </button>
 
@@ -1085,7 +1129,7 @@ def generate_workstation_graph_html(
 
         // Toolbar Button Handlers
         document.getElementById("btn-focus-target").addEventListener("click", function() {{
-            focusNode("PERSON_MAYA_LIN");
+            focusNode("{default_focus_target}");
         }});
 
         document.getElementById("btn-fit").addEventListener("click", function() {{
@@ -1135,13 +1179,15 @@ def generate_workstation_graph_html(
 def export_investigation_graph(
     G: nx.MultiDiGraph,
     output_dir: Path,
-    variations: Optional[List[str]] = None
+    variations: Optional[List[str]] = None,
+    default_focus_target: Optional[str] = None,
+    target_person_name: Optional[str] = None
 ) -> Dict[str, str]:
     """
     Export all investigation graph variations required by Zenken workstation.
     """
     if variations is None:
-        variations = ["default", "focus_maya", "no_labels", "hierarchical"]
+        variations = ["default", "focus_target", "no_labels", "hierarchical"]
 
     output_dir.mkdir(parents=True, exist_ok=True)
     results = {}
@@ -1149,19 +1195,41 @@ def export_investigation_graph(
     for var in variations:
         if var == "default":
             p = output_dir / "investigation_graph.html"
-            generate_workstation_graph_html(G, p, initial_layout="organic", initial_filter="core")
+            generate_workstation_graph_html(
+                G, p, 
+                default_focus_target=default_focus_target,
+                target_person_name=target_person_name,
+                initial_layout="organic", 
+                initial_filter="core"
+            )
             results["default"] = str(p)
-        elif var == "focus_maya":
+        elif var in ["focus_target", "focus_maya"]:
             p = output_dir / "investigation_graph_focus.html"
-            generate_workstation_graph_html(G, p, default_focus_target="PERSON_MAYA_LIN", initial_filter="target")
-            results["focus_maya"] = str(p)
+            generate_workstation_graph_html(
+                G, p, 
+                default_focus_target=default_focus_target,
+                target_person_name=target_person_name,
+                initial_filter="target"
+            )
+            results["focus_target"] = str(p)
         elif var == "no_labels":
             p = output_dir / "investigation_graph_clean.html"
-            generate_workstation_graph_html(G, p, initial_filter="core")
+            generate_workstation_graph_html(
+                G, p, 
+                default_focus_target=default_focus_target,
+                target_person_name=target_person_name,
+                initial_filter="core"
+            )
             results["no_labels"] = str(p)
         elif var == "hierarchical":
             p = output_dir / "investigation_graph_hierarchical.html"
-            generate_workstation_graph_html(G, p, initial_layout="hierarchical", initial_filter="core")
+            generate_workstation_graph_html(
+                G, p, 
+                default_focus_target=default_focus_target,
+                target_person_name=target_person_name,
+                initial_layout="hierarchical", 
+                initial_filter="core"
+            )
             results["hierarchical"] = str(p)
 
     return results

@@ -37,17 +37,23 @@ def build_investigation_graph(
     account_to_person = {}
     for cluster in resolved_clusters:
         p_id = cluster["canonical_id"]
+        is_target_node = bool(
+            "MAYA_LIN" in p_id or 
+            "ANANYA_NAIR" in p_id or 
+            cluster.get("is_target", False) or 
+            cluster.get("is_primary_subject", False)
+        )
         G.add_node(
             p_id,
             node_type="Person",
             label=cluster["canonical_name"],
             name=cluster["canonical_name"],
-            is_target=("MAYA_LIN" in p_id),
-            accounts=cluster["accounts"],
-            phones=cluster["linked_phones"],
-            emails=cluster["linked_emails"]
+            is_target=is_target_node,
+            accounts=cluster.get("accounts", []),
+            phones=cluster.get("linked_phones", []),
+            emails=cluster.get("linked_emails", [])
         )
-        for acc in cluster["accounts"]:
+        for acc in cluster.get("accounts", []):
             account_to_person[acc.lower()] = p_id
 
     # Add Account nodes
@@ -88,7 +94,6 @@ def build_investigation_graph(
                 status=row.get("status")
             )
             # Check owner hint or match to person
-            owner_name = str(row.get("registered_owner", ""))
             for cluster in resolved_clusters:
                 if ph_num in cluster.get("linked_phones", []):
                     G.add_edge(cluster["canonical_id"], ph_node_id, edge_type="OWNS", confidence=0.95)
@@ -100,37 +105,49 @@ def build_investigation_graph(
         for _, row in cdrs_df.iterrows():
             caller_id = f"PHONE_{str(row['caller_number']).replace('+', '').replace('-', '')}"
             receiver_id = f"PHONE_{str(row['receiver_number']).replace('+', '').replace('-', '')}"
-            if G.has_node(caller_id) and G.has_node(receiver_id):
-                G.add_edge(
-                    caller_id,
-                    receiver_id,
-                    edge_type="CONTACTED",
-                    call_id=row["call_id"],
-                    timestamp=row["timestamp_utc"],
-                    duration_sec=row["duration_sec"],
-                    cell_tower=row["cell_tower_sector"],
-                    confidence=1.0
-                )
+            if not G.has_node(caller_id):
+                G.add_node(caller_id, node_type="Phone", label=str(row['caller_number']), number=str(row['caller_number']))
+            if not G.has_node(receiver_id):
+                G.add_node(receiver_id, node_type="Phone", label=str(row['receiver_number']), number=str(row['receiver_number']))
+            G.add_edge(
+                caller_id,
+                receiver_id,
+                edge_type="CONTACTED",
+                call_id=row.get("call_id"),
+                timestamp=row.get("timestamp_utc"),
+                duration_sec=row.get("duration_sec"),
+                cell_tower=row.get("cell_tower_sector"),
+                confidence=1.0
+            )
 
     # 3. Add Location / Venue nodes
-    venues_path = data_dir.parent / "case" / "case_bible.yaml"
-    if venues_path.exists():
+    venues = []
+    if (data_dir / "venues.json").exists():
+        with open(data_dir / "venues.json", "r", encoding="utf-8") as f:
+            venues = json.load(f)
+    elif (data_dir / "case_bible.json").exists():
+        with open(data_dir / "case_bible.json", "r", encoding="utf-8") as f:
+            cb_json = json.load(f)
+            venues = cb_json.get("venues", [])
+    elif (data_dir.parent / "case" / "case_bible.yaml").exists():
         import yaml
-        with open(venues_path, "r", encoding="utf-8") as f:
+        with open(data_dir.parent / "case" / "case_bible.yaml", "r", encoding="utf-8") as f:
             cb = yaml.safe_load(f)
-            for v in cb.get("venues", []):
-                loc_id = f"LOC_{v['id']}"
-                G.add_node(
-                    loc_id,
-                    node_type="Location",
-                    label=v["name"],
-                    venue_id=v["id"],
-                    name=v["name"],
-                    category=v["category"],
-                    latitude=v["latitude"],
-                    longitude=v["longitude"],
-                    address=v.get("address")
-                )
+            venues = cb.get("venues", [])
+
+    for v in venues:
+        loc_id = f"LOC_{v['id']}"
+        G.add_node(
+            loc_id,
+            node_type="Location",
+            label=v.get("name", loc_id),
+            venue_id=v.get("id"),
+            name=v.get("name", loc_id),
+            category=v.get("category", "General"),
+            latitude=v.get("latitude"),
+            longitude=v.get("longitude"),
+            address=v.get("address")
+        )
 
     # 4. Add Check-in edges
     checkins_path = data_dir / "checkins.csv"
@@ -138,14 +155,27 @@ def build_investigation_graph(
         checkins_df = pd.read_csv(checkins_path)
         for _, row in checkins_df.iterrows():
             acc_id = f"ACC_{str(row['account']).lower()}"
-            loc_id = f"LOC_{row['venue_id']}"
-            if G.has_node(acc_id) and G.has_node(loc_id):
+            v_id = row.get("venue_id")
+            if pd.isna(v_id) or not v_id:
+                v_name = str(row.get("venue_name", "unknown"))
+                v_id = v_name.lower().replace(" ", "_")[:24]
+            loc_id = f"LOC_{v_id}"
+            if not G.has_node(loc_id):
+                G.add_node(
+                    loc_id,
+                    node_type="Location",
+                    label=str(row.get("venue_name", loc_id)),
+                    name=str(row.get("venue_name", loc_id)),
+                    latitude=row.get("latitude"),
+                    longitude=row.get("longitude")
+                )
+            if G.has_node(acc_id):
                 G.add_edge(
                     acc_id,
                     loc_id,
                     edge_type="CHECKED_IN_AT",
-                    checkin_id=row["checkin_id"],
-                    timestamp=row["timestamp_utc"],
+                    checkin_id=row.get("checkin_id"),
+                    timestamp=row.get("timestamp_utc"),
                     confidence=0.9
                 )
 
@@ -155,20 +185,21 @@ def build_investigation_graph(
         posts_df = pd.read_csv(posts_path)
         for _, row in posts_df.iterrows():
             p_id = f"POST_{row['post_id']}"
+            ts = row.get("timestamp_utc_iso") or row.get("timestamp_raw") or row.get("timestamp_utc") or ""
             G.add_node(
                 p_id,
                 node_type="Post",
                 label=f"Post {row['post_id']}",
                 post_id=row["post_id"],
-                timestamp=row["timestamp_utc_iso"],
-                text=row["text"],
+                timestamp=ts,
+                text=row.get("text", ""),
                 deleted=bool(row.get("deleted", False)),
                 sentiment=row.get("sentiment_label")
             )
             # Edge: Account -> POSTED -> Post
             acc_id = f"ACC_{str(row['account']).lower()}"
             if G.has_node(acc_id):
-                G.add_edge(acc_id, p_id, edge_type="POSTED", timestamp=row["timestamp_utc_iso"])
+                G.add_edge(acc_id, p_id, edge_type="POSTED", timestamp=ts)
 
             # Mentions edge
             mentions = str(row.get("mentions", "")).split(";") if pd.notna(row.get("mentions")) else []

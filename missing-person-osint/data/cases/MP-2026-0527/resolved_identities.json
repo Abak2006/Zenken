@@ -1,0 +1,111 @@
+{
+  "clusters": [
+    {
+      "canonical_id": "PERSON_ANANYA_NAIR",
+      "canonical_name": "Ananya Nair",
+      "is_target": true,
+      "is_primary_subject": true,
+      "account_count": 4,
+      "accounts": [
+        "ananya_dev",
+        "ananya.n",
+        "ananyan-dev",
+        "void_null07"
+      ],
+      "linked_emails": [
+        "ananya.nair.sys@fictional-mail.in",
+        "ananya_personal@fictional-mail.in",
+        "anon_blr07@proton-synthetic.me"
+      ],
+      "linked_phones": [
+        "+91-98801-0144",
+        "+91-98801-0199"
+      ],
+      "is_multi_account": true
+    },
+    {
+      "canonical_id": "PERSON_VECTOR_ZERO",
+      "canonical_name": "Vector Zero",
+      "is_target": false,
+      "account_count": 1,
+      "accounts": [
+        "vector_zero"
+      ],
+      "linked_emails": [
+        "recruiter@vector-zero.io"
+      ],
+      "linked_phones": [
+        "+91-98801-0900"
+      ],
+      "is_multi_account": false
+    },
+    {
+      "canonical_id": "PERSON_PRIYA_K",
+      "canonical_name": "Priya Krishnamurthy",
+      "is_target": false,
+      "account_count": 1,
+      "accounts": [
+        "priya_k"
+      ],
+      "linked_emails": [
+        "priya.k@biotech-blr.in"
+      ],
+      "linked_phones": [
+        "+91-98801-0222"
+      ],
+      "is_multi_account": false
+    },
+    {
+      "canonical_id": "PERSON_ROHAN_SHARMA",
+      "canonical_name": "Rohan Sharma",
+      "is_target": false,
+      "account_count": 1,
+      "accounts": [
+        "rohan_tech"
+      ],
+      "linked_emails": [
+        "rohan.sharma@fictional-bit.in"
+      ],
+      "linked_phones": [
+        "+91-98801-0333"
+      ],
+      "is_multi_account": false
+    },
+    {
+      "canonical_id": "PERSON_PROF_MENON",
+      "canonical_name": "Prof. K. Menon",
+      "is_target": false,
+      "account_count": 1,
+      "accounts": [
+        "prof_menon_sys"
+      ],
+      "linked_emails": [
+        "kmenon@bit-dept.ac.in"
+      ],
+      "linked_phones": [
+        "+91-98801-0444"
+      ],
+      "is_multi_account": false
+    }
+  ],
+  "confirmed_links": [
+    {
+      "account_a": "ananya_dev",
+      "account_b": "ananya.n",
+      "confidence": 0.96,
+      "rationale": "Shared primary phone +91-98801-0144 and student email domain"
+    },
+    {
+      "account_a": "ananya_dev",
+      "account_b": "ananyan-dev",
+      "confidence": 0.98,
+      "rationale": "Identical email ananya.nair.sys@fictional-mail.in and commit PGP signature"
+    },
+    {
+      "account_a": "void_null07",
+      "account_b": "ananya_dev",
+      "confidence": 0.91,
+      "rationale": "Consecutive cell tower handoff between primary and burner SIM at Hebbal junction"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "candidate_lkl": {
+    "rank": 1,
+    "venue_name": "Nandi Hills Ridge Overlook",
+    "latitude": 13.3702,
+    "longitude": 77.6835,
+    "confidence": 0.938,
+    "final_telecom_ping": "2026-04-16T21:15:00Z",
+    "cell_tower_id": "BLR-TWR-8841",
+    "search_radius_meters": 400
+  },
+  "clusters": [
+    {
+      "cluster_id": 0,
+      "name": "Koramangala & Indiranagar Hub",
+      "center": [
+        12.9535,
+        77.633
+      ],
+      "event_count": 8,
+      "dominant_modality": "Physical Check-ins & Cellular CDR"
+    },
+    {
+      "cluster_id": 1,
+      "name": "Electronic City Tech Zone",
+      "center": [
+        12.8452,
+        77.6602
+      ],
+      "event_count": 4,
+      "dominant_modality": "Academic Attendance & Social Transmissions"
+    },
+    {
+      "cluster_id": 2,
+      "name": "Hebbal & Bellary Road Exit Corridor",
+      "center": [
+        13.041,
+        77.591
+      ],
+      "event_count": 3,
+      "dominant_modality": "Burner Handset Cellular Pings"
+    },
+    {
+      "cluster_id": 3,
+      "name": "Nandi Hills Terminal Cluster (LKL)",
+      "center": [
+        13.3702,
+        77.6835
+      ],
+      "event_count": 2,
+      "dominant_modality": "Final Burner Handset Ping & EXIF Photo"
+    }
+  ]
+}

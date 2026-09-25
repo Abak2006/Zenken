@@ -1,0 +1,124 @@
+{
+  "case_metadata": {
+    "case_id": "MP-2026-0527",
+    "investigation_title": "Disappearance of Ananya Nair",
+    "status": "OPEN",
+    "date_reported": "2026-04-18T09:00:00Z",
+    "assigned_team": "Central Cyber Forensics & OSINT Squad",
+    "jurisdiction": "Bengaluru Central / Electronic City Division"
+  },
+  "missing_person": {
+    "full_name": "Ananya Nair",
+    "age": 22,
+    "pronouns": "she/her",
+    "occupation": "Software Engineering Student & Open-Source Contributor",
+    "institution": "Bengaluru Institute of Technology",
+    "last_seen_date": "2026-04-16T21:15:00Z",
+    "last_seen_location_name": "Nandi Hills Ridge Overlook",
+    "last_seen_coordinates": {
+      "latitude": 13.3702,
+      "longitude": 77.6835
+    },
+    "routine_description": "Final-year B.Tech Computer Science student. Daily commute between Koramangala student housing and Electronic City tech campus. Worked remote shifts from Indiranagar cafes on Thursdays. Disappeared during final capstone deployment week."
+  },
+  "digital_identities": [
+    {
+      "platform": "ChirpNet",
+      "handle": "ananya_dev",
+      "display_name": "Ananya Nair | Systems & AI",
+      "account_type": "primary",
+      "status": "active",
+      "bio": "CS Senior @ BIT Bengaluru. Distributed ML, kernels, Rust. Mail: ananya.nair.sys@fictional-mail.in",
+      "email": "ananya.nair.sys@fictional-mail.in",
+      "phone_reference": "+91-98801-0144"
+    },
+    {
+      "platform": "InstaPhoto",
+      "handle": "ananya.n",
+      "display_name": "Ananya N.",
+      "account_type": "variant_alias",
+      "status": "active",
+      "bio": "filter coffee, terminal windows & western ghats treks",
+      "email": "ananya_personal@fictional-mail.in",
+      "phone_reference": "+91-98801-0144"
+    },
+    {
+      "platform": "CodeHub",
+      "handle": "ananyan-dev",
+      "display_name": "Ananya Nair",
+      "account_type": "dormant_developer",
+      "status": "active",
+      "bio": "Compilers & distributed storage contributor",
+      "email": "ananya.nair.sys@fictional-mail.in",
+      "phone_reference": "+91-98801-0144"
+    },
+    {
+      "platform": "ShadowNet",
+      "handle": "void_null07",
+      "display_name": "null_ptr",
+      "account_type": "covert_burner",
+      "status": "active",
+      "bio": "ephemeral nodes & cold corridors",
+      "email": "anon_blr07@proton-synthetic.me",
+      "phone_reference": "+91-98801-0199"
+    }
+  ],
+  "venues": [
+    {
+      "id": "blr_v01",
+      "name": "Koramangala 4th Block Housing",
+      "category": "Residence",
+      "latitude": 12.9345,
+      "longitude": 77.6258,
+      "address": "Koramangala 4th Block, Bengaluru"
+    },
+    {
+      "id": "blr_v02",
+      "name": "Electronic City Tech Campus",
+      "category": "Academic",
+      "latitude": 12.8452,
+      "longitude": 77.6602,
+      "address": "Electronics City Phase 1, Hosur Road, Bengaluru"
+    },
+    {
+      "id": "blr_v03",
+      "name": "Third Wave Coffee Koramangala",
+      "category": "Cafe",
+      "latitude": 12.9352,
+      "longitude": 77.6245,
+      "address": "80 Feet Road, 4th Block, Koramangala"
+    },
+    {
+      "id": "blr_v04",
+      "name": "Indiranagar Roastery",
+      "category": "Cafe/Meeting",
+      "latitude": 12.9719,
+      "longitude": 77.6412,
+      "address": "100 Feet Road, Indiranagar, Bengaluru"
+    },
+    {
+      "id": "blr_v05",
+      "name": "Cubbon Park Bamboo Grove",
+      "category": "Park",
+      "latitude": 12.9763,
+      "longitude": 77.5929,
+      "address": "Kasturba Road, Bengaluru"
+    },
+    {
+      "id": "blr_v06",
+      "name": "Hebbal Lake Watchtower",
+      "category": "Transit/Observation",
+      "latitude": 13.041,
+      "longitude": 77.591,
+      "address": "Bellary Road, Hebbal, Bengaluru"
+    },
+    {
+      "id": "blr_v07",
+      "name": "Nandi Hills Ridge Overlook",
+      "category": "Scenic/Terminal",
+      "latitude": 13.3702,
+      "longitude": 77.6835,
+      "address": "Nandi Hills Ridge, Chikkaballapur District"
+    }
+  ]
+}

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6aadeb988386ee71cffd687565edf773 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <style>
+        .leaflet-container { 
+            background-color: #0E1231 !important; 
+            font-family: 'Inter', -apple-system, sans-serif !important; 
+        }
+        .leaflet-tile-pane { 
+            filter: brightness(0.65) invert(1) contrast(2.8) hue-rotate(200deg) saturate(0.35) brightness(0.7) !important; 
+        }
+        .leaflet-popup-content-wrapper, .leaflet-popup-tip { 
+            background: #1A2254 !important; 
+            color: #FFFFFF !important; 
+            border: 1px solid #2C3979 !important; 
+            border-radius: 8px !important; 
+            font-size: 11px !important;
+        }
+        .leaflet-bar a { 
+            background-color: #1A2254 !important; 
+            color: #FFFFFF !important; 
+            border: 1px solid #2C3979 !important; 
+        }
+        .leaflet-bar a:hover {
+            background-color: #242E70 !important;
+            color: #00E5A3 !important;
+        }
+        .leaflet-control-attribution { 
+            display: none !important; 
+        }
+    </style>
+    
+    
+            <div class="folium-map" id="map_6aadeb988386ee71cffd687565edf773" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6aadeb988386ee71cffd687565edf773 = L.map(
+                "map_6aadeb988386ee71cffd687565edf773",
+                {
+                    center: [13.12, 77.64],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_444b1cab7d4a849ee037ac63d97ce196 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "OpenStreetMap",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_444b1cab7d4a849ee037ac63d97ce196.addTo(map_6aadeb988386ee71cffd687565edf773);
+        
+    
+            var poly_line_b87836a270af4b3ffeab01bca500ce67 = L.polyline(
+                [[12.8452, 77.6602], [12.9352, 77.6245], [12.9719, 77.6412], [13.041, 77.591], [13.2483, 77.7126], [13.3702, 77.6835]],
+                {"bubblingMouseEvents": true, "color": "#3A6BFF", "dashArray": "6, 8", "dashOffset": null, "fill": false, "fillColor": "#3A6BFF", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_6aadeb988386ee71cffd687565edf773);
+        
+    
+            poly_line_b87836a270af4b3ffeab01bca500ce67.bindTooltip(
+                `<div>
+                     Tactical Movement Corridor
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2da8d624fb0e557abe1a57984ee60c24 = L.circleMarker(
+                [12.8452, 77.6602],
+                {"bubblingMouseEvents": true, "color": "#00E5A3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E5A3", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6aadeb988386ee71cffd687565edf773);
+        
+    
+        var popup_81c20db5eef5f3482d40d9437159138a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9713c4ce7da4c693e60c0e0952a7b54a = $(`<div id="html_9713c4ce7da4c693e60c0e0952a7b54a" style="width: 100.0%; height: 100.0%;"><b>Electronic City Tech Campus</b><br/>Last Physical Sight (Capstone review)</div>`)[0];
+                popup_81c20db5eef5f3482d40d9437159138a.setContent(html_9713c4ce7da4c693e60c0e0952a7b54a);
+            
+        
+
+        circle_marker_2da8d624fb0e557abe1a57984ee60c24.bindPopup(popup_81c20db5eef5f3482d40d9437159138a)
+        ;
+
+        
+    
+    
+            circle_marker_2da8d624fb0e557abe1a57984ee60c24.bindTooltip(
+                `<div>
+                     🏫 Electronic City Tech Campus
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b9f008a7b0ed3476e3b34ab0ad329b98 = L.circleMarker(
+                [12.9352, 77.6245],
+                {"bubblingMouseEvents": true, "color": "#6C5CE7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6C5CE7", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_6aadeb988386ee71cffd687565edf773);
+        
+    
+        var popup_b73127c457177d43528c6cdbf1427c9d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_15bbcc4cce932d8b1686fa51f01c32e9 = $(`<div id="html_15bbcc4cce932d8b1686fa51f01c32e9" style="width: 100.0%; height: 100.0%;"><b>Third Wave Coffee Koramangala</b><br/>Frequent Coding Hub & Check-in</div>`)[0];
+                popup_b73127c457177d43528c6cdbf1427c9d.setContent(html_15bbcc4cce932d8b1686fa51f01c32e9);
+            
+        
+
+        circle_marker_b9f008a7b0ed3476e3b34ab0ad329b98.bindPopup(popup_b73127c457177d43528c6cdbf1427c9d)
+        ;
+
+        
+    
+    
+            circle_marker_b9f008a7b0ed3476e3b34ab0ad329b98.bindTooltip(
+                `<div>
+                     ☕ Third Wave Coffee Koramangala
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0150a65f97260a966b9120cfd711aa7f = L.circleMarker(
+                [12.9719, 77.6412],
+                {"bubblingMouseEvents": true, "color": "#F5B942", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#F5B942", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_6aadeb988386ee71cffd687565edf773);
+        
+    
+        var popup_0d8a9941ff01bcca1e8e81683145888e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_141676220a6b3d1ad5efd099b26fc697 = $(`<div id="html_141676220a6b3d1ad5efd099b26fc697" style="width: 100.0%; height: 100.0%;"><b>Indiranagar Roastery</b><br/>Deleted Meeting Post with @vector_zero</div>`)[0];
+                popup_0d8a9941ff01bcca1e8e81683145888e.setContent(html_141676220a6b3d1ad5efd099b26fc697);
+            
+        
+
+        circle_marker_0150a65f97260a966b9120cfd711aa7f.bindPopup(popup_0d8a9941ff01bcca1e8e81683145888e)
+        ;
+
+        
+    
+    
+            circle_marker_0150a65f97260a966b9120cfd711aa7f.bindTooltip(
+                `<div>
+                     🗑️ Indiranagar Roastery
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3322063c125f8d33b5cf4f6a5c21d87b = L.circleMarker(
+                [13.041, 77.591],
+                {"bubblingMouseEvents": true, "color": "#00D2D3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00D2D3", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_6aadeb988386ee71cffd687565edf773);
+        
+    
+        var popup_d5ba4c2db31847a340acc6015a47f55f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e38992db3b13bdd43135c5f923cf4d09 = $(`<div id="html_e38992db3b13bdd43135c5f923cf4d09" style="width: 100.0%; height: 100.0%;"><b>Hebbal Lake Watchtower</b><br/>ShadowNet Secondary Uplink Active</div>`)[0];
+                popup_d5ba4c2db31847a340acc6015a47f55f.setContent(html_e38992db3b13bdd43135c5f923cf4d09);
+            
+        
+
+        circle_marker_3322063c125f8d33b5cf4f6a5c21d87b.bindPopup(popup_d5ba4c2db31847a340acc6015a47f55f)
+        ;
+
+        
+    
+    
+            circle_marker_3322063c125f8d33b5cf4f6a5c21d87b.bindTooltip(
+                `<div>
+                     🛡️ Hebbal Lake Watchtower
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e87cf75ac2012921dd556c790119ac10 = L.circleMarker(
+                [13.2483, 77.7126],
+                {"bubblingMouseEvents": true, "color": "#A29BFE", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#A29BFE", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_6aadeb988386ee71cffd687565edf773);
+        
+    
+        var popup_9db8de8419db857591e07a914252af85 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_51bd0c26507d887ed5233287f8a469fa = $(`<div id="html_51bd0c26507d887ed5233287f8a469fa" style="width: 100.0%; height: 100.0%;"><b>Devanahalli Highway Corridor</b><br/>Burner Mobile Tower Sector Ping</div>`)[0];
+                popup_9db8de8419db857591e07a914252af85.setContent(html_51bd0c26507d887ed5233287f8a469fa);
+            
+        
+
+        circle_marker_e87cf75ac2012921dd556c790119ac10.bindPopup(popup_9db8de8419db857591e07a914252af85)
+        ;
+
+        
+    
+    
+            circle_marker_e87cf75ac2012921dd556c790119ac10.bindTooltip(
+                `<div>
+                     📡 Devanahalli Highway Corridor
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ccb34c6baab9290c9620a9dc30a5e1fc = L.marker(
+                [13.3702, 77.6835],
+                {
+}
+            ).addTo(map_6aadeb988386ee71cffd687565edf773);
+        
+    
+            var icon_4106af8671922ce06460df3fc33520dc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e10b78e8dcfc8ce0c0060edfee25d199 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_bbc4a5449d8646b0b6c77f06f1b944a5 = $(`<div id="html_bbc4a5449d8646b0b6c77f06f1b944a5" style="width: 100.0%; height: 100.0%;"><div style='font-family:Inter;'><b>🚨 CANDIDATE LKL (RANK 1)</b><br/>Nandi Hills Ridge Overlook<br/>Confidence: 93.8%<br/>Terminal Burner Handset Ping (+91-98801-0199) at 21:15 UTC</div></div>`)[0];
+                popup_e10b78e8dcfc8ce0c0060edfee25d199.setContent(html_bbc4a5449d8646b0b6c77f06f1b944a5);
+            
+        
+
+        marker_ccb34c6baab9290c9620a9dc30a5e1fc.bindPopup(popup_e10b78e8dcfc8ce0c0060edfee25d199)
+        ;
+
+        
+    
+    
+            marker_ccb34c6baab9290c9620a9dc30a5e1fc.bindTooltip(
+                `<div>
+                     🚨 CRITICAL LKL: Nandi Hills Ridge Overlook
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ccb34c6baab9290c9620a9dc30a5e1fc.setIcon(icon_4106af8671922ce06460df3fc33520dc);
+            
+    
+            var circle_b2db663fe3dccddd4cb557f9e5e531ae = L.circle(
+                [13.3702, 77.6835],
+                {"bubblingMouseEvents": true, "color": "#FF4757", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4757", "fillOpacity": 0.25, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 400, "stroke": true, "weight": 2}
+            ).addTo(map_6aadeb988386ee71cffd687565edf773);
+        
+    
+            circle_b2db663fe3dccddd4cb557f9e5e531ae.bindTooltip(
+                `<div>
+                     High-Probability LKL Radius (400m)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

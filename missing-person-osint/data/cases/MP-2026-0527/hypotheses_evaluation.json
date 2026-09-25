@@ -1,0 +1,44 @@
+[
+  {
+    "hypothesis_id": "H1",
+    "title": "High-Tech Headhunting / Extortion via Covert Autonomous Recruiter",
+    "description": "Subject was systematically courted by @vector_zero offering proprietary AI deployment funding, followed by coerced off-grid departure from Indiranagar Roastery towards an unmapped facility north of Bengaluru.",
+    "prior": 0.4,
+    "likelihood": 0.89,
+    "posterior": 0.89,
+    "rank": 1,
+    "status": "MOST_PROBABLE",
+    "supporting_evidence": [
+      "Deleted posts P-106 & P-107 referencing confidential client NDA at Indiranagar Roastery",
+      "Repeated burner phone pings (+91-98801-0199) directly following Vector Zero contact",
+      "Final cell tower triangulation terminating at Nandi Hills Ridge Overlook at 21:15 UTC"
+    ]
+  },
+  {
+    "hypothesis_id": "H2",
+    "title": "Autonomous Voluntary Disappearance into Off-Grid Research Collective",
+    "description": "Subject deliberately rotated PGP keys and severed academic obligations to join an open-source stealth intelligence lab in the Western Ghats / Nandi perimeter.",
+    "prior": 0.35,
+    "likelihood": 0.65,
+    "posterior": 0.65,
+    "rank": 2,
+    "status": "PLAUSIBLE",
+    "supporting_evidence": [
+      "Post P-104 stating 'Some opportunities require uncoupling from conventional academic trajectories'",
+      "ShadowNet post P-105: 'Keys rotated. Secondary handset provisioned.'"
+    ]
+  },
+  {
+    "hypothesis_id": "H3",
+    "title": "Decoy Travel / Coastal Relocation to Goa",
+    "description": "Subject fled south-west toward coastal resorts to evade capstone deadline stress.",
+    "prior": 0.25,
+    "likelihood": 0.12,
+    "posterior": 0.12,
+    "rank": 3,
+    "status": "DISPROVEN_RED_HERRING",
+    "supporting_evidence": [
+      "Decoy photo PH-704 in Goa with mismatched Sony/Canon camera profile and zero cellular tower correlation"
+    ]
+  }
+]

@@ -1,0 +1,8 @@
+call_id,caller_number,receiver_number,call_type,timestamp_utc,duration_sec,cell_tower_id,cell_tower_sector,tower_latitude,tower_longitude
+CDR-901,+91-98801-0144,+91-98801-0222,Voice,2026-04-11 18:30:00,145,BLR-TWR-401,Koramangala 4th Block,12.9345,77.6258
+CDR-902,+91-98801-0144,+91-98801-0333,Voice,2026-04-12 10:15:00,84,BLR-TWR-102,Electronic City Phase 1,12.8399,77.677
+CDR-903,+91-98801-0144,+91-98801-0900,Voice,2026-04-12 17:45:00,210,BLR-TWR-504,Indiranagar 100ft Road,12.9719,77.6412
+CDR-904,+91-98801-0199,+91-98801-0900,Burner Handset Ping,2026-04-14 20:30:00,35,BLR-TWR-504,Indiranagar Metro Sector,12.9784,77.6385
+CDR-905,+91-98801-0199,+91-98801-0900,Burner Handset Ping,2026-04-15 14:10:00,42,BLR-TWR-712,Hebbal Flyover North,13.0358,77.597
+CDR-906,+91-98801-0199,+91-98801-0900,Burner Handset Ping,2026-04-16 19:40:00,60,BLR-TWR-810,Devanahalli Highway Corridor,13.2483,77.7126
+CDR-907,+91-98801-0199,+91-98801-0900,Burner Handset Ping,2026-04-16 21:15:00,18,BLR-TWR-8841,Nandi Hills Ridge Sector,13.3702,77.6835

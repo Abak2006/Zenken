@@ -1,0 +1,263 @@
+{
+  "total_nodes": 39,
+  "total_edges": 55,
+  "density": 0.0688,
+  "top_degree_centrality": [
+    {
+      "node": "ACC_ananya_dev",
+      "score": 0.4737,
+      "label": "@ananya_dev"
+    },
+    {
+      "node": "ACC_ananya.n",
+      "score": 0.2105,
+      "label": "@ananya.n"
+    },
+    {
+      "node": "PERSON_ANANYA_NAIR",
+      "score": 0.1579,
+      "label": "Ananya Nair"
+    },
+    {
+      "node": "ACC_void_null07",
+      "score": 0.1579,
+      "label": "@void_null07"
+    },
+    {
+      "node": "ACC_priya_k",
+      "score": 0.1316,
+      "label": "@priya_k"
+    },
+    {
+      "node": "ACC_vector_zero",
+      "score": 0.1053,
+      "label": "@vector_zero"
+    },
+    {
+      "node": "ACC_rohan_tech",
+      "score": 0.1053,
+      "label": "@rohan_tech"
+    },
+    {
+      "node": "PHONE_91988010144",
+      "score": 0.1053,
+      "label": "+91-98801-0144"
+    },
+    {
+      "node": "ACC_prof_menon_sys",
+      "score": 0.0789,
+      "label": "@prof_menon_sys"
+    },
+    {
+      "node": "PHONE_91988010900",
+      "score": 0.0789,
+      "label": "+91-98801-0900"
+    }
+  ],
+  "top_betweenness_centrality": [
+    {
+      "node": "ACC_ananya_dev",
+      "score": 0.6427,
+      "label": "@ananya_dev"
+    },
+    {
+      "node": "ACC_ananya.n",
+      "score": 0.2317,
+      "label": "@ananya.n"
+    },
+    {
+      "node": "ACC_void_null07",
+      "score": 0.1906,
+      "label": "@void_null07"
+    },
+    {
+      "node": "PERSON_ANANYA_NAIR",
+      "score": 0.1681,
+      "label": "Ananya Nair"
+    },
+    {
+      "node": "PHONE_91988010144",
+      "score": 0.1201,
+      "label": "+91-98801-0144"
+    },
+    {
+      "node": "ACC_priya_k",
+      "score": 0.0552,
+      "label": "@priya_k"
+    },
+    {
+      "node": "ACC_rohan_tech",
+      "score": 0.0501,
+      "label": "@rohan_tech"
+    },
+    {
+      "node": "ACC_prof_menon_sys",
+      "score": 0.0498,
+      "label": "@prof_menon_sys"
+    },
+    {
+      "node": "ACC_vector_zero",
+      "score": 0.042,
+      "label": "@vector_zero"
+    },
+    {
+      "node": "PERSON_PRIYA_K",
+      "score": 0.0181,
+      "label": "Priya Krishnamurthy"
+    }
+  ],
+  "communities_count": 7,
+  "communities": [
+    {
+      "community_id": 0,
+      "size": 9,
+      "members": [
+        "POST_P-108",
+        "ACC_ananya_dev",
+        "LOC_blr_v03",
+        "POST_P-106",
+        "POST_P-103",
+        "ACC_vector_zero",
+        "POST_P-104",
+        "LOC_blr_v05",
+        "POST_P-107"
+      ],
+      "sample_labels": [
+        "Post P-108",
+        "@ananya_dev",
+        "Third Wave Coffee Koramangala",
+        "Post P-106",
+        "Post P-103",
+        "@vector_zero"
+      ]
+    },
+    {
+      "community_id": 1,
+      "size": 9,
+      "members": [
+        "POST_P-102",
+        "PERSON_PRIYA_K",
+        "ACC_priya_k",
+        "PHOTO_PH-702",
+        "LOC_blr_v04",
+        "PHOTO_PH-701",
+        "ACC_ananya.n",
+        "POST_P-109",
+        "LOC_blr_v02"
+      ],
+      "sample_labels": [
+        "Post P-102",
+        "Priya Krishnamurthy",
+        "@priya_k",
+        "PH-702",
+        "Indiranagar Roastery",
+        "PH-701"
+      ]
+    },
+    {
+      "community_id": 2,
+      "size": 8,
+      "members": [
+        "PHONE_91988010144",
+        "PHONE_91988010222",
+        "PERSON_VECTOR_ZERO",
+        "ACC_ananyan-dev",
+        "PHONE_91988010900",
+        "PHONE_91988010333",
+        "PERSON_ANANYA_NAIR",
+        "PHONE_91988010199"
+      ],
+      "sample_labels": [
+        "+91-98801-0144",
+        "+91-98801-0222",
+        "Vector Zero",
+        "@ananyan-dev",
+        "+91-98801-0900",
+        "+91-98801-0333"
+      ]
+    },
+    {
+      "community_id": 3,
+      "size": 6,
+      "members": [
+        "PERSON_PROF_MENON",
+        "ACC_prof_menon_sys",
+        "POST_P-101",
+        "ACC_rohan_tech",
+        "PERSON_ROHAN_SHARMA",
+        "POST_P-110"
+      ],
+      "sample_labels": [
+        "Prof. K. Menon",
+        "@prof_menon_sys",
+        "Post P-101",
+        "@rohan_tech",
+        "Rohan Sharma",
+        "Post P-110"
+      ]
+    },
+    {
+      "community_id": 4,
+      "size": 5,
+      "members": [
+        "PHOTO_PH-703",
+        "ACC_void_null07",
+        "LOC_blr_v06",
+        "LOC_blr_v07",
+        "POST_P-105"
+      ],
+      "sample_labels": [
+        "PH-703",
+        "@void_null07",
+        "Hebbal Lake Watchtower",
+        "Nandi Hills Ridge Overlook",
+        "Post P-105"
+      ]
+    },
+    {
+      "community_id": 5,
+      "size": 1,
+      "members": [
+        "LOC_blr_v01"
+      ],
+      "sample_labels": [
+        "Koramangala 4th Block Housing"
+      ]
+    },
+    {
+      "community_id": 6,
+      "size": 1,
+      "members": [
+        "PHOTO_PH-704"
+      ],
+      "sample_labels": [
+        "PH-704"
+      ]
+    }
+  ],
+  "last_72h_subgraph": {
+    "node_count": 18,
+    "edge_count": 29,
+    "nodes": [
+      "PHONE_91988010144",
+      "PHONE_91988010222",
+      "ACC_ananyan-dev",
+      "PHONE_91988010333",
+      "ACC_void_null07",
+      "PERSON_PRIYA_K",
+      "PERSON_ANANYA_NAIR",
+      "ACC_ananya_dev",
+      "ACC_priya_k",
+      "PERSON_ROHAN_SHARMA",
+      "PERSON_VECTOR_ZERO",
+      "PERSON_PROF_MENON",
+      "ACC_vector_zero",
+      "ACC_prof_menon_sys",
+      "ACC_ananya.n",
+      "PHONE_91988010900",
+      "ACC_rohan_tech",
+      "PHONE_91988010199"
+    ]
+  },
+  "detected_communication_anomalies": []
+}

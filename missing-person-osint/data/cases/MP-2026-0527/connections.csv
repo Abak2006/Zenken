@@ -1,0 +1,7 @@
+source,target,relationship_type,weight,context
+ananya_dev,vector_zero,CONTACTED,1.0,Inbound recruiting pitch regarding raft distributed benchmarks
+vector_zero,ananya_dev,MENTIONS,0.9,Public commendation of cache repo
+ananya_dev,priya_k,FOLLOWS,1.0,Flatmate & roommate connection
+ananya_dev,rohan_tech,FOLLOWS,1.0,Capstone engineering partner
+ananya_dev,prof_menon_sys,FOLLOWS,0.8,Academic advisor
+priya_k,ananya.n,FOLLOWS,1.0,Social Instagram connection

@@ -1,0 +1,9 @@
+[
+  {
+    "account_a": "void_null07",
+    "account_b": "travel_bot_decoy",
+    "similarity_score": 0.22,
+    "status": "REJECTED_RED_HERRING",
+    "rationale": "IP hopping in Goa lacks device hash concordance with Sony ILCE camera"
+  }
+]

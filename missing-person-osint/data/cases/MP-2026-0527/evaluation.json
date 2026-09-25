@@ -1,0 +1,13 @@
+{
+  "case_id": "MP-2026-0527",
+  "benchmark_timestamp": "2026-04-18T12:00:00Z",
+  "metrics": {
+    "entity_resolution_precision": 0.962,
+    "entity_resolution_recall": 0.925,
+    "entity_resolution_f1": 0.943,
+    "lkl_spatial_error_meters": 142.5,
+    "lkl_rank1_accuracy": 1.0,
+    "hypothesis_mrr": 1.0,
+    "red_herring_rejection_rate": 1.0
+  }
+}

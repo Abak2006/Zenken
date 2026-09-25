@@ -108,9 +108,23 @@ CUSTOM_CSS = f"""
         display: none !important;
     }}
 
+    /* REMOVE DEPLOY BUTTON AND STREAMLIT HEADER DECORATIONS */
+    .stDeployButton,
+    [data-testid="stAppDeployButton"],
+    button[title="Deploy this app"],
+    button[title="Deploy"],
+    header[data-testid="stHeader"] .stDeployButton,
+    div[data-testid="stToolbar"] [data-testid="stAppDeployButton"],
     header[data-testid="stHeader"] {{
-        background: transparent !important;
+        display: none !important;
+        visibility: hidden !important;
         height: 0 !important;
+        max-height: 0 !important;
+        width: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
     }}
 
     .stApp [data-testid="stMainBlockContainer"] {{
@@ -128,8 +142,8 @@ CUSTOM_CSS = f"""
         justify-content: space-between;
         align-items: center;
         background: #101438;
-        border-bottom: 1px solid {BORDERS};
-        padding: 0.5rem 1.2rem;
+        border: 1px solid {BORDERS};
+        padding: 0.45rem 1.2rem;
         border-radius: 12px;
         margin-bottom: 0.65rem;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
@@ -227,36 +241,58 @@ CUSTOM_CSS = f"""
         letter-spacing: 0.5px;
     }}
 
-    /* Top Horizontal Navigation Strip (Styled Radio) */
+    /* Top Horizontal Navigation Container (Full Viewport Width & Zero Text Break) */
+    div[data-testid="stRadio"],
+    div[data-testid="stRadio"] > div,
+    div[data-testid="element-container"]:has(div[data-testid="stRadio"]) {{
+        width: 100% !important;
+        max-width: 100% !important;
+    }}
+
     div[data-testid="stRadio"] > div[role="radiogroup"] {{
         display: flex !important;
         flex-direction: row !important;
+        flex-wrap: nowrap !important;
         justify-content: space-between !important;
+        align-items: stretch !important;
         background: #12173D !important;
         border: 1px solid {BORDERS} !important;
         border-radius: 10px !important;
-        padding: 4px !important;
-        gap: 4px !important;
+        padding: 4px 6px !important;
+        gap: 6px !important;
         width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
         margin-bottom: 0.65rem !important;
+        overflow-x: auto !important;
+        scrollbar-width: none !important;
+    }}
+    div[data-testid="stRadio"] > div[role="radiogroup"]::-webkit-scrollbar {{
+        display: none !important;
     }}
 
     div[data-testid="stRadio"] > div[role="radiogroup"] > label {{
-        flex: 1 !important;
+        flex: 1 1 auto !important;
         display: flex !important;
         text-align: center !important;
         justify-content: center !important;
         align-items: center !important;
         background: transparent !important;
         border-radius: 8px !important;
-        padding: 7px 12px !important;
+        padding: 10px 16px !important;
         margin: 0 !important;
         cursor: pointer !important;
         transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
         border: 1px solid transparent !important;
         color: {SECONDARY_TEXT} !important;
-        font-size: 12px !important;
+        font-size: 13px !important;
         font-weight: 500 !important;
+        white-space: nowrap !important;
+        word-break: keep-all !important;
+        word-wrap: normal !important;
+        overflow: visible !important;
+        min-width: fit-content !important;
+        box-sizing: border-box !important;
     }}
 
     div[data-testid="stRadio"] > div[role="radiogroup"] > label:hover {{
@@ -266,7 +302,7 @@ CUSTOM_CSS = f"""
 
     div[data-testid="stRadio"] > div[role="radiogroup"] > label[data-checked="true"],
     div[data-testid="stRadio"] > div[role="radiogroup"] > label:has(input:checked) {{
-        background: linear-gradient(135deg, rgba(58, 107, 255, 0.4) 0%, rgba(108, 92, 231, 0.4) 100%) !important;
+        background: linear-gradient(135deg, rgba(58, 107, 255, 0.45) 0%, rgba(108, 92, 231, 0.45) 100%) !important;
         border: 1px solid {COLOR_PRIMARY} !important;
         color: #FFFFFF !important;
         font-weight: 600 !important;
@@ -278,9 +314,41 @@ CUSTOM_CSS = f"""
         display: none !important;
     }}
 
-    div[data-testid="stRadio"] > div[role="radiogroup"] span {{
-        font-size: 12px !important;
+    div[data-testid="stRadio"] > div[role="radiogroup"] > label div,
+    div[data-testid="stRadio"] > div[role="radiogroup"] > label p,
+    div[data-testid="stRadio"] > div[role="radiogroup"] > label span {{
+        white-space: nowrap !important;
+        word-break: keep-all !important;
+        word-wrap: normal !important;
+        text-overflow: clip !important;
+        overflow: visible !important;
+        font-size: 13px !important;
         color: inherit !important;
+        display: inline-block !important;
+    }}
+
+    @media (max-width: 1440px) {{
+        div[data-testid="stRadio"] > div[role="radiogroup"] > label {{
+            padding: 9px 12px !important;
+            font-size: 12.5px !important;
+        }}
+        div[data-testid="stRadio"] > div[role="radiogroup"] > label div,
+        div[data-testid="stRadio"] > div[role="radiogroup"] > label p,
+        div[data-testid="stRadio"] > div[role="radiogroup"] > label span {{
+            font-size: 12.5px !important;
+        }}
+    }}
+
+    @media (max-width: 1366px) {{
+        div[data-testid="stRadio"] > div[role="radiogroup"] > label {{
+            padding: 8px 10px !important;
+            font-size: 12px !important;
+        }}
+        div[data-testid="stRadio"] > div[role="radiogroup"] > label div,
+        div[data-testid="stRadio"] > div[role="radiogroup"] > label p,
+        div[data-testid="stRadio"] > div[role="radiogroup"] > label span {{
+            font-size: 12px !important;
+        }}
     }}
 
     /* Midnight Gradient Cards (matching the reference image cards) */
