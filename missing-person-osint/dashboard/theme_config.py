@@ -1,31 +1,32 @@
 """
-Vision UI Forensic Design System Configuration
-Inspired by Vision UI Dashboard PRO React (Creative Tim / Simmmple), Maltego, Neo4j Bloom, and Kaseware.
-High-polish dark aesthetic with glassmorphic cards, restrained gradients, and cohesive typography.
+Gradient Dashboard Design System Configuration
+Inspired by the Midnight Gradient User Admin Panel (Deep Indigo / Sapphire, Glowing Neon Mint Green, Electric Royal Blue).
+High-polish dark aesthetic with ambient glow, glowing horizontal accent dividers, and cohesive typography.
 """
 
-# Foundation Colors
-BG_DEEPEST = "#05070B"
-BACKGROUND = "#080C12"
-SURFACE = "#0B1017"
-CARD_BG = "#10151D"
-CARD_ELEVATED = "#141A23"
-BORDERS = "#222B38"
-BORDERS_LIGHT = "#2E3A4B"
+# Foundation Colors - Gradient Midnight Dashboard Theme
+BG_DEEPEST = "#0E1231"
+BACKGROUND = "#141A42"
+SURFACE = "#18204E"
+CARD_BG = "#1A2254"
+CARD_ELEVATED = "#202A66"
+BORDERS = "#2C3979"
+BORDERS_LIGHT = "#384994"
 
 # Typography
-PRIMARY_TEXT = "#F1F5F9"
-SECONDARY_TEXT = "#8B98A8"
-MUTED_TEXT = "#5F6B7A"
+PRIMARY_TEXT = "#FFFFFF"
+SECONDARY_TEXT = "#98A7CE"
+MUTED_TEXT = "#6D7FA8"
 
-# Vision UI Semantic Accent Palette
-COLOR_PRIMARY = "#4F7CFF"       # Primary Accent Blue
-COLOR_SECONDARY = "#7C5CFF"     # Secondary Purple Gradient
-COLOR_CYAN = "#27C6D9"          # Geographic / Locations
-COLOR_SUCCESS = "#19C37D"       # Confirmed / Positive Green
-COLOR_WARNING = "#F5B942"       # Transmissions / Warning Amber
-COLOR_DANGER = "#FF4D5D"        # Critical / Red / Subject LKL
-COLOR_SLATE = "#64748B"         # Hardware / Devices / Muted
+# Neon Mint & Electric Gradient Palette (from reference image)
+COLOR_PRIMARY = "#3A6BFF"       # Electric Royal Blue
+COLOR_SECONDARY = "#6C5CE7"     # Vibrant Indigo / Violet
+COLOR_MINT = "#00E5A3"          # Neon Mint Green (key accent in image!)
+COLOR_CYAN = "#00D2D3"          # Cyan / Locations
+COLOR_SUCCESS = "#00E5A3"       # Neon Mint Green for Success / Checkmarks
+COLOR_WARNING = "#F5B942"       # Warning Amber
+COLOR_DANGER = "#FF4757"        # Critical / Red / Danger
+COLOR_SLATE = "#7E8EB8"         # Slate Periwinkle
 
 # Backwards Compatibility Aliases
 PANELS = CARD_BG
@@ -48,7 +49,7 @@ NODE_COLORS = {
     "Phone": COLOR_SUCCESS,        # Telecommunications & handsets
     "Location": COLOR_CYAN,        # Physical venues / coordinates
     "Post": COLOR_WARNING,         # Microblog transmissions
-    "Photo": COLOR_CYAN,           # Photographic EXIF
+    "Photo": COLOR_MINT,           # Photographic EXIF
     "Device": COLOR_SLATE          # Hardware signatures
 }
 
@@ -81,18 +82,19 @@ TIMELINE_COLORS = {
 FONT_FAMILY = "Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
 MONO_FONT = "'JetBrains Mono', 'Fira Code', 'Consolas', monospace"
 
-# Vision UI CSS Design System
+# Gradient Midnight Dashboard CSS Design System
 CUSTOM_CSS = f"""
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
-    /* Global Dark Reset & Background */
+    /* Global Gradient Midnight Dashboard Background */
     html, body, .stApp {{
-        background-color: {BG_DEEPEST} !important;
+        background-color: #101538 !important;
         background-image: 
-            radial-gradient(circle at 50% 0%, rgba(79, 124, 255, 0.07) 0%, transparent 60%),
-            radial-gradient(circle at 100% 50%, rgba(124, 92, 255, 0.04) 0%, transparent 50%),
-            radial-gradient(circle at 0% 100%, rgba(39, 198, 217, 0.04) 0%, transparent 50%) !important;
+            radial-gradient(circle at 18% 18%, rgba(58, 107, 255, 0.25) 0%, transparent 45%),
+            radial-gradient(circle at 82% 78%, rgba(108, 92, 231, 0.22) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, rgba(0, 229, 163, 0.05) 0%, transparent 60%),
+            linear-gradient(135deg, #0E1231 0%, #141A42 50%, #1A2254 100%) !important;
         background-attachment: fixed !important;
         color: {PRIMARY_TEXT} !important;
         font-family: {FONT_FAMILY};
@@ -120,86 +122,56 @@ CUSTOM_CSS = f"""
         max-width: 100% !important;
     }}
 
-    /* Top Sticky Workstation Navigation Bar */
-    .vui-topbar {{
-        position: sticky;
-        top: 0;
-        z-index: 999;
-        background: rgba(8, 12, 18, 0.88);
-        backdrop-filter: blur(20px);
-        border-bottom: 1px solid {BORDERS};
-        padding: 0.5rem 0.5rem;
-        margin-bottom: 0.5rem;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.65);
-    }}
-
-    .vui-topbar-row {{
+    /* Top Navigation Bar styled like MyLogo header in reference */
+    .dashboard-topbar {{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-bottom: 0.4rem;
-        border-bottom: 1px solid rgba(34, 43, 56, 0.5);
-        margin-bottom: 0.45rem;
+        background: #101438;
+        border-bottom: 1px solid {BORDERS};
+        padding: 0.5rem 1.2rem;
+        border-radius: 12px;
+        margin-bottom: 0.65rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     }}
 
-    .vui-brand {{
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }}
-
-    .vui-logo {{
+    .topbar-logo {{
         font-family: {FONT_FAMILY};
         font-weight: 800;
-        font-size: 17px;
-        letter-spacing: 1.8px;
-        background: linear-gradient(135deg, #FFFFFF 0%, #CBD5E1 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        font-size: 19px;
+        letter-spacing: 1px;
+        color: #FFFFFF;
     }}
 
-    .vui-badge-pill {{
-        font-family: {MONO_FONT};
-        font-size: 9px;
-        font-weight: 600;
-        padding: 2px 7px;
-        background: linear-gradient(135deg, rgba(79, 124, 255, 0.2) 0%, rgba(124, 92, 255, 0.2) 100%);
-        border: 1px solid rgba(79, 124, 255, 0.4);
-        color: {COLOR_PRIMARY};
-        border-radius: 4px;
-        letter-spacing: 0.6px;
-    }}
-
-    .vui-case-tag {{
+    .topbar-right-controls {{
         display: flex;
         align-items: center;
-        gap: 8px;
-        font-family: {MONO_FONT};
-        font-size: 11px;
+        gap: 16px;
+        color: {SECONDARY_TEXT};
+        font-size: 13px;
     }}
 
-    .vui-case-id {{
-        color: {PRIMARY_TEXT};
-        font-weight: 600;
+    .topbar-badge-bell {{
+        position: relative;
+        cursor: pointer;
+        font-size: 14px;
     }}
 
-    .vui-case-name {{
-        color: {COLOR_PRIMARY};
-        font-weight: 500;
-    }}
-
-    .vui-status-active {{
-        display: inline-flex;
+    .topbar-badge-count {{
+        position: absolute;
+        top: -6px;
+        right: -8px;
+        background: #FF4757;
+        color: #FFFFFF;
+        font-size: 9px;
+        font-weight: 700;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        display: flex;
         align-items: center;
-        gap: 4px;
-        font-size: 10px;
-        font-weight: 600;
-        padding: 2px 8px;
-        border-radius: 4px;
-        background: rgba(25, 195, 125, 0.12);
-        color: {COLOR_SUCCESS};
-        border: 1px solid rgba(25, 195, 125, 0.3);
-        letter-spacing: 0.5px;
+        justify-content: center;
+        box-shadow: 0 0 6px rgba(255, 71, 87, 0.6);
     }}
 
     /* Compact Case Context Bar */
@@ -207,10 +179,10 @@ CUSTOM_CSS = f"""
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background: rgba(16, 21, 29, 0.6);
-        backdrop-filter: blur(12px);
+        background: rgba(22, 29, 72, 0.65);
+        backdrop-filter: blur(14px);
         border: 1px solid {BORDERS};
-        border-radius: 8px;
+        border-radius: 10px;
         padding: 6px 14px;
         margin-bottom: 0.85rem;
         font-size: 11px;
@@ -231,15 +203,28 @@ CUSTOM_CSS = f"""
         color: {SECONDARY_TEXT};
     }}
 
-    .vui-stat-item {{
-        display: flex;
-        align-items: center;
-        gap: 5px;
+    .vui-case-id {{
+        color: {PRIMARY_TEXT};
+        font-weight: 700;
     }}
 
-    .vui-stat-num {{
-        color: {PRIMARY_TEXT};
+    .vui-case-name {{
+        color: {COLOR_MINT};
         font-weight: 600;
+    }}
+
+    .vui-status-active {{
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 10px;
+        font-weight: 700;
+        padding: 2px 8px;
+        border-radius: 6px;
+        background: rgba(0, 229, 163, 0.15);
+        color: {COLOR_MINT};
+        border: 1px solid rgba(0, 229, 163, 0.4);
+        letter-spacing: 0.5px;
     }}
 
     /* Top Horizontal Navigation Strip (Styled Radio) */
@@ -247,12 +232,13 @@ CUSTOM_CSS = f"""
         display: flex !important;
         flex-direction: row !important;
         justify-content: space-between !important;
-        background: {CARD_BG} !important;
+        background: #12173D !important;
         border: 1px solid {BORDERS} !important;
-        border-radius: 8px !important;
-        padding: 3px !important;
-        gap: 3px !important;
+        border-radius: 10px !important;
+        padding: 4px !important;
+        gap: 4px !important;
         width: 100% !important;
+        margin-bottom: 0.65rem !important;
     }}
 
     div[data-testid="stRadio"] > div[role="radiogroup"] > label {{
@@ -262,7 +248,7 @@ CUSTOM_CSS = f"""
         justify-content: center !important;
         align-items: center !important;
         background: transparent !important;
-        border-radius: 6px !important;
+        border-radius: 8px !important;
         padding: 7px 12px !important;
         margin: 0 !important;
         cursor: pointer !important;
@@ -274,17 +260,17 @@ CUSTOM_CSS = f"""
     }}
 
     div[data-testid="stRadio"] > div[role="radiogroup"] > label:hover {{
-        background: {CARD_ELEVATED} !important;
-        color: {PRIMARY_TEXT} !important;
+        background: {CARD_BG} !important;
+        color: #FFFFFF !important;
     }}
 
     div[data-testid="stRadio"] > div[role="radiogroup"] > label[data-checked="true"],
     div[data-testid="stRadio"] > div[role="radiogroup"] > label:has(input:checked) {{
-        background: linear-gradient(135deg, rgba(79, 124, 255, 0.18) 0%, rgba(124, 92, 255, 0.18) 100%) !important;
-        border: 1px solid rgba(79, 124, 255, 0.5) !important;
+        background: linear-gradient(135deg, rgba(58, 107, 255, 0.4) 0%, rgba(108, 92, 231, 0.4) 100%) !important;
+        border: 1px solid {COLOR_PRIMARY} !important;
         color: #FFFFFF !important;
         font-weight: 600 !important;
-        box-shadow: 0 2px 10px rgba(79, 124, 255, 0.25) !important;
+        box-shadow: 0 0 14px rgba(58, 107, 255, 0.4) !important;
     }}
 
     div[data-testid="stRadio"] > div[role="radiogroup"] input,
@@ -297,80 +283,210 @@ CUSTOM_CSS = f"""
         color: inherit !important;
     }}
 
-    /* Vision UI Rounded Glass Cards */
-    .vui-card {{
-        background: rgba(16, 21, 29, 0.75);
-        backdrop-filter: blur(16px);
-        border: 1px solid {BORDERS};
-        border-radius: 12px;
-        padding: 1rem 1.1rem;
-        margin-bottom: 0.85rem;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-        transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    /* Midnight Gradient Cards (matching the reference image cards) */
+    .panel, .vui-card, .metric-card {{
+        background: {CARD_BG} !important;
+        border: 1px solid {BORDERS} !important;
+        border-radius: 14px !important;
+        padding: 1.15rem 1.25rem !important;
+        margin-bottom: 0.85rem !important;
+        box-shadow: 0 10px 28px rgba(8, 11, 30, 0.5), 0 0 1px rgba(58, 107, 255, 0.25) !important;
+        position: relative;
+        overflow: hidden;
     }}
 
-    .vui-card:hover {{
-        border-color: {BORDERS_LIGHT};
-        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.6);
+    .panel:hover, .vui-card:hover {{
+        border-color: {BORDERS_LIGHT} !important;
+        box-shadow: 0 12px 32px rgba(8, 11, 30, 0.65), 0 0 12px rgba(58, 107, 255, 0.2) !important;
     }}
 
-    .vui-card-glow {{
-        border-color: rgba(79, 124, 255, 0.35);
-        box-shadow: 0 0 20px rgba(79, 124, 255, 0.15);
-    }}
-
-    .vui-card-header {{
+    /* Card Header Bar with Glowing Accent Line */
+    .card-header-bar {{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 0.65rem;
+        margin-bottom: 6px;
     }}
 
-    .vui-card-title {{
-        font-size: 11px;
+    .card-title-text {{
+        font-size: 13px;
         font-weight: 600;
-        color: {MUTED_TEXT};
-        text-transform: uppercase;
-        letter-spacing: 0.7px;
+        color: #FFFFFF;
+        letter-spacing: 0.2px;
         margin: 0;
     }}
 
-    .vui-card-value {{
-        font-family: {FONT_FAMILY};
-        font-size: 22px;
+    .card-close-x {{
+        color: #6D7FA8;
+        font-size: 12px;
         font-weight: 700;
-        color: {PRIMARY_TEXT};
-        margin: 0.15rem 0;
     }}
 
-    .vui-card-sub {{
-        font-size: 11px;
+    .card-glow-divider {{
+        height: 2px;
+        width: 100%;
+        background: linear-gradient(90deg, #3A6BFF 0%, #6C5CE7 65%, transparent 100%);
+        border-radius: 2px;
+        margin-bottom: 14px;
+    }}
+
+    /* Progress Bars matching Aenean / Fermentum in image */
+    .prog-container {{
+        margin-bottom: 12px;
+    }}
+
+    .prog-header {{
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
         color: {SECONDARY_TEXT};
-        margin-top: 0.2rem;
+        margin-bottom: 5px;
+        font-weight: 500;
+    }}
+
+    .prog-bar-outer {{
+        height: 18px;
+        background: #12173D;
+        border-radius: 9px;
+        overflow: hidden;
+        padding: 2px;
+        border: 1px solid #232D63;
+    }}
+
+    .prog-bar-inner {{
+        height: 100%;
+        background: {COLOR_MINT};
+        border-radius: 7px;
+        box-shadow: 0 0 10px rgba(0, 229, 163, 0.45);
+    }}
+
+    /* Profile Avatar Ring matching Hamet faucibus */
+    .avatar-ring-box {{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 0;
+        text-align: center;
+    }}
+
+    .avatar-glowing-circle {{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 3px solid #FFFFFF;
+        box-shadow: 0 0 18px rgba(255, 255, 255, 0.4), inset 0 0 12px rgba(58, 107, 255, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 12px;
+    }}
+
+    .avatar-glowing-inner {{
+        width: 86px;
+        height: 86px;
+        border-radius: 50%;
+        background: radial-gradient(circle, #202A66 0%, #141A42 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+    }}
+
+    .neon-pill-badge {{
+        display: inline-block;
+        padding: 4px 14px;
+        background: {COLOR_MINT};
+        color: #0E1231;
+        font-size: 11px;
+        font-weight: 700;
+        border-radius: 12px;
+        letter-spacing: 0.5px;
+        margin-top: 6px;
+        box-shadow: 0 0 10px rgba(0, 229, 163, 0.45);
+    }}
+
+    /* Checklist matching Integer ater */
+    .chk-item {{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(44, 57, 121, 0.4);
+    }}
+
+    .chk-item:last-child {{
+        border-bottom: none;
+    }}
+
+    .chk-circle-hollow {{
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        border: 2px solid #6D7FA8;
+        flex-shrink: 0;
+    }}
+
+    .chk-circle-green {{
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: {COLOR_MINT};
+        border: 2px solid {COLOR_MINT};
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #0E1231;
+        font-size: 11px;
+        font-weight: 800;
+        flex-shrink: 0;
+        box-shadow: 0 0 8px rgba(0, 229, 163, 0.5);
+    }}
+
+    .chk-content {{
+        flex: 1;
+    }}
+
+    .chk-title {{
+        font-size: 12px;
+        font-weight: 600;
+        color: #FFFFFF;
+        margin-bottom: 2px;
+    }}
+
+    .chk-meta {{
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 10px;
+        color: {SECONDARY_TEXT};
+    }}
+
+    .chk-tag-gc {{
+        color: {COLOR_MINT};
+        display: inline-flex;
+        align-items: center;
+        gap: 3px;
     }}
 
     /* Buttons */
     .stButton > button {{
-        background: rgba(20, 26, 35, 0.85) !important;
-        color: {PRIMARY_TEXT} !important;
+        background: #18204E !important;
+        color: #FFFFFF !important;
         border: 1px solid {BORDERS} !important;
-        border-radius: 6px !important;
+        border-radius: 8px !important;
         font-size: 12px !important;
         font-weight: 500 !important;
-        padding: 0.4rem 0.85rem !important;
+        padding: 0.45rem 0.95rem !important;
         transition: all 0.18s ease !important;
     }}
 
     .stButton > button:hover {{
-        background: linear-gradient(135deg, rgba(79, 124, 255, 0.25) 0%, rgba(124, 92, 255, 0.25) 100%) !important;
+        background: linear-gradient(135deg, rgba(58, 107, 255, 0.35) 0%, rgba(108, 92, 231, 0.35) 100%) !important;
         border-color: {COLOR_PRIMARY} !important;
         color: #FFFFFF !important;
-        box-shadow: 0 0 12px rgba(79, 124, 255, 0.3) !important;
+        box-shadow: 0 0 14px rgba(58, 107, 255, 0.35) !important;
         transform: translateY(-1px);
-    }}
-
-    .stButton > button:active {{
-        transform: translateY(0);
     }}
 
     /* Selectbox, Inputs & Multiselect */
@@ -378,10 +494,10 @@ CUSTOM_CSS = f"""
     .stSelectbox [data-baseweb="select"],
     .stTextInput > div > div > input,
     .stMultiSelect > div > div {{
-        background-color: {CARD_BG} !important;
-        color: {PRIMARY_TEXT} !important;
+        background-color: #12173D !important;
+        color: #FFFFFF !important;
         border: 1px solid {BORDERS} !important;
-        border-radius: 6px !important;
+        border-radius: 8px !important;
         font-size: 12px !important;
     }}
 
@@ -395,36 +511,36 @@ CUSTOM_CSS = f"""
     [data-baseweb="popover"], [data-baseweb="menu"], [data-baseweb="select-dropdown"] {{
         background-color: {CARD_ELEVATED} !important;
         border: 1px solid {BORDERS} !important;
-        border-radius: 8px !important;
-        color: {PRIMARY_TEXT} !important;
+        border-radius: 10px !important;
+        color: #FFFFFF !important;
     }}
 
     [data-baseweb="menu"] li:hover {{
-        background-color: rgba(79, 124, 255, 0.15) !important;
-        color: {COLOR_PRIMARY} !important;
+        background-color: rgba(58, 107, 255, 0.2) !important;
+        color: {COLOR_MINT} !important;
     }}
 
     [data-baseweb="tag"] {{
         background-color: {CARD_ELEVATED} !important;
         border: 1px solid {BORDERS} !important;
-        border-radius: 4px !important;
-        color: {PRIMARY_TEXT} !important;
+        border-radius: 6px !important;
+        color: #FFFFFF !important;
     }}
 
     /* Tables & Dataframes */
     .stDataFrame, div[data-testid="stTable"] {{
         border: 1px solid {BORDERS} !important;
-        border-radius: 8px !important;
+        border-radius: 10px !important;
         background-color: {CARD_BG} !important;
     }}
 
     /* Tabs */
     .stTabs [data-baseweb="tab-list"] {{
-        background-color: {CARD_BG} !important;
+        background-color: #12173D !important;
         border-bottom: 1px solid {BORDERS} !important;
-        border-radius: 8px 8px 0 0 !important;
-        gap: 4px !important;
-        padding: 4px 6px 0 6px !important;
+        border-radius: 10px 10px 0 0 !important;
+        gap: 6px !important;
+        padding: 5px 8px 0 8px !important;
     }}
 
     .stTabs [data-baseweb="tab"] {{
@@ -438,26 +554,27 @@ CUSTOM_CSS = f"""
     }}
 
     .stTabs [aria-selected="true"] {{
-        background: {CARD_ELEVATED} !important;
-        color: {COLOR_PRIMARY} !important;
-        border-bottom: 2px solid {COLOR_PRIMARY} !important;
+        background: {CARD_BG} !important;
+        color: {COLOR_MINT} !important;
+        border-bottom: 2px solid {COLOR_MINT} !important;
     }}
 
     /* Expanders */
     .streamlit-expanderHeader {{
         background-color: {CARD_BG} !important;
         border: 1px solid {BORDERS} !important;
-        border-radius: 6px !important;
-        color: {PRIMARY_TEXT} !important;
+        border-radius: 8px !important;
+        color: #FFFFFF !important;
         font-size: 12px !important;
-        font-weight: 500 !important;
+        font-weight: 600 !important;
     }}
 
     .streamlit-expanderContent {{
         background-color: {SURFACE} !important;
         border: 1px solid {BORDERS} !important;
         border-top: none !important;
-        border-radius: 0 0 6px 6px !important;
+        border-radius: 0 0 8px 8px !important;
+        padding: 1rem !important;
     }}
 
     /* Status Badges */
@@ -466,69 +583,74 @@ CUSTOM_CSS = f"""
         align-items: center;
         gap: 4px;
         padding: 2px 8px;
-        border-radius: 4px;
+        border-radius: 6px;
         font-size: 10px;
-        font-weight: 600;
-        font-family: {MONO_FONT};
-        letter-spacing: 0.5px;
+        font-weight: 700;
+        letter-spacing: 0.4px;
         text-transform: uppercase;
     }}
 
     .status-active {{
-        background-color: rgba(25, 195, 125, 0.12);
-        color: {COLOR_SUCCESS};
-        border: 1px solid rgba(25, 195, 125, 0.3);
-    }}
-
-    .status-critical {{
-        background-color: rgba(255, 77, 93, 0.12);
-        color: {COLOR_DANGER};
-        border: 1px solid rgba(255, 77, 93, 0.3);
+        background-color: rgba(0, 229, 163, 0.15);
+        color: {COLOR_MINT};
+        border: 1px solid rgba(0, 229, 163, 0.4);
     }}
 
     .status-pending {{
-        background-color: rgba(245, 185, 66, 0.12);
+        background-color: rgba(245, 185, 66, 0.15);
         color: {COLOR_WARNING};
-        border: 1px solid rgba(245, 185, 66, 0.3);
+        border: 1px solid rgba(245, 185, 66, 0.4);
     }}
 
-    .status-info {{
-        background-color: rgba(79, 124, 255, 0.12);
-        color: {COLOR_PRIMARY};
-        border: 1px solid rgba(79, 124, 255, 0.3);
+    .status-critical {{
+        background-color: rgba(255, 71, 87, 0.15);
+        color: {COLOR_DANGER};
+        border: 1px solid rgba(255, 71, 87, 0.4);
     }}
 
+    /* Breadcrumbs */
     .breadcrumb {{
-        color: {MUTED_TEXT};
+        font-size: 11px;
         font-family: {MONO_FONT};
-        font-size: 10px;
-        margin-bottom: 0.25rem;
-        letter-spacing: 0.6px;
+        color: {MUTED_TEXT};
+        margin-bottom: 0.35rem;
+    }}
+
+    /* Metric cards */
+    .metric-label {{
+        font-size: 11px;
+        color: {SECONDARY_TEXT};
+        font-weight: 500;
         text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin: 0;
     }}
 
-    /* Iframe Responsiveness */
-    iframe {{
-        border: none !important;
-        border-radius: 10px;
-        width: 100% !important;
-        background-color: {BG_DEEPEST} !important;
+    .metric-value {{
+        font-size: 26px;
+        font-weight: 800;
+        color: #FFFFFF;
+        margin: 0.2rem 0;
+        letter-spacing: -0.5px;
     }}
 
-    /* Sleek Scrollbar */
+    /* Scrollbars */
     ::-webkit-scrollbar {{
         width: 6px;
         height: 6px;
     }}
+
     ::-webkit-scrollbar-track {{
-        background: {BG_DEEPEST};
+        background: #0E1231;
     }}
+
     ::-webkit-scrollbar-thumb {{
         background: {BORDERS};
         border-radius: 3px;
     }}
+
     ::-webkit-scrollbar-thumb:hover {{
-        background: {BORDERS_LIGHT};
+        background: {COLOR_PRIMARY};
     }}
 </style>
 """

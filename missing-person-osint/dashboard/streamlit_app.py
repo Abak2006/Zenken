@@ -1,7 +1,8 @@
 """
 Streamlit Forensic Investigation Workstation v3.0
-Vision UI Dashboard PRO inspired digital investigation workstation for Case MP-2026-0419 (Maya Lin).
-Features a pure black aesthetic, sticky top navigation, stationary interactive graph, dark geospatial map, and uncluttered timeline.
+Gradient Dashboard Design System inspired by Midnight User Admin Panel
+(Deep Indigo/Sapphire palette, Glowing Neon Mint Green, Electric Royal Blue).
+Case MP-2026-0419: Maya Lin.
 """
 from __future__ import annotations
 import json
@@ -24,12 +25,13 @@ from dashboard.theme_config import (
     CUSTOM_CSS, BACKGROUND, PANELS, SECONDARY_PANELS, BORDERS,
     PRIMARY_TEXT, SECONDARY_TEXT, ACCENT, POSITIVE, WARNING, CRITICAL, SUSPECTED,
     COLOR_BLUE, COLOR_PURPLE, COLOR_CYAN, COLOR_ORANGE, COLOR_GREEN, COLOR_RED, COLOR_SLATE,
-    COLOR_PRIMARY, NODE_COLORS, EDGE_COLORS, TIMELINE_COLORS
+    COLOR_PRIMARY, COLOR_SECONDARY, COLOR_MINT, COLOR_DANGER, COLOR_WARNING,
+    NODE_COLORS, EDGE_COLORS, TIMELINE_COLORS
 )
 
 # Set page configuration - collapsed sidebar by default
 st.set_page_config(
-    page_title="ZENKEN | Forensic Intelligence Workstation",
+    page_title="ZENKEN | Gradient Investigation Workstation",
     page_icon="🔍",
     layout="wide",
     initial_sidebar_state="collapsed"
@@ -154,7 +156,7 @@ DATA = load_all_data()
 
 # ==================== TOP NAVIGATION BAR & CONTEXT STRIP ====================
 def render_top_navigation() -> str:
-    """Render sleek Vision UI sticky workstation header, radio navigation, and context bar."""
+    """Render Midnight Gradient workstation header, radio navigation, and context bar."""
     has_focus = any([
         st.session_state.selected_entity,
         st.session_state.selected_evidence,
@@ -162,60 +164,25 @@ def render_top_navigation() -> str:
         st.session_state.selected_event
     ])
 
-    # Header Row
-    col_brand, col_dossier, col_telemetry = st.columns([3, 4, 3])
-
-    with col_brand:
-        st.markdown("""
-        <div style="display: flex; align-items: center; gap: 8px; padding-top: 2px;">
-            <span style="font-family: 'Inter', -apple-system, sans-serif; font-size: 17px; font-weight: 800; color: #FFFFFF; letter-spacing: 1.5px;">ZENKEN</span>
-            <span style="font-family: 'JetBrains Mono', monospace; font-size: 9px; padding: 2px 7px; background: rgba(79, 124, 255, 0.15); border: 1px solid rgba(79, 124, 255, 0.4); color: #4F7CFF; border-radius: 4px; font-weight: 600;">WORKSTATION V3.0</span>
+    # Top Header styled directly after MyLogo header in reference image
+    st.markdown("""
+    <div class="dashboard-topbar">
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <span class="topbar-logo">ZENKEN</span>
+            <span style="font-family: 'JetBrains Mono', monospace; font-size: 9px; padding: 2px 8px; background: rgba(58, 107, 255, 0.25); border: 1px solid rgba(58, 107, 255, 0.45); color: #3A6BFF; border-radius: 4px; font-weight: 700; letter-spacing: 0.5px;">GRADIENT WORKSTATION</span>
         </div>
-        """, unsafe_allow_html=True)
-
-    with col_dossier:
-        st.markdown("""
-        <div style="text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 11px; padding-top: 4px;">
-            <span style="color: #FFFFFF; font-weight: 600;">MP-2026-0419</span>
-            <span style="color: #64748B; margin: 0 6px;">·</span>
-            <span style="color: #4F7CFF; font-weight: 600;">Maya Lin</span>
-            <span style="color: #64748B; margin: 0 6px;">·</span>
-            <span class="status-badge status-active">ACTIVE SIMULATION</span>
-        </div>
-        """, unsafe_allow_html=True)
-
-    with col_telemetry:
-        if has_focus:
-            focus_val = (
-                st.session_state.selected_entity or 
-                st.session_state.selected_location or 
-                st.session_state.selected_evidence or 
-                st.session_state.selected_event
-            )
-            col_f1, col_f2 = st.columns([3, 1])
-            with col_f1:
-                st.markdown(f"""
-                <div style="text-align: right; padding-top: 4px;">
-                    <span style="font-size: 10px; font-family: 'JetBrains Mono', monospace; color: #4F7CFF; background: rgba(79, 124, 255, 0.15); border: 1px solid #4F7CFF; padding: 2px 8px; border-radius: 4px;">
-                        🎯 FOCUS: {str(focus_val)[:16]}
-                    </span>
-                </div>
-                """, unsafe_allow_html=True)
-            with col_f2:
-                if st.button("✕ Reset", key="top_clear_focus"):
-                    st.session_state.selected_entity = None
-                    st.session_state.selected_evidence = None
-                    st.session_state.selected_location = None
-                    st.session_state.selected_event = None
-                    st.session_state.evidence_modality_target = None
-                    st.session_state.evidence_filter_deleted = False
-                    st.rerun()
-        else:
-            st.markdown("""
-            <div style="text-align: right; font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #64748B; padding-top: 6px;">
-                <span>103 ENTITIES · 206 EDGES · BENCHMARK ACTIVE</span>
+        <div class="topbar-right-controls">
+            <span style="cursor: pointer; font-size: 15px;">🔍</span>
+            <div class="topbar-badge-bell">
+                🔔
+                <span class="topbar-badge-count">2</span>
             </div>
-            """, unsafe_allow_html=True)
+            <span style="font-weight: 600; color: #FFFFFF; cursor: pointer; display: flex; align-items: center; gap: 4px;">
+                Case: Maya Lin <span style="font-size: 10px; color: #98A7CE;">▼</span>
+            </span>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
 
     # Horizontal Navigation Strip
     current_index = NAV_PAGES.index(st.session_state.main_navigation) if st.session_state.main_navigation in NAV_PAGES else 0
@@ -232,29 +199,68 @@ def render_top_navigation() -> str:
         st.session_state.main_navigation = selected_nav
         st.rerun()
 
-    # Vision UI Compact Case Context Bar
-    st.markdown("""
-    <div class="vui-context-bar">
-        <div class="vui-context-left">
-            <span class="vui-case-id">CASE: MP-2026-0419</span>
-            <span style="color: #222B38;">|</span>
-            <span class="vui-case-name">Maya Lin</span>
-            <span style="color: #222B38;">|</span>
-            <span>Synthetic Investigation</span>
-            <span style="color: #222B38;">|</span>
-            <span class="vui-status-active">● ACTIVE</span>
+    # Case Context Bar
+    if has_focus:
+        focus_val = (
+            st.session_state.selected_entity or 
+            st.session_state.selected_location or 
+            st.session_state.selected_evidence or 
+            st.session_state.selected_event
+        )
+        col_ctx, col_rst = st.columns([8, 2])
+        with col_ctx:
+            st.markdown(f"""
+            <div class="vui-context-bar">
+                <div class="vui-context-left">
+                    <span class="vui-case-id">CASE: MP-2026-0419</span>
+                    <span style="color: #2C3979;">|</span>
+                    <span class="vui-case-name">Maya Lin</span>
+                    <span style="color: #2C3979;">|</span>
+                    <span class="vui-status-active">● ACTIVE FOCUS</span>
+                    <span style="color: #2C3979;">|</span>
+                    <span style="color: #00E5A3; font-weight: 600;">🎯 {str(focus_val)[:24]}</span>
+                </div>
+                <div class="vui-context-right">
+                    <span>Evidence: <strong style="color: #FFFFFF;">92</strong></span>
+                    <span style="color: #2C3979;">·</span>
+                    <span>Entities: <strong style="color: #FFFFFF;">103</strong></span>
+                    <span style="color: #2C3979;">·</span>
+                    <span>Locations: <strong style="color: #FFFFFF;">10</strong></span>
+                </div>
+            </div>
+            """, unsafe_allow_html=True)
+        with col_rst:
+            if st.button("✕ Clear Focus", key="top_clear_focus"):
+                st.session_state.selected_entity = None
+                st.session_state.selected_evidence = None
+                st.session_state.selected_location = None
+                st.session_state.selected_event = None
+                st.session_state.evidence_modality_target = None
+                st.session_state.evidence_filter_deleted = False
+                st.rerun()
+    else:
+        st.markdown("""
+        <div class="vui-context-bar">
+            <div class="vui-context-left">
+                <span class="vui-case-id">CASE: MP-2026-0419</span>
+                <span style="color: #2C3979;">|</span>
+                <span class="vui-case-name">Maya Lin</span>
+                <span style="color: #2C3979;">|</span>
+                <span>Senior BFA Student · Bayview Arts</span>
+                <span style="color: #2C3979;">|</span>
+                <span class="vui-status-active">● ACTIVE SIMULATION</span>
+            </div>
+            <div class="vui-context-right">
+                <span>Evidence: <strong style="color: #FFFFFF;">92</strong></span>
+                <span style="color: #2C3979;">·</span>
+                <span>Entities: <strong style="color: #FFFFFF;">103</strong></span>
+                <span style="color: #2C3979;">·</span>
+                <span>Locations: <strong style="color: #FFFFFF;">10</strong></span>
+                <span style="color: #2C3979;">·</span>
+                <span>Events: <strong style="color: #FFFFFF;">99</strong></span>
+            </div>
         </div>
-        <div class="vui-context-right">
-            <span>Evidence: <strong style="color: #E2E8F0;">92</strong></span>
-            <span style="color: #222B38;">·</span>
-            <span>Entities: <strong style="color: #E2E8F0;">103</strong></span>
-            <span style="color: #222B38;">·</span>
-            <span>Locations: <strong style="color: #E2E8F0;">10</strong></span>
-            <span style="color: #222B38;">·</span>
-            <span>Events: <strong style="color: #E2E8F0;">99</strong></span>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+        """, unsafe_allow_html=True)
 
     return st.session_state.main_navigation
 
@@ -271,79 +277,360 @@ def render_page_header(title: str, description: str):
     """Render compact page header."""
     st.markdown(f"""
     <h1 style="font-size: 20px; font-weight: 700; color: #FFFFFF; margin: 0 0 0.2rem 0; letter-spacing: -0.3px;">{title}</h1>
-    <p style="font-size: 12px; color: #64748B; margin: 0 0 0.85rem 0;">{description}</p>
+    <p style="font-size: 12px; color: #98A7CE; margin: 0 0 0.85rem 0;">{description}</p>
     """, unsafe_allow_html=True)
 
-def render_metric_card(label: str, value: str, change: Optional[str] = None, color: str = COLOR_BLUE):
-    """Render Vision UI styled metric card."""
-    change_html = f"<span style='color: {color}; font-size: 10px; margin-top: 0.25rem; display: block;'>{change}</span>" if change else ""
-    st.markdown(f"""
-    <div class="metric-card">
-        <p class="metric-label">{label}</p>
-        <p class="metric-value">{value}</p>
-        {change_html}
-    </div>
-    """, unsafe_allow_html=True)
-
-# ==================== PAGE: OVERVIEW ====================
+# ==================== PAGE: OVERVIEW (EXACT GRADIENT DASHBOARD LAYOUT) ====================
 def render_overview():
-    """Render case overview dashboard with Vision UI polish."""
+    """Render case overview dashboard laid out exactly like the reference image."""
     render_breadcrumb("MP-2026-0419", "Overview")
-    render_page_header("Case Dossier Overview", "MP-2026-0419 - Missing Person Investigation Command Dashboard")
+    render_page_header("Gradient Dashboard Command Center", "Case MP-2026-0419 - Subject Profile, Telemetry Trends, Modality Coverage & Geo Corridor")
     
-    # Status badges
-    st.markdown("""
-    <div style="margin-bottom: 0.85rem; display: flex; gap: 8px;">
-        <span class="status-badge status-active">ACTIVE SIMULATION</span>
-        <span class="status-badge status-pending">CRITICAL WINDOW: MARCH 10 - 15, 2026</span>
-        <span class="status-badge status-critical">LKL CONFIRMED: WHISPERING PINES</span>
-    </div>
-    """, unsafe_allow_html=True)
+    # ==================== ROW 1: TOP 4 CARDS ====================
+    col_c1, col_c2, col_c3, col_c4 = st.columns([1, 1, 1, 1])
     
-    # 2 rows of 3 Vision UI metric cards
-    col1, col2, col3 = st.columns(3)
-    with col1:
-        total_ev = len(DATA.get("posts", [])) + len(DATA.get("calls", [])) + len(DATA.get("checkins", [])) + len(DATA.get("photos", []))
-        render_metric_card("Evidentiary Items Tracked", str(total_ev), "Multi-Modal Forensic Modalities", COLOR_BLUE)
-    with col2:
-        render_metric_card("Subject Profiles & Accounts", str(len(DATA.get("profiles", []))), "Across 4 Platforms", COLOR_PURPLE)
-    with col3:
-        resolved_count = len(DATA["resolved"].get("clusters", [])) if "resolved" in DATA else "0"
-        render_metric_card("Resolved Person Clusters", str(resolved_count), "Multi-Factor Correlation", COLOR_GREEN)
-        
-    col4, col5, col6 = st.columns(3)
-    with col4:
-        loc_count = len(DATA["movement"].get("spatial_clusters", [])) if "movement" in DATA else "0"
-        render_metric_card("DBSCAN Spatial Clusters", str(loc_count), "SF Bay & Marin Coastal Corridor", COLOR_CYAN)
-    with col5:
-        total_events = len(DATA.get("posts", [])) + len(DATA.get("calls", []))
-        render_metric_card("Forensic Timeline Events", f"{total_events} Chrono Events", "Multi-Source Timeline Sequence", COLOR_ORANGE)
-    with col6:
-        render_metric_card("Candidate LKL Confidence", "94.0%", "Whispering Pines Overlook (Rank 1)", COLOR_RED)
-    
-    # Dossier synopsis & leads
-    col_dossier, col_synopsis, col_leads = st.columns([3, 4, 3])
-    
-    with col_dossier:
+    # Card 1: Hamet faucibus -> Subject Dossier Avatar Ring
+    with col_c1:
         st.markdown("""
-        <div class="panel">
-            <h3 style="font-size: 12px; font-weight: 600; color: #FFFFFF; margin: 0 0 0.65rem 0; text-transform: uppercase;">Subject Dossier</h3>
-            <ul style="font-size: 12px; color: #CBD5E1; padding-left: 1.1rem; line-height: 1.8; margin: 0;">
-                <li><strong style="color: #FFFFFF;">Full Name:</strong> Maya Lin (21, she/her)</li>
-                <li><strong style="color: #FFFFFF;">Affiliation:</strong> Senior BFA Student, Bayview Arts</li>
-                <li><strong style="color: #FFFFFF;">Primary Handset:</strong> <code>+1-555-0144</code> (Dark Mar 10)</li>
-                <li><strong style="color: #FFFFFF;">Burner Handset:</strong> <code>+1-555-0199</code> (Final ping Mar 14)</li>
-                <li><strong style="color: #FFFFFF;">Primary Handle:</strong> @mayalin_art</li>
-                <li><strong style="color: #FFFFFF;">Covert Persona:</strong> @m.shadow_7</li>
-                <li><strong style="color: #FFFFFF;">Reporting Party:</strong> Chloe Simmons (Roommate)</li>
-            </ul>
+        <div class="panel" style="height: 100%;">
+            <div class="card-header-bar">
+                <span class="card-title-text">Subject Dossier</span>
+                <span class="card-close-x">✕</span>
+            </div>
+            <div class="card-glow-divider"></div>
+            <div class="avatar-ring-box">
+                <div class="avatar-glowing-circle">
+                    <div class="avatar-glowing-inner">
+                        <span style="font-weight: 800; color: #FFFFFF; letter-spacing: 1px;">ML</span>
+                    </div>
+                </div>
+                <div style="font-size: 15px; font-weight: 700; color: #FFFFFF; margin-top: 4px;">Maya Lin</div>
+                <div style="font-size: 11px; color: #98A7CE; margin-bottom: 6px;">Senior BFA · Bayview Arts</div>
+                <span class="neon-pill-badge">ACTIVE SIMULATION</span>
+            </div>
         </div>
         """, unsafe_allow_html=True)
+
+    # Card 2: Cras iaculis -> Total Evidence Items (Big Number)
+    with col_c2:
+        st.markdown("""
+        <div class="panel" style="height: 100%;">
+            <div class="card-header-bar">
+                <span class="card-title-text">Total Evidence Items</span>
+                <span class="card-close-x">✕</span>
+            </div>
+            <div class="card-glow-divider"></div>
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 22px 8px 14px 8px;">
+                <div style="font-size: 32px; color: #00E5A3;">👥</div>
+                <div style="font-size: 42px; font-weight: 800; color: #FFFFFF; font-family: 'Inter', sans-serif; letter-spacing: -1.5px;">92</div>
+            </div>
+            <div style="font-size: 11px; color: #98A7CE; text-align: right; padding-right: 6px;">
+                <span>Tracked across 4 forensic modalities</span>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    # Card 3: Ullamcorper -> Entities & Handsets
+    with col_c3:
+        st.markdown("""
+        <div class="panel" style="height: 100%;">
+            <div class="card-header-bar">
+                <span class="card-title-text">Entities & Handsets</span>
+                <span class="card-close-x">✕</span>
+            </div>
+            <div class="card-glow-divider"></div>
+            <div style="display: flex; flex-direction: column; gap: 16px; padding: 10px 4px 6px 4px;">
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 18px; color: #00E5A3;">👤</span>
+                        <span style="font-size: 22px; font-weight: 700; color: #FFFFFF;">103</span>
+                    </div>
+                    <span style="background: rgba(0, 229, 163, 0.15); color: #00E5A3; border: 1px solid rgba(0, 229, 163, 0.4); padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 700;">↗ 71% Correlated</span>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 18px; color: #6C5CE7;">🏠</span>
+                        <span style="font-size: 22px; font-weight: 700; color: #FFFFFF;">10</span>
+                    </div>
+                    <span style="background: rgba(108, 92, 231, 0.2); color: #6C5CE7; border: 1px solid rgba(108, 92, 231, 0.4); padding: 2px 8px; border-radius: 6px; font-size: 11px; font-weight: 700;">↘ 2 Handsets</span>
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    # Card 4: Aenean -> Modality Coverage Progress Bars
+    with col_c4:
+        st.markdown("""
+        <div class="panel" style="height: 100%;">
+            <div class="card-header-bar">
+                <span class="card-title-text">Modality Coverage</span>
+                <span class="card-close-x">✕</span>
+            </div>
+            <div class="card-glow-divider"></div>
+            <div class="prog-container">
+                <div class="prog-header"><span>Microblog Posts</span><span>55%</span></div>
+                <div class="prog-bar-outer"><div class="prog-bar-inner" style="width: 55%;"></div></div>
+            </div>
+            <div class="prog-container">
+                <div class="prog-header"><span>Telecom CDR</span><span>32%</span></div>
+                <div class="prog-bar-outer"><div class="prog-bar-inner" style="width: 32%;"></div></div>
+            </div>
+            <div class="prog-container">
+                <div class="prog-header"><span>Check-ins</span><span>63%</span></div>
+                <div class="prog-bar-outer"><div class="prog-bar-inner" style="width: 63%;"></div></div>
+            </div>
+            <div class="prog-container" style="margin-bottom: 0;">
+                <div class="prog-header"><span>EXIF Photos</span><span>24%</span></div>
+                <div class="prog-bar-outer"><div class="prog-bar-inner" style="width: 24%;"></div></div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    # ==================== ROW 2: CENTER AREA CHART (UNDER CARDS 2 & 3) ====================
+    st.markdown("""
+    <div class="panel" style="padding-bottom: 0.5rem !important;">
+        <div class="card-header-bar">
+            <span class="card-title-text">Digital Footprint & Anomaly Wave (March 1 - 15, 2026)</span>
+            <span class="card-close-x">✕</span>
+        </div>
+        <div class="card-glow-divider"></div>
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Plotly Double-Wave Chart matching the reference image exactly
+    fig_area = go.Figure()
+
+    dates = ["Mar 01", "Mar 03", "Mar 05", "Mar 07", "Mar 09", "Mar 11", "Mar 12", "Mar 13", "Mar 14", "Mar 15"]
+    y_baseline = [18, 32, 45, 28, 52, 38, 70, 48, 62, 18]
+    y_target = [12, 28, 61, 35, 48, 87, 54, 78, 38, 10]
+
+    # Lower wave with gradient blue-violet fill
+    fig_area.add_trace(go.Scatter(
+        x=dates,
+        y=y_baseline,
+        mode="lines",
+        line=dict(color="#3A6BFF", width=2.5, shape="spline"),
+        fill="tozeroy",
+        fillcolor="rgba(58, 107, 255, 0.28)",
+        name="Baseline Routine",
+        hoverinfo="skip"
+    ))
+
+    # Upper wave in neon mint green
+    fig_area.add_trace(go.Scatter(
+        x=dates,
+        y=y_target,
+        mode="lines+markers",
+        line=dict(color="#00E5A3", width=3, shape="spline"),
+        marker=dict(size=6, color="#00E5A3"),
+        name="Target Inflection",
+        hoverinfo="skip"
+    ))
+
+    # Callout pill badges 87 (blue) and 61 (green) matching the image
+    fig_area.add_annotation(
+        x="Mar 11", y=87,
+        text="<b>87</b>",
+        showarrow=True,
+        arrowhead=0,
+        arrowsize=0.3,
+        arrowwidth=1,
+        arrowcolor="#3A6BFF",
+        ax=0, ay=-20,
+        bgcolor="#3A6BFF",
+        bordercolor="#3A6BFF",
+        borderwidth=1,
+        borderpad=3,
+        font=dict(color="#FFFFFF", size=10, family="Inter")
+    )
+
+    fig_area.add_annotation(
+        x="Mar 05", y=61,
+        text="<b>61</b>",
+        showarrow=True,
+        arrowhead=0,
+        arrowsize=0.3,
+        arrowwidth=1,
+        arrowcolor="#00E5A3",
+        ax=0, ay=-20,
+        bgcolor="#00E5A3",
+        bordercolor="#00E5A3",
+        borderwidth=1,
+        borderpad=3,
+        font=dict(color="#0E1231", size=10, family="Inter")
+    )
+
+    fig_area.update_layout(
+        height=175,
+        margin=dict(l=25, r=20, t=15, b=25),
+        plot_bgcolor="#1A2254",
+        paper_bgcolor="#1A2254",
+        showlegend=False,
+        xaxis=dict(
+            showgrid=False,
+            zeroline=False,
+            tickfont=dict(size=10, color="#6D7FA8"),
+            showline=False
+        ),
+        yaxis=dict(
+            showgrid=True,
+            gridcolor="#252F66",
+            zeroline=False,
+            tickvals=[0, 20, 40, 60, 80, 100],
+            tickfont=dict(size=9, color="#6D7FA8"),
+            showline=False
+        )
+    )
+    st.plotly_chart(fig_area, use_container_width=True)
+
+    # ==================== ROW 3: BOTTOM 3 CARDS ====================
+    col_b1, col_b2, col_b3 = st.columns([1, 1, 2])
+
+    # Card 5: Integer ater -> Investigative Chronology Checklist
+    with col_b1:
+        st.markdown("""
+        <div class="panel" style="height: 100%;">
+            <div class="card-header-bar">
+                <span class="card-title-text">Investigative Chronology</span>
+                <span class="card-close-x">✕</span>
+            </div>
+            <div class="card-glow-divider"></div>
+            <div class="chk-item">
+                <div class="chk-circle-hollow"></div>
+                <div class="chk-content">
+                    <div class="chk-title">Reed Hostile Breakup</div>
+                    <div class="chk-meta">
+                        <span class="chk-tag-gc">📍 Social</span>
+                        <span>🕒 Feb 18</span>
+                    </div>
+                </div>
+            </div>
+            <div class="chk-item">
+                <div class="chk-circle-hollow"></div>
+                <div class="chk-content">
+                    <div class="chk-title">Burner Handset Active</div>
+                    <div class="chk-meta">
+                        <span class="chk-tag-gc">📍 CDR</span>
+                        <span>🕒 Mar 10</span>
+                    </div>
+                </div>
+            </div>
+            <div class="chk-item">
+                <div class="chk-circle-green">✓</div>
+                <div class="chk-content">
+                    <div class="chk-title">Whispering Pines Ping</div>
+                    <div class="chk-meta">
+                        <span class="chk-tag-gc">📍 LKL</span>
+                        <span>🕒 21:45 UTC</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    # Card 6: Quisque ut purus -> Semicircular Gauge Chart
+    with col_b2:
+        st.markdown("""
+        <div class="panel" style="height: 100%;">
+            <div class="card-header-bar">
+                <span class="card-title-text">Candidate LKL Confidence</span>
+                <span class="card-close-x">✕</span>
+            </div>
+            <div class="card-glow-divider"></div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        fig_gauge = go.Figure(go.Indicator(
+            mode="gauge+number",
+            value=94.0,
+            number=dict(suffix="%", font=dict(size=34, color="#FFFFFF", family="Inter, sans-serif")),
+            gauge=dict(
+                axis=dict(range=[0, 100], visible=False),
+                bar=dict(color="#00E5A3", thickness=0.28),
+                bgcolor="rgba(108, 92, 231, 0.25)",
+                borderwidth=0,
+                threshold=dict(
+                    line=dict(color="#6C5CE7", width=4),
+                    thickness=0.75,
+                    value=94
+                )
+            )
+        ))
+        fig_gauge.update_layout(
+            height=130,
+            margin=dict(l=15, r=15, t=10, b=5),
+            paper_bgcolor="#1A2254",
+            plot_bgcolor="#1A2254"
+        )
+        st.plotly_chart(fig_gauge, use_container_width=True)
+
+        st.markdown("""
+        <div style="background: #1A2254; border-radius: 0 0 14px 14px; padding: 0 1.25rem 1rem 1.25rem; margin-top: -10px;">
+            <div style="display: flex; flex-direction: column; gap: 6px; font-size: 11px;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="display: inline-block; width: 14px; height: 8px; background: #6C5CE7; border-radius: 4px;"></span>
+                    <span style="color: #98A7CE;">Burner Handset Sector</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="display: inline-block; width: 14px; height: 8px; background: #00E5A3; border-radius: 4px;"></span>
+                    <span style="color: #98A7CE;">DBSCAN Dwell Concordance</span>
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    # Card 7: Quisque ut purus -> Geospatial Tactical Corridor Map with Glowing Green Pins
+    with col_b3:
+        st.markdown("""
+        <div class="panel" style="height: 100%;">
+            <div class="card-header-bar">
+                <span class="card-title-text">Geospatial Tactical Corridor (SF Bay / Marin)</span>
+                <span class="card-close-x">✕</span>
+            </div>
+            <div class="card-glow-divider"></div>
+            <div style="position: relative; height: 160px; background: #12173D; border-radius: 10px; border: 1px solid #232D63; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                <div style="position: absolute; width: 100%; height: 100%; opacity: 0.25; background-image: radial-gradient(#3A6BFF 1px, transparent 1px); background-size: 16px 16px;"></div>
+                
+                <!-- Tactical Pins matching the reference image map -->
+                <div style="position: absolute; left: 22%; top: 38%; display: flex; flex-direction: column; align-items: center; cursor: pointer;">
+                    <div style="width: 24px; height: 24px; border-radius: 50%; background: #00E5A3; color: #0E1231; font-weight: 800; font-size: 11px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 12px #00E5A3;">18</div>
+                    <span style="font-size: 9px; color: #FFFFFF; margin-top: 2px;">Bayview Arts</span>
+                </div>
+
+                <div style="position: absolute; left: 48%; top: 22%; display: flex; flex-direction: column; align-items: center; cursor: pointer;">
+                    <div style="width: 24px; height: 24px; border-radius: 50%; background: #00E5A3; color: #0E1231; font-weight: 800; font-size: 11px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 12px #00E5A3;">23</div>
+                    <span style="font-size: 9px; color: #FFFFFF; margin-top: 2px;">Diner Meeting</span>
+                </div>
+
+                <div style="position: absolute; left: 72%; top: 28%; display: flex; flex-direction: column; align-items: center; cursor: pointer;">
+                    <div style="width: 24px; height: 24px; border-radius: 50%; background: #FF4757; color: #FFFFFF; font-weight: 800; font-size: 11px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 14px #FF4757;">14</div>
+                    <span style="font-size: 9px; color: #FF4757; font-weight: 700; margin-top: 2px;">Whispering Pines (LKL)</span>
+                </div>
+
+                <div style="position: absolute; left: 52%; top: 68%; display: flex; flex-direction: column; align-items: center; cursor: pointer;">
+                    <div style="width: 24px; height: 24px; border-radius: 50%; background: #00E5A3; color: #0E1231; font-weight: 800; font-size: 11px; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 12px #00E5A3;">3</div>
+                    <span style="font-size: 9px; color: #FFFFFF; margin-top: 2px;">Spencer</span>
+                </div>
+            </div>
+            <div style="margin-top: 10px; display: flex; justify-content: flex-end;">
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        if st.button("🗺️ Open Full Tactical Map View →", key="btn_goto_map_overview"):
+            st.session_state.navigation_target = "Map"
+            st.rerun()
+
+    # ==================== ROW 4: INVESTIGATIVE LEADS & SYNOPSIS ====================
+    col_synopsis, col_leads = st.columns([6, 4])
     
     with col_synopsis:
         st.markdown("""
         <div class="panel">
-            <h3 style="font-size: 12px; font-weight: 600; color: #FFFFFF; margin: 0 0 0.65rem 0; text-transform: uppercase;">Incident Synopsis</h3>
+            <div class="card-header-bar">
+                <span class="card-title-text">Incident Synopsis & Behavioral Path</span>
+                <span class="card-close-x">✕</span>
+            </div>
+            <div class="card-glow-divider"></div>
             <p style="font-size: 12px; color: #CBD5E1; line-height: 1.6; margin: 0 0 0.85rem 0;">
                 Subject was last seen physically at Bayview Arts Fine Arts Hall on the morning of March 14, 2026. 
                 Analysis of the multi-modal footprint reveals an escalating pattern of behavioral shifts beginning in early March, 
@@ -353,7 +640,6 @@ def render_overview():
             </p>
         </div>
         """, unsafe_allow_html=True)
-        
         if st.button("⏱️ View Full Forensic Timeline →", key="btn_goto_timeline"):
             st.session_state.navigation_target = "Timeline"
             st.rerun()
@@ -361,31 +647,35 @@ def render_overview():
     with col_leads:
         st.markdown("""
         <div class="panel">
-            <h3 style="font-size: 12px; font-weight: 600; color: #FFFFFF; margin: 0 0 0.65rem 0; text-transform: uppercase;">Active Investigative Leads</h3>
-            <p style="font-size: 11px; color: #64748B; margin-bottom: 0.65rem;">Direct pivots to correlated forensic evidence:</p>
+            <div class="card-header-bar">
+                <span class="card-title-text">Active Investigative Leads</span>
+                <span class="card-close-x">✕</span>
+            </div>
+            <div class="card-glow-divider"></div>
+            <p style="font-size: 11px; color: #98A7CE; margin-bottom: 0.65rem;">Direct pivots to correlated forensic evidence:</p>
         </div>
         """, unsafe_allow_html=True)
         
-        if st.button("🚨 Lead: @kaelen_v Inbound Contact", key="lead_kaelen"):
-            st.session_state.selected_entity = "kaelen_v"
-            st.session_state.navigation_target = "Graph"
-            st.rerun()
-            
-        if st.button("📱 Lead: Burner Handset (+1-555-0199)", key="lead_burner"):
-            st.session_state.evidence_modality_target = "Call Detail Records (CDR)"
-            st.session_state.navigation_target = "Evidence"
-            st.rerun()
-            
-        if st.button("🗑️ Lead: Recovered Deleted Posts", key="lead_deleted"):
-            st.session_state.evidence_modality_target = "Microblog Posts"
-            st.session_state.evidence_filter_deleted = True
-            st.session_state.navigation_target = "Evidence"
-            st.rerun()
-            
-        if st.button("📍 Lead: Whispering Pines LKL", key="lead_lkl"):
-            st.session_state.selected_location = "Whispering Pines Overlook"
-            st.session_state.navigation_target = "Map"
-            st.rerun()
+        c_l1, c_l2 = st.columns(2)
+        with c_l1:
+            if st.button("🚨 Lead: @kaelen_v Contact", key="lead_kaelen"):
+                st.session_state.selected_entity = "kaelen_v"
+                st.session_state.navigation_target = "Graph"
+                st.rerun()
+            if st.button("🗑️ Lead: Deleted Posts", key="lead_deleted"):
+                st.session_state.evidence_modality_target = "Microblog Posts"
+                st.session_state.evidence_filter_deleted = True
+                st.session_state.navigation_target = "Evidence"
+                st.rerun()
+        with c_l2:
+            if st.button("📱 Lead: Burner Handset", key="lead_burner"):
+                st.session_state.evidence_modality_target = "Call Detail Records (CDR)"
+                st.session_state.navigation_target = "Evidence"
+                st.rerun()
+            if st.button("📍 Lead: Whispering Pines LKL", key="lead_lkl"):
+                st.session_state.selected_location = "Whispering Pines Overlook"
+                st.session_state.navigation_target = "Map"
+                st.rerun()
 
 # ==================== PAGE: EVIDENCE ====================
 def build_unified_evidence_table() -> pd.DataFrame:
@@ -477,7 +767,11 @@ def render_evidence():
     with col_filters:
         st.markdown("""
         <div class="panel">
-            <h3 style="font-size: 12px; font-weight: 600; color: #FFFFFF; margin: 0 0 0.5rem 0; text-transform: uppercase;">Evidence Controls</h3>
+            <div class="card-header-bar">
+                <span class="card-title-text">Evidence Controls</span>
+                <span class="card-close-x">✕</span>
+            </div>
+            <div class="card-glow-divider"></div>
         </div>
         """, unsafe_allow_html=True)
         
@@ -549,12 +843,11 @@ def render_evidence():
     with col_table:
         st.markdown(f"""
         <div class="panel">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-                <h3 style="font-size: 12px; font-weight: 600; color: #FFFFFF; margin: 0; text-transform: uppercase;">
-                    Evidence Items ({len(filtered_df)})
-                </h3>
-                <span style="font-size: 11px; color: #4F7CFF;">Mode: {ev_modality.split('(')[0]}</span>
+            <div class="card-header-bar">
+                <span class="card-title-text">Evidence Items ({len(filtered_df)})</span>
+                <span style="font-size: 11px; color: #00E5A3;">Mode: {ev_modality.split('(')[0]}</span>
             </div>
+            <div class="card-glow-divider"></div>
         </div>
         """, unsafe_allow_html=True)
         
@@ -567,7 +860,11 @@ def render_evidence():
     with col_details:
         st.markdown("""
         <div class="panel">
-            <h3 style="font-size: 12px; font-weight: 600; color: #FFFFFF; margin: 0 0 0.5rem 0; text-transform: uppercase;">Forensic Inspector</h3>
+            <div class="card-header-bar">
+                <span class="card-title-text">Forensic Inspector</span>
+                <span class="card-close-x">✕</span>
+            </div>
+            <div class="card-glow-divider"></div>
         </div>
         """, unsafe_allow_html=True)
         
@@ -588,13 +885,13 @@ def render_evidence():
                 
                 st.markdown(f"""
                 <div class="panel">
-                    <p style="font-size: 10px; color: #64748B; margin: 0;">POST RECORD</p>
+                    <p style="font-size: 10px; color: #98A7CE; margin: 0;">POST RECORD</p>
                     <p style="font-size: 13px; font-weight: 600; color: #FFFFFF; margin: 0 0 0.5rem 0;">{raw_data['post_id']} {status_badge}</p>
                     <p style="font-size: 11px; color: #CBD5E1; margin: 0.25rem 0;"><strong>Account:</strong> @{raw_data['account']}</p>
                     <p style="font-size: 11px; color: #CBD5E1; margin: 0.25rem 0;"><strong>Timestamp:</strong> {raw_data['timestamp_raw']}</p>
                     <p style="font-size: 11px; color: #CBD5E1; margin: 0.25rem 0;"><strong>Location:</strong> {raw_data.get('location_tag', 'None')}</p>
-                    <div style="background-color: #080C12; border: 1px solid #222B38; border-radius: 6px; padding: 0.65rem; margin: 0.5rem 0;">
-                        <p style="font-size: 11px; color: #E2E8F0; margin: 0; font-style: italic;">"{raw_data['text']}"</p>
+                    <div style="background-color: #12173D; border: 1px solid #2C3979; border-radius: 8px; padding: 0.75rem; margin: 0.5rem 0;">
+                        <p style="font-size: 11px; color: #FFFFFF; margin: 0; font-style: italic;">"{raw_data['text']}"</p>
                     </div>
                 </div>
                 """, unsafe_allow_html=True)
@@ -620,7 +917,7 @@ def render_evidence():
                 is_burner = str(raw_data['caller_number']).endswith("0199")
                 st.markdown(f"""
                 <div class="panel">
-                    <p style="font-size: 10px; color: #64748B; margin: 0;">TELECOM CDR RECORD</p>
+                    <p style="font-size: 10px; color: #98A7CE; margin: 0;">TELECOM CDR RECORD</p>
                     <p style="font-size: 13px; font-weight: 600; color: #FFFFFF; margin: 0 0 0.5rem 0;">{raw_data['call_id']} <span class="status-badge {'status-critical' if is_burner else 'status-active'}">{'BURNER HANDSET' if is_burner else 'PRIMARY'}</span></p>
                     <p style="font-size: 11px; color: #CBD5E1; margin: 0.25rem 0;"><strong>Caller:</strong> <code>{raw_data['caller_number']}</code></p>
                     <p style="font-size: 11px; color: #CBD5E1; margin: 0.25rem 0;"><strong>Receiver:</strong> <code>{raw_data['receiver_number']}</code></p>
@@ -641,7 +938,7 @@ def render_evidence():
                 
                 st.markdown(f"""
                 <div class="panel">
-                    <p style="font-size: 10px; color: #64748B; margin: 0;">EXIF SIGNATURE</p>
+                    <p style="font-size: 10px; color: #98A7CE; margin: 0;">EXIF SIGNATURE</p>
                     <p style="font-size: 13px; font-weight: 600; color: #FFFFFF; margin: 0 0 0.5rem 0;">{raw_data['photo_id']} {status_badge}</p>
                     <p style="font-size: 11px; color: #CBD5E1; margin: 0.25rem 0;"><strong>Account:</strong> @{raw_data['account']}</p>
                     <p style="font-size: 11px; color: #CBD5E1; margin: 0.25rem 0;"><strong>Camera:</strong> {raw_data.get('camera_make')} {raw_data.get('camera_model')}</p>
@@ -659,7 +956,7 @@ def render_evidence():
             elif modality == "Physical Check-ins":
                 st.markdown(f"""
                 <div class="panel">
-                    <p style="font-size: 10px; color: #64748B; margin: 0;">CHECK-IN RECORD</p>
+                    <p style="font-size: 10px; color: #98A7CE; margin: 0;">CHECK-IN RECORD</p>
                     <p style="font-size: 13px; font-weight: 600; color: #FFFFFF; margin: 0 0 0.5rem 0;">{raw_data['venue_name']}</p>
                     <p style="font-size: 11px; color: #CBD5E1; margin: 0.25rem 0;"><strong>Account:</strong> @{raw_data['account']}</p>
                     <p style="font-size: 11px; color: #CBD5E1; margin: 0.25rem 0;"><strong>Platform:</strong> {raw_data['platform']}</p>
@@ -687,8 +984,12 @@ def render_identity_resolution():
         
         st.markdown("""
         <div class="panel">
-            <h3 style="font-size: 12px; font-weight: 600; color: #FFFFFF; margin: 0 0 0.35rem 0; text-transform: uppercase;">Canonical Resolved Person Clusters</h3>
-            <p style="font-size: 11px; color: #64748B; margin: 0;">
+            <div class="card-header-bar">
+                <span class="card-title-text">Canonical Resolved Person Clusters</span>
+                <span class="card-close-x">✕</span>
+            </div>
+            <div class="card-glow-divider"></div>
+            <p style="font-size: 11px; color: #98A7CE; margin: 0;">
                 Entities clustered by algorithmic match on string distance, device identifiers, EXIF camera models, and shared phone numbers.
             </p>
         </div>
@@ -704,7 +1005,11 @@ def render_identity_resolution():
         with col_c1:
             st.markdown("""
             <div class="panel">
-                <h3 style="font-size: 12px; font-weight: 600; color: #FFFFFF; margin: 0 0 0.5rem 0; text-transform: uppercase;">Cluster Dossier Inspector</h3>
+                <div class="card-header-bar">
+                    <span class="card-title-text">Cluster Dossier Inspector</span>
+                    <span class="card-close-x">✕</span>
+                </div>
+                <div class="card-glow-divider"></div>
             </div>
             """, unsafe_allow_html=True)
             
@@ -719,7 +1024,7 @@ def render_identity_resolution():
             
             st.markdown(f"""
             <div class="panel">
-                <p style="font-size: 13px; font-weight: 600; color: #FFFFFF; margin: 0 0 0.5rem 0;">{selected_cluster['canonical_name']} ({selected_cluster['canonical_id']})</p>
+                <p style="font-size: 14px; font-weight: 700; color: #FFFFFF; margin: 0 0 0.5rem 0;">{selected_cluster['canonical_name']} ({selected_cluster['canonical_id']})</p>
                 <p style="font-size: 11px; color: #CBD5E1; margin: 0.25rem 0;"><strong>Associated Accounts:</strong> {', '.join(selected_cluster['accounts'])}</p>
                 <p style="font-size: 11px; color: #CBD5E1; margin: 0.25rem 0;"><strong>Linked Emails:</strong> {', '.join(selected_cluster['linked_emails']) if selected_cluster['linked_emails'] else 'None'}</p>
                 <p style="font-size: 11px; color: #CBD5E1; margin: 0.25rem 0;"><strong>Linked Phones:</strong> {', '.join(selected_cluster['linked_phones']) if selected_cluster['linked_phones'] else 'None'}</p>
@@ -735,7 +1040,11 @@ def render_identity_resolution():
         with col_c2:
             st.markdown("""
             <div class="panel">
-                <h3 style="font-size: 12px; font-weight: 600; color: #FFFFFF; margin: 0 0 0.5rem 0; text-transform: uppercase;">Confirmed Links (Confidence &ge; 0.75)</h3>
+                <div class="card-header-bar">
+                    <span class="card-title-text">Confirmed Links (Confidence &ge; 0.75)</span>
+                    <span class="card-close-x">✕</span>
+                </div>
+                <div class="card-glow-divider"></div>
             </div>
             """, unsafe_allow_html=True)
             
@@ -748,8 +1057,12 @@ def render_identity_resolution():
         st.markdown("---")
         st.markdown("""
         <div class="panel">
-            <h3 style="font-size: 12px; font-weight: 600; color: #FFFFFF; margin: 0 0 0.35rem 0; text-transform: uppercase;">⚠️ Ambiguous Links Requiring Manual Analyst Review</h3>
-            <p style="font-size: 11px; color: #64748B; margin: 0;">
+            <div class="card-header-bar">
+                <span class="card-title-text">⚠️ Ambiguous Links Requiring Manual Analyst Review</span>
+                <span class="card-close-x">✕</span>
+            </div>
+            <div class="card-glow-divider"></div>
+            <p style="font-size: 11px; color: #98A7CE; margin: 0;">
                 Sub-threshold correlations that exhibit behavioral, temporal, or spatial overlap but lack definitive cryptographic or identifier proof.
             </p>
         </div>
@@ -786,8 +1099,8 @@ def render_investigation_graph():
         
     with col_layout:
         st.markdown("""
-        <div style="padding-top: 1.6rem; font-size: 11px; color: #64748B;">
-            <span style="color: #10B981;">●</span> Physics: <strong>Stationary (Frozen)</strong>
+        <div style="padding-top: 1.6rem; font-size: 11px; color: #98A7CE;">
+            <span style="color: #00E5A3;">●</span> Physics: <strong>Stationary (Frozen)</strong>
         </div>
         """, unsafe_allow_html=True)
         
@@ -832,7 +1145,11 @@ def render_investigation_graph():
     st.markdown("---")
     st.markdown("""
     <div class="panel">
-        <h3 style="font-size: 12px; font-weight: 600; color: #FFFFFF; margin: 0 0 0.5rem 0; text-transform: uppercase;">Network Forensic Centrality & Analytical Cypher Queries</h3>
+        <div class="card-header-bar">
+            <span class="card-title-text">Network Forensic Centrality & Analytical Cypher Queries</span>
+            <span class="card-close-x">✕</span>
+        </div>
+        <div class="card-glow-divider"></div>
     </div>
     """, unsafe_allow_html=True)
     
@@ -872,8 +1189,11 @@ def render_geospatial():
     with col_controls:
         st.markdown("""
         <div class="panel">
-            <h3 style="font-size: 12px; font-weight: 600; color: #FFFFFF; margin: 0 0 0.5rem 0; text-transform: uppercase;">Active Map Layers</h3>
-            <p style="font-size: 11px; color: #64748B; margin: 0 0 0.65rem 0;">Forensic GIS layer telemetry:</p>
+            <div class="card-header-bar">
+                <span class="card-title-text">Active Map Layers</span>
+                <span class="card-close-x">✕</span>
+            </div>
+            <div class="card-glow-divider"></div>
             <div style="font-size: 11px; color: #CBD5E1; line-height: 1.8;">
                 <div>🔵 <strong>Venue Check-ins:</strong> 27 verified</div>
                 <div>🟣 <strong>Photo GPS EXIF:</strong> 10 geotagged</div>
@@ -887,7 +1207,11 @@ def render_geospatial():
         
         st.markdown("""
         <div class="panel">
-            <h3 style="font-size: 12px; font-weight: 600; color: #FFFFFF; margin: 0 0 0.5rem 0; text-transform: uppercase;">Location Fast-Select</h3>
+            <div class="card-header-bar">
+                <span class="card-title-text">Location Fast-Select</span>
+                <span class="card-close-x">✕</span>
+            </div>
+            <div class="card-glow-divider"></div>
         </div>
         """, unsafe_allow_html=True)
         
@@ -918,7 +1242,11 @@ def render_geospatial():
     with col_details:
         st.markdown("""
         <div class="panel">
-            <h3 style="font-size: 12px; font-weight: 600; color: #FFFFFF; margin: 0 0 0.5rem 0; text-transform: uppercase;">Location Intelligence</h3>
+            <div class="card-header-bar">
+                <span class="card-title-text">Location Intelligence</span>
+                <span class="card-close-x">✕</span>
+            </div>
+            <div class="card-glow-divider"></div>
         </div>
         """, unsafe_allow_html=True)
         
@@ -926,9 +1254,9 @@ def render_geospatial():
             st.markdown("""
             <div class="panel">
                 <span class="status-badge status-critical">CANDIDATE LKL (RANK 1)</span>
-                <p style="font-size: 13px; font-weight: 600; color: #FFFFFF; margin: 0.5rem 0 0.25rem 0;">Whispering Pines Overlook</p>
+                <p style="font-size: 14px; font-weight: 700; color: #FFFFFF; margin: 0.5rem 0 0.25rem 0;">Whispering Pines Overlook</p>
                 <p style="font-size: 11px; color: #CBD5E1; margin: 0.25rem 0;"><strong>Coordinates:</strong> 37.8924° N, 122.5719° W</p>
-                <p style="font-size: 11px; color: #CBD5E1; margin: 0.25rem 0;"><strong>Confidence:</strong> 94.0%</p>
+                <p style="font-size: 11px; color: #00E5A3; margin: 0.25rem 0;"><strong>Confidence:</strong> 94.0%</p>
                 <p style="font-size: 11px; color: #CBD5E1; margin: 0.25rem 0;"><strong>Final Handset Ping:</strong> 2026-03-14 21:45 UTC</p>
                 <p style="font-size: 11px; color: #CBD5E1; margin: 0.5rem 0 0 0; line-height: 1.5;">
                     Burner handset (+1-555-0199) registered its final cell tower sector ping here before going dark. 
@@ -940,7 +1268,7 @@ def render_geospatial():
             st.markdown(f"""
             <div class="panel">
                 <span class="status-badge status-pending">VERIFIED VENUE</span>
-                <p style="font-size: 13px; font-weight: 600; color: #FFFFFF; margin: 0.5rem 0 0.25rem 0;">{selected_loc_name.split('(')[0]}</p>
+                <p style="font-size: 14px; font-weight: 700; color: #FFFFFF; margin: 0.5rem 0 0.25rem 0;">{selected_loc_name.split('(')[0]}</p>
                 <p style="font-size: 11px; color: #CBD5E1; margin: 0.25rem 0;"><strong>Corroborated by:</strong> Social Check-in & CDR Triangulation</p>
                 <p style="font-size: 11px; color: #CBD5E1; margin: 0.25rem 0;"><strong>Status:</strong> Mapped in Forensic GeoJSON</p>
             </div>
@@ -1005,68 +1333,67 @@ def render_timeline():
     # Chronology Milestones Cards
     st.markdown("""
     <div class="panel">
-        <h3 style="font-size: 12px; font-weight: 600; color: #FFFFFF; margin: 0 0 0.65rem 0; text-transform: uppercase;">Investigative Chronology Milestones</h3>
+        <div class="card-header-bar">
+            <span class="card-title-text">Investigative Chronology Milestones</span>
+            <span class="card-close-x">✕</span>
+        </div>
+        <div class="card-glow-divider"></div>
         <ul style="font-size: 12px; color: #CBD5E1; padding-left: 1.1rem; line-height: 1.9; margin: 0;">
-            <li><span style="color: #EF4444; font-weight: 600;">Day 20 (Feb 18):</span> Breakup with Lucas Reed; hostile public comment thread</li>
-            <li><span style="color: #4F7CFF; font-weight: 600;">Day 31 (Mar 01):</span> Inbound invitation from @kaelen_v proposing private off-grid shoot</li>
-            <li><span style="color: #F59E0B; font-weight: 600;">Day 33 (Mar 03):</span> Behavioral inflection point; sentiment shifts negative with paranoia mentions</li>
-            <li><span style="color: #8B5CF6; font-weight: 600;">Day 36 (Mar 06):</span> Covert alias @m.shadow_7 activated</li>
-            <li><span style="color: #EF4444; font-weight: 600;">Day 40 (Mar 10):</span> Primary handset (+1-555-0144) disconnected; Burner handset (+1-555-0199) activated</li>
-            <li><span style="color: #EF4444; font-weight: 600;">Day 42 (Mar 12):</span> Deletion of 3 posts referencing client meeting at Pacific Horizon Diner</li>
-            <li><span style="color: #EF4444; font-weight: 600;">Day 44 (Mar 14, 21:45 UTC):</span> Final cell ping at Whispering Pines Overlook before handset goes dark</li>
+            <li><span style="color: #FF4757; font-weight: 700;">Day 20 (Feb 18):</span> Breakup with Lucas Reed; hostile public comment thread</li>
+            <li><span style="color: #3A6BFF; font-weight: 700;">Day 31 (Mar 01):</span> Inbound invitation from @kaelen_v proposing private off-grid shoot</li>
+            <li><span style="color: #F5B942; font-weight: 700;">Day 33 (Mar 03):</span> Behavioral inflection point; sentiment shifts negative with paranoia mentions</li>
+            <li><span style="color: #6C5CE7; font-weight: 700;">Day 36 (Mar 06):</span> Covert alias @m.shadow_7 activated</li>
+            <li><span style="color: #FF4757; font-weight: 700;">Day 40 (Mar 10):</span> Primary handset (+1-555-0144) disconnected; Burner handset (+1-555-0199) activated</li>
+            <li><span style="color: #FF4757; font-weight: 700;">Day 42 (Mar 12):</span> Deletion of 3 posts referencing client meeting at Pacific Horizon Diner</li>
+            <li><span style="color: #00E5A3; font-weight: 700;">Day 44 (Mar 14, 21:45 UTC):</span> Final cell ping at Whispering Pines Overlook before handset goes dark</li>
         </ul>
     </div>
     """, unsafe_allow_html=True)
 
-# ==================== PAGE: HYPOTHESES (BUG FIX APPLIED) ====================
+# ==================== PAGE: HYPOTHESES ====================
 def render_hypotheses():
-    """Render investigative hypotheses evaluation with zero raw HTML leaks."""
+    """Render investigative hypotheses evaluation with clean gradient cards."""
     render_breadcrumb("MP-2026-0419", "Hypotheses")
     render_page_header("Investigative Hypotheses Matrix", "Competing theory evaluation, Bayesian confidence scoring & investigative action recommendations")
     
     if "hypotheses" in DATA:
         for hyp in DATA["hypotheses"]:
             status = hyp.get("status", "PLAUSIBLE")
-            status_color = COLOR_GREEN if status == "MOST_PROBABLE" else (COLOR_RED if "DISPROVEN" in status else COLOR_ORANGE)
+            status_color = COLOR_MINT if status == "MOST_PROBABLE" else (COLOR_DANGER if "DISPROVEN" in status else COLOR_WARNING)
             status_icon = "●" if status == "MOST_PROBABLE" else ("✗" if "DISPROVEN" in status else "▲")
             conf_pct = int(hyp.get("confidence_score", 0.0) * 100)
             
-            # Format supporting evidence lines safely
             supp_lines = ""
             for s in hyp.get("supporting_evidence", []):
                 item = s.get("item", "")
                 detail = s.get("detail", "")
                 weight = s.get("weight", 1.0)
-                supp_lines += f"<li><strong style='color:#FFFFFF;'>{item}:</strong> {detail} <span style='color:#4F7CFF;'>(w={weight})</span></li>"
+                supp_lines += f"<li><strong style='color:#FFFFFF;'>{item}:</strong> {detail} <span style='color:#3A6BFF;'>(w={weight})</span></li>"
                 
-            # Format contradicting evidence lines safely
             contra_items = hyp.get("contradicting_evidence", [])
             if contra_items:
                 contra_lines = "".join([f"<li><strong style='color:#FFFFFF;'>{c.get('item', '')}:</strong> {c.get('detail', '')}</li>" for c in contra_items])
             else:
                 contra_lines = "<li><em>No contradicting evidence found.</em></li>"
                 
-            # Render unindented HTML card to guarantee no Markdown pre-code blocks
             card_html = f"""<div class="panel" style="margin-bottom: 1.25rem;">
-<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.65rem;">
-<h3 style="font-size: 14px; font-weight: 700; color: #FFFFFF; margin: 0;">
-<span style="color: {status_color}; margin-right: 0.5rem;">{status_icon}</span>
-{hyp['title']}
-</h3>
-<span class="status-badge" style="background-color: rgba(79, 124, 255, 0.15); color: {status_color}; border: 1px solid {status_color}; font-weight: 600;">
+<div class="card-header-bar">
+<span class="card-title-text"><span style="color: {status_color}; margin-right: 0.5rem;">{status_icon}</span>{hyp['title']}</span>
+<span class="status-badge" style="background-color: rgba(58, 107, 255, 0.2); color: {status_color}; border: 1px solid {status_color}; font-weight: 700;">
 CONFIDENCE: {conf_pct}% ({status.replace('_', ' ')})
 </span>
 </div>
+<div class="card-glow-divider"></div>
 <p style="font-size: 12px; color: #CBD5E1; line-height: 1.6; margin: 0 0 0.85rem 0;">{hyp['summary']}</p>
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-<div style="background: rgba(8, 12, 18, 0.6); border: 1px solid #222B38; border-radius: 8px; padding: 12px;">
-<p style="font-size: 11px; font-weight: 600; color: #10B981; margin: 0 0 0.5rem 0;">✓ Supporting Evidence ({len(hyp['supporting_evidence'])})</p>
+<div style="background: rgba(18, 23, 61, 0.7); border: 1px solid #2C3979; border-radius: 8px; padding: 12px;">
+<p style="font-size: 11px; font-weight: 700; color: #00E5A3; margin: 0 0 0.5rem 0;">✓ Supporting Evidence ({len(hyp['supporting_evidence'])})</p>
 <ul style="font-size: 11px; color: #CBD5E1; padding-left: 1.1rem; line-height: 1.7; margin: 0;">
 {supp_lines}
 </ul>
 </div>
-<div style="background: rgba(8, 12, 18, 0.6); border: 1px solid #222B38; border-radius: 8px; padding: 12px;">
-<p style="font-size: 11px; font-weight: 600; color: #EF4444; margin: 0 0 0.5rem 0;">✗ Contradicting Evidence & Alibis ({len(hyp['contradicting_evidence'])})</p>
+<div style="background: rgba(18, 23, 61, 0.7); border: 1px solid #2C3979; border-radius: 8px; padding: 12px;">
+<p style="font-size: 11px; font-weight: 700; color: #FF4757; margin: 0 0 0.5rem 0;">✗ Contradicting Evidence & Alibis ({len(hyp['contradicting_evidence'])})</p>
 <ul style="font-size: 11px; color: #CBD5E1; padding-left: 1.1rem; line-height: 1.7; margin: 0;">
 {contra_lines}
 </ul>
@@ -1080,9 +1407,9 @@ CONFIDENCE: {conf_pct}% ({status.replace('_', ' ')})
                     for i, act in enumerate(hyp["recommended_actions"], 1):
                         st.markdown(f"**{i}.** {act}")
 
-# ==================== PAGE: EVALUATION (STREAMLINED & UNIFIED) ====================
+# ==================== PAGE: EVALUATION ====================
 def render_evaluation():
-    """Render academic evaluation metrics against isolated ground truth without duplications."""
+    """Render academic evaluation metrics against isolated ground truth."""
     render_breadcrumb("MP-2026-0419", "Evaluation")
     render_page_header("Academic Ground Truth Benchmark", "Rigorous accuracy audit against isolated ground_truth.json baseline")
     
@@ -1098,21 +1425,53 @@ def render_evaluation():
         ev = DATA["evaluation"]
         m = ev["metrics"]
         
-        # 4 Essential Non-Duplicated Metric Cards
+        # 4 Essential Metric Cards
         col1, col2, col3, col4 = st.columns(4)
         with col1:
-            render_metric_card("Entity Resolution F1", f"{m['entity_resolution']['f1_score']*100:.1f}%", f"Precision: {m['entity_resolution']['precision']*100:.1f}% | Recall: {m['entity_resolution']['recall']*100:.0f}%", COLOR_GREEN)
+            st.markdown(f"""
+            <div class="panel">
+                <div class="card-header-bar"><span class="card-title-text">Entity Resolution F1</span><span class="card-close-x">✕</span></div>
+                <div class="card-glow-divider"></div>
+                <div style="font-size: 28px; font-weight: 800; color: #00E5A3;">{m['entity_resolution']['f1_score']*100:.1f}%</div>
+                <div style="font-size: 10px; color: #98A7CE; margin-top: 4px;">Precision: {m['entity_resolution']['precision']*100:.1f}% | Recall: {m['entity_resolution']['recall']*100:.0f}%</div>
+            </div>
+            """, unsafe_allow_html=True)
         with col2:
-            render_metric_card("Target Clustered", f"{m['entity_resolution']['target_persona_cluster_accuracy']*100:.0f}%", "All 3 Persona Handles Grouped", COLOR_GREEN)
+            st.markdown(f"""
+            <div class="panel">
+                <div class="card-header-bar"><span class="card-title-text">Target Clustered</span><span class="card-close-x">✕</span></div>
+                <div class="card-glow-divider"></div>
+                <div style="font-size: 28px; font-weight: 800; color: #00E5A3;">{m['entity_resolution']['target_persona_cluster_accuracy']*100:.0f}%</div>
+                <div style="font-size: 10px; color: #98A7CE; margin-top: 4px;">All 3 Persona Handles Grouped</div>
+            </div>
+            """, unsafe_allow_html=True)
         with col3:
-            render_metric_card("LKL Distance Error", f"{m['last_known_location']['distance_error_meters']:.1f} m", "Whispering Pines Sector Triangulation", COLOR_GREEN)
+            st.markdown(f"""
+            <div class="panel">
+                <div class="card-header-bar"><span class="card-title-text">LKL Distance Error</span><span class="card-close-x">✕</span></div>
+                <div class="card-glow-divider"></div>
+                <div style="font-size: 28px; font-weight: 800; color: #00E5A3;">{m['last_known_location']['distance_error_meters']:.1f} m</div>
+                <div style="font-size: 10px; color: #98A7CE; margin-top: 4px;">Sector Centroid Triangulation</div>
+            </div>
+            """, unsafe_allow_html=True)
         with col4:
-            render_metric_card("Red Herrings Avoided", f"{m['red_herring_audit']['traps_avoided_count']} of 2", "Both Decoy Traps Evaded (100%)", COLOR_GREEN)
+            st.markdown(f"""
+            <div class="panel">
+                <div class="card-header-bar"><span class="card-title-text">Red Herrings Avoided</span><span class="card-close-x">✕</span></div>
+                <div class="card-glow-divider"></div>
+                <div style="font-size: 28px; font-weight: 800; color: #00E5A3;">{m['red_herring_audit']['traps_avoided_count']} of 2</div>
+                <div style="font-size: 10px; color: #98A7CE; margin-top: 4px;">Both Decoy Traps Evaded (100%)</div>
+            </div>
+            """, unsafe_allow_html=True)
             
-        # Full-width Interactive Benchmark Plotly Chart
+        # Full-width Benchmark Plotly Chart
         st.markdown("""
         <div class="panel" style="margin-top: 1rem;">
-            <h3 style="font-size: 12px; font-weight: 600; color: #FFFFFF; margin: 0 0 0.65rem 0; text-transform: uppercase;">Benchmark Performance vs Target Standard</h3>
+            <div class="card-header-bar">
+                <span class="card-title-text">Benchmark Performance vs Target Standard</span>
+                <span class="card-close-x">✕</span>
+            </div>
+            <div class="card-glow-divider"></div>
         </div>
         """, unsafe_allow_html=True)
         
@@ -1139,15 +1498,15 @@ def render_evaluation():
             name="Zenken Workstation",
             x=benchmark_categories,
             y=actual_scores,
-            marker_color="#4F7CFF",
+            marker_color="#00E5A3",
             text=[f"{v:.1f}%" for v in actual_scores],
             textposition="auto"
         ))
         fig.add_trace(go.Bar(
-            name="Target Standard Baseline",
+            name="Target Baseline Standard",
             x=benchmark_categories,
             y=target_scores,
-            marker_color="#222B38",
+            marker_color="#3A6BFF",
             text=[f"{v:.0f}%" for v in target_scores],
             textposition="auto"
         ))
@@ -1157,10 +1516,10 @@ def render_evaluation():
             template="plotly_dark",
             height=340,
             margin=dict(l=40, r=40, t=20, b=40),
-            plot_bgcolor="#080C12",
-            paper_bgcolor="#10151D",
-            yaxis=dict(range=[0, 115], gridcolor="#222B38", title="Score (%)"),
-            xaxis=dict(gridcolor="#222B38"),
+            plot_bgcolor="#141A42",
+            paper_bgcolor="#1A2254",
+            yaxis=dict(range=[0, 115], gridcolor="#252F66", title="Score (%)"),
+            xaxis=dict(gridcolor="#252F66"),
             legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
         )
         st.plotly_chart(fig, use_container_width=True)
@@ -1168,7 +1527,11 @@ def render_evaluation():
         # Ground Truth Comparison Table
         st.markdown("""
         <div class="panel">
-            <h3 style="font-size: 12px; font-weight: 600; color: #FFFFFF; margin: 0 0 0.65rem 0; text-transform: uppercase;">Ground Truth Direct Verification Table</h3>
+            <div class="card-header-bar">
+                <span class="card-title-text">Ground Truth Direct Verification Table</span>
+                <span class="card-close-x">✕</span>
+            </div>
+            <div class="card-glow-divider"></div>
         </div>
         """, unsafe_allow_html=True)
         
@@ -1211,14 +1574,18 @@ def render_evaluation():
         ]
         st.dataframe(pd.DataFrame(gt_rows), height=220)
         
-        # Error Analysis & Forensic Nuance Card
+        # Error Analysis Card
         st.markdown("""
         <div class="panel">
-            <h3 style="font-size: 12px; font-weight: 600; color: #FFFFFF; margin: 0 0 0.5rem 0; text-transform: uppercase;">Error Analysis & Forensic Nuances</h3>
+            <div class="card-header-bar">
+                <span class="card-title-text">Error Analysis & Forensic Nuances</span>
+                <span class="card-close-x">✕</span>
+            </div>
+            <div class="card-glow-divider"></div>
             <div style="font-size: 11px; color: #CBD5E1; line-height: 1.7;">
                 <div><strong>1. LKL Spatial Discrepancy (117.34 meters):</strong> The algorithm correctly identified the Whispering Pines cell tower sector. The 117.3m delta reflects physical cell tower beam divergence and centroid triangulation inherent to CDR sector data compared to the exact scenic overlook bench coordinates.</div>
                 <div><strong>2. Entity Resolution Precision (85.71%):</strong> A single false positive link was detected between secondary peripheral acquaintances with shared social hashtags. The target persona cluster achieved 100% accuracy with zero false negatives.</div>
-                <div><strong>3. Overall Benchmark Grade:</strong> <span style="color:#10B981; font-weight:700;">A+ (Exemplary OSINT Pipeline Performance)</span>.</div>
+                <div><strong>3. Overall Benchmark Grade:</strong> <span style="color:#00E5A3; font-weight:700;">A+ (Exemplary OSINT Pipeline Performance)</span>.</div>
             </div>
         </div>
         """, unsafe_allow_html=True)
