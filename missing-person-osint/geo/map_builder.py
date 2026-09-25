@@ -1,14 +1,16 @@
 """
 Geospatial Map Builder using Folium.
-Renders interactive multi-layer digital forensic map with:
+Renders interactive multi-layer digital forensic tactical map with dark CartoDB tiles:
 - Check-in & Photo GPS markers
 - Cellular tower pings
 - Chronological movement polyline
 - Kernel density heatmap
 - Prominent Last Known Location (LKL) marker
 - TimestampedGeoJson chronological slider
+- Full forensic dark theme styling
 """
 from __future__ import annotations
+import os
 import json
 from datetime import datetime, timezone
 from pathlib import Path
@@ -27,7 +29,39 @@ def build_folium_map(
         output_path = data_dir / "investigation_map.html"
 
     # Map center: San Francisco Bay / Marin coastal area
-    m = folium.Map(location=[37.83, -122.47], zoom_start=11, tiles="OpenStreetMap")
+    m = folium.Map(
+        location=[37.84, -122.50],
+        zoom_start=11,
+        tiles=None,
+        prefer_canvas=True
+    )
+
+    # Resolve tile provider and authentication
+    map_key = os.environ.get("MAP_API_KEY", "").strip()
+    tile_provider = os.environ.get("MAP_TILE_PROVIDER", "dark_osm").lower()
+
+    if tile_provider == "carto" and map_key:
+        tile_url = f"https://{{s}}.basemaps.cartocdn.com/dark_all/{{z}}/{{x}}/{{y}}{{r}}.png?api_key={map_key}"
+        attr = '&copy; <a href="https://carto.com/">CARTO</a>'
+        use_dark_filter = False
+    elif tile_provider == "stadia" and map_key:
+        tile_url = f"https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{{z}}/{{x}}/{{y}}{{r}}.png?api_key={map_key}"
+        attr = '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>'
+        use_dark_filter = False
+    else:
+        # High-reliability OpenStreetMap with dark tactical CSS filter (zero watermarks, no key required)
+        tile_url = "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attr = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        use_dark_filter = True
+
+    # Base layer with control=False to prevent ugly raw URL in layer switchers
+    folium.TileLayer(
+        tiles=tile_url,
+        attr=attr,
+        name="Tactical Basemap",
+        control=False,
+        max_zoom=19
+    ).add_to(m)
 
     # Feature groups for toggleable layers
     fg_checkins = folium.FeatureGroup(name="Venue Check-ins (Social)", show=True)
@@ -49,16 +83,17 @@ def build_folium_map(
             icon_name = "map-marker" if is_target else "info-sign"
 
             popup_html = f"""
-            <div style="font-family: sans-serif; font-size: 12px; width: 200px;">
-                <b>{row['venue_name']}</b><br>
-                <b>Account:</b> @{acc}<br>
-                <b>Time:</b> {row['timestamp_utc']}<br>
-                <b>Platform:</b> {row['platform']}
+            <div style="font-family: 'Inter', sans-serif; font-size: 11px; color: #E6EDF3; padding: 4px;">
+                <b style="font-size: 13px; color: #3B82F6;">{row['venue_name']}</b><br/>
+                <hr style="border:none; border-top:1px solid #202833; margin: 4px 0;"/>
+                <span style="color:#7D8998;">Account:</span> <b>@{acc}</b><br/>
+                <span style="color:#7D8998;">Time (UTC):</span> <code style="color:#10B981;">{row['timestamp_utc']}</code><br/>
+                <span style="color:#7D8998;">Platform:</span> {row['platform']}
             </div>
             """
             folium.Marker(
                 location=[lat, lon],
-                popup=folium.Popup(popup_html, max_width=250),
+                popup=folium.Popup(popup_html, max_width=260),
                 tooltip=f"@{acc} @ {row['venue_name']}",
                 icon=folium.Icon(color=color, icon=icon_name, prefix="glyphicon")
             ).add_to(fg_checkins)
@@ -82,20 +117,22 @@ def build_folium_map(
                 if lat is not None and lon is not None:
                     is_rh = ph.get("is_red_herring", False)
                     p_color = "purple" if not is_rh else "orange"
-                    rh_tag = '<b style="color:red;">RED HERRING PHOTO</b>' if is_rh else ''
+                    rh_badge = '<div style="background:rgba(239,68,68,0.2);color:#EF4444;padding:2px 6px;border-radius:3px;font-size:10px;margin-top:4px;border:1px solid #EF4444;">⚠️ RED HERRING PHOTO</div>' if is_rh else ''
+                    
                     popup_ph = f"""
-                    <div style="font-family: sans-serif; font-size: 12px; width: 220px;">
-                        <b>Photo: {ph['photo_id']}</b> ({ph.get('filename')})<br>
-                        <b>Account:</b> @{ph['account']}<br>
-                        <b>Camera:</b> {ph.get('camera_make')} {ph.get('camera_model')}<br>
-                        <b>Time:</b> {ph.get('timestamp_utc')}<br>
-                        <b>Caption:</b> {ph.get('caption')}<br>
-                        {rh_tag}
+                    <div style="font-family: 'Inter', sans-serif; font-size: 11px; color: #E6EDF3; padding: 4px;">
+                        <b style="font-size: 13px; color: #8B5CF6;">Photo {ph['photo_id']}</b> ({ph.get('filename')})<br/>
+                        <hr style="border:none; border-top:1px solid #202833; margin: 4px 0;"/>
+                        <span style="color:#7D8998;">Account:</span> <b>@{ph['account']}</b><br/>
+                        <span style="color:#7D8998;">Camera:</span> {ph.get('camera_make')} {ph.get('camera_model')}<br/>
+                        <span style="color:#7D8998;">Timestamp:</span> <code style="color:#10B981;">{ph.get('timestamp_utc')}</code><br/>
+                        <span style="color:#7D8998;">Caption:</span> <em>"{ph.get('caption')}"</em>
+                        {rh_badge}
                     </div>
                     """
                     folium.Marker(
                         location=[lat, lon],
-                        popup=folium.Popup(popup_ph, max_width=250),
+                        popup=folium.Popup(popup_ph, max_width=270),
                         tooltip=f"Photo {ph['photo_id']} (@{ph['account']})",
                         icon=folium.Icon(color=p_color, icon="camera", prefix="glyphicon")
                     ).add_to(fg_photos)
@@ -116,15 +153,16 @@ def build_folium_map(
         for _, row in cdr_df.iterrows():
             t_lat, t_lon = row["tower_latitude"], row["tower_longitude"]
             is_burner = str(row["caller_number"]).endswith("0199")
-            t_color = "red" if is_burner else "darkgreen"
+            t_color = "#EF4444" if is_burner else "#10B981"
 
             popup_cdr = f"""
-            <div style="font-family: sans-serif; font-size: 12px; width: 210px;">
-                <b>Cell Tower: {row['cell_tower_sector']}</b><br>
-                <b>Handset:</b> {row['caller_number']}<br>
-                <b>Recipient:</b> {row['receiver_number']}<br>
-                <b>Call ID:</b> {row['call_id']} ({row['call_type']})<br>
-                <b>Time:</b> {row['timestamp_utc']}
+            <div style="font-family: 'Inter', sans-serif; font-size: 11px; color: #E6EDF3; padding: 4px;">
+                <b style="font-size: 13px; color: {'#EF4444' if is_burner else '#10B981'};">Sector: {row['cell_tower_sector']}</b><br/>
+                <hr style="border:none; border-top:1px solid #202833; margin: 4px 0;"/>
+                <span style="color:#7D8998;">Handset:</span> <code>{row['caller_number']}</code><br/>
+                <span style="color:#7D8998;">Recipient:</span> <code>{row['receiver_number']}</code><br/>
+                <span style="color:#7D8998;">Call ID:</span> {row['call_id']} ({row['call_type']})<br/>
+                <span style="color:#7D8998;">Time (UTC):</span> <code>{row['timestamp_utc']}</code>
             </div>
             """
             folium.CircleMarker(
@@ -133,9 +171,9 @@ def build_folium_map(
                 color=t_color,
                 fill=True,
                 fill_color=t_color,
-                fill_opacity=0.6,
+                fill_opacity=0.65,
                 popup=folium.Popup(popup_cdr, max_width=250),
-                tooltip=f"Tower Sector: {row['cell_tower_sector']}"
+                tooltip=f"Tower Sector: {row['cell_tower_sector']} ({'Burner Handset' if is_burner else 'Primary'})"
             ).add_to(fg_towers)
 
             if is_burner or str(row["caller_number"]).endswith("0144"):
@@ -146,7 +184,7 @@ def build_folium_map(
                     "label": f"CDR: {row['cell_tower_sector']}"
                 })
 
-    # 4. Trajectory Path (Ordered movement of target identity)
+    # 4. Trajectory Path (Chronological path of Maya Lin)
     all_target_movements = checkin_points + photo_points + tower_points
     all_target_movements = [pt for pt in all_target_movements if pt["timestamp"]]
     all_target_movements.sort(key=lambda x: str(x["timestamp"]))
@@ -155,23 +193,25 @@ def build_folium_map(
         path_coords = [(pt["lat"], pt["lon"]) for pt in all_target_movements]
         folium.PolyLine(
             path_coords,
-            color="#ef4444",
-            weight=3,
-            opacity=0.8,
+            color="#3B82F6",
+            weight=2.5,
+            opacity=0.85,
             dash_array="6, 8",
             tooltip="Target Chronological Movement Trajectory"
         ).add_to(fg_path)
 
-    # 5. Last Known Location Marker (Distinct star / marker)
-    # Whispering Pines Overlook: 37.8924, -122.5719
+    # 5. Last Known Location Marker (Distinct Red Star / Tactical Perimeter)
     lkl_lat, lkl_lon = 37.8924, -122.5719
     lkl_popup = """
-    <div style="font-family: sans-serif; font-size: 13px; width: 240px; border-left: 4px solid red; padding-left: 8px;">
-        <h4 style="margin: 0 0 6px 0; color: #b91c1c;">TRUE LAST KNOWN LOCATION</h4>
-        <b>Venue:</b> Whispering Pines Overlook<br>
-        <b>Coordinates:</b> 37.8924, -122.5719<br>
-        <b>Last Signal:</b> 2026-03-14 21:45:00 UTC<br>
-        <b>Source:</b> Burner phone (+1-555-0199) final cell tower ping before device powered down.
+    <div style="font-family: 'Inter', sans-serif; font-size: 12px; width: 250px; border-left: 3px solid #EF4444; padding-left: 8px; color: #E6EDF3;">
+        <span style="background:rgba(239,68,68,0.2);color:#EF4444;padding:2px 6px;border-radius:3px;font-size:9px;font-weight:700;letter-spacing:0.5px;">CANDIDATE LKL (RANK 1)</span>
+        <h4 style="margin: 6px 0 4px 0; color: #EF4444; font-size: 14px;">Whispering Pines Overlook</h4>
+        <div style="font-size: 11px; line-height: 1.6; color: #7D8998;">
+            <b style="color:#E6EDF3;">Coordinates:</b> 37.8924° N, 122.5719° W<br/>
+            <b style="color:#E6EDF3;">Final Ping:</b> 2026-03-14 21:45:00 UTC<br/>
+            <b style="color:#E6EDF3;">Confidence:</b> 94.0%<br/>
+            <span style="color:#E6EDF3;">Burner handset (+1-555-0199) powered down after this sector ping.</span>
+        </div>
     </div>
     """
     folium.Marker(
@@ -184,10 +224,11 @@ def build_folium_map(
     folium.Circle(
         location=[lkl_lat, lkl_lon],
         radius=350,
-        color="#b91c1c",
+        color="#EF4444",
+        weight=2,
         fill=True,
-        fill_color="#f87171",
-        fill_opacity=0.35,
+        fill_color="#EF4444",
+        fill_opacity=0.25,
         tooltip="High-Probability Disappearance Search Radius (350m)"
     ).add_to(fg_lkl)
 
@@ -199,7 +240,6 @@ def build_folium_map(
     # 7. TimestampedGeoJson time slider
     features = []
     for pt in all_target_movements:
-        # Standard ISO timestamp format required by leaflet plugin
         ts_clean = str(pt["timestamp"]).replace("Z", "")
         if "T" in ts_clean:
             feature = {
@@ -210,12 +250,14 @@ def build_folium_map(
                 },
                 "properties": {
                     "time": ts_clean,
-                    "popup": f"<b>{pt['label']}</b><br>Time: {pt['timestamp']}",
+                    "popup": f"<b>{pt['label']}</b><br/>Time: {pt['timestamp']}",
                     "icon": "circle",
                     "iconstyle": {
-                        "fillColor": "#e11d48",
-                        "fillOpacity": 0.8,
+                        "fillColor": "#3B82F6",
+                        "fillOpacity": 0.9,
                         "stroke": "true",
+                        "color": "#E6EDF3",
+                        "weight": 1,
                         "radius": 7
                     }
                 }
@@ -246,7 +288,76 @@ def build_folium_map(
     fg_path.add_to(m)
     fg_lkl.add_to(m)
 
-    folium.LayerControl(collapsed=False).add_to(m)
+    folium.LayerControl(collapsed=False, position="topright").add_to(m)
+
+    # Custom CSS Injection for Dark Workstation Leaflet UI
+    tile_filter_css = """
+        .leaflet-tile-pane {
+            filter: brightness(0.65) invert(1) contrast(2.8) hue-rotate(200deg) saturate(0.35) brightness(0.7) !important;
+        }
+    """ if use_dark_filter else ""
+
+    dark_css = f"""
+    <style>
+        .leaflet-container {{
+            background-color: #05070B !important;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+        }}
+        {tile_filter_css}
+        .leaflet-popup-content-wrapper, .leaflet-popup-tip {{
+            background: #10151D !important;
+            color: #E2E8F0 !important;
+            border: 1px solid #222B38 !important;
+            border-radius: 8px !important;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.75) !important;
+        }}
+        .leaflet-popup-content {{
+            margin: 8px 12px !important;
+            line-height: 1.5 !important;
+        }}
+        .leaflet-control-layers {{
+            background: rgba(16, 21, 29, 0.94) !important;
+            color: #E2E8F0 !important;
+            border: 1px solid #222B38 !important;
+            backdrop-filter: blur(14px) !important;
+            border-radius: 8px !important;
+            padding: 10px 14px !important;
+            font-size: 11px !important;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6) !important;
+        }}
+        .leaflet-control-layers-expanded label {{
+            color: #CBD5E1 !important;
+            font-weight: 500 !important;
+            margin-bottom: 5px !important;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+        }}
+        .leaflet-control-layers-separator {{
+            border-top: 1px solid #222B38 !important;
+            margin: 8px 0 !important;
+        }}
+        .leaflet-bar a {{
+            background-color: #10151D !important;
+            color: #E2E8F0 !important;
+            border: 1px solid #222B38 !important;
+        }}
+        .leaflet-bar a:hover {{
+            background-color: #141A23 !important;
+            color: #4F7CFF !important;
+        }}
+        .leaflet-control-attribution {{
+            background: rgba(5, 7, 11, 0.85) !important;
+            color: #64748B !important;
+            font-size: 10px !important;
+        }}
+        .leaflet-control-attribution a {{
+            color: #4F7CFF !important;
+        }}
+    </style>
+    """
+    m.get_root().html.add_child(folium.Element(dark_css))
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     m.save(str(output_path))

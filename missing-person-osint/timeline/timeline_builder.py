@@ -5,7 +5,9 @@ with forensic annotations highlighting behavioral change points, deleted evidenc
 """
 from __future__ import annotations
 import json
+import sys
 from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from typing import Dict, Any, List
 import pandas as pd
 import plotly.graph_objects as go
@@ -14,10 +16,23 @@ def build_investigation_timeline(
     data_dir: Path | None = None,
     output_html_path: Path | None = None
 ) -> Dict[str, Any]:
+    """
+    Build investigation timeline using improved visualization.
+    This wrapper uses the improved timeline builder for better UX.
+    """
+    from timeline.improved_timeline import build_improved_timeline
+    return build_improved_timeline(data_dir, output_html_path)
+
+# Legacy function kept for backward compatibility
+def build_legacy_timeline(
+    data_dir: Path | None = None,
+    output_html_path: Path | None = None
+) -> Dict[str, Any]:
+    """Legacy timeline builder (kept for reference)."""
     if data_dir is None:
         data_dir = Path(__file__).resolve().parent.parent / "data"
     if output_html_path is None:
-        output_html_path = data_dir / "investigation_timeline.html"
+        output_html_path = data_dir / "investigation_timeline_legacy.html"
 
     # Collect multi-source events
     events = []

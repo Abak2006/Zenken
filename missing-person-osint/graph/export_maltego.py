@@ -6,7 +6,9 @@ Graph Exporters:
 """
 from __future__ import annotations
 import json
+import sys
 from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from typing import Dict, Any
 import networkx as nx
 import pandas as pd
@@ -95,39 +97,10 @@ def export_all_formats(
     nx.write_graphml(G_clean, str(graphml_path))
     generated_files["graphml"] = str(graphml_path)
 
-    # 3. PyVis Interactive HTML
-    net = Network(height="750px", width="100%", bgcolor="#0f172a", font_color="#f8fafc", directed=True)
-    for node_id, data in G.nodes(data=True):
-        ntype = data.get("node_type", "Unknown")
-        color = NODE_COLOR_MAP.get(ntype, "#94a3b8")
-        label = data.get("label", node_id)
-        size = 25 if ntype == "Person" else (18 if ntype in ["Account", "Phone"] else 12)
-        title_hover = f"Type: {ntype}<br>ID: {node_id}<br>" + "<br>".join([f"{k}: {v}" for k, v in data.items() if k != "label"][:4])
-
-        net.add_node(node_id, label=label, color=color, size=size, title=title_hover)
-
-    for u, v, k, data in G.edges(keys=True, data=True):
-        rel = data.get("edge_type", "")
-        title_hover = f"Rel: {rel}<br>Confidence: {data.get('confidence', 1.0)}"
-        color = "#e2e8f0" if rel == "SAME_AS" else "#64748b"
-        width = 2.5 if rel == "SAME_AS" else 1.0
-        net.add_edge(u, v, title=title_hover, label=rel, color=color, width=width)
-
-    net.set_options("""
-    var options = {
-      "physics": {
-        "barnesHut": {
-          "gravitationalConstant": -4000,
-          "centralGravity": 0.3,
-          "springLength": 95,
-          "springConstant": 0.04
-        },
-        "minVelocity": 0.75
-      }
-    }
-    """)
+    # 3. PyVis Interactive HTML - Use improved graph export
+    from graph.improved_graph_export import create_improved_pyvis_graph
     pyvis_path = output_dir / "investigation_graph.html"
-    net.save_graph(str(pyvis_path))
+    create_improved_pyvis_graph(G, pyvis_path, layout="organic")
     generated_files["pyvis_html"] = str(pyvis_path)
 
     return generated_files
