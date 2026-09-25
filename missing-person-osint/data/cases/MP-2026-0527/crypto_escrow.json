@@ -1,0 +1,54 @@
+[
+  {
+    "tx_id": "TX-CRYPTO-801",
+    "tx_hash": "0x7f2a1b948c2e4019da821948ba120489ca8102948bbef0192849102481902481",
+    "network": "Ethereum / Base L2",
+    "tx_type": "Escrow Contract Deposit",
+    "sender_address": "0x4B9E21804B18491A9B (CipherCore Deployer)",
+    "recipient_address": "0x98A10C2948B0192481 (Multi-Sig Escrow Contract)",
+    "amount": "25,000 USDC",
+    "timestamp_utc": "2026-04-11 14:00:00",
+    "gateway_node": "AWS eu-central-1 Validator",
+    "status": "CONFIRMED (Block #19820491)",
+    "milestone": "Deposit for HyperMesh Kernel Architecture IP Transfer"
+  },
+  {
+    "tx_id": "TX-CRYPTO-802",
+    "tx_hash": "0x9184ba019284ca91847192849102948192048190248190248190248190248190",
+    "network": "Ethereum / Base L2",
+    "tx_type": "PGP Milestone Attestation",
+    "sender_address": "0x98A10C2948B0192481 (Multi-Sig Escrow Contract)",
+    "recipient_address": "0x71C839049182A89F (Ananya Cold Hardware Enclave)",
+    "amount": "0 USDC (Smart Contract Execution)",
+    "timestamp_utc": "2026-04-12 21:00:00",
+    "gateway_node": "Bangalore Exit Node",
+    "status": "VERIFIED",
+    "milestone": "Cryptographic sign-off of secret firmware repository release"
+  },
+  {
+    "tx_id": "TX-CRYPTO-803",
+    "tx_hash": "0x3341b80294819024819024819024819024819024819024819024819024819024",
+    "network": "Ethereum / Base L2",
+    "tx_type": "Hardware Escrow Transfer",
+    "sender_address": "0x98A10C2948B0192481 (Multi-Sig Escrow Contract)",
+    "recipient_address": "0x71C839049182A89F (Ananya Cold Hardware Enclave)",
+    "amount": "15,000 USDC",
+    "timestamp_utc": "2026-04-13 02:40:00",
+    "gateway_node": "Tor Relayer Node",
+    "status": "DISBURSED",
+    "milestone": "Phase 1 compensation release to cold hardware wallet"
+  },
+  {
+    "tx_id": "TX-CRYPTO-804",
+    "tx_hash": "0xbb10294819024819024819024819024819024819024819024819024819024819",
+    "network": "Ethereum Mainnet",
+    "tx_type": "Relayer Gas Sponsorship",
+    "sender_address": "0x00000000000000 (Tornado / Railgun Privacy Relayer)",
+    "recipient_address": "0x71C839049182A89F (Ananya Cold Hardware Enclave)",
+    "amount": "0.15 ETH",
+    "timestamp_utc": "2026-04-15 11:10:00",
+    "gateway_node": "Privacy Pool",
+    "status": "OBSCURED",
+    "milestone": "Gas sponsorship to sever on-chain identity trace"
+  }
+]

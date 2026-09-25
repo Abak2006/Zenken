@@ -1,111 +1,175 @@
 {
+  "total_profiles_analyzed": 18,
+  "resolved_clusters_count": 7,
+  "multi_account_clusters_count": 1,
+  "confirmed_links_count": 3,
+  "ambiguous_links_count": 2,
   "clusters": [
     {
-      "canonical_id": "PERSON_ANANYA_NAIR",
+      "canonical_id": "ANANYA_NAIR",
       "canonical_name": "Ananya Nair",
-      "is_target": true,
       "is_primary_subject": true,
-      "account_count": 4,
+      "is_target": true,
       "accounts": [
         "ananya_dev",
         "ananya.n",
         "ananyan-dev",
         "void_null07"
       ],
+      "account_count": 4,
+      "is_multi_account": true,
+      "linked_phones": [
+        "+91-98801-0144",
+        "+91-98801-0199"
+      ],
       "linked_emails": [
         "ananya.nair.sys@fictional-mail.in",
         "ananya_personal@fictional-mail.in",
         "anon_blr07@proton-synthetic.me"
       ],
-      "linked_phones": [
-        "+91-98801-0144",
-        "+91-98801-0199"
+      "linked_devices": [
+        "DEV-AN-001",
+        "DEV-AN-002",
+        "DEV-AN-003",
+        "DEV-AN-005"
       ],
-      "is_multi_account": true
+      "confidence": 0.99
     },
     {
-      "canonical_id": "PERSON_VECTOR_ZERO",
-      "canonical_name": "Vector Zero",
+      "canonical_id": "VECTOR_ZERO",
+      "canonical_name": "Vector Zero / CipherCore",
+      "is_primary_subject": false,
       "is_target": false,
-      "account_count": 1,
       "accounts": [
         "vector_zero"
       ],
-      "linked_emails": [
-        "recruiter@vector-zero.io"
-      ],
+      "account_count": 1,
+      "is_multi_account": false,
       "linked_phones": [
         "+91-98801-0900"
       ],
-      "is_multi_account": false
+      "linked_emails": [
+        "ops@ciphercore-vector.io"
+      ],
+      "linked_devices": [
+        "DEV-AN-006"
+      ],
+      "confidence": 0.95
     },
     {
-      "canonical_id": "PERSON_PRIYA_K",
+      "canonical_id": "PRIYA_KRISHNAMURTHY",
       "canonical_name": "Priya Krishnamurthy",
+      "is_primary_subject": false,
       "is_target": false,
-      "account_count": 1,
       "accounts": [
         "priya_k"
+      ],
+      "account_count": 1,
+      "is_multi_account": false,
+      "linked_phones": [
+        "+91-98801-0222"
       ],
       "linked_emails": [
         "priya.k@biotech-blr.in"
       ],
-      "linked_phones": [
-        "+91-98801-0222"
-      ],
-      "is_multi_account": false
+      "linked_devices": [],
+      "confidence": 0.98
     },
     {
-      "canonical_id": "PERSON_ROHAN_SHARMA",
+      "canonical_id": "ROHAN_SHARMA",
       "canonical_name": "Rohan Sharma",
+      "is_primary_subject": false,
       "is_target": false,
-      "account_count": 1,
       "accounts": [
-        "rohan_tech"
+        "rohan_sys"
+      ],
+      "account_count": 1,
+      "is_multi_account": false,
+      "linked_phones": [
+        "+91-98801-0333"
       ],
       "linked_emails": [
         "rohan.sharma@fictional-bit.in"
       ],
-      "linked_phones": [
-        "+91-98801-0333"
-      ],
-      "is_multi_account": false
+      "linked_devices": [],
+      "confidence": 0.98
     },
     {
-      "canonical_id": "PERSON_PROF_MENON",
-      "canonical_name": "Prof. K. Menon",
+      "canonical_id": "VIKRAM_MENON",
+      "canonical_name": "Dr. Vikram S. Menon",
+      "is_primary_subject": false,
       "is_target": false,
-      "account_count": 1,
       "accounts": [
         "prof_menon_sys"
       ],
-      "linked_emails": [
-        "kmenon@bit-dept.ac.in"
-      ],
+      "account_count": 1,
+      "is_multi_account": false,
       "linked_phones": [
         "+91-98801-0444"
       ],
-      "is_multi_account": false
+      "linked_emails": [
+        "vsmenon@bit-dept.ac.in"
+      ],
+      "linked_devices": [],
+      "confidence": 0.99
+    },
+    {
+      "canonical_id": "KAVYA_PATEL",
+      "canonical_name": "Kavya Patel",
+      "is_primary_subject": false,
+      "is_target": false,
+      "accounts": [
+        "kavya_drone_ai"
+      ],
+      "account_count": 1,
+      "is_multi_account": false,
+      "linked_phones": [
+        "+91-98801-0555"
+      ],
+      "linked_emails": [
+        "kavya.patel@aero-blr.in"
+      ],
+      "linked_devices": [],
+      "confidence": 0.95
+    },
+    {
+      "canonical_id": "DEEPAK_RAO",
+      "canonical_name": "Deepak Rao",
+      "is_primary_subject": false,
+      "is_target": false,
+      "accounts": [
+        "deepak_kernel"
+      ],
+      "account_count": 1,
+      "is_multi_account": false,
+      "linked_phones": [
+        "+91-98801-0777"
+      ],
+      "linked_emails": [
+        "d_rao@kernel-embed.in"
+      ],
+      "linked_devices": [],
+      "confidence": 0.96
     }
   ],
   "confirmed_links": [
     {
       "account_a": "ananya_dev",
       "account_b": "ananya.n",
-      "confidence": 0.96,
-      "rationale": "Shared primary phone +91-98801-0144 and student email domain"
+      "confidence": 0.99,
+      "rationale": "Shared mobile number +91-98801-0144 and mutual follower corroboration"
     },
     {
       "account_a": "ananya_dev",
       "account_b": "ananyan-dev",
-      "confidence": 0.98,
-      "rationale": "Identical email ananya.nair.sys@fictional-mail.in and commit PGP signature"
+      "confidence": 0.99,
+      "rationale": "Matching corporate institutional email ananya.nair.sys@fictional-mail.in and repo commit author"
     },
     {
-      "account_a": "void_null07",
-      "account_b": "ananya_dev",
-      "confidence": 0.91,
-      "rationale": "Consecutive cell tower handoff between primary and burner SIM at Hebbal junction"
+      "account_a": "ananyan-dev",
+      "account_b": "void_null07",
+      "confidence": 0.98,
+      "rationale": "Cryptographic GPG Master Key 0x9E4B2F81A07C match on code commits and darknet pings"
     }
   ]
 }

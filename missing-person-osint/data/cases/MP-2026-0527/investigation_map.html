@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_eafacfa8541bfa4fac2e90165fdb4051 {
+                #map_976645940dcf06f97250c83a3fcab204 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -55,64 +55,23 @@
     
     
     <style>
-        .leaflet-container {
-            background-color: #0E1231 !important;
-            font-family: 'Inter', -apple-system, sans-serif !important;
-        }
-        .leaflet-tile-pane {
-            filter: brightness(0.65) invert(1) contrast(2.8) hue-rotate(200deg) saturate(0.35) brightness(0.7) !important;
-        }
-        .leaflet-popup-content-wrapper, .leaflet-popup-tip {
-            background: #1A2254 !important;
-            color: #FFFFFF !important;
-            border: 1px solid #2C3979 !important;
-            border-radius: 8px !important;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.75) !important;
-        }
-        .leaflet-control-layers {
-            background: rgba(22, 29, 72, 0.94) !important;
-            color: #FFFFFF !important;
-            border: 1px solid #2C3979 !important;
-            backdrop-filter: blur(14px) !important;
-            border-radius: 8px !important;
-            padding: 10px 14px !important;
-            font-size: 11px !important;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6) !important;
-        }
-        .leaflet-control-layers-expanded label {
-            color: #CBD5E1 !important;
-            font-weight: 500 !important;
-            margin-bottom: 5px !important;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            cursor: pointer;
-        }
-        .leaflet-bar a {
-            background-color: #1A2254 !important;
-            color: #FFFFFF !important;
-            border: 1px solid #2C3979 !important;
-        }
-        .leaflet-bar a:hover {
-            background-color: #202A66 !important;
-            color: #3A6BFF !important;
-        }
-        .leaflet-control-attribution {
-            display: none !important;
-        }
+        .leaflet-container { background-color: #0E1231 !important; font-family: 'Inter', sans-serif !important; }
+        .leaflet-tile-pane { filter: brightness(0.65) invert(1) contrast(2.8) hue-rotate(200deg) saturate(0.35) brightness(0.7) !important; }
+        .leaflet-popup-content-wrapper, .leaflet-popup-tip { background: #1A2254 !important; color: #FFFFFF !important; border: 1px solid #2C3979 !important; border-radius: 8px !important; font-size: 11px !important; }
+        .leaflet-control-attribution { display: none !important; }
     </style>
     
     
-            <div class="folium-map" id="map_eafacfa8541bfa4fac2e90165fdb4051" ></div>
+            <div class="folium-map" id="map_976645940dcf06f97250c83a3fcab204" ></div>
         
 </body>
 <script>
     
     
-            var map_eafacfa8541bfa4fac2e90165fdb4051 = L.map(
-                "map_eafacfa8541bfa4fac2e90165fdb4051",
+            var map_976645940dcf06f97250c83a3fcab204 = L.map(
+                "map_976645940dcf06f97250c83a3fcab204",
                 {
-                    center: [13.12, 77.64],
+                    center: [13.12, 77.65],
                     crs: L.CRS.EPSG3857,
                     ...{
   "zoom": 10,
@@ -127,7 +86,7 @@
 
         
     
-            var tile_layer_5b70574284816531942be23b242a87e3 = L.tileLayer(
+            var tile_layer_73187405d55324783a9733fae7eda5bb = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -144,684 +103,335 @@
             );
         
     
-            tile_layer_5b70574284816531942be23b242a87e3.addTo(map_eafacfa8541bfa4fac2e90165fdb4051);
+            tile_layer_73187405d55324783a9733fae7eda5bb.addTo(map_976645940dcf06f97250c83a3fcab204);
         
     
-            var feature_group_8e86dbaf4662435759b74cc82accae12 = L.featureGroup(
-                {
-}
-            );
+            var poly_line_db9fe9c475e39550da33fb02c8f1f040 = L.polyline(
+                [[12.9345, 77.6258], [12.8452, 77.6602], [12.9352, 77.6245], [12.9715, 77.6074], [12.9719, 77.6412], [12.9763, 77.5929], [13.041, 77.591], [13.1007, 77.5963], [13.2483, 77.7126], [13.3412, 77.689], [13.3702, 77.6835]],
+                {"bubblingMouseEvents": true, "color": "#3A6BFF", "dashArray": "6, 6", "dashOffset": null, "fill": false, "fillColor": "#3A6BFF", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_976645940dcf06f97250c83a3fcab204);
         
     
-            var circle_marker_fc000dec6fba48553b015312929bfb03 = L.circleMarker(
-                [12.9352, 77.6245],
-                {"bubblingMouseEvents": true, "color": "#3A6BFF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3A6BFF", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
-            ).addTo(feature_group_8e86dbaf4662435759b74cc82accae12);
-        
-    
-        var popup_6eca168887f488a0a40f7c11b1312508 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_9688441b203c2701574996e10ab4dcbe = $(`<div id="html_9688441b203c2701574996e10ab4dcbe" style="width: 100.0%; height: 100.0%;"><b>Check-in: Third Wave Coffee Koramangala</b><br/>Account: @ananya_dev<br/>Time: 2026-04-08 11:30:00</div>`)[0];
-                popup_6eca168887f488a0a40f7c11b1312508.setContent(html_9688441b203c2701574996e10ab4dcbe);
-            
-        
-
-        circle_marker_fc000dec6fba48553b015312929bfb03.bindPopup(popup_6eca168887f488a0a40f7c11b1312508)
-        ;
-
-        
-    
-    
-            circle_marker_fc000dec6fba48553b015312929bfb03.bindTooltip(
-                `<div>
-                     Check-in: Third Wave Coffee Koramangala
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_ba760a49fa9f69a4134372ba2a10b48c = L.circleMarker(
-                [12.8452, 77.6602],
-                {"bubblingMouseEvents": true, "color": "#3A6BFF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3A6BFF", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
-            ).addTo(feature_group_8e86dbaf4662435759b74cc82accae12);
-        
-    
-        var popup_645aadfcb822e9021b0a3ad656b13344 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_b0b9de882a73075d3c08fe29192ec024 = $(`<div id="html_b0b9de882a73075d3c08fe29192ec024" style="width: 100.0%; height: 100.0%;"><b>Check-in: Electronic City Tech Campus</b><br/>Account: @ananya.n<br/>Time: 2026-04-10 14:00:00</div>`)[0];
-                popup_645aadfcb822e9021b0a3ad656b13344.setContent(html_b0b9de882a73075d3c08fe29192ec024);
-            
-        
-
-        circle_marker_ba760a49fa9f69a4134372ba2a10b48c.bindPopup(popup_645aadfcb822e9021b0a3ad656b13344)
-        ;
-
-        
-    
-    
-            circle_marker_ba760a49fa9f69a4134372ba2a10b48c.bindTooltip(
-                `<div>
-                     Check-in: Electronic City Tech Campus
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_3ddda5a7515ca66eb9d505f7fe3774ed = L.circleMarker(
-                [12.9719, 77.6412],
-                {"bubblingMouseEvents": true, "color": "#3A6BFF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3A6BFF", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
-            ).addTo(feature_group_8e86dbaf4662435759b74cc82accae12);
-        
-    
-        var popup_65c4b60247bf847ba268cca8ba72a53c = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_d3a478162cb472a6898650226dbbb0fc = $(`<div id="html_d3a478162cb472a6898650226dbbb0fc" style="width: 100.0%; height: 100.0%;"><b>Check-in: Indiranagar Roastery</b><br/>Account: @ananya.n<br/>Time: 2026-04-12 18:00:00</div>`)[0];
-                popup_65c4b60247bf847ba268cca8ba72a53c.setContent(html_d3a478162cb472a6898650226dbbb0fc);
-            
-        
-
-        circle_marker_3ddda5a7515ca66eb9d505f7fe3774ed.bindPopup(popup_65c4b60247bf847ba268cca8ba72a53c)
-        ;
-
-        
-    
-    
-            circle_marker_3ddda5a7515ca66eb9d505f7fe3774ed.bindTooltip(
-                `<div>
-                     Check-in: Indiranagar Roastery
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_ce044f9ba46fa3152a3dc610057e3cd9 = L.circleMarker(
-                [12.9763, 77.5929],
-                {"bubblingMouseEvents": true, "color": "#3A6BFF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3A6BFF", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
-            ).addTo(feature_group_8e86dbaf4662435759b74cc82accae12);
-        
-    
-        var popup_ff92f75b98ffca1f9cff80e998e932b2 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_0fc39693a45496d824b950f78fd988fa = $(`<div id="html_0fc39693a45496d824b950f78fd988fa" style="width: 100.0%; height: 100.0%;"><b>Check-in: Cubbon Park Bamboo Grove</b><br/>Account: @ananya_dev<br/>Time: 2026-04-13 16:45:00</div>`)[0];
-                popup_ff92f75b98ffca1f9cff80e998e932b2.setContent(html_0fc39693a45496d824b950f78fd988fa);
-            
-        
-
-        circle_marker_ce044f9ba46fa3152a3dc610057e3cd9.bindPopup(popup_ff92f75b98ffca1f9cff80e998e932b2)
-        ;
-
-        
-    
-    
-            circle_marker_ce044f9ba46fa3152a3dc610057e3cd9.bindTooltip(
-                `<div>
-                     Check-in: Cubbon Park Bamboo Grove
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_a63860bc1c8dcfd1a370766e2ccb7e11 = L.circleMarker(
-                [13.041, 77.591],
-                {"bubblingMouseEvents": true, "color": "#3A6BFF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3A6BFF", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
-            ).addTo(feature_group_8e86dbaf4662435759b74cc82accae12);
-        
-    
-        var popup_86786db43208ce9e9b9e3cba71b29f72 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_3104b57d84d39d96a982ec16cacfbe8a = $(`<div id="html_3104b57d84d39d96a982ec16cacfbe8a" style="width: 100.0%; height: 100.0%;"><b>Check-in: Hebbal Lake Watchtower</b><br/>Account: @void_null07<br/>Time: 2026-04-15 15:20:00</div>`)[0];
-                popup_86786db43208ce9e9b9e3cba71b29f72.setContent(html_3104b57d84d39d96a982ec16cacfbe8a);
-            
-        
-
-        circle_marker_a63860bc1c8dcfd1a370766e2ccb7e11.bindPopup(popup_86786db43208ce9e9b9e3cba71b29f72)
-        ;
-
-        
-    
-    
-            circle_marker_a63860bc1c8dcfd1a370766e2ccb7e11.bindTooltip(
-                `<div>
-                     Check-in: Hebbal Lake Watchtower
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_959122fece837d5b74ab2bd3eb0611df = L.circleMarker(
-                [13.3702, 77.6835],
-                {"bubblingMouseEvents": true, "color": "#3A6BFF", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3A6BFF", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
-            ).addTo(feature_group_8e86dbaf4662435759b74cc82accae12);
-        
-    
-        var popup_fe8ca461e0c5e892713c6182bbde9164 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_2a4b5e6de861e691f5aa774dc47042da = $(`<div id="html_2a4b5e6de861e691f5aa774dc47042da" style="width: 100.0%; height: 100.0%;"><b>Check-in: Nandi Hills Ridge Overlook</b><br/>Account: @void_null07<br/>Time: 2026-04-16 20:50:00</div>`)[0];
-                popup_fe8ca461e0c5e892713c6182bbde9164.setContent(html_2a4b5e6de861e691f5aa774dc47042da);
-            
-        
-
-        circle_marker_959122fece837d5b74ab2bd3eb0611df.bindPopup(popup_fe8ca461e0c5e892713c6182bbde9164)
-        ;
-
-        
-    
-    
-            circle_marker_959122fece837d5b74ab2bd3eb0611df.bindTooltip(
-                `<div>
-                     Check-in: Nandi Hills Ridge Overlook
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            feature_group_8e86dbaf4662435759b74cc82accae12.addTo(map_eafacfa8541bfa4fac2e90165fdb4051);
-        
-    
-            var feature_group_e0d2f056c6343bb72dd1379d23ecbf7c = L.featureGroup(
-                {
-}
-            );
-        
-    
-            var circle_marker_a3a9d8765d101fbb209dfb2ad2b6947a = L.circleMarker(
-                [12.9352, 77.6245],
-                {"bubblingMouseEvents": true, "color": "#6C5CE7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6C5CE7", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(feature_group_e0d2f056c6343bb72dd1379d23ecbf7c);
-        
-    
-        var popup_d70531246d503c6388fd60ae20698e93 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_7482fea04e653cd3658aa8e69544fd15 = $(`<div id="html_7482fea04e653cd3658aa8e69544fd15" style="width: 100.0%; height: 100.0%;"><b>Photo: koramangala_cafe.jpg</b><br/>Camera: Sony ILCE-7M4<br/>Time: 2026-04-06 17:30:00</div>`)[0];
-                popup_d70531246d503c6388fd60ae20698e93.setContent(html_7482fea04e653cd3658aa8e69544fd15);
-            
-        
-
-        circle_marker_a3a9d8765d101fbb209dfb2ad2b6947a.bindPopup(popup_d70531246d503c6388fd60ae20698e93)
-        ;
-
-        
-    
-    
-            circle_marker_a3a9d8765d101fbb209dfb2ad2b6947a.bindTooltip(
-                `<div>
-                     EXIF: koramangala_cafe.jpg
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_04345a682d0d25de2078bfacf23f6123 = L.circleMarker(
-                [12.9719, 77.6412],
-                {"bubblingMouseEvents": true, "color": "#6C5CE7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6C5CE7", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(feature_group_e0d2f056c6343bb72dd1379d23ecbf7c);
-        
-    
-        var popup_d36aa2615da515d268cb0508034511f7 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_bfb78c88a67efa6d35e929f28f468490 = $(`<div id="html_bfb78c88a67efa6d35e929f28f468490" style="width: 100.0%; height: 100.0%;"><b>Photo: indiranagar_roastery.jpg</b><br/>Camera: Apple iPhone 15 Pro<br/>Time: 2026-04-12 18:30:00</div>`)[0];
-                popup_d36aa2615da515d268cb0508034511f7.setContent(html_bfb78c88a67efa6d35e929f28f468490);
-            
-        
-
-        circle_marker_04345a682d0d25de2078bfacf23f6123.bindPopup(popup_d36aa2615da515d268cb0508034511f7)
-        ;
-
-        
-    
-    
-            circle_marker_04345a682d0d25de2078bfacf23f6123.bindTooltip(
-                `<div>
-                     EXIF: indiranagar_roastery.jpg
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_7db572980af77e16fd39efe0564845a3 = L.circleMarker(
-                [13.3702, 77.6835],
-                {"bubblingMouseEvents": true, "color": "#6C5CE7", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#6C5CE7", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(feature_group_e0d2f056c6343bb72dd1379d23ecbf7c);
-        
-    
-        var popup_1254c4506b36a648523f844a2642f502 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_9c122d5364b4153c05a38254f0932c4d = $(`<div id="html_9c122d5364b4153c05a38254f0932c4d" style="width: 100.0%; height: 100.0%;"><b>Photo: nandi_ridge_dusk.jpg</b><br/>Camera: Sony ILCE-7M4<br/>Time: 2026-04-16 20:30:00</div>`)[0];
-                popup_1254c4506b36a648523f844a2642f502.setContent(html_9c122d5364b4153c05a38254f0932c4d);
-            
-        
-
-        circle_marker_7db572980af77e16fd39efe0564845a3.bindPopup(popup_1254c4506b36a648523f844a2642f502)
-        ;
-
-        
-    
-    
-            circle_marker_7db572980af77e16fd39efe0564845a3.bindTooltip(
-                `<div>
-                     EXIF: nandi_ridge_dusk.jpg
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            feature_group_e0d2f056c6343bb72dd1379d23ecbf7c.addTo(map_eafacfa8541bfa4fac2e90165fdb4051);
-        
-    
-            var feature_group_6371a2e1d8e6d79fc9416f5823905b9a = L.featureGroup(
-                {
-}
-            );
-        
-    
-            var circle_marker_3c5cb90d7819c659bca885845d1c5fa3 = L.circleMarker(
+            var circle_marker_58c5998e70962088a13d93908237afd2 = L.circleMarker(
                 [12.9345, 77.6258],
-                {"bubblingMouseEvents": true, "color": "#00E5A3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E5A3", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(feature_group_6371a2e1d8e6d79fc9416f5823905b9a);
+                {"bubblingMouseEvents": true, "color": "#00E5A3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E5A3", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_976645940dcf06f97250c83a3fcab204);
         
     
-        var popup_2c7601b71ca6bf454e024a0020bc2dfc = L.popup({
+        var popup_18bfd8ae2696286efe6a2a497c398e27 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_9406d82544851ce3464283621fb71fb3 = $(`<div id="html_9406d82544851ce3464283621fb71fb3" style="width: 100.0%; height: 100.0%;"><b>Tower: Koramangala 4th Block</b><br/>Handset: +91-98801-0144<br/>Time: 2026-04-11 18:30:00</div>`)[0];
-                popup_2c7601b71ca6bf454e024a0020bc2dfc.setContent(html_9406d82544851ce3464283621fb71fb3);
+                var html_b618c06ffcaede6df16e213e522e90f0 = $(`<div id="html_b618c06ffcaede6df16e213e522e90f0" style="width: 100.0%; height: 100.0%;"><b>Koramangala 4th Block Housing</b><br/>Residence<br/>Koramangala 4th Block, Bengaluru</div>`)[0];
+                popup_18bfd8ae2696286efe6a2a497c398e27.setContent(html_b618c06ffcaede6df16e213e522e90f0);
             
         
 
-        circle_marker_3c5cb90d7819c659bca885845d1c5fa3.bindPopup(popup_2c7601b71ca6bf454e024a0020bc2dfc)
+        circle_marker_58c5998e70962088a13d93908237afd2.bindPopup(popup_18bfd8ae2696286efe6a2a497c398e27)
         ;
 
         
     
     
-            circle_marker_3c5cb90d7819c659bca885845d1c5fa3.bindTooltip(
-                `<div>
-                     Tower Sector: Koramangala 4th Block (Primary)
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
+            var circle_marker_17d762bbd2c339f82e10af713c45588f = L.circleMarker(
+                [12.8452, 77.6602],
+                {"bubblingMouseEvents": true, "color": "#00E5A3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E5A3", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_976645940dcf06f97250c83a3fcab204);
         
     
-            var circle_marker_726afc272a6e39fa5b6c24896642d457 = L.circleMarker(
-                [12.8399, 77.677],
-                {"bubblingMouseEvents": true, "color": "#00E5A3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E5A3", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(feature_group_6371a2e1d8e6d79fc9416f5823905b9a);
-        
-    
-        var popup_e30b4d9b8e8bbf65375c257a1476117f = L.popup({
+        var popup_06a1459758b6670de8cf11a92eb48aba = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_c18aa5603dc5489a8691c85b02cd25ce = $(`<div id="html_c18aa5603dc5489a8691c85b02cd25ce" style="width: 100.0%; height: 100.0%;"><b>Tower: Electronic City Phase 1</b><br/>Handset: +91-98801-0144<br/>Time: 2026-04-12 10:15:00</div>`)[0];
-                popup_e30b4d9b8e8bbf65375c257a1476117f.setContent(html_c18aa5603dc5489a8691c85b02cd25ce);
+                var html_682fbc2836ed9aa3bacf97c47019aaad = $(`<div id="html_682fbc2836ed9aa3bacf97c47019aaad" style="width: 100.0%; height: 100.0%;"><b>Electronic City BIT Robotics Lab</b><br/>Academic<br/>Electronics City Phase 1, Hosur Road, Bengaluru</div>`)[0];
+                popup_06a1459758b6670de8cf11a92eb48aba.setContent(html_682fbc2836ed9aa3bacf97c47019aaad);
             
         
 
-        circle_marker_726afc272a6e39fa5b6c24896642d457.bindPopup(popup_e30b4d9b8e8bbf65375c257a1476117f)
+        circle_marker_17d762bbd2c339f82e10af713c45588f.bindPopup(popup_06a1459758b6670de8cf11a92eb48aba)
         ;
 
         
     
     
-            circle_marker_726afc272a6e39fa5b6c24896642d457.bindTooltip(
-                `<div>
-                     Tower Sector: Electronic City Phase 1 (Primary)
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
+            var circle_marker_7e40faede5fb0bcedd8430c5d2fb1c98 = L.circleMarker(
+                [12.9352, 77.6245],
+                {"bubblingMouseEvents": true, "color": "#00E5A3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E5A3", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_976645940dcf06f97250c83a3fcab204);
         
     
-            var circle_marker_0980eeaea84c9ea9f5f1b5f7271acf5a = L.circleMarker(
+        var popup_ef5cfe7e12088a68dfd3f3646f6f25e3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_259822aae3d4a194b94d0221e292f107 = $(`<div id="html_259822aae3d4a194b94d0221e292f107" style="width: 100.0%; height: 100.0%;"><b>Third Wave Coffee Koramangala</b><br/>Cafe<br/>80 Feet Road, 4th Block, Koramangala</div>`)[0];
+                popup_ef5cfe7e12088a68dfd3f3646f6f25e3.setContent(html_259822aae3d4a194b94d0221e292f107);
+            
+        
+
+        circle_marker_7e40faede5fb0bcedd8430c5d2fb1c98.bindPopup(popup_ef5cfe7e12088a68dfd3f3646f6f25e3)
+        ;
+
+        
+    
+    
+            var circle_marker_513b51b8f5341efedd2fff644e9225aa = L.circleMarker(
+                [12.9715, 77.6074],
+                {"bubblingMouseEvents": true, "color": "#00E5A3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E5A3", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_976645940dcf06f97250c83a3fcab204);
+        
+    
+        var popup_be51467c29062b3cd3f0a15acbb035b2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0d8bc309fef8d8b1eb409c39c7f66d05 = $(`<div id="html_0d8bc309fef8d8b1eb409c39c7f66d05" style="width: 100.0%; height: 100.0%;"><b>WeWork Galaxy Residency Road</b><br/>Coworking<br/>43 Residency Road, Shanthala Nagar, Bengaluru</div>`)[0];
+                popup_be51467c29062b3cd3f0a15acbb035b2.setContent(html_0d8bc309fef8d8b1eb409c39c7f66d05);
+            
+        
+
+        circle_marker_513b51b8f5341efedd2fff644e9225aa.bindPopup(popup_be51467c29062b3cd3f0a15acbb035b2)
+        ;
+
+        
+    
+    
+            var circle_marker_dc53ee1e40184f31a869677eff67043b = L.circleMarker(
                 [12.9719, 77.6412],
-                {"bubblingMouseEvents": true, "color": "#00E5A3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E5A3", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
-            ).addTo(feature_group_6371a2e1d8e6d79fc9416f5823905b9a);
+                {"bubblingMouseEvents": true, "color": "#00E5A3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E5A3", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_976645940dcf06f97250c83a3fcab204);
         
     
-        var popup_91601e077cf2247571da926ed9221f2d = L.popup({
+        var popup_fa99ddca9815ff909d767d9014a9ade3 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_f11a4d85572163fe37ac4d5349ba5e36 = $(`<div id="html_f11a4d85572163fe37ac4d5349ba5e36" style="width: 100.0%; height: 100.0%;"><b>Tower: Indiranagar 100ft Road</b><br/>Handset: +91-98801-0144<br/>Time: 2026-04-12 17:45:00</div>`)[0];
-                popup_91601e077cf2247571da926ed9221f2d.setContent(html_f11a4d85572163fe37ac4d5349ba5e36);
+                var html_6214c6892b3bff2ad60a16d44b512b12 = $(`<div id="html_6214c6892b3bff2ad60a16d44b512b12" style="width: 100.0%; height: 100.0%;"><b>Indiranagar Roastery</b><br/>Cafe/Meeting<br/>100 Feet Road, Indiranagar, Bengaluru</div>`)[0];
+                popup_fa99ddca9815ff909d767d9014a9ade3.setContent(html_6214c6892b3bff2ad60a16d44b512b12);
             
         
 
-        circle_marker_0980eeaea84c9ea9f5f1b5f7271acf5a.bindPopup(popup_91601e077cf2247571da926ed9221f2d)
+        circle_marker_dc53ee1e40184f31a869677eff67043b.bindPopup(popup_fa99ddca9815ff909d767d9014a9ade3)
         ;
 
         
     
     
-            circle_marker_0980eeaea84c9ea9f5f1b5f7271acf5a.bindTooltip(
-                `<div>
-                     Tower Sector: Indiranagar 100ft Road (Primary)
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
+            var circle_marker_ed428282d0d81982f7ed52b94368d178 = L.circleMarker(
+                [12.9763, 77.5929],
+                {"bubblingMouseEvents": true, "color": "#00E5A3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E5A3", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_976645940dcf06f97250c83a3fcab204);
         
     
-            var circle_marker_e2822969512ad3f595bfa37a172bdca8 = L.circleMarker(
-                [12.9784, 77.6385],
-                {"bubblingMouseEvents": true, "color": "#FF4757", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4757", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
-            ).addTo(feature_group_6371a2e1d8e6d79fc9416f5823905b9a);
-        
-    
-        var popup_5e8316d1d734924900db349488f7ce7d = L.popup({
+        var popup_88debc09e04f7f7d5fd621318c87cd7c = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_68c6b2a045d63864fee7fbb4ef84eeb2 = $(`<div id="html_68c6b2a045d63864fee7fbb4ef84eeb2" style="width: 100.0%; height: 100.0%;"><b>Tower: Indiranagar Metro Sector</b><br/>Handset: +91-98801-0199<br/>Time: 2026-04-14 20:30:00</div>`)[0];
-                popup_5e8316d1d734924900db349488f7ce7d.setContent(html_68c6b2a045d63864fee7fbb4ef84eeb2);
+                var html_2bd4723910f3f49b69ce64522bf6a2d1 = $(`<div id="html_2bd4723910f3f49b69ce64522bf6a2d1" style="width: 100.0%; height: 100.0%;"><b>Cubbon Park Bamboo Grove</b><br/>Park<br/>Kasturba Road, Bengaluru</div>`)[0];
+                popup_88debc09e04f7f7d5fd621318c87cd7c.setContent(html_2bd4723910f3f49b69ce64522bf6a2d1);
             
         
 
-        circle_marker_e2822969512ad3f595bfa37a172bdca8.bindPopup(popup_5e8316d1d734924900db349488f7ce7d)
+        circle_marker_ed428282d0d81982f7ed52b94368d178.bindPopup(popup_88debc09e04f7f7d5fd621318c87cd7c)
         ;
 
         
     
     
-            circle_marker_e2822969512ad3f595bfa37a172bdca8.bindTooltip(
-                `<div>
-                     Tower Sector: Indiranagar Metro Sector (Burner)
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
+            var circle_marker_daffff583333c4bc37d6c6aa8990bdce = L.circleMarker(
+                [13.041, 77.591],
+                {"bubblingMouseEvents": true, "color": "#00E5A3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E5A3", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_976645940dcf06f97250c83a3fcab204);
         
     
-            var circle_marker_69a1d737a4f821c510fc06bd692e529a = L.circleMarker(
-                [13.0358, 77.597],
-                {"bubblingMouseEvents": true, "color": "#FF4757", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4757", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
-            ).addTo(feature_group_6371a2e1d8e6d79fc9416f5823905b9a);
-        
-    
-        var popup_b49b1b746dd4a24c1c87bc818bd409a9 = L.popup({
+        var popup_df2edfb7c6b71ebabc5453a33be1069d = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_d12011310dbc4caddcda25708bf60b2f = $(`<div id="html_d12011310dbc4caddcda25708bf60b2f" style="width: 100.0%; height: 100.0%;"><b>Tower: Hebbal Flyover North</b><br/>Handset: +91-98801-0199<br/>Time: 2026-04-15 14:10:00</div>`)[0];
-                popup_b49b1b746dd4a24c1c87bc818bd409a9.setContent(html_d12011310dbc4caddcda25708bf60b2f);
+                var html_51277cc962d29024be3b05f0cdb10d0c = $(`<div id="html_51277cc962d29024be3b05f0cdb10d0c" style="width: 100.0%; height: 100.0%;"><b>Hebbal Lake Transit Hub</b><br/>Transit/Observation<br/>Bellary Road, Hebbal, Bengaluru</div>`)[0];
+                popup_df2edfb7c6b71ebabc5453a33be1069d.setContent(html_51277cc962d29024be3b05f0cdb10d0c);
             
         
 
-        circle_marker_69a1d737a4f821c510fc06bd692e529a.bindPopup(popup_b49b1b746dd4a24c1c87bc818bd409a9)
+        circle_marker_daffff583333c4bc37d6c6aa8990bdce.bindPopup(popup_df2edfb7c6b71ebabc5453a33be1069d)
         ;
 
         
     
     
-            circle_marker_69a1d737a4f821c510fc06bd692e529a.bindTooltip(
-                `<div>
-                     Tower Sector: Hebbal Flyover North (Burner)
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_37c19802a182a061742a00ac367e110b = L.circleMarker(
+            var circle_marker_d5cb592981fbb3a60f2248274519236d = L.circleMarker(
                 [13.2483, 77.7126],
-                {"bubblingMouseEvents": true, "color": "#FF4757", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4757", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
-            ).addTo(feature_group_6371a2e1d8e6d79fc9416f5823905b9a);
+                {"bubblingMouseEvents": true, "color": "#00E5A3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E5A3", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_976645940dcf06f97250c83a3fcab204);
         
     
-        var popup_966adeac5b14cfbd2bbb9e4abbcc5782 = L.popup({
+        var popup_8a644fad33d3dc0d8e60b93d41fc5321 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_36d462de2eadd7e14f8f814e847bbe64 = $(`<div id="html_36d462de2eadd7e14f8f814e847bbe64" style="width: 100.0%; height: 100.0%;"><b>Tower: Devanahalli Highway Corridor</b><br/>Handset: +91-98801-0199<br/>Time: 2026-04-16 19:40:00</div>`)[0];
-                popup_966adeac5b14cfbd2bbb9e4abbcc5782.setContent(html_36d462de2eadd7e14f8f814e847bbe64);
+                var html_f0b7865e130310b9490c1834d2fdada8 = $(`<div id="html_f0b7865e130310b9490c1834d2fdada8" style="width: 100.0%; height: 100.0%;"><b>Devanahalli Logistics Corridor</b><br/>Industrial/Transit<br/>NH-44 Airport Bypass, Devanahalli, Bengaluru</div>`)[0];
+                popup_8a644fad33d3dc0d8e60b93d41fc5321.setContent(html_f0b7865e130310b9490c1834d2fdada8);
             
         
 
-        circle_marker_37c19802a182a061742a00ac367e110b.bindPopup(popup_966adeac5b14cfbd2bbb9e4abbcc5782)
+        circle_marker_d5cb592981fbb3a60f2248274519236d.bindPopup(popup_8a644fad33d3dc0d8e60b93d41fc5321)
         ;
 
         
     
     
-            circle_marker_37c19802a182a061742a00ac367e110b.bindTooltip(
-                `<div>
-                     Tower Sector: Devanahalli Highway Corridor (Burner)
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_d0b50a712013712dbf00ebafb78b2219 = L.circleMarker(
+            var circle_marker_48ca19a6439040c1f8fb480ccdcaff8a = L.circleMarker(
                 [13.3702, 77.6835],
-                {"bubblingMouseEvents": true, "color": "#FF4757", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4757", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
-            ).addTo(feature_group_6371a2e1d8e6d79fc9416f5823905b9a);
+                {"bubblingMouseEvents": true, "color": "#FF4757", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4757", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_976645940dcf06f97250c83a3fcab204);
         
     
-        var popup_b9bb3be5ef277a780c0251a05a488984 = L.popup({
+        var popup_2f14dcd80eebce83608031db66c34aed = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_62550484fa8deba2c66be3ddddd14953 = $(`<div id="html_62550484fa8deba2c66be3ddddd14953" style="width: 100.0%; height: 100.0%;"><b>Tower: Nandi Hills Ridge Sector</b><br/>Handset: +91-98801-0199<br/>Time: 2026-04-16 21:15:00</div>`)[0];
-                popup_b9bb3be5ef277a780c0251a05a488984.setContent(html_62550484fa8deba2c66be3ddddd14953);
+                var html_e44fb2bdb4eeb5f5ac2909bf7a53d85a = $(`<div id="html_e44fb2bdb4eeb5f5ac2909bf7a53d85a" style="width: 100.0%; height: 100.0%;"><b>Nandi Hills Ridge Overlook</b><br/>Scenic/Terminal Radar<br/>Nandi Hills Ridge Radar Base, Chikkaballapur District</div>`)[0];
+                popup_2f14dcd80eebce83608031db66c34aed.setContent(html_e44fb2bdb4eeb5f5ac2909bf7a53d85a);
             
         
 
-        circle_marker_d0b50a712013712dbf00ebafb78b2219.bindPopup(popup_b9bb3be5ef277a780c0251a05a488984)
+        circle_marker_48ca19a6439040c1f8fb480ccdcaff8a.bindPopup(popup_2f14dcd80eebce83608031db66c34aed)
         ;
 
         
     
     
-            circle_marker_d0b50a712013712dbf00ebafb78b2219.bindTooltip(
-                `<div>
-                     Tower Sector: Nandi Hills Ridge Sector (Burner)
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
+            var circle_marker_e06a44af537694b30e80af3f7ac7880e = L.circleMarker(
+                [12.986, 77.731],
+                {"bubblingMouseEvents": true, "color": "#00E5A3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E5A3", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_976645940dcf06f97250c83a3fcab204);
         
     
-            feature_group_6371a2e1d8e6d79fc9416f5823905b9a.addTo(map_eafacfa8541bfa4fac2e90165fdb4051);
-        
-    
-            var feature_group_afd09d77a1025eaaf300d649ba905d05 = L.featureGroup(
-                {
-}
-            );
-        
-    
-            var poly_line_9558060edf18877950229b92de4ada66 = L.polyline(
-                [[12.9352, 77.6245], [12.9352, 77.6245], [12.8452, 77.6602], [12.9345, 77.6258], [12.8399, 77.677], [12.9719, 77.6412], [12.9719, 77.6412], [12.9719, 77.6412], [12.9763, 77.5929], [12.9784, 77.6385], [13.0358, 77.597], [13.041, 77.591], [13.2483, 77.7126], [13.3702, 77.6835], [13.3702, 77.6835], [13.3702, 77.6835]],
-                {"bubblingMouseEvents": true, "color": "#3A6BFF", "dashArray": "6, 8", "dashOffset": null, "fill": false, "fillColor": "#3A6BFF", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.85, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
-            ).addTo(feature_group_afd09d77a1025eaaf300d649ba905d05);
-        
-    
-            poly_line_9558060edf18877950229b92de4ada66.bindTooltip(
-                `<div>
-                     Ananya Nair Chronological Trajectory
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            feature_group_afd09d77a1025eaaf300d649ba905d05.addTo(map_eafacfa8541bfa4fac2e90165fdb4051);
-        
-    
-            var feature_group_8bf4fe00c62a18f1b08db4215f53270a = L.featureGroup(
-                {
-}
-            );
-        
-    
-            var marker_fb93a808583ea764384c1ccce8e798ca = L.marker(
-                [13.3702, 77.6835],
-                {
-}
-            ).addTo(feature_group_8bf4fe00c62a18f1b08db4215f53270a);
-        
-    
-            var icon_ae80460674d7d0561f74f0766646e932 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "star",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_b64fa7938364eefd3a755829e3da9a25 = L.popup({
+        var popup_ab4a3cddf1cc765257182774286fffa7 = L.popup({
   "maxWidth": "100%",
 });
 
         
             
-                var html_dc1a4f70fd7ca16fd45256574cf6a17a = $(`<div id="html_dc1a4f70fd7ca16fd45256574cf6a17a" style="width: 100.0%; height: 100.0%;"><div style='font-family:Inter; color:#FFFFFF;'><b>🚨 CANDIDATE LKL (RANK 1)</b><br/>Nandi Hills Ridge Overlook<br/>Final Handset Ping: 2026-04-16 21:15 UTC<br/>Confidence: 93.8%</div></div>`)[0];
-                popup_b64fa7938364eefd3a755829e3da9a25.setContent(html_dc1a4f70fd7ca16fd45256574cf6a17a);
+                var html_c785c5b33b7297f494bdf2cbacca6999 = $(`<div id="html_c785c5b33b7297f494bdf2cbacca6999" style="width: 100.0%; height: 100.0%;"><b>Whitefield ITPL Tech Corridor</b><br/>Industrial/Tech<br/>International Tech Park, Whitefield, Bengaluru</div>`)[0];
+                popup_ab4a3cddf1cc765257182774286fffa7.setContent(html_c785c5b33b7297f494bdf2cbacca6999);
             
         
 
-        marker_fb93a808583ea764384c1ccce8e798ca.bindPopup(popup_b64fa7938364eefd3a755829e3da9a25)
+        circle_marker_e06a44af537694b30e80af3f7ac7880e.bindPopup(popup_ab4a3cddf1cc765257182774286fffa7)
         ;
 
         
     
     
-            marker_fb93a808583ea764384c1ccce8e798ca.bindTooltip(
-                `<div>
-                     🚨 CRITICAL: Last Known Location (Nandi Hills Ridge)
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
+            var circle_marker_812319eee63757e1aff23c841e7a2a16 = L.circleMarker(
+                [13.135, 77.605],
+                {"bubblingMouseEvents": true, "color": "#00E5A3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E5A3", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_976645940dcf06f97250c83a3fcab204);
         
     
-                marker_fb93a808583ea764384c1ccce8e798ca.setIcon(icon_ae80460674d7d0561f74f0766646e932);
-            
-    
-            var circle_80df50f5024784a727cde5b288cdf249 = L.circle(
-                [13.3702, 77.6835],
-                {"bubblingMouseEvents": true, "color": "#FF4757", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#FF4757", "fillOpacity": 0.25, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 400, "stroke": true, "weight": 2}
-            ).addTo(feature_group_8bf4fe00c62a18f1b08db4215f53270a);
-        
-    
-            circle_80df50f5024784a727cde5b288cdf249.bindTooltip(
-                `<div>
-                     High-Probability Disappearance Search Radius (400m)
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            feature_group_8bf4fe00c62a18f1b08db4215f53270a.addTo(map_eafacfa8541bfa4fac2e90165fdb4051);
-        
-    
-            var layer_control_0e43990dd5bb0cdfe2b0cfb68bd8c922_layers = {
-                base_layers : {
-                    "https://tile.openstreetmap.org/{z}/{x}/{y}.png" : tile_layer_5b70574284816531942be23b242a87e3,
-                },
-                overlays :  {
-                    "\ud83d\udd35 Venue Check-ins" : feature_group_8e86dbaf4662435759b74cc82accae12,
-                    "\ud83d\udfe3 Photo GPS EXIF" : feature_group_e0d2f056c6343bb72dd1379d23ecbf7c,
-                    "\ud83d\udfe2 Cell Tower Sectors" : feature_group_6371a2e1d8e6d79fc9416f5823905b9a,
-                    "\ud83d\udfe0 Trajectory Polyline" : feature_group_afd09d77a1025eaaf300d649ba905d05,
-                    "\ud83d\udd34 Candidate LKL (Rank 1)" : feature_group_8bf4fe00c62a18f1b08db4215f53270a,
-                },
-            };
-            let layer_control_0e43990dd5bb0cdfe2b0cfb68bd8c922 = L.control.layers(
-                layer_control_0e43990dd5bb0cdfe2b0cfb68bd8c922_layers.base_layers,
-                layer_control_0e43990dd5bb0cdfe2b0cfb68bd8c922_layers.overlays,
-                {
-  "position": "topright",
-  "collapsed": false,
-  "autoZIndex": true,
-}
-            ).addTo(map_eafacfa8541bfa4fac2e90165fdb4051);
+        var popup_92ad06e84b79fdde5482b9b6c5f231a2 = L.popup({
+  "maxWidth": "100%",
+});
 
         
+            
+                var html_da7f3769cf2d9869463d3fce9069334a = $(`<div id="html_da7f3769cf2d9869463d3fce9069334a" style="width: 100.0%; height: 100.0%;"><b>Yelahanka Airbase Sector</b><br/>Aviation Perimeter<br/>Air Force Station Yelahanka Perimeter, Bengaluru</div>`)[0];
+                popup_92ad06e84b79fdde5482b9b6c5f231a2.setContent(html_da7f3769cf2d9869463d3fce9069334a);
+            
+        
+
+        circle_marker_812319eee63757e1aff23c841e7a2a16.bindPopup(popup_92ad06e84b79fdde5482b9b6c5f231a2)
+        ;
+
+        
+    
+    
+            var circle_marker_234cafcde1f9dc83eedc741c66600099 = L.circleMarker(
+                [13.048, 77.62],
+                {"bubblingMouseEvents": true, "color": "#00E5A3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E5A3", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_976645940dcf06f97250c83a3fcab204);
+        
+    
+        var popup_a0db8f19acf1fc714647235df17ad0f1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_60e641ef671788cc0ab474b207d27b02 = $(`<div id="html_60e641ef671788cc0ab474b207d27b02" style="width: 100.0%; height: 100.0%;"><b>Manyata Tech Park North</b><br/>Commercial/R&D<br/>Nagavara Outer Ring Road, Bengaluru</div>`)[0];
+                popup_a0db8f19acf1fc714647235df17ad0f1.setContent(html_60e641ef671788cc0ab474b207d27b02);
+            
+        
+
+        circle_marker_234cafcde1f9dc83eedc741c66600099.bindPopup(popup_a0db8f19acf1fc714647235df17ad0f1)
+        ;
+
+        
+    
+    
+            var circle_marker_efdb19a1cf089c9b47b241cf38a2966d = L.circleMarker(
+                [13.18, 77.635],
+                {"bubblingMouseEvents": true, "color": "#00E5A3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E5A3", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_976645940dcf06f97250c83a3fcab204);
+        
+    
+        var popup_65b4990344ec39b68bb8368330540100 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ec0fcbe13df76b01da90abe80f731037 = $(`<div id="html_ec0fcbe13df76b01da90abe80f731037" style="width: 100.0%; height: 100.0%;"><b>Bellary Road Tollway Sector</b><br/>Highway/FASTAG<br/>NH-44 Expressway Toll Plaza, Bengaluru North</div>`)[0];
+                popup_65b4990344ec39b68bb8368330540100.setContent(html_ec0fcbe13df76b01da90abe80f731037);
+            
+        
+
+        circle_marker_efdb19a1cf089c9b47b241cf38a2966d.bindPopup(popup_65b4990344ec39b68bb8368330540100)
+        ;
+
+        
+    
+    
+            var circle_marker_1615719000380ee781eff25aa4722916 = L.circleMarker(
+                [13.39, 77.72],
+                {"bubblingMouseEvents": true, "color": "#00E5A3", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00E5A3", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_976645940dcf06f97250c83a3fcab204);
+        
+    
+        var popup_bb76743eba040294adc51651e589c7f9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f9e2e7777f46760528cb30a4bcd95b8f = $(`<div id="html_f9e2e7777f46760528cb30a4bcd95b8f" style="width: 100.0%; height: 100.0%;"><b>Chikkaballapur Foothills Checkpoint</b><br/>Rural Checkpoint<br/>SH-104 Foothills Junction, Chikkaballapur</div>`)[0];
+                popup_bb76743eba040294adc51651e589c7f9.setContent(html_f9e2e7777f46760528cb30a4bcd95b8f);
+            
+        
+
+        circle_marker_1615719000380ee781eff25aa4722916.bindPopup(popup_bb76743eba040294adc51651e589c7f9)
+        ;
+
+        
+    
 </script>
 </html>

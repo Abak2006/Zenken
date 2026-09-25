@@ -1,0 +1,80 @@
+[
+  {
+    "device_id": "DEV-AN-001",
+    "device_name": "ThinkPad P1 Gen 6 (Workstation)",
+    "device_type": "Laptop / Workstation",
+    "platform": "Arch Linux (Kernel 6.8.4-zen)",
+    "imei_or_mac": "48:2a:e3:10:9c:51",
+    "associated_account": "ananyan-dev",
+    "owner_entity": "Ananya Nair",
+    "timestamp_utc": "2026-04-12 23:45:00",
+    "event": "LUKS key wipe command executed over SSH from remote bridge",
+    "status": "Cryptographically Sanitized",
+    "confidence": 1.0
+  },
+  {
+    "device_id": "DEV-AN-002",
+    "device_name": "OnePlus 12 (Primary Smartphone)",
+    "device_type": "Smartphone",
+    "platform": "OxygenOS 14 (Android 14)",
+    "imei_or_mac": "864920184029112",
+    "associated_account": "ananya_dev",
+    "owner_entity": "Ananya Nair",
+    "timestamp_utc": "2026-04-13 08:15:00",
+    "event": "Airtel postpaid SIM removed; left powered on at Koramangala room",
+    "status": "Abandoned in Room",
+    "confidence": 0.99
+  },
+  {
+    "device_id": "DEV-AN-003",
+    "device_name": "Nokia 105 (Prepaid Burner Handset)",
+    "device_type": "Feature Phone / Burner",
+    "platform": "Series 30+",
+    "imei_or_mac": "863920194829104",
+    "associated_account": "void_null07",
+    "owner_entity": "Ananya Nair",
+    "timestamp_utc": "2026-04-16 21:15:00",
+    "event": "Battery abruptly removed following final Nandi Hills radar ping",
+    "status": "Terminated LKL",
+    "confidence": 0.98
+  },
+  {
+    "device_id": "DEV-AN-004",
+    "device_name": "Xilinx Zynq UltraScale+ FPGA Board",
+    "device_type": "Embedded Hardware",
+    "platform": "FreeRTOS / Bare-Metal",
+    "imei_or_mac": "MAC: 00:0A:35:FE:81:42",
+    "associated_account": "ananyan-dev",
+    "owner_entity": "BIT Robotics Lab",
+    "timestamp_utc": "2026-04-14 02:10:00",
+    "event": "JTAG programmer flash dump of flight control firmware",
+    "status": "Hardware Desoldered & Scraped",
+    "confidence": 0.95
+  },
+  {
+    "device_id": "DEV-AN-005",
+    "device_name": "Sabrent Tool-Free NVMe Enclosure",
+    "device_type": "Cold Storage SSD",
+    "platform": "Hardware Encrypted",
+    "imei_or_mac": "SN: NVME-EXT-9941",
+    "associated_account": "void_null07",
+    "owner_entity": "Ananya Nair",
+    "timestamp_utc": "2026-04-12 21:30:00",
+    "event": "Full repository clone and encrypted firmware dump archived",
+    "status": "Exfiltrated with Subject",
+    "confidence": 0.94
+  },
+  {
+    "device_id": "DEV-AN-006",
+    "device_name": "DJI Matrice 300 RTK Radio Transceiver",
+    "device_type": "RF Drone Telemetry Transponder",
+    "platform": "OcuSync Enterprise (2.4/5.8 GHz)",
+    "imei_or_mac": "RF-TX: 2488-K9-9182",
+    "associated_account": "void_null07",
+    "owner_entity": "CipherCore Vector Systems",
+    "timestamp_utc": "2026-04-16 21:14:00",
+    "event": "Autonomous drone swarm telemetry uplink burst at 2.412 GHz",
+    "status": "Airborne RF Terminal Ping",
+    "confidence": 0.96
+  }
+]

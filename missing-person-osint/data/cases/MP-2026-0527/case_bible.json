@@ -1,34 +1,34 @@
 {
   "case_metadata": {
     "case_id": "MP-2026-0527",
-    "investigation_title": "Disappearance of Ananya Nair",
+    "investigation_title": "Disappearance of Ananya Nair \u2014 Autonomous Systems Security Incident",
     "status": "OPEN",
     "date_reported": "2026-04-18T09:00:00Z",
-    "assigned_team": "Central Cyber Forensics & OSINT Squad",
-    "jurisdiction": "Bengaluru Central / Electronic City Division"
+    "assigned_team": "Central Cyber Forensics & Special OSINT Squad",
+    "jurisdiction": "Bengaluru Central / Electronic City Cyber Crime Division"
   },
   "missing_person": {
     "full_name": "Ananya Nair",
     "age": 22,
     "pronouns": "she/her",
-    "occupation": "Software Engineering Student & Open-Source Contributor",
-    "institution": "Bengaluru Institute of Technology",
+    "occupation": "Distributed Systems & Autonomous Drone Firmware Researcher",
+    "institution": "Bengaluru Institute of Technology (BIT)",
     "last_seen_date": "2026-04-16T21:15:00Z",
     "last_seen_location_name": "Nandi Hills Ridge Overlook",
     "last_seen_coordinates": {
       "latitude": 13.3702,
       "longitude": 77.6835
     },
-    "routine_description": "Final-year B.Tech Computer Science student. Daily commute between Koramangala student housing and Electronic City tech campus. Worked remote shifts from Indiranagar cafes on Thursdays. Disappeared during final capstone deployment week."
+    "routine_description": "Final-year B.Tech CS researcher leading the HyperMesh-K9 peer-to-peer telemetry swarm project. Maintained daily routines between Koramangala student quarters and Electronic City campus robotics labs. Disappeared following a secret contract NDA meeting at Indiranagar Roastery. Digital audit reveals repository force-pushes, JTAG testbench flash dumps, and a burner handset trace heading north on the NH-44 highway corridor."
   },
   "digital_identities": [
     {
       "platform": "ChirpNet",
       "handle": "ananya_dev",
-      "display_name": "Ananya Nair | Systems & AI",
+      "display_name": "Ananya Nair | Systems & Kernel",
       "account_type": "primary",
       "status": "active",
-      "bio": "CS Senior @ BIT Bengaluru. Distributed ML, kernels, Rust. Mail: ananya.nair.sys@fictional-mail.in",
+      "bio": "CS Senior @ BIT. Distributed consensus, drone mesh firmware, eBPF, Rust. Mail: ananya.nair.sys@fictional-mail.in",
       "email": "ananya.nair.sys@fictional-mail.in",
       "phone_reference": "+91-98801-0144"
     },
@@ -38,7 +38,7 @@
       "display_name": "Ananya N.",
       "account_type": "variant_alias",
       "status": "active",
-      "bio": "filter coffee, terminal windows & western ghats treks",
+      "bio": "filter coffee, terminal logs & Western Ghats ridge treks",
       "email": "ananya_personal@fictional-mail.in",
       "phone_reference": "+91-98801-0144"
     },
@@ -48,7 +48,7 @@
       "display_name": "Ananya Nair",
       "account_type": "dormant_developer",
       "status": "active",
-      "bio": "Compilers & distributed storage contributor",
+      "bio": "Maintainer: bit-lab/hypermesh-core. PGP: 0x9E4B2F81A07C",
       "email": "ananya.nair.sys@fictional-mail.in",
       "phone_reference": "+91-98801-0144"
     },
@@ -58,7 +58,7 @@
       "display_name": "null_ptr",
       "account_type": "covert_burner",
       "status": "active",
-      "bio": "ephemeral nodes & cold corridors",
+      "bio": "ephemeral telemetry nodes & cold hardware corridors",
       "email": "anon_blr07@proton-synthetic.me",
       "phone_reference": "+91-98801-0199"
     }
@@ -74,7 +74,7 @@
     },
     {
       "id": "blr_v02",
-      "name": "Electronic City Tech Campus",
+      "name": "Electronic City BIT Robotics Lab",
       "category": "Academic",
       "latitude": 12.8452,
       "longitude": 77.6602,
@@ -90,6 +90,14 @@
     },
     {
       "id": "blr_v04",
+      "name": "WeWork Galaxy Residency Road",
+      "category": "Coworking",
+      "latitude": 12.9715,
+      "longitude": 77.6074,
+      "address": "43 Residency Road, Shanthala Nagar, Bengaluru"
+    },
+    {
+      "id": "blr_v05",
       "name": "Indiranagar Roastery",
       "category": "Cafe/Meeting",
       "latitude": 12.9719,
@@ -97,7 +105,7 @@
       "address": "100 Feet Road, Indiranagar, Bengaluru"
     },
     {
-      "id": "blr_v05",
+      "id": "blr_v06",
       "name": "Cubbon Park Bamboo Grove",
       "category": "Park",
       "latitude": 12.9763,
@@ -105,20 +113,68 @@
       "address": "Kasturba Road, Bengaluru"
     },
     {
-      "id": "blr_v06",
-      "name": "Hebbal Lake Watchtower",
+      "id": "blr_v07",
+      "name": "Hebbal Lake Transit Hub",
       "category": "Transit/Observation",
       "latitude": 13.041,
       "longitude": 77.591,
       "address": "Bellary Road, Hebbal, Bengaluru"
     },
     {
-      "id": "blr_v07",
+      "id": "blr_v08",
+      "name": "Devanahalli Logistics Corridor",
+      "category": "Industrial/Transit",
+      "latitude": 13.2483,
+      "longitude": 77.7126,
+      "address": "NH-44 Airport Bypass, Devanahalli, Bengaluru"
+    },
+    {
+      "id": "blr_v09",
       "name": "Nandi Hills Ridge Overlook",
-      "category": "Scenic/Terminal",
+      "category": "Scenic/Terminal Radar",
       "latitude": 13.3702,
       "longitude": 77.6835,
-      "address": "Nandi Hills Ridge, Chikkaballapur District"
+      "address": "Nandi Hills Ridge Radar Base, Chikkaballapur District"
+    },
+    {
+      "id": "blr_v10",
+      "name": "Whitefield ITPL Tech Corridor",
+      "category": "Industrial/Tech",
+      "latitude": 12.986,
+      "longitude": 77.731,
+      "address": "International Tech Park, Whitefield, Bengaluru"
+    },
+    {
+      "id": "blr_v11",
+      "name": "Yelahanka Airbase Sector",
+      "category": "Aviation Perimeter",
+      "latitude": 13.135,
+      "longitude": 77.605,
+      "address": "Air Force Station Yelahanka Perimeter, Bengaluru"
+    },
+    {
+      "id": "blr_v12",
+      "name": "Manyata Tech Park North",
+      "category": "Commercial/R&D",
+      "latitude": 13.048,
+      "longitude": 77.62,
+      "address": "Nagavara Outer Ring Road, Bengaluru"
+    },
+    {
+      "id": "blr_v13",
+      "name": "Bellary Road Tollway Sector",
+      "category": "Highway/FASTAG",
+      "latitude": 13.18,
+      "longitude": 77.635,
+      "address": "NH-44 Expressway Toll Plaza, Bengaluru North"
+    },
+    {
+      "id": "blr_v14",
+      "name": "Chikkaballapur Foothills Checkpoint",
+      "category": "Rural Checkpoint",
+      "latitude": 13.39,
+      "longitude": 77.72,
+      "address": "SH-104 Foothills Junction, Chikkaballapur"
     }
   ]
 }

@@ -1,54 +1,108 @@
 {
-  "candidate_lkl": {
-    "rank": 1,
-    "venue_name": "Nandi Hills Ridge Overlook",
-    "latitude": 13.3702,
-    "longitude": 77.6835,
-    "confidence": 0.938,
-    "final_telecom_ping": "2026-04-16T21:15:00Z",
-    "cell_tower_id": "BLR-TWR-8841",
-    "search_radius_meters": 400
-  },
-  "clusters": [
+  "spatial_clusters": [
     {
       "cluster_id": 0,
-      "name": "Koramangala & Indiranagar Hub",
-      "center": [
-        12.9535,
-        77.633
-      ],
-      "event_count": 8,
-      "dominant_modality": "Physical Check-ins & Cellular CDR"
+      "label": "Koramangala Residential Core",
+      "center_lat": 12.9348,
+      "center_lon": 77.6252,
+      "points_count": 18,
+      "first_seen": "2026-03-28 08:30:00",
+      "last_seen": "2026-04-13 08:15:00",
+      "description": "Student residence quarters and Third Wave Coffee morning routines"
     },
     {
       "cluster_id": 1,
-      "name": "Electronic City Tech Zone",
-      "center": [
-        12.8452,
-        77.6602
-      ],
-      "event_count": 4,
-      "dominant_modality": "Academic Attendance & Social Transmissions"
+      "label": "Electronic City Robotics Lab",
+      "center_lat": 12.8452,
+      "center_lon": 77.6602,
+      "points_count": 24,
+      "first_seen": "2026-03-28 09:15:00",
+      "last_seen": "2026-04-14 02:10:00",
+      "description": "BIT Robotics Lab hardware testbed and FPGA drone benches"
     },
     {
       "cluster_id": 2,
-      "name": "Hebbal & Bellary Road Exit Corridor",
-      "center": [
-        13.041,
-        77.591
-      ],
-      "event_count": 3,
-      "dominant_modality": "Burner Handset Cellular Pings"
+      "label": "Indiranagar Meeting Corridor",
+      "center_lat": 12.9719,
+      "center_lon": 77.6412,
+      "points_count": 14,
+      "first_seen": "2026-04-09 17:35:00",
+      "last_seen": "2026-04-14 20:10:00",
+      "description": "Confidential NDA dining meeting and initial burner handset activation"
     },
     {
       "cluster_id": 3,
-      "name": "Nandi Hills Terminal Cluster (LKL)",
-      "center": [
-        13.3702,
-        77.6835
-      ],
-      "event_count": 2,
-      "dominant_modality": "Final Burner Handset Ping & EXIF Photo"
+      "label": "Hebbal / Devanahalli Highway Transit",
+      "center_lat": 13.1446,
+      "center_lon": 77.6518,
+      "points_count": 12,
+      "first_seen": "2026-04-15 15:10:00",
+      "last_seen": "2026-04-16 19:42:00",
+      "description": "Northbound transit via NH-44 expressway and toll plaza ANPR camera"
+    },
+    {
+      "cluster_id": 4,
+      "label": "Nandi Hills Ridge Overlook (LKL Candidate)",
+      "center_lat": 13.3702,
+      "center_lon": 77.6835,
+      "points_count": 8,
+      "first_seen": "2026-04-16 20:45:00",
+      "last_seen": "2026-04-16 21:15:00",
+      "description": "Terminal radar sector ping, thermal drone burst, and complete signal termination"
     }
-  ]
+  ],
+  "trajectory": [
+    [
+      12.9345,
+      77.6258
+    ],
+    [
+      12.8452,
+      77.6602
+    ],
+    [
+      12.9352,
+      77.6245
+    ],
+    [
+      12.9715,
+      77.6074
+    ],
+    [
+      12.9719,
+      77.6412
+    ],
+    [
+      12.9763,
+      77.5929
+    ],
+    [
+      13.041,
+      77.591
+    ],
+    [
+      13.1007,
+      77.5963
+    ],
+    [
+      13.2483,
+      77.7126
+    ],
+    [
+      13.3412,
+      77.689
+    ],
+    [
+      13.3702,
+      77.6835
+    ]
+  ],
+  "candidate_lkl": {
+    "name": "Nandi Hills Ridge Overlook",
+    "latitude": 13.3702,
+    "longitude": 77.6835,
+    "timestamp": "2026-04-16 21:15:00",
+    "confidence": 0.945,
+    "evidence_basis": "Final cell tower sector ping (BLR-TWR-8841), 2.4 GHz drone beacon emission, and FASTAG trajectory heading north"
+  }
 }

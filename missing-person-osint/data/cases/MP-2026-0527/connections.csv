@@ -1,7 +1,8 @@
 source,target,relationship_type,weight,context
-ananya_dev,vector_zero,CONTACTED,1.0,Inbound recruiting pitch regarding raft distributed benchmarks
-vector_zero,ananya_dev,MENTIONS,0.9,Public commendation of cache repo
-ananya_dev,priya_k,FOLLOWS,1.0,Flatmate & roommate connection
-ananya_dev,rohan_tech,FOLLOWS,1.0,Capstone engineering partner
-ananya_dev,prof_menon_sys,FOLLOWS,0.8,Academic advisor
-priya_k,ananya.n,FOLLOWS,1.0,Social Instagram connection
+ananya_dev,vector_zero,CONTACTED,1.0,Inbound recruiting pitch regarding autonomous drone swarm telemetry
+vector_zero,ananya_dev,MENTIONS,0.95,Public commendation of HyperMesh-K9 benchmarks
+ananya_dev,rohan_sys,CO_RESEARCHER,1.0,Co-author on distributed consensus and drone swarm protocols
+ananya_dev,prof_menon_sys,ADVISOR,0.85,Faculty supervisor and lab director at BIT
+ananya_dev,priya_k,ROOMMATE,1.0,Flatmate connection at Koramangala quarters
+ananya_dev,deepak_kernel,COLLABORATOR,0.8,Hardware JTAG flashing on testboards
+kavya_drone_ai,ananya_dev,WARNED,0.9,Advisory warning regarding unregistered aerospace defense recruiters

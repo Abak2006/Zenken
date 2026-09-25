@@ -1,0 +1,74 @@
+[
+  {
+    "sensor_event_id": "SEN-TR-01",
+    "event_type": "Campus Biometric RFID",
+    "infrastructure": "BIT Campus Security",
+    "target_identifier": "Student ID #BIT-2022-CS-084 (Ananya Nair)",
+    "sensor_location": "Electronic City BIT Robotics Lab Turnstile",
+    "latitude": 12.8452,
+    "longitude": 77.6602,
+    "timestamp_utc": "2026-04-12 14:10:00",
+    "confidence": 1.0,
+    "details": "Exit turnstile swipe recorded at main robotics facility."
+  },
+  {
+    "sensor_event_id": "SEN-TR-02",
+    "event_type": "Metro AFC Gate Swipe",
+    "infrastructure": "Namma Metro Purple Line",
+    "target_identifier": "SmartCard #BLR-METRO-99401",
+    "sensor_location": "Indiranagar Metro Station Gate 3",
+    "latitude": 12.9784,
+    "longitude": 77.6385,
+    "timestamp_utc": "2026-04-12 17:45:00",
+    "confidence": 0.98,
+    "details": "Automated Fare Collection tap-in linked to Ananya's Paytm wallet token."
+  },
+  {
+    "sensor_event_id": "SEN-TR-03",
+    "event_type": "Enterprise WiFi BSSID Association",
+    "infrastructure": "Third Wave Guest Network",
+    "target_identifier": "MAC: 74:83:C2:11:9A:04 (ThinkPad X1 Carbon)",
+    "sensor_location": "Third Wave Coffee Koramangala",
+    "latitude": 12.9352,
+    "longitude": 77.6245,
+    "timestamp_utc": "2026-04-13 14:20:00",
+    "confidence": 0.99,
+    "details": "Laptop WiFi handshake establishing 42-minute session before disconnecting."
+  },
+  {
+    "sensor_event_id": "SEN-TR-04",
+    "event_type": "NH-44 FASTAG Highway Toll Capture",
+    "infrastructure": "National Highways Authority of India",
+    "target_identifier": "FASTAG #IND-KA05-MH-8812 (Mahindra Scorpio Black)",
+    "sensor_location": "NH-44 Devanahalli Toll Plaza (Northbound Lane 04)",
+    "latitude": 13.2483,
+    "longitude": 77.7126,
+    "timestamp_utc": "2026-04-16 19:42:00",
+    "confidence": 0.99,
+    "details": "RFID overhead gantry camera reading tag and capturing dark Scorpio escorting subject north."
+  },
+  {
+    "sensor_event_id": "SEN-TR-05",
+    "event_type": "Smart Traffic ANPR Camera",
+    "infrastructure": "Bengaluru Traffic Police Automated Number Plate System",
+    "target_identifier": "Plate #KA-04-ME-9021",
+    "sensor_location": "Hebbal Flyover Junction North Camera 08",
+    "latitude": 13.0358,
+    "longitude": 77.597,
+    "timestamp_utc": "2026-04-16 18:35:00",
+    "confidence": 0.95,
+    "details": "Automated plate recognition matching vehicle velocity at 78 km/h heading toward airport expressway."
+  },
+  {
+    "sensor_event_id": "SEN-TR-06",
+    "event_type": "Forest Checkpost Automated RFID Barrier",
+    "infrastructure": "Karnataka Forest Dept Security",
+    "target_identifier": "RFID Gate Beacon #KFD-NANDI-02",
+    "sensor_location": "Nandi Hills Ridge Entry Barrier Gate",
+    "latitude": 13.368,
+    "longitude": 77.684,
+    "timestamp_utc": "2026-04-16 20:52:00",
+    "confidence": 0.97,
+    "details": "Automated barrier arm opening for authorized vehicle approaching the northern radar ridge."
+  }
+]

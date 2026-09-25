@@ -1,9 +1,32 @@
-[
-  {
-    "account_a": "void_null07",
-    "account_b": "travel_bot_decoy",
-    "similarity_score": 0.22,
-    "status": "REJECTED_RED_HERRING",
-    "rationale": "IP hopping in Goa lacks device hash concordance with Sony ILCE camera"
-  }
-]
+{
+  "ambiguous_links": [
+    {
+      "account_a": "void_null07",
+      "account_b": "travel_bot_decoy",
+      "confidence": 0.18,
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "type": "REJECTED_RED_HERRING",
+          "detail": "Decoy IP hopping in Manali lacks device hash concordance with Sony ILCE-7M4 camera",
+          "weight": 0.18
+        }
+      ],
+      "rationale": "REJECTED_RED_HERRING: Decoy IP hopping in Manali lacks device hash concordance with Sony ILCE-7M4 camera"
+    },
+    {
+      "account_a": "ananya_dev",
+      "account_b": "aero_recruit_bot",
+      "confidence": 0.35,
+      "evidence_count": 1,
+      "evidence": [
+        {
+          "type": "UNVERIFIED_SOLICITATION",
+          "detail": "Cold recruitment solicitation on technical forum without cryptographic handshake",
+          "weight": 0.35
+        }
+      ],
+      "rationale": "UNVERIFIED_SOLICITATION: Cold recruitment solicitation on technical forum without cryptographic handshake"
+    }
+  ]
+}

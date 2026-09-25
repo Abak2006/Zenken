@@ -1,0 +1,58 @@
+[
+  {
+    "commit_id": "GH-AN-001",
+    "commit_sha": "a8f3c91e42b08d7",
+    "repo": "bit-lab/hypermesh-core",
+    "branch": "main",
+    "author": "Ananya Nair",
+    "author_account": "ananyan-dev",
+    "timestamp_utc": "2026-03-28 09:15:00",
+    "message": "release: tag v0.4 swarm consensus protocol with sub-4ms broadcast",
+    "type": "Code Commit",
+    "ip_or_terminal": "BIT Campus Lab LAN",
+    "pgp_signature_valid": true,
+    "pgp_key_id": "0x9E4B2F81A07C"
+  },
+  {
+    "commit_id": "GH-AN-002",
+    "commit_sha": "c41e08db91a45f2",
+    "repo": "bit-lab/hypermesh-core",
+    "branch": "feature/spi-fastpath",
+    "author": "Ananya Nair",
+    "author_account": "ananyan-dev",
+    "timestamp_utc": "2026-04-04 18:30:00",
+    "message": "driver: optimize DMA burst buffers for UltraScale FPGA transceiver",
+    "type": "Code Commit",
+    "ip_or_terminal": "BIT Campus Lab LAN",
+    "pgp_signature_valid": true,
+    "pgp_key_id": "0x9E4B2F81A07C"
+  },
+  {
+    "commit_id": "GH-AN-003",
+    "commit_sha": "f92a10b40e729a1",
+    "repo": "bit-lab/hypermesh-core",
+    "branch": "feature/spi-fastpath",
+    "author": "Ananya Nair",
+    "author_account": "ananyan-dev",
+    "timestamp_utc": "2026-04-12 22:45:00",
+    "message": "refactor: force-scrub embedded telemetry keys and proprietary headers",
+    "type": "Force-Push Scrub",
+    "ip_or_terminal": "ProtonVPN Netherlands Exit Node",
+    "pgp_signature_valid": true,
+    "pgp_key_id": "0x9E4B2F81A07C"
+  },
+  {
+    "commit_id": "GH-AN-004",
+    "commit_sha": "e77b02c819fa003",
+    "repo": "bit-lab/hypermesh-core",
+    "branch": "main",
+    "author": "null_ptr",
+    "author_account": "void_null07",
+    "timestamp_utc": "2026-04-14 23:10:00",
+    "message": "purge: repository branch force-deleted via upstream administrator token",
+    "type": "Branch Force-Deletion",
+    "ip_or_terminal": "Tor Onion Gateway Node",
+    "pgp_signature_valid": true,
+    "pgp_key_id": "0x9E4B2F81A07C"
+  }
+]

@@ -1,6 +1,7 @@
 phone_number,registered_owner,account_link_hint,carrier,plan_type,status,first_seen,last_seen
-+91-98801-0144,Ananya Nair,ananya_dev,Airtel Karnataka,Postpaid,Suspended / Offline,2024-08-01,2026-04-12
-+91-98801-0199,Cash Purchase (Anonymous SIM),void_null07,Jio Prepaid,Prepaid Burner,De-registered after 21:15 UTC,2026-04-14,2026-04-16
-+91-98801-0900,Vector Zero Systems Ltd,vector_zero,Vi Business,Corporate Encrypted,Active,2025-11-15,2026-04-18
++91-98801-0144,Ananya Nair,ananya_dev,Airtel Karnataka 5G,Postpaid,Abandoned in Room (SIM Removed),2024-08-01,2026-04-12
++91-98801-0199,Anonymous Cash SIM (IMEI 863920194829104),void_null07,Jio Karnataka Prepaid,Prepaid Burner Handset,Terminated at Nandi Ridge 21:15 UTC,2026-04-14,2026-04-16
++91-98801-0900,CipherCore Vector Systems Ltd,vector_zero,Vodafone Business Secure SIP,Encrypted VoIP Trunk,Active / Uncooperative,2025-11-15,2026-04-18
 +91-98801-0222,Priya Krishnamurthy,priya_k,Airtel Karnataka,Postpaid,Active,2024-06-10,2026-04-18
-+91-98801-0333,Rohan Sharma,rohan_tech,Jio Karnataka,Prepaid,Active,2024-08-20,2026-04-18
++91-98801-0333,Rohan Sharma,rohan_sys,Jio Karnataka,Prepaid,Active,2024-08-20,2026-04-18
++91-98801-0777,Deepak Rao,deepak_kernel,Airtel Karnataka,Postpaid,Active,2024-09-01,2026-04-18

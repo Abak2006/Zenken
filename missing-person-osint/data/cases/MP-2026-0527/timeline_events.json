@@ -1,0 +1,1500 @@
+[
+  {
+    "event_id": "EV-AN-001",
+    "timestamp": "2026-03-28 09:15:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "GitHub / Code",
+    "event_type": "Repository Release",
+    "severity": "NORMAL",
+    "description": "Release v0.4 of HyperMesh-K9 swarm consensus tagged on bit-lab/hypermesh-core",
+    "entity_ids": [
+      "ananya_nair",
+      "ananyan-dev"
+    ],
+    "location_id": "blr_v02",
+    "location_name": "Electronic City BIT Robotics Lab",
+    "evidence_ids": [
+      "GH-AN-001"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Research"
+  },
+  {
+    "event_id": "EV-AN-002",
+    "timestamp": "2026-03-28 10:15:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@ananya_dev announced sub-4ms consensus round benchmarks across 128 UAV nodes",
+    "entity_ids": [
+      "ananya_nair",
+      "ananya_dev"
+    ],
+    "location_id": "blr_v02",
+    "location_name": "Electronic City BIT Robotics Lab",
+    "evidence_ids": [
+      "POST-AN-001"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Research"
+  },
+  {
+    "event_id": "EV-AN-003",
+    "timestamp": "2026-03-28 10:20:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Photo / EXIF",
+    "event_type": "EXIF Photo",
+    "severity": "NORMAL",
+    "description": "Sony ILCE-7M4 photo capture of 4-channel SPI bus logic trace in robotics lab",
+    "entity_ids": [
+      "ananya_nair",
+      "ananya.n"
+    ],
+    "location_id": "blr_v02",
+    "location_name": "Electronic City BIT Robotics Lab",
+    "evidence_ids": [
+      "IMG-AN-001"
+    ],
+    "confidence": 0.98,
+    "phase": "Baseline Research"
+  },
+  {
+    "event_id": "EV-AN-004",
+    "timestamp": "2026-03-29 14:10:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Photo / EXIF",
+    "event_type": "EXIF Photo",
+    "severity": "NORMAL",
+    "description": "Gimbal testbench setup photograph with quadrotor carbon frame",
+    "entity_ids": [
+      "rohan_sys"
+    ],
+    "location_id": "blr_v02",
+    "location_name": "Electronic City BIT Robotics Lab",
+    "evidence_ids": [
+      "IMG-AN-002"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Research"
+  },
+  {
+    "event_id": "EV-AN-005",
+    "timestamp": "2026-03-30 08:30:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "Voice call between Ananya and roommate Priya (140s) from Koramangala quarters",
+    "entity_ids": [
+      "ananya_nair",
+      "priya_k"
+    ],
+    "location_id": "blr_v01",
+    "location_name": "Koramangala 4th Block",
+    "evidence_ids": [
+      "CDR-AN-001"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Research"
+  },
+  {
+    "event_id": "EV-AN-006",
+    "timestamp": "2026-03-30 17:10:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Social Media",
+    "event_type": "POI Outreach",
+    "severity": "NOTABLE",
+    "description": "@vector_zero public pitch regarding CipherCore autonomous edge clusters",
+    "entity_ids": [
+      "vector_zero",
+      "ananya_dev"
+    ],
+    "location_id": "blr_v05",
+    "location_name": "Indiranagar",
+    "evidence_ids": [
+      "POST-AN-002"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Research"
+  },
+  {
+    "event_id": "EV-AN-007",
+    "timestamp": "2026-04-01 10:15:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "Call with colleague Rohan Sharma regarding testbench SPI throughput (210s)",
+    "entity_ids": [
+      "ananya_nair",
+      "rohan_sys"
+    ],
+    "location_id": "blr_v02",
+    "location_name": "Electronic City Phase 1",
+    "evidence_ids": [
+      "CDR-AN-002"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Research"
+  },
+  {
+    "event_id": "EV-AN-008",
+    "timestamp": "2026-04-01 11:35:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Photo / EXIF",
+    "event_type": "EXIF Photo",
+    "severity": "NORMAL",
+    "description": "iPhone 15 Pro photo of pour-over coffee and research paper draft",
+    "entity_ids": [
+      "ananya_nair",
+      "ananya.n"
+    ],
+    "location_id": "blr_v03",
+    "location_name": "Third Wave Coffee Koramangala",
+    "evidence_ids": [
+      "IMG-AN-003"
+    ],
+    "confidence": 0.98,
+    "phase": "Baseline Research"
+  },
+  {
+    "event_id": "EV-AN-009",
+    "timestamp": "2026-04-02 11:20:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Social Media",
+    "event_type": "Security Advisory",
+    "severity": "SUSPICIOUS",
+    "description": "Dr. Kavya Patel issues public advisory warning regarding shell aerospace recruiters",
+    "entity_ids": [
+      "kavya_drone_ai"
+    ],
+    "location_id": "blr_v04",
+    "location_name": "Bengaluru Central",
+    "evidence_ids": [
+      "POST-AN-003"
+    ],
+    "confidence": 0.9,
+    "phase": "Baseline Research"
+  },
+  {
+    "event_id": "EV-AN-010",
+    "timestamp": "2026-04-03 14:20:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "Voice consultation with faculty director Dr. Menon on capstone evaluation (380s)",
+    "entity_ids": [
+      "ananya_nair",
+      "prof_menon_sys"
+    ],
+    "location_id": "blr_v02",
+    "location_name": "Electronic City Phase 1",
+    "evidence_ids": [
+      "CDR-AN-003"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Research"
+  },
+  {
+    "event_id": "EV-AN-011",
+    "timestamp": "2026-04-04 18:30:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "GitHub / Code",
+    "event_type": "Code Commit",
+    "severity": "NORMAL",
+    "description": "Git commit c41e08d optimizing DMA burst buffers for UltraScale FPGA transceiver",
+    "entity_ids": [
+      "ananya_nair",
+      "ananyan-dev"
+    ],
+    "location_id": "blr_v02",
+    "location_name": "Electronic City BIT Robotics Lab",
+    "evidence_ids": [
+      "GH-AN-002"
+    ],
+    "confidence": 1.0,
+    "phase": "Inbound Outreach"
+  },
+  {
+    "event_id": "EV-AN-012",
+    "timestamp": "2026-04-05 16:45:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Social Media",
+    "event_type": "Personal Post",
+    "severity": "NORMAL",
+    "description": "@ananya.n photo post relaxing in bamboo grove before deployment sprint",
+    "entity_ids": [
+      "ananya_nair",
+      "ananya.n"
+    ],
+    "location_id": "blr_v06",
+    "location_name": "Cubbon Park Bamboo Grove",
+    "evidence_ids": [
+      "POST-AN-004"
+    ],
+    "confidence": 1.0,
+    "phase": "Inbound Outreach"
+  },
+  {
+    "event_id": "EV-AN-013",
+    "timestamp": "2026-04-05 16:50:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Photo / EXIF",
+    "event_type": "EXIF Photo",
+    "severity": "NORMAL",
+    "description": "iPhone 15 Pro photo of bamboo trees near high court perimeter",
+    "entity_ids": [
+      "ananya_nair",
+      "ananya.n"
+    ],
+    "location_id": "blr_v06",
+    "location_name": "Cubbon Park Bamboo Grove",
+    "evidence_ids": [
+      "IMG-AN-004"
+    ],
+    "confidence": 0.98,
+    "phase": "Inbound Outreach"
+  },
+  {
+    "event_id": "EV-AN-014",
+    "timestamp": "2026-04-05 19:10:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "Routine evening check-in call with roommate Priya (65s)",
+    "entity_ids": [
+      "ananya_nair",
+      "priya_k"
+    ],
+    "location_id": "blr_v01",
+    "location_name": "Koramangala 4th Block",
+    "evidence_ids": [
+      "CDR-AN-004"
+    ],
+    "confidence": 1.0,
+    "phase": "Inbound Outreach"
+  },
+  {
+    "event_id": "EV-AN-015",
+    "timestamp": "2026-04-07 09:15:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Photo / EXIF",
+    "event_type": "EXIF Photo",
+    "severity": "NORMAL",
+    "description": "Sony A7M4 photo of nonce rotation equations on lab whiteboard",
+    "entity_ids": [
+      "ananya_nair",
+      "ananya.n"
+    ],
+    "location_id": "blr_v02",
+    "location_name": "Electronic City BIT Robotics Lab",
+    "evidence_ids": [
+      "IMG-AN-005"
+    ],
+    "confidence": 0.98,
+    "phase": "Inbound Outreach"
+  },
+  {
+    "event_id": "EV-AN-016",
+    "timestamp": "2026-04-07 11:45:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "Call with hardware engineer Deepak Rao regarding JTAG flasher availability (95s)",
+    "entity_ids": [
+      "ananya_nair",
+      "deepak_kernel"
+    ],
+    "location_id": "blr_v02",
+    "location_name": "Electronic City Phase 1",
+    "evidence_ids": [
+      "CDR-AN-005"
+    ],
+    "confidence": 1.0,
+    "phase": "Inbound Outreach"
+  },
+  {
+    "event_id": "EV-AN-017",
+    "timestamp": "2026-04-08 09:00:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "ChirpNet geo check-in at BIT Robotics Lab for morning firmware test session",
+    "entity_ids": [
+      "ananya_nair",
+      "ananya_dev"
+    ],
+    "location_id": "blr_v02",
+    "location_name": "Electronic City BIT Robotics Lab",
+    "evidence_ids": [
+      "CHK-AN-001"
+    ],
+    "confidence": 0.95,
+    "phase": "Inbound Outreach"
+  },
+  {
+    "event_id": "EV-AN-018",
+    "timestamp": "2026-04-08 20:30:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Photo / EXIF",
+    "event_type": "EXIF Photo",
+    "severity": "NORMAL",
+    "description": "Galaxy S23 photo of evening skyline view from Koramangala flat",
+    "entity_ids": [
+      "priya_k"
+    ],
+    "location_id": "blr_v01",
+    "location_name": "Koramangala 4th Block Housing",
+    "evidence_ids": [
+      "IMG-AN-006"
+    ],
+    "confidence": 0.95,
+    "phase": "Inbound Outreach"
+  },
+  {
+    "event_id": "EV-AN-019",
+    "timestamp": "2026-04-09 14:30:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "Check-in at Third Wave Coffee Koramangala during code review break",
+    "entity_ids": [
+      "ananya_nair",
+      "ananya_dev"
+    ],
+    "location_id": "blr_v03",
+    "location_name": "Third Wave Coffee Koramangala",
+    "evidence_ids": [
+      "CHK-AN-002"
+    ],
+    "confidence": 0.95,
+    "phase": "Inbound Outreach"
+  },
+  {
+    "event_id": "EV-AN-020",
+    "timestamp": "2026-04-09 17:35:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Telecommunications",
+    "event_type": "Encrypted VoIP",
+    "severity": "SUSPICIOUS",
+    "description": "Inbound encrypted SIP call from CipherCore trunk (+91-98801-0900) lasting 420s",
+    "entity_ids": [
+      "ananya_nair",
+      "vector_zero"
+    ],
+    "location_id": "blr_v05",
+    "location_name": "Indiranagar 100ft Road",
+    "evidence_ids": [
+      "CDR-AN-006"
+    ],
+    "confidence": 1.0,
+    "phase": "Inbound Outreach"
+  },
+  {
+    "event_id": "EV-AN-021",
+    "timestamp": "2026-04-09 23:15:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Social Media",
+    "event_type": "Covert Handshake",
+    "severity": "CRITICAL",
+    "description": "@void_null07 posted PGP key 0x9E4B2F81A07C activation dispatch on ShadowNet",
+    "entity_ids": [
+      "ananya_nair",
+      "void_null07"
+    ],
+    "location_id": "blr_v07",
+    "location_name": "Hebbal Lake Transit Hub",
+    "evidence_ids": [
+      "POST-AN-005"
+    ],
+    "confidence": 1.0,
+    "phase": "Inbound Outreach"
+  },
+  {
+    "event_id": "EV-AN-022",
+    "timestamp": "2026-04-09 23:15:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "OSINT Correlation",
+    "event_type": "Key Correlation",
+    "severity": "CRITICAL",
+    "description": "PGP key 0x9E4B2F81A07C on ShadowNet directly matches CodeHub key of @ananyan-dev",
+    "entity_ids": [
+      "ananyan-dev",
+      "void_null07"
+    ],
+    "location_id": "blr_v07",
+    "location_name": "Hebbal Lake Transit Hub",
+    "evidence_ids": [
+      "OSINT-AN-001"
+    ],
+    "confidence": 0.99,
+    "phase": "Inbound Outreach"
+  },
+  {
+    "event_id": "EV-AN-023",
+    "timestamp": "2026-04-10 01:20:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "OSINT Correlation",
+    "event_type": "Covert Messaging",
+    "severity": "SUSPICIOUS",
+    "description": "ShadowNet handshake between @void_null07 and @vector_zero exchanging code SYS-K9-BLR",
+    "entity_ids": [
+      "void_null07",
+      "vector_zero"
+    ],
+    "location_id": "blr_v05",
+    "location_name": "Indiranagar",
+    "evidence_ids": [
+      "OSINT-AN-003"
+    ],
+    "confidence": 0.94,
+    "phase": "Inbound Outreach"
+  },
+  {
+    "event_id": "EV-AN-024",
+    "timestamp": "2026-04-10 15:40:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Photo / EXIF",
+    "event_type": "EXIF Photo",
+    "severity": "NORMAL",
+    "description": "Dual monitor terminal benchmark setup photo at WeWork Galaxy",
+    "entity_ids": [
+      "ananya_nair",
+      "ananya.n"
+    ],
+    "location_id": "blr_v04",
+    "location_name": "WeWork Galaxy Residency Road",
+    "evidence_ids": [
+      "IMG-AN-007"
+    ],
+    "confidence": 0.98,
+    "phase": "Inbound Outreach"
+  },
+  {
+    "event_id": "EV-AN-025",
+    "timestamp": "2026-04-10 18:15:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "Call with roommate Priya confirming dinner plans at Koramangala quarters (195s)",
+    "entity_ids": [
+      "ananya_nair",
+      "priya_k"
+    ],
+    "location_id": "blr_v01",
+    "location_name": "Koramangala 4th Block",
+    "evidence_ids": [
+      "CDR-AN-007"
+    ],
+    "confidence": 1.0,
+    "phase": "Inbound Outreach"
+  },
+  {
+    "event_id": "EV-AN-026",
+    "timestamp": "2026-04-11 11:00:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "InstaPhoto location check-in at WeWork Galaxy Residency Road",
+    "entity_ids": [
+      "ananya_nair",
+      "ananya.n"
+    ],
+    "location_id": "blr_v04",
+    "location_name": "WeWork Galaxy Residency Road",
+    "evidence_ids": [
+      "CHK-AN-003"
+    ],
+    "confidence": 0.95,
+    "phase": "Inbound Outreach"
+  },
+  {
+    "event_id": "EV-AN-027",
+    "timestamp": "2026-04-11 11:20:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "Call with colleague Rohan discussing upcoming capstone thesis deadline (84s)",
+    "entity_ids": [
+      "ananya_nair",
+      "rohan_sys"
+    ],
+    "location_id": "blr_v02",
+    "location_name": "Electronic City Phase 1",
+    "evidence_ids": [
+      "CDR-AN-008"
+    ],
+    "confidence": 1.0,
+    "phase": "Inbound Outreach"
+  },
+  {
+    "event_id": "EV-AN-028",
+    "timestamp": "2026-04-11 15:40:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "Lengthy academic review call with Dr. Menon regarding lab equipment signoff (310s)",
+    "entity_ids": [
+      "ananya_nair",
+      "prof_menon_sys"
+    ],
+    "location_id": "blr_v02",
+    "location_name": "Electronic City Phase 1",
+    "evidence_ids": [
+      "CDR-AN-009"
+    ],
+    "confidence": 1.0,
+    "phase": "Inbound Outreach"
+  },
+  {
+    "event_id": "EV-AN-029",
+    "timestamp": "2026-04-12 16:15:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Social Media",
+    "event_type": "Deleted Post",
+    "severity": "CRITICAL",
+    "description": "DELETED POST: @ananya_dev confirmed 20:00 meeting at Indiranagar Roastery with @vector_zero",
+    "entity_ids": [
+      "ananya_nair",
+      "ananya_dev",
+      "vector_zero"
+    ],
+    "location_id": "blr_v05",
+    "location_name": "Indiranagar Roastery",
+    "evidence_ids": [
+      "POST-AN-006"
+    ],
+    "confidence": 1.0,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-AN-030",
+    "timestamp": "2026-04-12 17:35:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Telecommunications",
+    "event_type": "Encrypted VoIP",
+    "severity": "SUSPICIOUS",
+    "description": "CipherCore PBX SIP trunk call to Ananya's primary phone at Indiranagar (360s)",
+    "entity_ids": [
+      "ananya_nair",
+      "vector_zero"
+    ],
+    "location_id": "blr_v05",
+    "location_name": "Indiranagar 100ft Road",
+    "evidence_ids": [
+      "CDR-AN-010"
+    ],
+    "confidence": 1.0,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-AN-031",
+    "timestamp": "2026-04-12 18:00:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NOTABLE",
+    "description": "InstaPhoto check-in at Indiranagar Roastery cafe patio",
+    "entity_ids": [
+      "ananya_nair",
+      "ananya.n"
+    ],
+    "location_id": "blr_v05",
+    "location_name": "Indiranagar Roastery",
+    "evidence_ids": [
+      "CHK-AN-004"
+    ],
+    "confidence": 0.95,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-AN-032",
+    "timestamp": "2026-04-12 18:10:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Photo / EXIF",
+    "event_type": "EXIF Photo",
+    "severity": "NOTABLE",
+    "description": "iPhone 15 Pro photo of evening coffee table setup before contract review",
+    "entity_ids": [
+      "ananya_nair",
+      "ananya.n"
+    ],
+    "location_id": "blr_v05",
+    "location_name": "Indiranagar Roastery",
+    "evidence_ids": [
+      "IMG-AN-008"
+    ],
+    "confidence": 0.98,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-AN-033",
+    "timestamp": "2026-04-12 19:15:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "Brief final call to Priya stating she would stay late at lab/coworking (45s)",
+    "entity_ids": [
+      "ananya_nair",
+      "priya_k"
+    ],
+    "location_id": "blr_v05",
+    "location_name": "Indiranagar 100ft Road",
+    "evidence_ids": [
+      "CDR-AN-011"
+    ],
+    "confidence": 1.0,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-AN-034",
+    "timestamp": "2026-04-12 19:40:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Social Media",
+    "event_type": "Deleted Post",
+    "severity": "CRITICAL",
+    "description": "DELETED POST: @ananya_dev mentions contract NDA terms requiring immediate repository wipe",
+    "entity_ids": [
+      "ananya_nair",
+      "ananya_dev"
+    ],
+    "location_id": "blr_v05",
+    "location_name": "Indiranagar Roastery",
+    "evidence_ids": [
+      "POST-AN-007"
+    ],
+    "confidence": 1.0,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-AN-035",
+    "timestamp": "2026-04-12 21:05:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Photo / EXIF",
+    "event_type": "EXIF Photo",
+    "severity": "SUSPICIOUS",
+    "description": "Captured iPhone photo showing watermark of confidential aerospace agreement",
+    "entity_ids": [
+      "ananya_nair",
+      "ananya.n"
+    ],
+    "location_id": "blr_v05",
+    "location_name": "Indiranagar Roastery",
+    "evidence_ids": [
+      "IMG-AN-009"
+    ],
+    "confidence": 0.98,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-AN-036",
+    "timestamp": "2026-04-12 21:30:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Device Artifact",
+    "event_type": "Hardware Extraction",
+    "severity": "CRITICAL",
+    "description": "Cold storage Sabrent NVMe enclosure plugged in; full repository clone archived",
+    "entity_ids": [
+      "ananya_nair",
+      "DEV-AN-005"
+    ],
+    "location_id": "blr_v05",
+    "location_name": "Indiranagar",
+    "evidence_ids": [
+      "DEV-AN-005"
+    ],
+    "confidence": 0.94,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-AN-037",
+    "timestamp": "2026-04-12 22:45:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "GitHub / Code",
+    "event_type": "Force-Push Scrub",
+    "severity": "CRITICAL",
+    "description": "Commit f92a10b force-scrubbed proprietary telemetry headers via Netherlands exit node",
+    "entity_ids": [
+      "ananya_nair",
+      "ananyan-dev"
+    ],
+    "location_id": "blr_v05",
+    "location_name": "Indiranagar",
+    "evidence_ids": [
+      "GH-AN-003"
+    ],
+    "confidence": 1.0,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-AN-038",
+    "timestamp": "2026-04-12 23:45:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Device Artifact",
+    "event_type": "Disk Encryption Wipe",
+    "severity": "CRITICAL",
+    "description": "LUKS key wipe command executed on ThinkPad P1 Gen 6; primary drive rendered unreadable",
+    "entity_ids": [
+      "ananya_nair",
+      "DEV-AN-001"
+    ],
+    "location_id": "blr_v01",
+    "location_name": "Koramangala 4th Block Housing",
+    "evidence_ids": [
+      "DEV-AN-001"
+    ],
+    "confidence": 1.0,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-AN-039",
+    "timestamp": "2026-04-13 08:15:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Device Artifact",
+    "event_type": "SIM Removal",
+    "severity": "CRITICAL",
+    "description": "Primary OnePlus 12 smartphone powered down; Airtel SIM physically removed in room",
+    "entity_ids": [
+      "ananya_nair",
+      "DEV-AN-002"
+    ],
+    "location_id": "blr_v01",
+    "location_name": "Koramangala 4th Block Housing",
+    "evidence_ids": [
+      "DEV-AN-002"
+    ],
+    "confidence": 0.99,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-AN-040",
+    "timestamp": "2026-04-13 16:30:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NOTABLE",
+    "description": "Last public check-in at Cubbon Park Bamboo Grove from personal profile",
+    "entity_ids": [
+      "ananya_nair",
+      "ananya.n"
+    ],
+    "location_id": "blr_v06",
+    "location_name": "Cubbon Park Bamboo Grove",
+    "evidence_ids": [
+      "CHK-AN-005"
+    ],
+    "confidence": 0.95,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-AN-041",
+    "timestamp": "2026-04-14 02:10:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Device Artifact",
+    "event_type": "Hardware Extraction",
+    "severity": "CRITICAL",
+    "description": "Raw JTAG programmer flash dump executed on Xilinx FPGA drone telemetry board in Lab 4",
+    "entity_ids": [
+      "ananya_nair",
+      "DEV-AN-004"
+    ],
+    "location_id": "blr_v02",
+    "location_name": "Electronic City BIT Robotics Lab",
+    "evidence_ids": [
+      "DEV-AN-004"
+    ],
+    "confidence": 0.95,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-AN-042",
+    "timestamp": "2026-04-14 13:45:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Photo / EXIF",
+    "event_type": "EXIF Photo",
+    "severity": "CRITICAL",
+    "description": "Galaxy S23 photo showing desoldered EEPROM pins and scraped barcode serials on FPGA",
+    "entity_ids": [
+      "deepak_kernel"
+    ],
+    "location_id": "blr_v02",
+    "location_name": "Electronic City BIT Robotics Lab",
+    "evidence_ids": [
+      "IMG-AN-010"
+    ],
+    "confidence": 0.98,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-AN-043",
+    "timestamp": "2026-04-14 14:00:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Social Media",
+    "event_type": "Breach Alert",
+    "severity": "SUSPICIOUS",
+    "description": "Deepak Rao posts public alarm regarding scraped FPGA board barcodes in Lab 4",
+    "entity_ids": [
+      "deepak_kernel"
+    ],
+    "location_id": "blr_v02",
+    "location_name": "Electronic City BIT Robotics Lab",
+    "evidence_ids": [
+      "POST-AN-008"
+    ],
+    "confidence": 0.95,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-AN-044",
+    "timestamp": "2026-04-14 20:10:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Telecommunications",
+    "event_type": "Burner Handset Ping",
+    "severity": "CRITICAL",
+    "description": "Anonymous prepaid burner handset (+91-98801-0199) registers first ping at Indiranagar Metro",
+    "entity_ids": [
+      "ananya_nair",
+      "void_null07"
+    ],
+    "location_id": "blr_v05",
+    "location_name": "Indiranagar Metro Sector",
+    "evidence_ids": [
+      "CDR-AN-012"
+    ],
+    "confidence": 1.0,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-AN-045",
+    "timestamp": "2026-04-14 20:10:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "OSINT Correlation",
+    "event_type": "Burner Correlation",
+    "severity": "CRITICAL",
+    "description": "Burner IMEI 863920194829104 matches ShadowNet active TLS connection session timestamps",
+    "entity_ids": [
+      "void_null07"
+    ],
+    "location_id": "blr_v05",
+    "location_name": "Indiranagar Metro Sector",
+    "evidence_ids": [
+      "OSINT-AN-004"
+    ],
+    "confidence": 0.97,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-AN-046",
+    "timestamp": "2026-04-14 23:10:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "GitHub / Code",
+    "event_type": "Branch Force-Deletion",
+    "severity": "CRITICAL",
+    "description": "Commit e77b02c: bit-lab/hypermesh-core repository branch completely purged via Tor exit node",
+    "entity_ids": [
+      "ananya_nair",
+      "void_null07"
+    ],
+    "location_id": "blr_v07",
+    "location_name": "Hebbal Lake Transit Hub",
+    "evidence_ids": [
+      "GH-AN-004"
+    ],
+    "confidence": 1.0,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-AN-047",
+    "timestamp": "2026-04-15 11:30:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Telecommunications",
+    "event_type": "Burner Handset Ping",
+    "severity": "SUSPICIOUS",
+    "description": "Burner handset brief voice call (24s) routed through Cubbon Park / High Court sector",
+    "entity_ids": [
+      "void_null07",
+      "deepak_kernel"
+    ],
+    "location_id": "blr_v06",
+    "location_name": "Cubbon Park / High Court",
+    "evidence_ids": [
+      "CDR-AN-013"
+    ],
+    "confidence": 0.95,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-AN-048",
+    "timestamp": "2026-04-15 15:10:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Physical Location",
+    "event_type": "Covert Check-in",
+    "severity": "SUSPICIOUS",
+    "description": "ShadowNet automated location check-in at Hebbal Lake Transit Hub",
+    "entity_ids": [
+      "void_null07"
+    ],
+    "location_id": "blr_v07",
+    "location_name": "Hebbal Lake Transit Hub",
+    "evidence_ids": [
+      "CHK-AN-006"
+    ],
+    "confidence": 0.9,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-AN-049",
+    "timestamp": "2026-04-15 15:20:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Photo / EXIF",
+    "event_type": "Low-Res Photo",
+    "severity": "NOTABLE",
+    "description": "Nokia 105 640x480 snapshot capturing northern highway flyover pylon",
+    "entity_ids": [
+      "void_null07"
+    ],
+    "location_id": "blr_v07",
+    "location_name": "Hebbal Lake Transit Hub",
+    "evidence_ids": [
+      "IMG-AN-011"
+    ],
+    "confidence": 0.92,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-AN-050",
+    "timestamp": "2026-04-15 16:45:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Telecommunications",
+    "event_type": "Burner Handset Ping",
+    "severity": "SUSPICIOUS",
+    "description": "Burner handset coordinates confirmed at Hebbal Flyover North sector (65s call)",
+    "entity_ids": [
+      "void_null07",
+      "vector_zero"
+    ],
+    "location_id": "blr_v07",
+    "location_name": "Hebbal Flyover North",
+    "evidence_ids": [
+      "CDR-AN-014"
+    ],
+    "confidence": 1.0,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-AN-051",
+    "timestamp": "2026-04-16 17:30:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Photo / EXIF",
+    "event_type": "Traffic ANPR Photo",
+    "severity": "NOTABLE",
+    "description": "Manyata Outer Ring Road surveillance camera frames dark transit SUV moving north",
+    "entity_ids": [
+      "ananya_nair"
+    ],
+    "location_id": "blr_v12",
+    "location_name": "Manyata Tech Park North",
+    "evidence_ids": [
+      "IMG-AN-012"
+    ],
+    "confidence": 0.94,
+    "phase": "Terminal Transit"
+  },
+  {
+    "event_id": "EV-AN-052",
+    "timestamp": "2026-04-16 18:20:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Telecommunications",
+    "event_type": "Burner Handset Ping",
+    "severity": "CRITICAL",
+    "description": "Burner handset cell sector handover confirmed at Yelahanka Airbase Sector",
+    "entity_ids": [
+      "void_null07",
+      "vector_zero"
+    ],
+    "location_id": "blr_v11",
+    "location_name": "Yelahanka Airbase Sector",
+    "evidence_ids": [
+      "CDR-AN-015"
+    ],
+    "confidence": 1.0,
+    "phase": "Terminal Transit"
+  },
+  {
+    "event_id": "EV-AN-053",
+    "timestamp": "2026-04-16 19:10:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Social Media",
+    "event_type": "Covert Transmission",
+    "severity": "CRITICAL",
+    "description": "@void_null07 broadcasts final covert transit dispatch heading toward Devanahalli gateway",
+    "entity_ids": [
+      "void_null07"
+    ],
+    "location_id": "blr_v08",
+    "location_name": "Devanahalli Logistics Corridor",
+    "evidence_ids": [
+      "POST-AN-009"
+    ],
+    "confidence": 1.0,
+    "phase": "Terminal Transit"
+  },
+  {
+    "event_id": "EV-AN-054",
+    "timestamp": "2026-04-16 19:40:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Telecommunications",
+    "event_type": "Burner Handset Ping",
+    "severity": "CRITICAL",
+    "description": "Burner handset voice link (48s) connects through Devanahalli Highway Corridor tower",
+    "entity_ids": [
+      "void_null07",
+      "vector_zero"
+    ],
+    "location_id": "blr_v08",
+    "location_name": "Devanahalli Highway Corridor",
+    "evidence_ids": [
+      "CDR-AN-016"
+    ],
+    "confidence": 1.0,
+    "phase": "Terminal Transit"
+  },
+  {
+    "event_id": "EV-AN-055",
+    "timestamp": "2026-04-16 19:42:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Photo / EXIF",
+    "event_type": "FASTAG Camera Photo",
+    "severity": "CRITICAL",
+    "description": "NH-44 Devanahalli Toll Plaza ANPR camera captures vehicle windshield RFID tag reading",
+    "entity_ids": [
+      "ananya_nair"
+    ],
+    "location_id": "blr_v08",
+    "location_name": "Devanahalli Logistics Corridor",
+    "evidence_ids": [
+      "IMG-AN-013"
+    ],
+    "confidence": 0.99,
+    "phase": "Terminal Transit"
+  },
+  {
+    "event_id": "EV-AN-056",
+    "timestamp": "2026-04-16 20:45:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Physical Location",
+    "event_type": "Covert Check-in",
+    "severity": "CRITICAL",
+    "description": "ShadowNet encrypted automated telemetry check-in at Nandi Hills Ridge Overlook",
+    "entity_ids": [
+      "void_null07"
+    ],
+    "location_id": "blr_v09",
+    "location_name": "Nandi Hills Ridge Overlook",
+    "evidence_ids": [
+      "CHK-AN-007"
+    ],
+    "confidence": 0.96,
+    "phase": "Terminal Transit"
+  },
+  {
+    "event_id": "EV-AN-057",
+    "timestamp": "2026-04-16 20:50:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Telecommunications",
+    "event_type": "Burner Handset Ping",
+    "severity": "CRITICAL",
+    "description": "Burner handset tower ping registered at Nandi Foot Base Station (BLR-TWR-8840)",
+    "entity_ids": [
+      "void_null07",
+      "vector_zero"
+    ],
+    "location_id": "blr_v09",
+    "location_name": "Nandi Foot Base Station",
+    "evidence_ids": [
+      "CDR-AN-017"
+    ],
+    "confidence": 1.0,
+    "phase": "Terminal Transit"
+  },
+  {
+    "event_id": "EV-AN-058",
+    "timestamp": "2026-04-16 20:55:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Photo / EXIF",
+    "event_type": "EXIF Photo",
+    "severity": "NOTABLE",
+    "description": "Sony A7M4 photo of dense mountain mist rolling over radar dome facility",
+    "entity_ids": [
+      "void_null07"
+    ],
+    "location_id": "blr_v09",
+    "location_name": "Nandi Hills Ridge Overlook",
+    "evidence_ids": [
+      "IMG-AN-014"
+    ],
+    "confidence": 0.95,
+    "phase": "Terminal Transit"
+  },
+  {
+    "event_id": "EV-AN-059",
+    "timestamp": "2026-04-16 21:14:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Device Artifact",
+    "event_type": "RF Telemetry Beacon",
+    "severity": "CRITICAL",
+    "description": "2.412 GHz autonomous UAV telemetry burst emitted by DJI Matrice RTK remote transponder",
+    "entity_ids": [
+      "void_null07",
+      "DEV-AN-006"
+    ],
+    "location_id": "blr_v09",
+    "location_name": "Nandi Hills Ridge Overlook",
+    "evidence_ids": [
+      "DEV-AN-006"
+    ],
+    "confidence": 0.96,
+    "phase": "Terminal Transit"
+  },
+  {
+    "event_id": "EV-AN-060",
+    "timestamp": "2026-04-16 21:14:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Photo / EXIF",
+    "event_type": "Thermal FLIR Photo",
+    "severity": "CRITICAL",
+    "description": "Teledyne FLIR Boson 640 thermal sensor captures drone rotor thermal blooming signature",
+    "entity_ids": [
+      "void_null07"
+    ],
+    "location_id": "blr_v09",
+    "location_name": "Nandi Hills Ridge Overlook",
+    "evidence_ids": [
+      "IMG-AN-015"
+    ],
+    "confidence": 0.97,
+    "phase": "Terminal Transit"
+  },
+  {
+    "event_id": "EV-AN-061",
+    "timestamp": "2026-04-16 21:15:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Telecommunications",
+    "event_type": "Terminal Tower Ping",
+    "severity": "CRITICAL",
+    "description": "FINAL LKL PING: Burner handset registers terminal transmission on tower BLR-TWR-8841 before powering off",
+    "entity_ids": [
+      "void_null07",
+      "ananya_nair"
+    ],
+    "location_id": "blr_v09",
+    "location_name": "Nandi Hills Ridge Radar Sector",
+    "evidence_ids": [
+      "CDR-AN-018"
+    ],
+    "confidence": 1.0,
+    "phase": "Terminal Transit"
+  },
+  {
+    "event_id": "EV-AN-062",
+    "timestamp": "2026-04-16 21:15:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Device Artifact",
+    "event_type": "Hardware Depower",
+    "severity": "CRITICAL",
+    "description": "Nokia 105 burner handset battery removed; RF signal ceases immediately",
+    "entity_ids": [
+      "ananya_nair",
+      "DEV-AN-003"
+    ],
+    "location_id": "blr_v09",
+    "location_name": "Nandi Hills Ridge Overlook",
+    "evidence_ids": [
+      "DEV-AN-003"
+    ],
+    "confidence": 0.98,
+    "phase": "Terminal Transit"
+  },
+  {
+    "event_id": "EV-AN-063",
+    "timestamp": "2026-04-17 07:00:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Physical Location",
+    "event_type": "Observation Gap",
+    "severity": "NORMAL",
+    "description": "Koramangala room observed vacant; bed undisturbed since previous night",
+    "entity_ids": [
+      "priya_k"
+    ],
+    "location_id": "blr_v01",
+    "location_name": "Koramangala 4th Block Housing",
+    "evidence_ids": [
+      "DEV-AN-002"
+    ],
+    "confidence": 0.95,
+    "phase": "Terminal Transit"
+  },
+  {
+    "event_id": "EV-AN-064",
+    "timestamp": "2026-04-17 09:30:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Social Media",
+    "event_type": "Alarm Broadcast",
+    "severity": "SUSPICIOUS",
+    "description": "Roommate Priya broadcasts urgent missing person notice on InstaPhoto",
+    "entity_ids": [
+      "priya_k"
+    ],
+    "location_id": "blr_v01",
+    "location_name": "Koramangala 4th Block Housing",
+    "evidence_ids": [
+      "POST-AN-004"
+    ],
+    "confidence": 0.95,
+    "phase": "Terminal Transit"
+  },
+  {
+    "event_id": "EV-AN-065",
+    "timestamp": "2026-04-17 11:45:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Social Media",
+    "event_type": "Lab Alert",
+    "severity": "SUSPICIOUS",
+    "description": "Rohan Sharma alerts faculty that Ananya missed capstone and repository is gone",
+    "entity_ids": [
+      "rohan_sys"
+    ],
+    "location_id": "blr_v02",
+    "location_name": "Electronic City BIT Robotics Lab",
+    "evidence_ids": [
+      "GH-AN-004"
+    ],
+    "confidence": 0.95,
+    "phase": "Terminal Transit"
+  },
+  {
+    "event_id": "EV-AN-066",
+    "timestamp": "2026-04-17 12:00:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Photo / EXIF",
+    "event_type": "Red Herring Photo",
+    "severity": "SUSPICIOUS",
+    "description": "Spoofed tourist photo alleging sighting in Old Manali cafe circulated online",
+    "entity_ids": [
+      "tourist_bot_decoy"
+    ],
+    "location_id": "blr_v14",
+    "location_name": "Old Manali, Himachal Pradesh",
+    "evidence_ids": [
+      "IMG-AN-016"
+    ],
+    "confidence": 0.25,
+    "phase": "Terminal Transit"
+  },
+  {
+    "event_id": "EV-AN-067",
+    "timestamp": "2026-04-17 14:00:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Social Media",
+    "event_type": "Police Report",
+    "severity": "NORMAL",
+    "description": "BIT Department of CS files formal cybercrime police missing person report",
+    "entity_ids": [
+      "prof_menon_sys"
+    ],
+    "location_id": "blr_v02",
+    "location_name": "Electronic City BIT Robotics Lab",
+    "evidence_ids": [
+      "POST-AN-001"
+    ],
+    "confidence": 1.0,
+    "phase": "Terminal Transit"
+  },
+  {
+    "event_id": "EV-AN-068",
+    "timestamp": "2026-04-17 15:30:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Photo / EXIF",
+    "event_type": "Red Herring Photo",
+    "severity": "SUSPICIOUS",
+    "description": "Scraped beach photo alleging Goa sighting detected with altered EXIF headers",
+    "entity_ids": [
+      "goa_decoy_account"
+    ],
+    "location_id": "blr_v14",
+    "location_name": "Anjuna, Goa",
+    "evidence_ids": [
+      "IMG-AN-017"
+    ],
+    "confidence": 0.2,
+    "phase": "Terminal Transit"
+  },
+  {
+    "event_id": "EV-AN-069",
+    "timestamp": "2026-04-17 16:30:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "OSINT Correlation",
+    "event_type": "Entity Resolution",
+    "severity": "NOTABLE",
+    "description": "Cyber Forensics confirms CipherCore entity operating as unlicensed defense contractor",
+    "entity_ids": [
+      "vector_zero"
+    ],
+    "location_id": "blr_v05",
+    "location_name": "Indiranagar",
+    "evidence_ids": [
+      "OSINT-AN-005"
+    ],
+    "confidence": 0.95,
+    "phase": "Terminal Transit"
+  },
+  {
+    "event_id": "EV-AN-070",
+    "timestamp": "2026-04-17 17:00:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Physical Location",
+    "event_type": "Police Dispatch",
+    "severity": "NORMAL",
+    "description": "Search teams dispatched along Bellary Road and NH-44 Devanahalli highway corridor",
+    "entity_ids": [
+      "ananya_nair"
+    ],
+    "location_id": "blr_v13",
+    "location_name": "Bellary Road Tollway Sector",
+    "evidence_ids": [
+      "CHK-AN-006"
+    ],
+    "confidence": 0.95,
+    "phase": "Terminal Transit"
+  },
+  {
+    "event_id": "EV-AN-071",
+    "timestamp": "2026-04-17 18:00:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Telecommunications",
+    "event_type": "Subpoena Request",
+    "severity": "NORMAL",
+    "description": "Court order issued to Vodafone SIP trunk carrier regarding incoming Indiranagar calls",
+    "entity_ids": [
+      "vector_zero"
+    ],
+    "location_id": "blr_v05",
+    "location_name": "Indiranagar 100ft Road",
+    "evidence_ids": [
+      "CDR-AN-006"
+    ],
+    "confidence": 1.0,
+    "phase": "Terminal Transit"
+  },
+  {
+    "event_id": "EV-AN-072",
+    "timestamp": "2026-04-17 19:00:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Device Artifact",
+    "event_type": "Forensic Imaging",
+    "severity": "NORMAL",
+    "description": "ThinkPad P1 Gen 6 mirrored; SHA-256 hash verifies full LUKS sector entropy loss",
+    "entity_ids": [
+      "DEV-AN-001"
+    ],
+    "location_id": "blr_v01",
+    "location_name": "Koramangala 4th Block Housing",
+    "evidence_ids": [
+      "DEV-AN-001"
+    ],
+    "confidence": 1.0,
+    "phase": "Terminal Transit"
+  },
+  {
+    "event_id": "EV-AN-073",
+    "timestamp": "2026-04-17 20:00:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Physical Location",
+    "event_type": "Ridge Inspection",
+    "severity": "NOTABLE",
+    "description": "Chikkaballapur patrol officers discover vehicle tire impressions at Nandi Ridge overlook",
+    "entity_ids": [
+      "ananya_nair"
+    ],
+    "location_id": "blr_v09",
+    "location_name": "Nandi Hills Ridge Overlook",
+    "evidence_ids": [
+      "CHK-AN-007"
+    ],
+    "confidence": 0.95,
+    "phase": "Terminal Transit"
+  },
+  {
+    "event_id": "EV-AN-074",
+    "timestamp": "2026-04-17 21:00:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "OSINT Correlation",
+    "event_type": "Identity Cluster",
+    "severity": "NORMAL",
+    "description": "Resolved identity cluster completed: Ananya Nair linked across 4 aliases and 2 phone numbers",
+    "entity_ids": [
+      "ananya_nair",
+      "ananya_dev",
+      "ananya.n",
+      "ananyan-dev",
+      "void_null07"
+    ],
+    "location_id": "blr_v02",
+    "location_name": "Electronic City BIT Robotics Lab",
+    "evidence_ids": [
+      "OSINT-AN-002"
+    ],
+    "confidence": 0.98,
+    "phase": "Terminal Transit"
+  },
+  {
+    "event_id": "EV-AN-075",
+    "timestamp": "2026-04-17 22:00:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Photo / EXIF",
+    "event_type": "Evidence Sealed",
+    "severity": "NORMAL",
+    "description": "Full photographic evidence dossier cataloged with SHA-256 perceptual hashes",
+    "entity_ids": [
+      "ananya_nair"
+    ],
+    "location_id": "blr_v02",
+    "location_name": "Electronic City BIT Robotics Lab",
+    "evidence_ids": [
+      "IMG-AN-001"
+    ],
+    "confidence": 1.0,
+    "phase": "Terminal Transit"
+  },
+  {
+    "event_id": "EV-AN-076",
+    "timestamp": "2026-04-17 23:00:00",
+    "case_id": "MP-2026-0527",
+    "source_type": "Telecommunications",
+    "event_type": "Tactical Summary",
+    "severity": "CRITICAL",
+    "description": "Case dossier finalized: High probability of autonomous drone exfiltration north of Nandi Hills",
+    "entity_ids": [
+      "ananya_nair",
+      "vector_zero"
+    ],
+    "location_id": "blr_v09",
+    "location_name": "Nandi Hills Ridge Overlook",
+    "evidence_ids": [
+      "CDR-AN-018"
+    ],
+    "confidence": 0.94,
+    "phase": "Terminal Transit"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "link_id": "OSINT-AN-001",
+    "source_account": "@ananyan-dev",
+    "target_account": "@void_null07",
+    "platform": "PGP Web of Trust",
+    "basis": "Identical GPG Master Key ID (0x9E4B2F81A07C) and subkey fingerprints",
+    "confidence": 0.99,
+    "first_observed": "2026-04-09 23:15:00",
+    "status": "CONFIRMED_SAME_PERSON"
+  },
+  {
+    "link_id": "OSINT-AN-002",
+    "source_account": "@ananya_dev",
+    "target_account": "@ananya.n",
+    "platform": "ChirpNet / InstaPhoto",
+    "basis": "Shared recovery phone +91-98801-0144 and bio bio-metric facial match on campus",
+    "confidence": 0.98,
+    "first_observed": "2024-08-01 12:00:00",
+    "status": "CONFIRMED_SAME_PERSON"
+  },
+  {
+    "link_id": "OSINT-AN-003",
+    "source_account": "@void_null07",
+    "target_account": "@vector_zero",
+    "platform": "ShadowNet",
+    "basis": "Mutual PGP encrypted session handshake exchanging recruit code SYS-K9-BLR",
+    "confidence": 0.94,
+    "first_observed": "2026-04-10 01:20:00",
+    "status": "VERIFIED_POI_CONTACT"
+  },
+  {
+    "link_id": "OSINT-AN-004",
+    "source_account": "+91-98801-0199",
+    "target_account": "@void_null07",
+    "platform": "Cellular CDR / ShadowNet",
+    "basis": "Handset IMEI 863920194829104 cellular data pings precisely match ShadowNet session logins",
+    "confidence": 0.97,
+    "first_observed": "2026-04-14 20:10:00",
+    "status": "CONFIRMED_BURNER_HARDWARE"
+  },
+  {
+    "link_id": "OSINT-AN-005",
+    "source_account": "@vector_zero",
+    "target_account": "CipherCore Vector Systems",
+    "platform": "Corporate Registry & Darknet",
+    "basis": "Domain WHOIS registration and SIP PBX gateway (+91-98801-0900) corporate routing",
+    "confidence": 0.95,
+    "first_observed": "2025-11-15 09:00:00",
+    "status": "IDENTIFIED_EMPLOYER_ENTITY"
+  }
+]

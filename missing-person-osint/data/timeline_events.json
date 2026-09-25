@@ -1,0 +1,1866 @@
+[
+  {
+    "event_id": "EV-ML-FPH-010",
+    "timestamp": "2024-06-15T12:00:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Photo / EXIF",
+    "event_type": "Red Herring Photo",
+    "severity": "SUSPICIOUS",
+    "description": "EXIF photo capture: PH-010.jpg (iPhone 8)",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_travels"
+    ],
+    "location_id": "venue_08",
+    "location_name": "22.8905, -109.9167",
+    "evidence_ids": [
+      "PH-010"
+    ],
+    "confidence": 0.35,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-ML-FPH-003",
+    "timestamp": "2025-10-21T15:00:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Photo / EXIF",
+    "event_type": "EXIF Photo",
+    "severity": "NOTABLE",
+    "description": "EXIF photo capture: PH-003.jpg (ILCE-7M4)",
+    "entity_ids": [
+      "maya_lin",
+      "@pixel_maya"
+    ],
+    "location_id": "venue_01",
+    "location_name": "37.8012, -122.4215",
+    "evidence_ids": [
+      "PH-003"
+    ],
+    "confidence": 0.98,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0501",
+    "timestamp": "2026-01-30T19:17:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "@mayalin_art checked in at Bayview Arts Institute - Fine Arts Hall (InstaPhoto)",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_01",
+    "location_name": "Bayview Arts Institute - Fine Arts Hall",
+    "evidence_ids": [
+      "CHK-0501"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0001",
+    "timestamp": "2026-01-30T20:17:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@mayalin_art: Setting up the tripod at Bayview Arts Hall for lighting studies. #analogue #artschool",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_01",
+    "location_name": "Bayview Arts Institute - Fine Arts Hall",
+    "evidence_ids": [
+      "POST-0001"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0002",
+    "timestamp": "2026-01-31T09:01:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@mayalin_art: Studio critique with Prof Vance went well! He suggested larger formats.",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_01",
+    "location_name": "Bayview Arts Institute - Fine Arts Hall",
+    "evidence_ids": [
+      "POST-0002"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0502",
+    "timestamp": "2026-02-01T08:01:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "@mayalin_art checked in at Bayside Living Apartments (Maya's Residence) (InstaPhoto)",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_04",
+    "location_name": "Bayside Living Apartments (Maya's Residence)",
+    "evidence_ids": [
+      "CHK-0502"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-CCDR-1001",
+    "timestamp": "2026-02-01T14:15:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "CDR: +1-555-0144 -> +1-555-0121 (149s) sector Marina Arts Sector",
+    "entity_ids": [
+      "maya_lin",
+      "+1-555-0144",
+      "+1-555-0121"
+    ],
+    "location_id": "tower_loc",
+    "location_name": "Marina Arts Sector",
+    "evidence_ids": [
+      "CDR-1001"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0003",
+    "timestamp": "2026-02-01T19:44:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@mayalin_art: Golden hour ridge gradients. Pure serenity out here.",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_01",
+    "location_name": "Redwood Ridge Scenic Park",
+    "evidence_ids": [
+      "POST-0003"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0503",
+    "timestamp": "2026-02-02T11:28:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "@mayalin_art checked in at Bayside Living Apartments (Maya's Residence) (InstaPhoto)",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_04",
+    "location_name": "Bayside Living Apartments (Maya's Residence)",
+    "evidence_ids": [
+      "CHK-0503"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0004",
+    "timestamp": "2026-02-03T11:44:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@mayalin_art: Dinner with @david_lin_tech in town. Reminding me to eat actual food.",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_01",
+    "location_name": "Harbor Light Cafe",
+    "evidence_ids": [
+      "POST-0004"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-FPH-001",
+    "timestamp": "2026-02-03T17:00:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Photo / EXIF",
+    "event_type": "EXIF Photo",
+    "severity": "NOTABLE",
+    "description": "EXIF photo capture: PH-001.jpg (ILCE-7M4)",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_03",
+    "location_name": "37.8715, -122.4891",
+    "evidence_ids": [
+      "PH-001"
+    ],
+    "confidence": 0.98,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0005",
+    "timestamp": "2026-02-04T10:22:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@m_lin99: Studio critique with Prof Vance went well! He suggested larger formats.",
+    "entity_ids": [
+      "maya_lin",
+      "@m_lin99"
+    ],
+    "location_id": "venue_01",
+    "location_name": "Bayview Arts Institute - Fine Arts Hall",
+    "evidence_ids": [
+      "POST-0005"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0504",
+    "timestamp": "2026-02-04T12:09:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "@mayalin_art checked in at Redwood Ridge Scenic Park (InstaPhoto)",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_03",
+    "location_name": "Redwood Ridge Scenic Park",
+    "evidence_ids": [
+      "CHK-0504"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-CCDR-1002",
+    "timestamp": "2026-02-04T16:02:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "CDR: +1-555-0144 -> +1-555-0121 (283s) sector Marina Arts Sector",
+    "entity_ids": [
+      "maya_lin",
+      "+1-555-0144",
+      "+1-555-0121"
+    ],
+    "location_id": "tower_loc",
+    "location_name": "Marina Arts Sector",
+    "evidence_ids": [
+      "CDR-1002"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0505",
+    "timestamp": "2026-02-05T13:38:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "@mayalin_art checked in at Redwood Ridge Scenic Park (InstaPhoto)",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_03",
+    "location_name": "Redwood Ridge Scenic Park",
+    "evidence_ids": [
+      "CHK-0505"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0506",
+    "timestamp": "2026-02-06T09:35:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "@m_lin99 checked in at Bayside Living Apartments (Maya's Residence) (InstaPhoto)",
+    "entity_ids": [
+      "maya_lin",
+      "@m_lin99"
+    ],
+    "location_id": "venue_04",
+    "location_name": "Bayside Living Apartments (Maya's Residence)",
+    "evidence_ids": [
+      "CHK-0506"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0006",
+    "timestamp": "2026-02-06T10:35:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@mayalin_art: Studio critique with Prof Vance went well! He suggested larger formats.",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_01",
+    "location_name": "Bayview Arts Institute - Fine Arts Hall",
+    "evidence_ids": [
+      "POST-0006"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-CCDR-1003",
+    "timestamp": "2026-02-06T13:45:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "CDR: +1-555-0144 -> +1-555-0133 (648s) sector Marina Arts Sector",
+    "entity_ids": [
+      "maya_lin",
+      "+1-555-0144",
+      "+1-555-0133"
+    ],
+    "location_id": "tower_loc",
+    "location_name": "Marina Arts Sector",
+    "evidence_ids": [
+      "CDR-1003"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0007",
+    "timestamp": "2026-02-07T10:02:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@mayalin_art: Golden hour ridge gradients. Pure serenity out here.",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_01",
+    "location_name": "nan",
+    "evidence_ids": [
+      "POST-0007"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-CCDR-1004",
+    "timestamp": "2026-02-07T10:48:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "CDR: +1-555-0144 -> +1-555-0121 (393s) sector Harbor Wharf Sector",
+    "entity_ids": [
+      "maya_lin",
+      "+1-555-0144",
+      "+1-555-0121"
+    ],
+    "location_id": "tower_loc",
+    "location_name": "Harbor Wharf Sector",
+    "evidence_ids": [
+      "CDR-1004"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0507",
+    "timestamp": "2026-02-07T19:04:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "@mayalin_art checked in at Harbor Light Cafe (InstaPhoto)",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_02",
+    "location_name": "Harbor Light Cafe",
+    "evidence_ids": [
+      "CHK-0507"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0508",
+    "timestamp": "2026-02-08T09:24:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "@mayalin_art checked in at Harbor Light Cafe (InstaPhoto)",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_02",
+    "location_name": "Harbor Light Cafe",
+    "evidence_ids": [
+      "CHK-0508"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-CCDR-1005",
+    "timestamp": "2026-02-08T13:48:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "CDR: +1-555-0144 -> +1-555-0133 (434s) sector Marina Arts Sector",
+    "entity_ids": [
+      "maya_lin",
+      "+1-555-0144",
+      "+1-555-0133"
+    ],
+    "location_id": "tower_loc",
+    "location_name": "Marina Arts Sector",
+    "evidence_ids": [
+      "CDR-1005"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-CCDR-1006",
+    "timestamp": "2026-02-09T15:38:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "CDR: +1-555-0144 -> +1-555-0133 (792s) sector Harbor Wharf Sector",
+    "entity_ids": [
+      "maya_lin",
+      "+1-555-0144",
+      "+1-555-0133"
+    ],
+    "location_id": "tower_loc",
+    "location_name": "Harbor Wharf Sector",
+    "evidence_ids": [
+      "CDR-1006"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0509",
+    "timestamp": "2026-02-09T18:17:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "@mayalin_art checked in at Harbor Light Cafe (InstaPhoto)",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_02",
+    "location_name": "Harbor Light Cafe",
+    "evidence_ids": [
+      "CHK-0509"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0008",
+    "timestamp": "2026-02-09T19:53:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@mayalin_art: Studio critique with Prof Vance went well! He suggested larger formats.",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_01",
+    "location_name": "Bayview Arts Institute - Fine Arts Hall",
+    "evidence_ids": [
+      "POST-0008"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-FPH-002",
+    "timestamp": "2026-02-10T09:00:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Photo / EXIF",
+    "event_type": "EXIF Photo",
+    "severity": "NOTABLE",
+    "description": "EXIF photo capture: PH-002.jpg (Pixel 7)",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_02",
+    "location_name": "37.8055, -122.4342",
+    "evidence_ids": [
+      "PH-002"
+    ],
+    "confidence": 0.98,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0510",
+    "timestamp": "2026-02-10T10:29:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "@mayalin_art checked in at Harbor Light Cafe (InstaPhoto)",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_02",
+    "location_name": "Harbor Light Cafe",
+    "evidence_ids": [
+      "CHK-0510"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0511",
+    "timestamp": "2026-02-11T08:14:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "@mayalin_art checked in at Redwood Ridge Scenic Park (InstaPhoto)",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_03",
+    "location_name": "Redwood Ridge Scenic Park",
+    "evidence_ids": [
+      "CHK-0511"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-CCDR-1007",
+    "timestamp": "2026-02-11T16:05:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "CDR: +1-555-0144 -> +1-555-0133 (678s) sector Harbor Wharf Sector",
+    "entity_ids": [
+      "maya_lin",
+      "+1-555-0144",
+      "+1-555-0133"
+    ],
+    "location_id": "tower_loc",
+    "location_name": "Harbor Wharf Sector",
+    "evidence_ids": [
+      "CDR-1007"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0009",
+    "timestamp": "2026-02-12T11:34:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@mayalin_art: Golden hour ridge gradients. Pure serenity out here.",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_01",
+    "location_name": "Redwood Ridge Scenic Park",
+    "evidence_ids": [
+      "POST-0009"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0512",
+    "timestamp": "2026-02-12T11:41:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "@mayalin_art checked in at Redwood Ridge Scenic Park (InstaPhoto)",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_03",
+    "location_name": "Redwood Ridge Scenic Park",
+    "evidence_ids": [
+      "CHK-0512"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0513",
+    "timestamp": "2026-02-13T11:47:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "@mayalin_art checked in at Harbor Light Cafe (InstaPhoto)",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_02",
+    "location_name": "Harbor Light Cafe",
+    "evidence_ids": [
+      "CHK-0513"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-CCDR-1008",
+    "timestamp": "2026-02-13T13:45:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "CDR: +1-555-0144 -> +1-555-0121 (278s) sector Marina Arts Sector",
+    "entity_ids": [
+      "maya_lin",
+      "+1-555-0144",
+      "+1-555-0121"
+    ],
+    "location_id": "tower_loc",
+    "location_name": "Marina Arts Sector",
+    "evidence_ids": [
+      "CDR-1008"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0010",
+    "timestamp": "2026-02-14T12:43:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@mayalin_art: Why does the darkroom always smell like vinegar and existential dread? haha",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_01",
+    "location_name": "nan",
+    "evidence_ids": [
+      "POST-0010"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0514",
+    "timestamp": "2026-02-15T10:32:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "@m_lin99 checked in at Harbor Light Cafe (InstaPhoto)",
+    "entity_ids": [
+      "maya_lin",
+      "@m_lin99"
+    ],
+    "location_id": "venue_02",
+    "location_name": "Harbor Light Cafe",
+    "evidence_ids": [
+      "CHK-0514"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0011",
+    "timestamp": "2026-02-16T12:58:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@m_lin99: Setting up the tripod at Bayview Arts Hall for lighting studies. #analogue #artschool",
+    "entity_ids": [
+      "maya_lin",
+      "@m_lin99"
+    ],
+    "location_id": "venue_01",
+    "location_name": "Bayview Arts Institute - Fine Arts Hall",
+    "evidence_ids": [
+      "POST-0011"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0515",
+    "timestamp": "2026-02-16T18:27:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "@mayalin_art checked in at Harbor Light Cafe (InstaPhoto)",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_02",
+    "location_name": "Harbor Light Cafe",
+    "evidence_ids": [
+      "CHK-0515"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0516",
+    "timestamp": "2026-02-17T16:00:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "@m_lin99 checked in at Redwood Ridge Scenic Park (InstaPhoto)",
+    "entity_ids": [
+      "maya_lin",
+      "@m_lin99"
+    ],
+    "location_id": "venue_03",
+    "location_name": "Redwood Ridge Scenic Park",
+    "evidence_ids": [
+      "CHK-0516"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0012",
+    "timestamp": "2026-02-17T16:09:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@mayalin_art: Golden hour ridge gradients. Pure serenity out here.",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_01",
+    "location_name": "Redwood Ridge Scenic Park",
+    "evidence_ids": [
+      "POST-0012"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0013",
+    "timestamp": "2026-02-18T15:57:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@mayalin_art: Why does the darkroom always smell like vinegar and existential dread? haha",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_01",
+    "location_name": "nan",
+    "evidence_ids": [
+      "POST-0013"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-CCDR-1009",
+    "timestamp": "2026-02-18T17:40:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "CDR: +1-555-0144 -> +1-555-0133 (408s) sector Marina Arts Sector",
+    "entity_ids": [
+      "maya_lin",
+      "+1-555-0144",
+      "+1-555-0133"
+    ],
+    "location_id": "tower_loc",
+    "location_name": "Marina Arts Sector",
+    "evidence_ids": [
+      "CDR-1009"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-FPH-004",
+    "timestamp": "2026-02-18T18:00:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Photo / EXIF",
+    "event_type": "EXIF Photo",
+    "severity": "NOTABLE",
+    "description": "EXIF photo capture: PH-004.jpg (ILCE-7M4)",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_05",
+    "location_name": "37.8924, -122.5719",
+    "evidence_ids": [
+      "PH-004"
+    ],
+    "confidence": 0.98,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0020",
+    "timestamp": "2026-02-18T19:15:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@lucas_r_sound: @mayalin_art Stop ignoring my calls. You still have my studio microphones and audio interf",
+    "entity_ids": [
+      "maya_lin",
+      "@lucas_r_sound"
+    ],
+    "location_id": "venue_01",
+    "location_name": "Bayside Living Apartments",
+    "evidence_ids": [
+      "POST-0020"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-CCDR-1010",
+    "timestamp": "2026-02-19T14:44:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "CDR: +1-555-0144 -> +1-555-0121 (220s) sector Harbor Wharf Sector",
+    "entity_ids": [
+      "maya_lin",
+      "+1-555-0144",
+      "+1-555-0121"
+    ],
+    "location_id": "tower_loc",
+    "location_name": "Harbor Wharf Sector",
+    "evidence_ids": [
+      "CDR-1010"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0014",
+    "timestamp": "2026-02-19T21:03:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@m_lin99: Setting up the tripod at Bayview Arts Hall for lighting studies. #analogue #artschool",
+    "entity_ids": [
+      "maya_lin",
+      "@m_lin99"
+    ],
+    "location_id": "venue_01",
+    "location_name": "Bayview Arts Institute - Fine Arts Hall",
+    "evidence_ids": [
+      "POST-0014"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0517",
+    "timestamp": "2026-02-20T14:10:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "@m_lin99 checked in at Redwood Ridge Scenic Park (InstaPhoto)",
+    "entity_ids": [
+      "maya_lin",
+      "@m_lin99"
+    ],
+    "location_id": "venue_03",
+    "location_name": "Redwood Ridge Scenic Park",
+    "evidence_ids": [
+      "CHK-0517"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0015",
+    "timestamp": "2026-02-20T15:38:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@m_lin99: Studio critique with Prof Vance went well! He suggested larger formats.",
+    "entity_ids": [
+      "maya_lin",
+      "@m_lin99"
+    ],
+    "location_id": "venue_01",
+    "location_name": "Bayview Arts Institute - Fine Arts Hall",
+    "evidence_ids": [
+      "POST-0015"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0518",
+    "timestamp": "2026-02-21T16:06:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "@mayalin_art checked in at Harbor Light Cafe (InstaPhoto)",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_02",
+    "location_name": "Harbor Light Cafe",
+    "evidence_ids": [
+      "CHK-0518"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-CCDR-1011",
+    "timestamp": "2026-02-21T17:24:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "CDR: +1-555-0144 -> +1-555-0133 (700s) sector Harbor Wharf Sector",
+    "entity_ids": [
+      "maya_lin",
+      "+1-555-0144",
+      "+1-555-0133"
+    ],
+    "location_id": "tower_loc",
+    "location_name": "Harbor Wharf Sector",
+    "evidence_ids": [
+      "CDR-1011"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0016",
+    "timestamp": "2026-02-22T10:43:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@m_lin99: Golden hour ridge gradients. Pure serenity out here.",
+    "entity_ids": [
+      "maya_lin",
+      "@m_lin99"
+    ],
+    "location_id": "venue_01",
+    "location_name": "nan",
+    "evidence_ids": [
+      "POST-0016"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0519",
+    "timestamp": "2026-02-22T13:48:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "@m_lin99 checked in at Harbor Light Cafe (InstaPhoto)",
+    "entity_ids": [
+      "maya_lin",
+      "@m_lin99"
+    ],
+    "location_id": "venue_02",
+    "location_name": "Harbor Light Cafe",
+    "evidence_ids": [
+      "CHK-0519"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0017",
+    "timestamp": "2026-02-23T11:29:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@mayalin_art: Studio critique with Prof Vance went well! He suggested larger formats.",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_01",
+    "location_name": "nan",
+    "evidence_ids": [
+      "POST-0017"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-CCDR-1012",
+    "timestamp": "2026-02-23T15:53:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "CDR: +1-555-0144 -> +1-555-0121 (77s) sector Marina Arts Sector",
+    "entity_ids": [
+      "maya_lin",
+      "+1-555-0144",
+      "+1-555-0121"
+    ],
+    "location_id": "tower_loc",
+    "location_name": "Marina Arts Sector",
+    "evidence_ids": [
+      "CDR-1012"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0520",
+    "timestamp": "2026-02-24T08:07:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "@m_lin99 checked in at Bayside Living Apartments (Maya's Residence) (InstaPhoto)",
+    "entity_ids": [
+      "maya_lin",
+      "@m_lin99"
+    ],
+    "location_id": "venue_04",
+    "location_name": "Bayside Living Apartments (Maya's Residence)",
+    "evidence_ids": [
+      "CHK-0520"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-FPH-005",
+    "timestamp": "2026-02-24T12:00:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Photo / EXIF",
+    "event_type": "EXIF Photo",
+    "severity": "NOTABLE",
+    "description": "EXIF photo capture: PH-005.jpg (None)",
+    "entity_ids": [
+      "maya_lin",
+      "@m_lin99"
+    ],
+    "location_id": "venue_01",
+    "location_name": "Stripped EXIF",
+    "evidence_ids": [
+      "PH-005"
+    ],
+    "confidence": 0.98,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-CCDR-1013",
+    "timestamp": "2026-02-25T11:13:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "CDR: +1-555-0144 -> +1-555-0133 (556s) sector Marina Arts Sector",
+    "entity_ids": [
+      "maya_lin",
+      "+1-555-0144",
+      "+1-555-0133"
+    ],
+    "location_id": "tower_loc",
+    "location_name": "Marina Arts Sector",
+    "evidence_ids": [
+      "CDR-1013"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0521",
+    "timestamp": "2026-02-25T11:36:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "@mayalin_art checked in at Bayview Arts Institute - Fine Arts Hall (InstaPhoto)",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_01",
+    "location_name": "Bayview Arts Institute - Fine Arts Hall",
+    "evidence_ids": [
+      "CHK-0521"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0522",
+    "timestamp": "2026-02-26T10:42:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "@mayalin_art checked in at Harbor Light Cafe (InstaPhoto)",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_02",
+    "location_name": "Harbor Light Cafe",
+    "evidence_ids": [
+      "CHK-0522"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0018",
+    "timestamp": "2026-02-26T19:19:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@m_lin99: Setting up the tripod at Bayview Arts Hall for lighting studies. #analogue #artschool",
+    "entity_ids": [
+      "maya_lin",
+      "@m_lin99"
+    ],
+    "location_id": "venue_01",
+    "location_name": "Bayview Arts Institute - Fine Arts Hall",
+    "evidence_ids": [
+      "POST-0018"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-CCDR-1014",
+    "timestamp": "2026-02-26T20:29:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "CDR: +1-555-0144 -> +1-555-0121 (297s) sector Marina Arts Sector",
+    "entity_ids": [
+      "maya_lin",
+      "+1-555-0144",
+      "+1-555-0121"
+    ],
+    "location_id": "tower_loc",
+    "location_name": "Marina Arts Sector",
+    "evidence_ids": [
+      "CDR-1014"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0019",
+    "timestamp": "2026-02-27T17:49:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@m_lin99: Late cold brew at Harbor Light Cafe. Editing coastal fog negatives all morning.",
+    "entity_ids": [
+      "maya_lin",
+      "@m_lin99"
+    ],
+    "location_id": "venue_01",
+    "location_name": "Harbor Light Cafe",
+    "evidence_ids": [
+      "POST-0019"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0523",
+    "timestamp": "2026-02-28T16:48:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "@mayalin_art checked in at Harbor Light Cafe (InstaPhoto)",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_02",
+    "location_name": "Harbor Light Cafe",
+    "evidence_ids": [
+      "CHK-0523"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0021",
+    "timestamp": "2026-03-01T14:10:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@kaelen_v: @mayalin_art Impressed by your architectural shadow work. We have a private coastal commis",
+    "entity_ids": [
+      "maya_lin",
+      "@kaelen_v"
+    ],
+    "location_id": "venue_01",
+    "location_name": "nan",
+    "evidence_ids": [
+      "POST-0021"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-CCDR-1018",
+    "timestamp": "2026-03-02T15:20:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "CDR: +1-555-0188 -> +1-555-0144 (412s) sector Marina Arts Sector",
+    "entity_ids": [
+      "maya_lin",
+      "+1-555-0188",
+      "+1-555-0144"
+    ],
+    "location_id": "tower_loc",
+    "location_name": "Marina Arts Sector",
+    "evidence_ids": [
+      "CDR-1018"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-FPH-006",
+    "timestamp": "2026-03-02T19:00:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Photo / EXIF",
+    "event_type": "EXIF Photo",
+    "severity": "NOTABLE",
+    "description": "EXIF photo capture: PH-006.jpg (ILCE-7M4)",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_06",
+    "location_name": "37.854, -122.4789",
+    "evidence_ids": [
+      "PH-006"
+    ],
+    "confidence": 0.98,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-CCDR-1015",
+    "timestamp": "2026-03-02T19:25:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "CDR: +1-555-0144 -> +1-555-0133 (186s) sector Marina Arts Sector",
+    "entity_ids": [
+      "maya_lin",
+      "+1-555-0144",
+      "+1-555-0133"
+    ],
+    "location_id": "tower_loc",
+    "location_name": "Marina Arts Sector",
+    "evidence_ids": [
+      "CDR-1015"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0022",
+    "timestamp": "2026-03-03T22:45:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@m_lin99: feeling strangely watched lately. maybe just exhaustion from final portfolio reviews... or",
+    "entity_ids": [
+      "maya_lin",
+      "@m_lin99"
+    ],
+    "location_id": "venue_01",
+    "location_name": "nan",
+    "evidence_ids": [
+      "POST-0022"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-CCDR-1016",
+    "timestamp": "2026-03-04T10:55:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "CDR: +1-555-0144 -> +1-555-0121 (208s) sector Marina Arts Sector",
+    "entity_ids": [
+      "maya_lin",
+      "+1-555-0144",
+      "+1-555-0121"
+    ],
+    "location_id": "tower_loc",
+    "location_name": "Marina Arts Sector",
+    "evidence_ids": [
+      "CDR-1016"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-CCDR-1017",
+    "timestamp": "2026-03-06T11:24:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "CDR: +1-555-0144 -> +1-555-0133 (524s) sector Marina Arts Sector",
+    "entity_ids": [
+      "maya_lin",
+      "+1-555-0144",
+      "+1-555-0133"
+    ],
+    "location_id": "tower_loc",
+    "location_name": "Marina Arts Sector",
+    "evidence_ids": [
+      "CDR-1017"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-FPH-007",
+    "timestamp": "2026-03-06T22:00:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Photo / EXIF",
+    "event_type": "EXIF Photo",
+    "severity": "NOTABLE",
+    "description": "EXIF photo capture: PH-007.jpg (Moto G Play Synthetic)",
+    "entity_ids": [
+      "maya_lin",
+      "@m.shadow_7"
+    ],
+    "location_id": "venue_05",
+    "location_name": "37.8924, -122.5719",
+    "evidence_ids": [
+      "PH-007"
+    ],
+    "confidence": 0.98,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0023",
+    "timestamp": "2026-03-06T22:05:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@m.shadow_7: Location secured for preview shoot. Coastal fog coordinates verified. PGP key updated.",
+    "entity_ids": [
+      "maya_lin",
+      "@m.shadow_7"
+    ],
+    "location_id": "venue_01",
+    "location_name": "Whispering Pines Overlook",
+    "evidence_ids": [
+      "POST-0023"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0024",
+    "timestamp": "2026-03-10T11:30:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Deleted Post",
+    "severity": "CRITICAL",
+    "description": "@mayalin_art: Meeting with K at Pacific Horizon Diner on Friday to finalize the private gallery contract",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_01",
+    "location_name": "Pacific Horizon Diner",
+    "evidence_ids": [
+      "POST-0024"
+    ],
+    "confidence": 1.0,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-ML-CCDR-1019",
+    "timestamp": "2026-03-10T14:10:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Telecommunications",
+    "event_type": "Burner Handset Ping",
+    "severity": "CRITICAL",
+    "description": "CDR: +1-555-0199 -> +1-555-0188 (185s) sector Marina Arts Sector",
+    "entity_ids": [
+      "maya_lin",
+      "+1-555-0199",
+      "+1-555-0188"
+    ],
+    "location_id": "tower_loc",
+    "location_name": "Marina Arts Sector",
+    "evidence_ids": [
+      "CDR-1019"
+    ],
+    "confidence": 1.0,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0025",
+    "timestamp": "2026-03-11T15:00:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Deleted Post",
+    "severity": "CRITICAL",
+    "description": "@m_lin99: Switching to new phone line soon. Don't call the 0144 number after tomorrow morning.",
+    "entity_ids": [
+      "maya_lin",
+      "@m_lin99"
+    ],
+    "location_id": "venue_01",
+    "location_name": "nan",
+    "evidence_ids": [
+      "POST-0025"
+    ],
+    "confidence": 1.0,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-ML-CCDR-1020",
+    "timestamp": "2026-03-12T11:45:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Telecommunications",
+    "event_type": "Burner Handset Ping",
+    "severity": "CRITICAL",
+    "description": "CDR: +1-555-0199 -> +1-555-0188 (310s) sector Shoreline Sausalito Sector",
+    "entity_ids": [
+      "maya_lin",
+      "+1-555-0199",
+      "+1-555-0188"
+    ],
+    "location_id": "tower_loc",
+    "location_name": "Shoreline Sausalito Sector",
+    "evidence_ids": [
+      "CDR-1020"
+    ],
+    "confidence": 1.0,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-ML-FPH-008",
+    "timestamp": "2026-03-12T16:00:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Photo / EXIF",
+    "event_type": "EXIF Photo",
+    "severity": "NOTABLE",
+    "description": "EXIF photo capture: PH-008.jpg (Pixel 7)",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_06",
+    "location_name": "37.854, -122.4789",
+    "evidence_ids": [
+      "PH-008"
+    ],
+    "confidence": 0.98,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0026",
+    "timestamp": "2026-03-12T16:20:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Deleted Post",
+    "severity": "CRITICAL",
+    "description": "@mayalin_art: Awaiting appointment at the shoreline. Fog is coming in fast.",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_01",
+    "location_name": "Pacific Horizon Diner",
+    "evidence_ids": [
+      "POST-0026"
+    ],
+    "confidence": 1.0,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0524",
+    "timestamp": "2026-03-12T16:30:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "SUSPICIOUS",
+    "description": "@mayalin_art checked in at Pacific Horizon Diner (InstaPhoto)",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_art"
+    ],
+    "location_id": "venue_06",
+    "location_name": "Pacific Horizon Diner",
+    "evidence_ids": [
+      "CHK-0524"
+    ],
+    "confidence": 0.95,
+    "phase": "Inbound Outreach"
+  },
+  {
+    "event_id": "EV-ML-CCDR-1021",
+    "timestamp": "2026-03-13T19:30:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Telecommunications",
+    "event_type": "Burner Handset Ping",
+    "severity": "CRITICAL",
+    "description": "CDR: +1-555-0199 -> +1-555-0188 (95s) sector Shoreline Sausalito Sector",
+    "entity_ids": [
+      "maya_lin",
+      "+1-555-0199",
+      "+1-555-0188"
+    ],
+    "location_id": "tower_loc",
+    "location_name": "Shoreline Sausalito Sector",
+    "evidence_ids": [
+      "CDR-1021"
+    ],
+    "confidence": 1.0,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0029",
+    "timestamp": "2026-03-14T14:00:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@mayalin_travels: Escaped all the stress! Sunny beach freedom in Cabo! Best decision ever #mexico #escape #n",
+    "entity_ids": [
+      "maya_lin",
+      "@mayalin_travels"
+    ],
+    "location_id": "venue_01",
+    "location_name": "Silver Sands Motel",
+    "evidence_ids": [
+      "POST-0029"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-CCDR-1022",
+    "timestamp": "2026-03-14T16:50:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Telecommunications",
+    "event_type": "Burner Handset Ping",
+    "severity": "CRITICAL",
+    "description": "CDR: +1-555-0199 -> +1-555-0188 (240s) sector Shoreline Sausalito Sector",
+    "entity_ids": [
+      "maya_lin",
+      "+1-555-0199",
+      "+1-555-0188"
+    ],
+    "location_id": "tower_loc",
+    "location_name": "Shoreline Sausalito Sector",
+    "evidence_ids": [
+      "CDR-1022"
+    ],
+    "confidence": 1.0,
+    "phase": "Digital Sanitization"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0525",
+    "timestamp": "2026-03-14T17:15:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "SUSPICIOUS",
+    "description": "@m.shadow_7 checked in at Pacific Horizon Diner (WhisperWire)",
+    "entity_ids": [
+      "maya_lin",
+      "@m.shadow_7"
+    ],
+    "location_id": "venue_06",
+    "location_name": "Pacific Horizon Diner",
+    "evidence_ids": [
+      "CHK-0525"
+    ],
+    "confidence": 0.95,
+    "phase": "Inbound Outreach"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0028",
+    "timestamp": "2026-03-14T18:00:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@lucas_r_sound: Sitting at SFO airport gate 82 waiting for SEA-441. Leaving this toxic drama behind. Peace",
+    "entity_ids": [
+      "maya_lin",
+      "@lucas_r_sound"
+    ],
+    "location_id": "venue_01",
+    "location_name": "SFO Airport Marriott Gateway",
+    "evidence_ids": [
+      "POST-0028"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0527",
+    "timestamp": "2026-03-14T18:50:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "NORMAL",
+    "description": "@lucas_r_sound checked in at SFO Airport Marriott Gateway (ChirpNet)",
+    "entity_ids": [
+      "maya_lin",
+      "@lucas_r_sound"
+    ],
+    "location_id": "venue_09",
+    "location_name": "SFO Airport Marriott Gateway",
+    "evidence_ids": [
+      "CHK-0527"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-CCDR-1024",
+    "timestamp": "2026-03-14T19:10:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Telecommunications",
+    "event_type": "Voice Call",
+    "severity": "NORMAL",
+    "description": "CDR: +1-555-0155 -> +1-555-0129 (340s) sector Airport Gateway Sector",
+    "entity_ids": [
+      "maya_lin",
+      "+1-555-0155",
+      "+1-555-0129"
+    ],
+    "location_id": "tower_loc",
+    "location_name": "Airport Gateway Sector",
+    "evidence_ids": [
+      "CDR-1024"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0030",
+    "timestamp": "2026-03-14T20:30:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@marcus_c_drift: My civic died right past the scenic turnoff out of gas. Waiting for tow truck. Great start",
+    "entity_ids": [
+      "maya_lin",
+      "@marcus_c_drift"
+    ],
+    "location_id": "venue_01",
+    "location_name": "Silver Sands Motel",
+    "evidence_ids": [
+      "POST-0030"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-FPH-009",
+    "timestamp": "2026-03-14T21:00:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Photo / EXIF",
+    "event_type": "EXIF Photo",
+    "severity": "NOTABLE",
+    "description": "EXIF photo capture: PH-009.jpg (Moto G Play Synthetic)",
+    "entity_ids": [
+      "maya_lin",
+      "@m.shadow_7"
+    ],
+    "location_id": "venue_05",
+    "location_name": "37.8924, -122.5719",
+    "evidence_ids": [
+      "PH-009"
+    ],
+    "confidence": 0.98,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-KCHK-0526",
+    "timestamp": "2026-03-14T21:05:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Physical Location",
+    "event_type": "Venue Check-in",
+    "severity": "SUSPICIOUS",
+    "description": "@m.shadow_7 checked in at Whispering Pines Overlook (WhisperWire)",
+    "entity_ids": [
+      "maya_lin",
+      "@m.shadow_7"
+    ],
+    "location_id": "venue_05",
+    "location_name": "Whispering Pines Overlook",
+    "evidence_ids": [
+      "CHK-0526"
+    ],
+    "confidence": 0.95,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0027",
+    "timestamp": "2026-03-14T21:10:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@m.shadow_7: Vehicle arrived. Headlights on the upper ridge. Meeting now.",
+    "entity_ids": [
+      "maya_lin",
+      "@m.shadow_7"
+    ],
+    "location_id": "venue_01",
+    "location_name": "Whispering Pines Overlook",
+    "evidence_ids": [
+      "POST-0027"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  },
+  {
+    "event_id": "EV-ML-CCDR-1023",
+    "timestamp": "2026-03-14T21:45:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Telecommunications",
+    "event_type": "Burner Handset Ping",
+    "severity": "CRITICAL",
+    "description": "CDR: +1-555-0199 -> +1-555-0188 (0s) sector Whispering Pines Ridge Sector",
+    "entity_ids": [
+      "maya_lin",
+      "+1-555-0199",
+      "+1-555-0188"
+    ],
+    "location_id": "tower_loc",
+    "location_name": "Whispering Pines Ridge Sector",
+    "evidence_ids": [
+      "CDR-1023"
+    ],
+    "confidence": 1.0,
+    "phase": "Terminal LKL"
+  },
+  {
+    "event_id": "EV-ML-PPOST-0031",
+    "timestamp": "2026-03-15T08:15:00+00:00",
+    "case_id": "MP-2026-0419",
+    "source_type": "Social Media",
+    "event_type": "Public Post",
+    "severity": "NORMAL",
+    "description": "@chloe_creative: Has anyone seen @mayalin_art since yesterday evening?? Her car is gone and her phone goes ",
+    "entity_ids": [
+      "maya_lin",
+      "@chloe_creative"
+    ],
+    "location_id": "venue_01",
+    "location_name": "Bayside Living Apartments",
+    "evidence_ids": [
+      "POST-0031"
+    ],
+    "confidence": 1.0,
+    "phase": "Baseline Activity"
+  }
+]

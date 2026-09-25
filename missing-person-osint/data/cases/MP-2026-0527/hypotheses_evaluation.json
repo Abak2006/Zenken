@@ -1,44 +1,161 @@
 [
   {
-    "hypothesis_id": "H1",
-    "title": "High-Tech Headhunting / Extortion via Covert Autonomous Recruiter",
-    "description": "Subject was systematically courted by @vector_zero offering proprietary AI deployment funding, followed by coerced off-grid departure from Indiranagar Roastery towards an unmapped facility north of Bengaluru.",
-    "prior": 0.4,
-    "likelihood": 0.89,
-    "posterior": 0.89,
-    "rank": 1,
-    "status": "MOST_PROBABLE",
+    "hypothesis_id": "HYP-01-CIPHERCORE-UAV-EXFILTRATION",
+    "id": "H1",
+    "title": "Coercive Corporate / Defense UAV Exfiltration by CipherCore",
+    "status": "SUPPORTED",
+    "confidence_score": 0.88,
+    "confidence": 0.88,
+    "prior": 0.3,
+    "posterior": 0.88,
+    "summary": "Subject recruited or coerced under stealth defense NDA by CipherCore; hardware and firmware extracted northbound towards Nandi Hills.",
     "supporting_evidence": [
-      "Deleted posts P-106 & P-107 referencing confidential client NDA at Indiranagar Roastery",
-      "Repeated burner phone pings (+91-98801-0199) directly following Vector Zero contact",
-      "Final cell tower triangulation terminating at Nandi Hills Ridge Overlook at 21:15 UTC"
+      {
+        "item": "Inbound Pitch and Deleted Meeting",
+        "detail": "Deleted post POST-AN-006 confirms confidential meeting with @vector_zero at Indiranagar Roastery on April 14.",
+        "weight": 0.85
+      },
+      {
+        "item": "Encrypted PBX Telecommunications",
+        "detail": "CDR-AN-010 registers 360-second encrypted PBX call from CipherCore SIP trunk (+91-98801-0900).",
+        "weight": 0.88
+      },
+      {
+        "item": "Northbound Highway ANPR Tracking",
+        "detail": "FASTAG toll camera (IMG-AN-013) captured transport vehicle passing Devanahalli toll plaza northbound at 19:42 UTC.",
+        "weight": 0.92
+      },
+      {
+        "item": "Terminal RF Telemetry Beacon",
+        "detail": "Teledyne FLIR (IMG-AN-015) and 2.412 GHz autonomous UAV telemetry beacon recorded at Nandi Ridge before tower shut down.",
+        "weight": 0.95
+      }
+    ],
+    "contradicting_evidence": [
+      {
+        "item": "Voluntary Contract Sign-Off",
+        "detail": "Draft consulting agreement indicates subject voluntarily signed NDA for autonomous mesh routing."
+      }
+    ],
+    "recommended_actions": [
+      "Issue urgent court order to Vodafone and Airtel for subscriber records of CipherCore PBX SIP trunk (+91-98801-0900).",
+      "Deploy Chikkaballapur Search and Rescue teams to Nandi Hills Ridge Radar Sector (13.3702, 77.6835).",
+      "Subpoena Indiranagar Roastery high-definition surveillance feeds for April 14, 18:00-20:00 IST."
     ]
   },
   {
-    "hypothesis_id": "H2",
-    "title": "Autonomous Voluntary Disappearance into Off-Grid Research Collective",
-    "description": "Subject deliberately rotated PGP keys and severed academic obligations to join an open-source stealth intelligence lab in the Western Ghats / Nandi perimeter.",
-    "prior": 0.35,
-    "likelihood": 0.65,
-    "posterior": 0.65,
-    "rank": 2,
-    "status": "PLAUSIBLE",
-    "supporting_evidence": [
-      "Post P-104 stating 'Some opportunities require uncoupling from conventional academic trajectories'",
-      "ShadowNet post P-105: 'Keys rotated. Secondary handset provisioned.'"
-    ]
-  },
-  {
-    "hypothesis_id": "H3",
-    "title": "Decoy Travel / Coastal Relocation to Goa",
-    "description": "Subject fled south-west toward coastal resorts to evade capstone deadline stress.",
+    "hypothesis_id": "HYP-02-VOLUNTARY-INDUSTRY-DEFECTION",
+    "id": "H2",
+    "title": "Voluntary Covert Industry Defection and Self-Extraction",
+    "status": "STRONGLY_SUPPORTED",
+    "confidence_score": 0.92,
+    "confidence": 0.92,
     "prior": 0.25,
-    "likelihood": 0.12,
-    "posterior": 0.12,
-    "rank": 3,
-    "status": "DISPROVEN_RED_HERRING",
+    "posterior": 0.92,
+    "summary": "Ananya deliberately scrubbed her digital footprint (LUKS full-disk wipe, force-deleted git branches, SIM removal) to transition to an unmonitored private defense research facility.",
     "supporting_evidence": [
-      "Decoy photo PH-704 in Goa with mismatched Sony/Canon camera profile and zero cellular tower correlation"
+      {
+        "item": "LUKS Full-Disk Cryptographic Wipe",
+        "detail": "Workstation (DEV-AN-001) mirrored with all LUKS encryption headers permanently erased via /dev/urandom.",
+        "weight": 0.95
+      },
+      {
+        "item": "Destructive Repository Force-Deletion",
+        "detail": "bit-lab/hypermesh-core repository branch deleted using personal admin token routed over Tor exit node.",
+        "weight": 0.9
+      },
+      {
+        "item": "Clean SIM Extraction and Physical Staging",
+        "detail": "Airtel postpaid SIM (+91-98801-0144) was extracted and left cleanly on her Koramangala room desk.",
+        "weight": 0.92
+      },
+      {
+        "item": "Simultaneous Burner Activation",
+        "detail": "Prepaid Nokia 105 handset (+91-98801-0199) activated concurrently at Indiranagar with zero prior social footprint.",
+        "weight": 0.88
+      }
+    ],
+    "contradicting_evidence": [
+      {
+        "item": "Faculty Warning Advisory",
+        "detail": "Dr. Kavya Patel published advisories warning robotics students about predatory recruiters posing as stealth defense ventures."
+      }
+    ],
+    "recommended_actions": [
+      "Audit institutional GitHub enterprise access logs for Tor exit node IP clusters matching the admin token deletion.",
+      "Analyze SHA-256 entropy on mirrored workstation drive DEV-AN-001 to identify potential cold-boot remnants.",
+      "Cross-reference prepaid SIM cash recharge records at Koramangala retail vendor."
+    ]
+  },
+  {
+    "hypothesis_id": "HYP-03-ACADEMIC-BURNOUT-SABBATICAL",
+    "id": "H3",
+    "title": "Academic Burnout / Personal Sabbatical (Disproven Red Herring)",
+    "status": "CONTRADICTED_RED_HERRING",
+    "confidence_score": 0.12,
+    "confidence": 0.12,
+    "prior": 0.25,
+    "posterior": 0.12,
+    "summary": "Initial suspicion that Ananya took an unannounced sabbatical to decompress from doctoral research pressures is refuted by deliberate hardware destruction and covert communications.",
+    "supporting_evidence": [
+      {
+        "item": "Social Reflection on Deadlines",
+        "detail": "Cubbon Park post POST-AN-004 reflects on hectic capstone milestone schedules and burnout.",
+        "weight": 0.4
+      }
+    ],
+    "contradicting_evidence": [
+      {
+        "item": "JTAG Hardware EEPROM Scrubbing",
+        "detail": "Testbench FPGA chips were desoldered, flashed with null bytes, and PCB serial numbers scraped clean."
+      },
+      {
+        "item": "Exclusive Burner Telecommunications",
+        "detail": "Burner handset was used exclusively to communicate with defense recruiter PBX, not friends or family."
+      },
+      {
+        "item": "Destructive Git Sabotage",
+        "detail": "Repository force-deletion destroyed shared team research, inconsistent with a simple sabbatical."
+      }
+    ],
+    "recommended_actions": [
+      "Deprioritize student sabbatical inquiries; classify case under technical asset extraction."
+    ]
+  },
+  {
+    "hypothesis_id": "HYP-04-OPPORTUNISTIC-KIDNAPPING",
+    "id": "H4",
+    "title": "Opportunistic Street Kidnapping / Foul Play (Weakly Supported)",
+    "status": "WEAKLY_SUPPORTED",
+    "confidence_score": 0.18,
+    "confidence": 0.18,
+    "prior": 0.2,
+    "posterior": 0.18,
+    "summary": "Hypothesis of street abduction during transit is contradicted by voluntary PGP key handshakes and deliberate digital footprint sanitization.",
+    "supporting_evidence": [
+      {
+        "item": "Robotics Lab Hardware Theft",
+        "detail": "High-value custom sensor boards were removed without BIT department sign-off.",
+        "weight": 0.5
+      },
+      {
+        "item": "Cellular Signal Termination",
+        "detail": "Burner handset connection ceased abruptly at remote ridge overlook.",
+        "weight": 0.7
+      }
+    ],
+    "contradicting_evidence": [
+      {
+        "item": "Cryptographic PGP Signature",
+        "detail": "Escrow confirmation message was signed with Ananya's private PGP key, verifying keyholder intent."
+      },
+      {
+        "item": "Pre-arranged Transport Route",
+        "detail": "FASTAG toll records corroborate a direct, non-erratic transit path along NH-44 highway."
+      }
+    ],
+    "recommended_actions": [
+      "Maintain radar overlook search while tracking secondary financial escrow release addresses."
     ]
   }
 ]

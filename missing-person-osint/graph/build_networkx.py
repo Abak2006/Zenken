@@ -271,6 +271,117 @@ def build_investigation_graph(
                         rationale=link["rationale"]
                     )
 
+    # 8. Add Git Repos & Commits
+    git_path = data_dir / "git_commits.json"
+    if git_path.exists():
+        with open(git_path, "r", encoding="utf-8") as f:
+            commits = json.load(f)
+            for c in commits:
+                c_id = f"COMMIT_{c['commit_id']}"
+                G.add_node(
+                    c_id,
+                    node_type="GitCommit",
+                    label=f"Commit: {c['commit_id']}",
+                    commit_sha=c.get("commit_sha"),
+                    repo=c.get("repo"),
+                    branch=c.get("branch"),
+                    message=c.get("message"),
+                    timestamp=c.get("timestamp_utc"),
+                    pgp_valid=c.get("pgp_signature_valid", False)
+                )
+                acc_handle = c.get("author_account")
+                if acc_handle:
+                    acc_id = f"ACC_{acc_handle.lower()}"
+                    if G.has_node(acc_id):
+                        G.add_edge(acc_id, c_id, edge_type="COMMITTED", timestamp=c.get("timestamp_utc"))
+
+    # 9. Add Transit & Infrastructure Sensors
+    sensor_path = data_dir / "transit_sensors.json"
+    if sensor_path.exists():
+        with open(sensor_path, "r", encoding="utf-8") as f:
+            sensors = json.load(f)
+            for s in sensors:
+                s_id = f"SENSOR_{s['sensor_event_id']}"
+                G.add_node(
+                    s_id,
+                    node_type="SensorEvent",
+                    label=f"{s.get('event_type')}: {s['sensor_event_id']}",
+                    sensor_type=s.get("event_type"),
+                    location=s.get("sensor_location"),
+                    latitude=s.get("latitude"),
+                    longitude=s.get("longitude"),
+                    timestamp=s.get("timestamp_utc")
+                )
+
+    # 10. Add Crypto Escrow Nodes
+    escrow_path = data_dir / "crypto_escrow.json"
+    if escrow_path.exists():
+        with open(escrow_path, "r", encoding="utf-8") as f:
+            escrows = json.load(f)
+            for esc in escrows:
+                tx_node_id = f"TX_{esc['tx_id']}"
+                G.add_node(
+                    tx_node_id,
+                    node_type="FinancialTransaction",
+                    label=f"{esc.get('tx_type')}: {esc['tx_id']}",
+                    network=esc.get("network"),
+                    amount=esc.get("amount"),
+                    timestamp=esc.get("timestamp_utc")
+                )
+
+    # 11. Add Device Artifact Nodes
+    devices_path = data_dir / "devices.json"
+    if devices_path.exists():
+        with open(devices_path, "r", encoding="utf-8") as f:
+            devices = json.load(f)
+            for d in devices:
+                d_id = f"DEV_{d['device_id']}"
+                G.add_node(
+                    d_id,
+                    node_type="Device",
+                    label=f"Device: {d.get('device_name', d['device_id'])}",
+                    device_id=d["device_id"],
+                    device_type=d.get("device_type"),
+                    platform=d.get("platform"),
+                    imei_mac=d.get("imei_or_mac"),
+                    status=d.get("status")
+                )
+                owner = d.get("associated_account") or d.get("owner_entity")
+                if owner:
+                    owner_node = f"ACC_{owner.lstrip('@').lower()}"
+                    if G.has_node(owner_node):
+                        G.add_edge(owner_node, d_id, edge_type="OPERATES", timestamp=d.get("timestamp_utc", ""))
+                # If tied to target person
+                for cluster in resolved_clusters:
+                    if d["device_id"] in cluster.get("linked_devices", []):
+                        G.add_edge(cluster["canonical_id"], d_id, edge_type="OWNS", confidence=1.0)
+
+    # 12. Add OSINT Correlation Nodes & Edges
+    osint_path = data_dir / "osint_links.json"
+    if osint_path.exists():
+        with open(osint_path, "r", encoding="utf-8") as f:
+            links = json.load(f)
+            for lk in links:
+                lk_id = f"OSINT_{lk['link_id']}"
+                G.add_node(
+                    lk_id,
+                    node_type="OSINTCorrelation",
+                    label=f"OSINT: {lk['link_id']}",
+                    platform=lk.get("platform"),
+                    basis=lk.get("basis"),
+                    confidence=lk.get("confidence")
+                )
+                src = lk.get("source_account")
+                tgt = lk.get("target_account")
+                if src:
+                    src_node = f"ACC_{src.lstrip('@').lower()}"
+                    if G.has_node(src_node):
+                        G.add_edge(src_node, lk_id, edge_type="CORRELATES_TO", confidence=lk.get("confidence", 0.9))
+                if tgt:
+                    tgt_node = f"ACC_{tgt.lstrip('@').lower()}"
+                    if G.has_node(tgt_node):
+                        G.add_edge(lk_id, tgt_node, edge_type="RESOLVES_AS", confidence=lk.get("confidence", 0.9))
+
     return G
 
 if __name__ == "__main__":

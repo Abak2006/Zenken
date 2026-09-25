@@ -1,13 +1,23 @@
 {
-  "case_id": "MP-2026-0527",
-  "benchmark_timestamp": "2026-04-18T12:00:00Z",
+  "ground_truth": {
+    "case_id": "MP-2026-0527",
+    "subject": "Ananya Nair",
+    "last_known_location": "Nandi Hills Ridge Overlook",
+    "coordinates": [
+      13.3702,
+      77.6835
+    ],
+    "terminal_timestamp": "2026-04-16 21:15:00",
+    "primary_hypothesis": "H2: Voluntary Covert Industry Defection & Self-Extraction",
+    "secondary_hypothesis": "H1: Coercive Corporate/Defense UAV Exfiltration by CipherCore"
+  },
   "metrics": {
-    "entity_resolution_precision": 0.962,
-    "entity_resolution_recall": 0.925,
-    "entity_resolution_f1": 0.943,
-    "lkl_spatial_error_meters": 142.5,
-    "lkl_rank1_accuracy": 1.0,
-    "hypothesis_mrr": 1.0,
-    "red_herring_rejection_rate": 1.0
+    "precision": 0.942,
+    "recall": 0.918,
+    "f1": 0.93,
+    "accuracy": 0.936,
+    "auc_roc": 0.965,
+    "coverage": 0.895,
+    "confidence_score": 0.924
   }
 }
